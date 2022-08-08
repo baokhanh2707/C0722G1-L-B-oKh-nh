@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>chuyển đổi tiền tệ</title>
+</head>
+<body>
+<form>
+<table>
+    <tr>
+        <td><p>Amount</p></td>
+        <td><p>From Currency</p></td>
+        <td><p>To Currency</p></td>
+    </tr>
+    <tr>
+        <td>
+            <input type="number" id="nhapso">
+        </td>
+        <td>
+            <select id="so1">
+                <option value="vnd">VND</option>
+                <option value="usd">USD</option>
+            </select>
+        </td>
+        <td>
+            <select id="so2">
+                <option value="vnd">VND</option>
+                <option value="usd">USD</option>
+            </select>
+        </td>
+        <td>
+            <button type="button"onclick="nhanvao()">Convert</button>
+        </td>
+    </tr>
+</table>
+<p id="result" style="color: blue;font-size: 20px">Result</p>
+    <script>
+        function nhanvao(){
+            let nhapSo=document.getElementById("nhapso").value
+            let so1=document.getElementById("so1").value
+            let so2=document.getElementById("so2").value
+            let ketQua=document.getElementById("result")
+            if ( so1== "usd" && so2== "vnd"){
+                ketQua="result=" + (nhapSo*23000 +"Đ" )
+            }
+            if (so1 =="vnd"&& so2=="usd"){
+                ketQua="result=" + (nhapSo/23000 +"$" )
+            }
+            document.getElementById("result").innerHTML= ketQua
+        }
+
+
+    </script>
+</form>
+</body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ứng dụng máy tính</title>
+</head>
+<body>
+    <table>
+        <tr>
+            <td >
+                <input type="number" id="so1";>
+            </td>
+            <td >
+                <input type="number" id="so2";>
+            </td>
+            <td >
+                <button type="button" onclick="cong()">cộng</button>
+            </td>
+            <td >
+                <button type="button" onclick="tru()">trừ</button>
+            </td>
+            <td >
+                <button type="button" onclick="nhan()">nhân</button>
+            </td>
+            <td >
+                <button type="button" onclick="chia()">chia</button>
+            </td>
+        </tr>
+
+    </table>
+    <br>
+    <p id="kq">Result:</p>
+
+</body>
+<script>
+    function cong() {
+        let so1=document.getElementById("so1").value
+        let so2=document.getElementById("so2").value
+        let ketQua= Number(so1) + Number(so2)
+        document.getElementById("kq").innerHTML=("Result:"+ketQua)
+    }
+    function tru() {
+        let so1=document.getElementById("so1").value
+        let so2=document.getElementById("so2").value
+        let ketQua= Number(so1) - Number(so2)
+        document.getElementById("kq").innerHTML=("Result:"+ketQua)
+    }
+    function nhan() {
+        let so1=document.getElementById("so1").value
+        let so2=document.getElementById("so2").value
+        let ketQua= Number(so1) *Number(so2)
+        document.getElementById("kq").innerHTML=("Result:"+ketQua)
+    }
+    function chia() {
+        let so1=document.getElementById("so1").value
+        let so2=document.getElementById("so2").value
+        let ketQua= Number(so1) /Number(so2)
+        document.getElementById("kq").innerHTML=("Result:"+ketQua)
+    }
+
+
+
+</script>
+</html>
