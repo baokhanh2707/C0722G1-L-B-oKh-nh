@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>chương trình tính thuế thu nhập cá nhân</title>
+</head>
+<body>
+<script>
+    let soTien = parseFloat(prompt('nhập số tiền đơn vị triệu'));
+    if (soTien <= 5) {
+        alert('số thuế phải nộp=' + soTien * 5 / 100);
+    } else if (soTien < 5 && soTien <= 10) {
+        alert('số thuế phải nộp=' + soTien * 10 / 100);
+    } else if (soTien < 10 && soTien <= 18) {
+        alert('số thuế phải nộp=' + soTien * 15 / 100);
+    } else if (soTien < 18 && soTien <= 32) {
+        alert('số thuế phải nộp=' + soTien * 20 / 100);
+    }else if (soTien < 32 && soTien <= 52) {
+        alert('số thuế phải nộp=' + soTien * 25 / 100);
+    }else{
+        alert('số thuế phải nộp=' + soTien * 30 / 100);
+    }
+</script>
+</body>
+</html>

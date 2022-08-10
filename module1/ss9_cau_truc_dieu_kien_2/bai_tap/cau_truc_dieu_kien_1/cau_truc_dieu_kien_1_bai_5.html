@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>khanh</title>
+</head>
+<body>
+<script>
+    let diemBaiKiemTra = +parseFloat(prompt('điểm bài kiểm tra'));
+    let diemThiGiuaKi = + parseFloat(prompt('điểm thi giữa kì'));
+    let diemThiCuoiKi = + parseFloat(prompt('điểm thi cuối kì'));
+    let diemTrungBinh = +((diemBaiKiemTra + diemThiCuoiKi + diemThiGiuaKi) / 3);
+    if (diemTrungBinh >= 8) {
+        alert('học sinh giỏi');
+    }
+    else if (diemTrungBinh >= 6.5){
+        alert('học sinh khá');
+    }
+    else if (diemTrungBinh >= 5 ){
+        alert('học sinh trung bình');
+    }
+    else {
+        alert('học sinh yếu');
+    }
+
+
+</script>
+</body>
+</html>

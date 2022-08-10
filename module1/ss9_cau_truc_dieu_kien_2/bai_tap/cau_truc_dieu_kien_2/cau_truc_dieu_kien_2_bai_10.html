@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>chương trình tính giá điện</title>
+</head>
+<body>
+<script>
+    let kWh=parseFloat(prompt('nhập số kWh điện'));
+    if (kWh<100){
+        alert('giá bán điện=' + kWh*1.734);
+    }else if(kWh<400){
+        alert('giá bán điện=' + kWh*2.834);
+    }else{
+        alert('giá bán điện=' +  kWh*2987);
+    }
+
+
+</script>
+</body>
+</html>
