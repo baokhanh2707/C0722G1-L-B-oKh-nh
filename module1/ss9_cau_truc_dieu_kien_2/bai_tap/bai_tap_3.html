@@ -5,33 +5,103 @@
     <title>may tinh </title>
 </head>
 <body>
-<input type="number">
 <table>
     <tr>
-        <td><button onclick="nhanvao">1</button></td>
-        <td><button onclick="nhanvao()">2</button></td>
-        <td><button onclick="nhanvao()">3</button></td>
-        <td><button onclick="nhanvao()">+</button></td>
+        <td colspan="4"><input id="nhapso" type="text"></td>
     </tr>
     <tr>
-        <td><button onclick="nhanvao()">4</button></td>
-        <td><button onclick="nhanvao()">5</button></td>
-        <td><button onclick="nhanvao()">6</button></td>
-        <td><button onclick="nhanvao()">-</button></td>
+        <td><input type="button" value="1" onclick="nhap1()"></td>
+        <td><input type="button" value="2" onclick="nhap2()"></td>
+        <td><input type="button" value="3" onclick="nhap3()"></td>
+        <td><input type="button" value="+" onclick="nhapCong()"></td>
     </tr>
     <tr>
-        <td><button onclick="nhanvao()">7</button></td>
-        <td><button onclick="nhanvao()">8</button></td>
-        <td><button onclick="nhanvao()">9</button></td>
-        <td><button onclick="nhanvao()">*</button></td>
+        <td><input type="button" value="4" onclick="nhap4()"></td>
+        <td><input type="button" value="5" onclick="nhap5()"></td>
+        <td><input type="button" value="6" onclick="nhap6()"></td>
+        <td><input type="button" value="-" onclick="nhapTru()"></td>
     </tr>
     <tr>
-        <td><button onclick="nhanvao()">AC</button></td>
-        <td><button onclick="nhanvao()">0</button></td>
-        <td><button onclick="nhanvao()">=</button></td>
-        <td><button onclick="nhanvao()">/</button></td>
+        <td><input type="button" value="7" onclick="nhap7()"></td>
+        <td><input type="button" value="8" onclick="nhap8()"></td>
+        <td><input type="button" value="9" onclick="nhap9()"></td>
+        <td><input type="button" value="x" onclick="nhapNhan()"></td>
     </tr>
-</table>
+    <tr>
+        <td><input type="button" value="C" onclick="nhapC()"></td>
+        <td><input type="button" value="0" onclick="nhap0()"></td>
+        <td><input type="button" value="=" onclick="nhapBang()"></td>
+        <td><input type="button" value="/" onclick="nhapChia()"></td>
+    </tr>
 
+</table>
+</body>
+<script>
+    function nhap1() {
+        document.getElementById("nhapso").value += 1;
+    }
+
+    function nhap2() {
+        document.getElementById("nhapso").value += 2;
+    }
+
+    function nhap3() {
+        document.getElementById("nhapso").value += 3;
+    }
+
+    function nhap4() {
+        document.getElementById("nhapso").value += 4;
+    }
+
+    function nhap5() {
+        document.getElementById("nhapso").value += 5;
+    }
+
+    function nhap6() {
+        document.getElementById("nhapso").value += 6;
+    }
+
+    function nhap7() {
+        document.getElementById("nhapso").value += 7;
+    }
+
+    function nhap8() {
+        document.getElementById("nhapso").value += 8;
+    }
+
+    function nhap9() {
+        document.getElementById("nhapso").value += 9;
+    }
+
+    function nhapCong() {
+        document.getElementById("nhapso").value += '+';
+    }
+
+    function nhapTru() {
+        document.getElementById("nhapso").value += '-';
+    }
+
+    function nhapNhan() {
+        document.getElementById("nhapso").value += '*';
+    }
+
+    function nhapChia() {
+        document.getElementById("nhapso").value += '/';
+    }
+
+    function nhap0() {
+        document.getElementById("nhapso").value += 0;
+    }
+
+    function nhapBang() {
+        let bieuThuc = document.getElementById("nhapso").value;
+        let ketQua = eval(bieuThuc);
+        document.getElementById("nhapso").value = ketQua;
+    }
+
+    function nhapC() {
+        document.getElementById("nhapso").value = '';
+    }
+</script>
 </body>
 </html>
