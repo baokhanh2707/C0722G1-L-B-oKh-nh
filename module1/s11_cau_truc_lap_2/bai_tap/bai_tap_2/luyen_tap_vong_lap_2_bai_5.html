@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bài 5</title>
+</head>
+<body>
+<script>
+    let tienGoi= +prompt (' số tiền gửi: ');
+    let thangGoi= +prompt(' số tháng gửi: ');
+    let laiSuatThang = +prompt('lãi suất ');
+    let tienLai;
+    for ( let i= 0; i < thangGoi; i++ ) {
+        tienLai= tienGoi * laiSuatThang/100;
+        tienGoi= tienGoi+ tienLai;
+    }
+    alert('số tiền nhận được là :' + tienGoi);
+</script>
+</body>
+</html>
