@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bài 3</title>
+</head>
+<body>
+<script>
+    let tong = 0;
+    let numbers = [1, 5, 3];
+    let max = [0];
+    for (let i = 0; i < numbers.length; i++)
+    {
+        if (numbers[i] > max)
+        {
+            max = numbers[i];
+        }
+    }
+    for (let i = 0; i < numbers.length; i++)
+    {
+        tong = tong + numbers[i];
+    }
+    document.write('sớ lớn nhất là ' + max);
+    document.write('trung bình cộng là' + (tong / numbers.length));
+
+</script>
+</body>
+</html>

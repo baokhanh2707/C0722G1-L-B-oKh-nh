@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bài 4</title>
+</head>
+<body>
+<script>
+    let numbers = [-1, 2, 3, 4, 5, 6];
+    let first = 0;
+    let last = numbers.length - 1;
+    while (first < last) {
+        let b = numbers[first];
+        numbers[first] = numbers[last];
+        numbers[last] = b;
+        first++;
+        last--;
+    }
+    document.write(numbers);
+</script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<script>
+    let numbers = +prompt('nhập độ dài của mảng vào đây');
+    let x = new Array(numbers);
+    for (let i = 0; i < x.length; i++) {
+        let n = +prompt("nhập phần tử của mảng");
+        x[i] = n
+    }
+    let tong=0;
+    let count=0
+    for (let j = 0; j <x.length; j++) {
+        if (x[j] % 2 == 1 || j % 2 == 0) {
+            count = count + 1
+            tong = tong + x[j]
+        }
+    }
+alert('trung bình cộng là '+(tong/count))
+</script>
+</body>
+</html>

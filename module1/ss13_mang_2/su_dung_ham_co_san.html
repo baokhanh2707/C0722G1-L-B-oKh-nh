@@ -2,9 +2,54 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Title</title>
 </head>
 <body>
-$END$
+<script>
+    // câu 1// var cau1=["Red", "Green","White", "Black"];
+    // // document.write(id1.toString());
+    // câu 2let nhapVao=prompt('nhập vào 025468');
+    // let x
+    // let str = nhapVao.toString();
+    // let result = [str[0]];
+    // for( x=1; x<nhapVao.length; x++){
+    //     if((str[x-1]%2 === 0)&&(str[x]%2 === 0))
+    //     {
+    //         result.push('-', str[x]);
+    //     }
+    //     else
+    //     {
+    //         result.push(str[x]);
+    //     }
+    // }
+    // alert(result.join(''));
+    let nhapVao=prompt();
+    let inHoa="ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+    let inThuong="abcdefghijklmnopqrstuvwxyz";
+    let result=[];
+    let x;
+    for( x=0; x<nhapVao.length; x++)
+    {
+        if(inHoa.indexOf(nhapVao[x]) !== -1)
+        {
+            result.push(nhapVao[x].toLowerCase());
+        }
+        else if(inThuong.indexOf(nhapVao[x]) !== -1)
+        {
+            result.push(nhapVao[x].toUpperCase());
+        }
+        else
+        {
+            result.push(nhapVao[x]);
+        }
+    }
+    document.write(result.join(''));
+
+
+
+
+
+
+</script>
 </body>
 </html>
