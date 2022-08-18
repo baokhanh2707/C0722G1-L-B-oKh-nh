@@ -2,9 +2,31 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Title</title>
 </head>
 <body>
-$END$
+<script>
+    let ngoiSao1 = ["Polaris", "Aldebaran", "Deneb", "Vega", "Altair", "Dubhe", " Regulus"];
+    let ngoiSao2 = ["UrsaMinor", "Tarurus", "Cygnus", "Lyra", " Aquila", "UrsaMajor", "Leo"];
+    let ngoiSao = prompt('nhập tên sao')
+
+    function star(ngoiSao1, ngoiSao) {
+        let count = 0;
+        for (let i = 1; i < ngoiSao1.length; i++) {
+            if (ngoiSao1[i] === ngoiSao) {
+                count = i;
+            }
+        }
+        if (count !== 0) {
+            alert(ngoiSao2[count]);
+        } else {
+            alert('không tìm thấy sao');
+        }
+    }
+
+    star(ngoiSao1, ngoiSao);
+
+
+</script>
 </body>
 </html>

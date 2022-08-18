@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--Viết hàm truyền vào 2 số nguyên bất kì, thực hiện đổi chỗ hai số nguyên đó.-->
+</body>
+<script>
+    let number1=+prompt("nhập số thứ nhất");
+    let number2=+prompt("nhập số thứ hai");
+    function changePlaces(number1,number2) {
+        let veres=number1;
+        number1=number2;
+        number2=veres;
+        return alert(number1 +" "+number2)
+    }
+    changePlaces(number1,number2);
+</script>
+</html>

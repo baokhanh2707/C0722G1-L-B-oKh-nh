@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    // Viết hàm nhận vào 3 số nguyên bất kỳ, trả về số nguyên có giá trị nhỏ nhất.
+    let number3 = +prompt('nhập số nguyên thứ nhất');
+    let number4 = +prompt('nhập số nguyên thứ hai');
+    let number5 = +prompt('nhập số nguyên thứ ba');
+
+    function checkNumber(num1, num2, num3) {
+        if (num1 < num2 && num1 < num3) {
+            return num1;
+        } else if (num2 < num3) {
+            return num2;
+        } else {
+            return num3;
+        }
+    }
+
+    alert('đây là số bé nhất:' + checkNumber(number3, number4, number5));
+
+</script>
+</body>
+</html>
