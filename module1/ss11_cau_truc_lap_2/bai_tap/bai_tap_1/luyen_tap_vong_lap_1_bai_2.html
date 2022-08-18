@@ -6,15 +6,19 @@
 </head>
 <body>
 <script>
-    let nhietDo=parseInt(prompt('nhập số độ vào đây'));
-    while(nhietDo>=20){
-            alert('người dùng tăng nhiệt độ');
-        nhietDo=parseInt(prompt('nhập số độ vào đây'));
-        }while(nhietDo<=100){
-            alert('người dùng giảm nhiệt độ');
-        nhietDo=parseInt(prompt('nhập số độ vào đây'));
+    let nhietDo;
+    do {
+        nhietDo= +prompt("Nhập nhiệt độ:");
+        if (nhietDo > 100 ) {
+            alert("Giảm nhiệt độ")
+        }
+        if (nhietDo <20) {
+            alert ("Tăng nhiệt độ")
+        }
     }
-
+    while (nhietDo <=20 && nhietDo >=100) {
+        alert ("nhiệt độ ok")
+    }
 </script>
 </body>
 </html>

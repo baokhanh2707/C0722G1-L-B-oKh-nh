@@ -6,17 +6,16 @@
 </head>
 <body>
 <script>
-    let i;
-    let j;
-    for (i = 1; i <= 5; i++) {
-        for (j = 1; j <= i; j++) {
+
+    for (let i = 1; i <= 5; i++) {
+        for (let j = 1; j <= i; j++) {
             document.write("*");
         }
         document.write("<br>");
     }
     document.write('<br>');
-    for (i = 5; i >= 1; i--) {
-        for (j = 1; j <= i; j++) {
+    for (let i = 5; i >= 1; i--) {
+        for (let j = 1; j <= i; j++) {
             document.write("*");
         }
         document.write("<br>");
@@ -26,8 +25,7 @@
         for (let j = 1; j < i; j++) {
             document.write('&nbsp&nbsp');
         }
-        for (let k = 5; k >= i; k--)
-        {
+        for (let k = 5; k >= i; k--) {
             document.write('*');
         }
 
@@ -35,10 +33,8 @@
     }
     document.write('<br>');
 
-    for (let i = 5; i > 0 && i <= 5; i--)
-    {
-        for (let j = 4; j >= i; j--)
-        {
+    for (let i = 5; i > 0 && i <= 5; i--) {
+        for (let j = 4; j >= i; j--) {
             document.write('&nbsp&nbsp');
         }
         for (let k = 1; k <= i; k++) {
