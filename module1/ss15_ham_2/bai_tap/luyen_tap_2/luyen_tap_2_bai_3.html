@@ -9,14 +9,17 @@
 </body>
 </html>
 <script>
-    let nhapSo=parseFloat(prompt('nhập 1 số '));
+    let nhapSo = parseFloat(prompt('nhập 1 số '));
+
     function giaiThua(so) {
         let i;
-        let tong=1;
-        for ( i = 1; i <= so ; i++) {
-            tong=tong*i;
-        }return tong;
+        let tong = 1;
+        for (i = 1; i <= so; i++) {
+            tong = tong * i;
+        }
+        return tong;
     }
+
     alert(giaiThua(nhapSo));
 
 </script>

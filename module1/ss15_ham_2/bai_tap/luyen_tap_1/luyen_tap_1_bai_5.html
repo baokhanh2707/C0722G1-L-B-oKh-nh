@@ -6,25 +6,25 @@
 </head>
 <body>
 <script>
-    let ngoiSao1 = ["Polaris", "Aldebaran", "Deneb", "Vega", "Altair", "Dubhe", " Regulus"];
-    let ngoiSao2 = ["UrsaMinor", "Tarurus", "Cygnus", "Lyra", " Aquila", "UrsaMajor", "Leo"];
+    let mangNgoiSao = ["Polaris", "Aldebaran", "Deneb", "Vega", "Altair", "Dubhe", " Regulus"];
+    let mangChomSao = ["UrsaMinor", "Tarurus", "Cygnus", "Lyra", " Aquila", "UrsaMajor", "Leo"];
     let ngoiSao = prompt('nhập tên sao')
 
-    function star(ngoiSao1, ngoiSao) {
-        let count = 0;
-        for (let i = 1; i < ngoiSao1.length; i++) {
-            if (ngoiSao1[i] === ngoiSao) {
+    function star(mangNgoiSao, ngoiSao) {
+        let count = 1;
+        for (let i = 0; i < mangNgoiSao.length; i++) {
+            if (mangNgoiSao[i] === ngoiSao) {
                 count = i;
             }
         }
-        if (count !== 0) {
-            alert(ngoiSao2[count]);
+        if (count !== 1) {
+            alert(mangChomSao[count]);
         } else {
             alert('không tìm thấy sao');
         }
     }
 
-    star(ngoiSao1, ngoiSao);
+    star(mangNgoiSao, ngoiSao);
 
 
 </script>
