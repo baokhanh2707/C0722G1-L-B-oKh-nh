@@ -36,17 +36,17 @@
 <p id="result" style="color: blue;font-size: 20px">Result</p>
     <script>
         function nhanVao(){
-            let nhapSo=document.getElementById("nhapso").value
-            let so1=document.getElementById("so1").value
-            let so2=document.getElementById("so2").value
-            let ketQua=document.getElementById("result")
+            let nhapSo=document.getElementById("nhapso").value;
+            let so1=document.getElementById("so1").value;
+            let so2=document.getElementById("so2").value;
+            let ketQua=document.getElementById("result");
             if ( so1== "usd" && so2== "vnd"){
                 ketQua="result=" + (nhapSo*23000 +"Đ" )
             }
             if (so1 =="vnd"&& so2=="usd"){
                 ketQua="result=" + (nhapSo/23000 +"$" )
             }
-            document.getElementById("result").innerHTML= ketQua
+            document.getElementById("result").innerHTML= ketQua;
         }
 
 
