@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p>
+    <span><input type="text" id="input"></span>
+    <span><button onclick="add()">Add</button></span>
+</p>
+<p id="display"></p>
+</body>
+<script>
+    let arrTab = [];
+
+    function addToTable(arrTab) {
+        let table = "<table border='1'>" +
+            "<tr>" +
+            "<th>STT</th>" +
+            "<th>Tên Sản Phẩm</th>" +
+            "<th colspan='2'>Action</th>" +
+            "</tr>"
+        for (let i = 0; i < arrTab.length; i++) {
+            table += "<tr>" +
+                "<td>" + (i + 1) + "</td>" +
+                "<td>" + arrTab[i] + "</td>" +
+                "<td>" + "<button onclick='edit(" + i + ")'>Edit</button>" + "</td>" +
+                "<td>" + "<button onclick='remove(" + i + ")'>Remove</button>" + "</td>" +
+                "</tr>";
+        }
+        table += "</table>"
+        document.getElementById("display").innerHTML = table;
+    }
+
+    addToTable(arrTab);
+
+    function add() {
+        let product = document.getElementById("input").value;
+        arrTab.push(product);
+        addToTable(arrTab);
+    }
+
+    function edit(index) {
+        arrTab[index] = prompt("Nhập tên sản phẩm");
+        addToTable(arrTab);
+    }
+
+    function remove(index) {
+        arrTab.splice(index, 1);
+        addToTable(arrTab);
+    }
+    </script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--Cho hai xâu kí tự, tìm số lượng kí tự chung giữa chúng.-->
+<!--Ví dụ: s1 = "aabcc" và s2 = "adcaa", thì kết quả commonCharacterCount(s1, s2) = 3.-->
+<!--⇨	2 xâu s1 và s2 có 3 kí tự chung: 2 kí tự 'a' và 1 kí tự 'c'.-->
+
+</body>
+<script>
+    let kyTu1 = "aabcc"
+    let kyTu2 = "adcaa"
+    let mang1 = kyTu1.split("")
+    let mang2 = kyTu2.split("")
+    let a = []
+    for (let i = 0; i < mang1.length; i++) {
+        for (let j = 0; j < mang2.length; j++) {
+            if (mang2[j].indexOf(mang1[i]) != -1) {
+                a.push(mang2[j])
+            }
+        }
+    }document.write(a)
+
+</script>
+
+
+</html>
