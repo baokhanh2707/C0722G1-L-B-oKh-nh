@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--Bài 1: Viết một hàm chuẩn hóa xâu ký tự: biến đổi xâu ký tự thành-->
+<!--xâu sao cho trong xâu không có 2 dấu cách liền nhau và bắt đầu -->
+<!--mỗi từ phải in hoa. Ví dụ tRuong    TaN   HAI => Truong Tan Hai.-->
+<!--Và một hàm tìm từ dài nhất trong 1 xâu ký tự.-->
+<!--Hàm main sử dụng các hàm này để nhập xâu ký tự từ bàn phím,-->
+<!--in ra xâu trước và sau khi chuẩn hóa, 1 từ dài nhất trong xâu đó.-->
+</body>
+<script>
+    let nhapKiTu = prompt('nhập kí tự vào đây')
+
+    function chuyenDoi(nhapten) {
+        let mang = []
+        let ketQua = nhapten.toLowerCase().split(" ");
+        for (let i = 0; i < ketQua.length; i++) {
+            if (ketQua[i] != "") {
+                mang.push(ketQua[i])
+            }
+        }
+        for (let i = 0; i < mang.length; i++) {
+            mang[i] = mang[i][0].toLocaleUpperCase() + mang[i].slice(1);
+        }
+       return  mang.join(" ");
+    }
+
+    let ketQua = chuyenDoi(nhapKiTu);
+
+    function demKyTu(mang) {
+        let nhapKyTu = mang.split(" ")
+
+        let doDaiLonNhat = nhapKyTu[0]
+        for (let i = 0; i < nhapKyTu.length; i++) {
+            if(nhapKyTu[i]>doDaiLonNhat){
+                doDaiLonNhat=nhapKyTu[i]
+            }
+        }
+        return doDaiLonNhat
+    }
+
+    document.write(ketQua+'<br>')
+    document.write(demKyTu(ketQua))
+</script>
+</html>

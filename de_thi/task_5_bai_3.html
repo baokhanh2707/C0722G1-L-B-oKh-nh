@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let mang = [[5, 1, 9, 10, 20], [4, 6, 8, 9, 2, 1]];
+
+    function kiemTraMax(mang) {
+        let max = mang[0][0]
+        for (let i = 0; i < mang.length; i++) {
+            for (let j = 0; j < mang[i].length; j++) {
+                if (max < mang[i][j]) {
+                    max = mang[i][j]
+
+                }
+
+            }
+
+        }
+        alert('số lớn nhất là '+ max)
+    }
+
+    kiemTraMax( mang)
+
+    function kiemTraMin(mang) {
+        let min = mang[0][0]
+        for (let i = 0; i < mang.length; i++) {
+            for (let j = 0; j < mang[i].length; j++) {
+                if (min > mang[i][j]) {
+                    min = mang[i][j]
+                }
+            }
+        }
+        alert('số bé nhất là '+min)
+
+    }
+    kiemTraMin( mang)
+
+</script>
+</body>
+</html>
