@@ -7,18 +7,17 @@
 <!--mảng cộng dồn-->
 <body>
 <script>
-    function prefix_sums(arr) {
-        let new_arr = [];
+    function prefixSums(arr) {
+        let arr1 = [];
+        let sum=0;
         for (let i = 0; i < arr.length; i++) {
-            new_arr[i] = 0;
-            for (let j = 0; j < i + 1; j++) {
-                new_arr[i] += arr[j];
-            }
+            sum+=arr[i];
+            arr1.push(sum)
         }
-        return new_arr;
+        return arr1;
     }
 
-    document.write(prefix_sums([1, 3, 9, 4,15]));
+    document.write(prefixSums([1, 2, 3, 4, 5]));
 
 </script>
 </body>

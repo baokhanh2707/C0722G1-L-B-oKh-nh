@@ -11,14 +11,18 @@
 <!--Ví dụ:  A=[7,2,5,3,5,3] và B=[7,2,5,4,6,3,5,3] thì kết quả missingValue(A, B) = [4, 6]-->
 </body>
 <script>
-    let mangB = [1, 2, 3,7];
-    let mangA = [1, 2, 3, 4, 5, 6];
+    let mangB = [7,2,5,3,5,3];
+    let mangA = [7,2,5,4,6,3,5,3];
     let mangC = [];
     for (let i = 0; i < mangB.length; i++) {
-        if (mangA.indexOf(mangB[i]) === -1) {
-            mangC.push(mangB[i]);
+        if (mangB.indexOf(mangA[i]) === -1) {
+            mangC.push(mangA[i]);
         }
     }
+    mangC.sort(function (a, b) {
+            return a - b;
+        }
+    )
     document.write(mangC);
 
 

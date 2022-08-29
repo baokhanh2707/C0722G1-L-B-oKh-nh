@@ -6,42 +6,53 @@
 </head>
 <body>
 <script>
-    let mang = [3, 5, 7, 10, 15, 12, 60, 98];
+    let mang = [3, 5, 89, 144, 15, 12, 60, 98];
 
-    function kiemTra(fibonaci) {
-        fibonaci = []
+
+    function soLonNhat(array) {
+        let max = array[0];
+        let maxIndex = 0;
+        for (let i = 0; i < array.length; i++) {
+            if (max < array[i]) {
+                max = array[i];
+                maxIndex = i;
+            }
+
+        }
+        return max;
+
+
+    }
+
+    function kiemTra(number) {
+        let fibonaci = [];
         let soA = 0;
         let soB = 1;
         let soC;
-        for (let i = 0; i <= 20; i++) {
-            document.write(soA + "<br>");
+        for (let i = 0; i <= number; i++) {
             soC = soA + soB;
             soA = soB;
             soB = soC;
+            fibonaci.push(soC);
         }
-        fibonaci.push(soA)
-        return fibonaci
+        return fibonaci;
     }
 
-    let fibonaci = kiemTra()
 
-    function ketQua(mang) {
-        let mangRong = []
-        for (let i = 0; i < mang.length; i++) {
-            for (let j = 0; j < fibonaci.length; j++) {
-                if (mang[i].indexOf(fibonaci[i]) !== -1) {
-                    mangRong.push(mang[i])
-                }
+    function ketQua(mang1) {
+        let mangRong = [];
+        let max = soLonNhat(mang);
+
+        for (let i = 0; i < mang1.length; i++) {
+            if (kiemTra(max).indexOf(mang1[i]) !== -1) {
+                mangRong.push(mang1[i]);
             }
-
-
         }
-        alert(mangRong)
-
-
+        return mangRong;
     }
 
-    ketQua(mang)
+    alert(ketQua(mang));
+
 </script>
 </body>
 </html>

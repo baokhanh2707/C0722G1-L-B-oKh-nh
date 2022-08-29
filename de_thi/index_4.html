@@ -12,7 +12,7 @@
 <input type="button" onclick="themMayTinh()" value="thêm 1 máy tính">
 <p id="display"></p>
 <script>
-    class mayTinh {
+    class MayTinh {
         constructor(maMay, tenMay, hangSanXuat, giaBan) {
             this.maMay = maMay;
             this.tenMay = tenMay;
@@ -25,7 +25,7 @@
         }
 
         setTenMay(tenMay) {
-            this.maMay = tenMay;
+            this.tenMay = tenMay;
         }
 
         setHangSanXuat(hangSanXuat) {
@@ -53,9 +53,9 @@
         }
     }
 
-    let mayTinh1 = new mayTinh(1, "asernitro5", "aser", 20000000);
-    let mayTinh2 = new mayTinh(2, "asernitro7", "aser", 1500000);
-    let mayTinh3 = new mayTinh(3, "asernitro9", "aser", 1800000);
+    let mayTinh1 = new MayTinh(1, "asernitro5", "aser", 20000000);
+    let mayTinh2 = new MayTinh(2, "asernitro7", "aser", 1500000);
+    let mayTinh3 = new MayTinh(3, "asernitro9", "aser", 1800000);
     let danhSachMayTinh = [mayTinh1, mayTinh2, mayTinh3];
     display(danhSachMayTinh);
 
@@ -68,7 +68,7 @@
             '        <th>Tên Máy</th>\n' +
             '        <th>Hãng Sản Xuất</th>\n' +
             '        <th>Giá Bán</th>\n' +
-            '        <th>Thêm máy</th>\n' +
+            '        <th></th>\n' +
             '    </tr>';
         for (let i = 0; i < list.length; i++) {
             tableString += '<tr>\n' +
