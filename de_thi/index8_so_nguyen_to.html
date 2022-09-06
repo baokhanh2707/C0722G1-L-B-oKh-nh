@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<script>
+    let a = prompt("nhập độ dài mảng số nguyên");
+    let array = [];
+    for (let i = 0; i < a; i++) {
+        array[i] = +prompt("nhập phần tử thứ n");
+    }
+    document.write(array + "<br>");
+    let sum = 0;
+    for (let i = 0; i < array.length; i++) {
+        if (array[i] % 2 == 1) {
+            sum = sum + array[i];
+        }
+    }
+    document.write(sum + "<br>");
+
+    function isPrime(number) {
+        if (number < 2) {
+            return false;
+        }
+        for (let i = 2; i < number; i++) {
+            if (number % i == 0) {
+                return false;
+            }
+        }
+        return true;
+    }
+
+    let sum1 = 0
+    for (let i = 0; i < array.length; i += 2) {
+        if (isPrime(array[i])) {
+            sum1 += array[i];
+        }
+    }
+    document.write(sum1 + "<br>");
+    let k = 5
+    // let viTri = array.indexOf(k);
+    document.write(array.indexOf(k));
+</script>
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    // let arr = [];
+    // let sum = 0;
+    // let element;
+    // let count = 0;
+    // let average;
+    // do {
+    //     size = +prompt("Nhập chiều dài mảng: ");điều kiện chiều dài mảng
+    // } while (size > 50);
+    // for (let i = 0; i < size; i++) {
+    //     element = +prompt("Nhập phần tử thứ: " + (i + 1));
+    //     arr.push(element);
+    // }
+    // for (let i = 0; i < arr.length; i = i + 3) {
+    //     if (arr[i] % 5 === 0) {
+    //         sum += arr[i];
+    //         count += 1;
+    //     }
+    //     average = sum / count;
+    // }
+    // alert("Các phần tử của mảng là: " + arr);
+    // alert("Giá trị trung bình của các phần tử chia hết cho 5 ở vị trí chia hết cho 3 là: " + average);
+    let n = prompt(" nhập độ dài của mảng số nguyên: ");
+    let arr = new Array(n);
+    let arr1 = [];
+    let phanTu;
+    for (let i = 0; i < n; i++) {
+        do {
+            phanTu = +prompt("nhập vào phần tử thứ: " + (i))
+            if (phanTu < 10 || phanTu > 100) {
+                alert("số nhập vào không thỏa điều kiện!")
+            } else {
+                arr[i] = phanTu;
+            }
+        } while (phanTu < 10 || phanTu > 100)
+    }
+    alert("mảng mới khi thêm các phần tử là:" + arr);
+ // điều kiện phần tử
+
+</script>
+</body>
+</html>
