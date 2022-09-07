@@ -7,7 +7,7 @@ public class CompoundArray {
         public static void main (String[]args){
             int[] arrays1 = new int[2];
             int[] arrays2 = new int[3];
-            int[] arrays3 = new int[5];
+            int[] arrays3 = new int[arrays1.length + arrays2.length];
             Scanner scanner = new Scanner(System.in);
             for (int i = 0; i < arrays1.length; i++) {
                 System.out.println("Array 1: phần tử  " + (i + 1));
