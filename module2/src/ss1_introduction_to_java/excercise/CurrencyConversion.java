@@ -6,10 +6,10 @@ public class CurrencyConversion {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         System.out.println("nhập số tiền cần đổi");
-        int vnd = 23000;
+        int rate = 23000;
         int usd;
         usd = scanner.nextInt();
-        int quyDoi = usd * vnd;
-        System.out.println("giá trị vnd là " + quyDoi);
+        int vnd = usd * rate;
+        System.out.println("giá trị vnd là " + vnd);
     }
 }
