@@ -57,14 +57,21 @@ public class BuildTheFanClass {
 
     @Override
     public String toString() {
-        return "BuildTheFanClass{" +
-                "speed=" + speed +
-                ", on=" + on +
-                ", radius=" + radius +
-                ", color='" + color + '\'' +
-                '}';
+        if (geton()) {
+            return "BuildTheFanClass{" +
+                    "speed=" + speed +
+                    ", on=" + on +
+                    ", radius=" + radius +
+                    ", color='" + color + '\'' +
+                    '}';
+        } else {
+            return "BuildTheFanClass{" +
+                    ", on=" + on +
+                    ", radius=" + radius +
+                    ", color='" + color + '\'' +
+                    '}';
+        }
     }
-
     public static void main(String[] args) {
         BuildTheFanClass fan0=new BuildTheFanClass();
         System.out.println(fan0);

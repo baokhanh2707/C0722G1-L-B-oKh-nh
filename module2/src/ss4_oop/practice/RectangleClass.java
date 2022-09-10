@@ -5,10 +5,6 @@ import java.util.Scanner;
 public class RectangleClass {
     double width;
     double height;
-
-    public RectangleClass() {
-    }
-
     public RectangleClass(double width, double height) {
         this.width = width;
         this.height = height;
