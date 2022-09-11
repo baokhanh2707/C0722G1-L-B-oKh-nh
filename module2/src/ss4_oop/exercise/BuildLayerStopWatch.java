@@ -5,11 +5,11 @@ public class BuildLayerStopWatch {
     private long endTime;
 
 
-    public void getStarTime() {
+    public void  star() {
         this.starTime = System.currentTimeMillis();
     }
 
-    public void getEndTime() {
+    public void  stop() {
         this.endTime = System.currentTimeMillis();
     }
     public long  getElapsedTime(){
@@ -18,13 +18,13 @@ public class BuildLayerStopWatch {
 
     public static void main(String[] args) {
         BuildLayerStopWatch buildLayerStopWatch  = new BuildLayerStopWatch();
-        buildLayerStopWatch.getStarTime();
+        buildLayerStopWatch.star();
         for (int i = 0; i < 1000000000; i++) {
             for (int j = 0; j < 1000000000; j++) {
 
             }
         }
-        buildLayerStopWatch.getEndTime();
+        buildLayerStopWatch.stop();
 
         System.out.println(buildLayerStopWatch.getElapsedTime()+" milliseconds");
 
