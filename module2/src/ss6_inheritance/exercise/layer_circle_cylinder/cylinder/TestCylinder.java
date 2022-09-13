@@ -1,4 +1,4 @@
-package ss6_inheritance.exercise.cylinder;
+package ss6_inheritance.exercise.layer_circle_cylinder.cylinder;
 
 public class TestCylinder {
     public static void main(String[] args) {

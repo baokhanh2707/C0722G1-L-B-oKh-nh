@@ -1,6 +1,6 @@
-package ss6_inheritance.exercise.cylinder;
+package ss6_inheritance.exercise.layer_circle_cylinder.cylinder;
 
-import ss6_inheritance.exercise.circle.Circle;
+import ss6_inheritance.exercise.layer_circle_cylinder.circles.Circle;
 
 public class Cylinder extends Circle {
     private double height =5.0;

@@ -1,4 +1,4 @@
-package ss6_inheritance.exercise.circle;
+package ss6_inheritance.exercise.layer_circle_cylinder.circles;
 
 public class Circle {
     private double radius=1.0;
