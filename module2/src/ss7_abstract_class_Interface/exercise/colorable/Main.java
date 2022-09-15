@@ -8,8 +8,8 @@ public class Main {
 
         Geometry[] geometries =new Geometry[]{square,circle,rectangle};
         for (Geometry geometry:geometries) {
-            if(geometry.equals(square)){
-                square.howToColor();
+            if(geometry instanceof Colorable){
+                ((Square)geometry).howToColor();
             }else {
                 System.out.println(geometry.getArea());
             }

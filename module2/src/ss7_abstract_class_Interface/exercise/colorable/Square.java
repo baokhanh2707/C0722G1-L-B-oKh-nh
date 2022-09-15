@@ -2,9 +2,9 @@ package ss7_abstract_class_Interface.exercise.colorable;
 
 import ss6_inheritance.practice.rectangle.Rectangle;
 
-public class  Square extends Geometry implements Colorable{
+public class Square extends Geometry implements Colorable {
 
-    private double edge ;
+    private double edge;
 
     public double getEdge() {
         return edge;
@@ -25,7 +25,7 @@ public class  Square extends Geometry implements Colorable{
 
     @Override
     double getArea() {
-        return Math.pow(this.edge,2);
+        return Math.pow(this.edge, 2);
     }
 }
 

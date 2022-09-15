@@ -2,7 +2,7 @@ package ss7_abstract_class_Interface.exercise.colorable;
 
 import ss6_inheritance.practice.shape.Shape;
 
-public class Rectangle extends Geometry implements Colorable {
+public class Rectangle extends Geometry {
     private double length;
     private double width;
 
@@ -28,12 +28,7 @@ public class Rectangle extends Geometry implements Colorable {
     }
 
     @Override
-    public void howToColor() {
-
-    }
-
-    @Override
     double getArea() {
-        return this.length*this.width;
+        return this.length * this.width;
     }
 }
