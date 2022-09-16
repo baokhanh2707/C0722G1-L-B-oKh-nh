@@ -1,63 +1,93 @@
 package ss8_clean_code.exercise;
 
 public class Refactoring {
-    public static final String LOVE = "Love";
-    public static final String FIFTEEN = "Fifteen";
-    public static final String THIRTY = "Thirty";
-    public static final String FORTY = "Forty";
+    public static String getScore(String player1Name, String player2Name, int playerScore1, int playerScore2) {
+        String score = "";
+        final int POINTSZERO = 0;
+        final int POINTSONE = 1;
+        final int POINTTWO = 2;
+        final int POINTSTHREE = 3;
 
-    public static String getScore(String player1Name, String player2Name, int score1, int score2) {
-        StringBuilder score = new StringBuilder();
-        int tempScore;
-        if (score1 == score2) {
-            switch (score1) {
-                case 0:
-                    score = new StringBuilder("LoveAll");
+        if (playerScore1 == playerScore2) {
+            switch (playerScore1) {
+                case POINTSZERO:
+                    score = "Love-All";
                     break;
-                case 1:
-                    score = new StringBuilder("FifteenAll");
+                case POINTSONE:
+                    score = "Fifteen-All";
                     break;
-                case 2:
-                    score = new StringBuilder("ThirtyAll");
+                case POINTTWO:
+                    score = "Thirty-All";
                     break;
-                case 3:
-                    score = new StringBuilder("FortyAll");
+                case POINTSTHREE:
+                    score = "Forty-All";
                     break;
                 default:
-                    score = new StringBuilder("Deuce");
+                    score = "Deuce";
                     break;
-
-            }
-        } else if (score1 >= 4 || score2 >= 4) {
-            int minusResult = score1 - score2;
-            if (minusResult == 1) score = new StringBuilder("Advantage player1");
-            else if (minusResult == -1) score = new StringBuilder("Advantage player2");
-            else if (minusResult >= 2) score = new StringBuilder("Win for player1");
-            else score = new StringBuilder("Win for player2");
-        } else {
-            for (int i = 1; i < 3; i++) {
-                if (i == 1) tempScore = score1;
-                else {
-                    score.append("-");
-                    tempScore = score2;
-                }
-                switch (tempScore) {
-                    case 0:
-                        score.append(LOVE);
-                        break;
-                    case 1:
-                        score.append(FIFTEEN);
-                        break;
-                    case 2:
-                        score.append(THIRTY);
-
-                        break;
-                    case 3:
-                        score.append(FORTY);
-                        break;
-                }
             }
         }
-        return score.toString();
+        return score;
+    }
+
+
+
+    private static String getPrize(int playerScore1, int playerScore2) {
+        boolean isPlayerScore1 = playerScore1 >= 4;
+        boolean isPlayerScore2 = playerScore2 >= 4;
+        String score = "";
+        if (isPlayerScore1 || isPlayerScore2) {
+
+            int minusResult = playerScore1 - playerScore2;
+            boolean isMinusResult1 = minusResult == 1;
+            boolean isMinusResult2 = minusResult == -1;
+            boolean isMinusResult3 = minusResult >= 2;
+
+            if (isMinusResult1) score = "Advantage player1";
+            else if (isMinusResult2) score = "Advantage player2";
+            else if (isMinusResult3) score = "Win for player1";
+            else score = "Win for player2";
+        }
+        return score;
+    }
+
+
+
+    private static String player(int playerScore1, int playerScore2) {
+        boolean isPlayerScore1 = playerScore1 >= 4;
+        boolean isPlayerScore2 = playerScore2 >= 4;
+
+        String score = "";
+        int tempScore = 0;
+        final int ZERO_SCORE = 0;
+        final int ONE_POINTS = 1;
+        final int TWO_POINTS = 2;
+        final int THREE_POINTS = 3;
+
+        if (isPlayerScore1 != isPlayerScore2) {
+            for (int i = 1; i < 3; i++) {
+                if (i == 1) tempScore = playerScore1;
+                else {
+                    score += "-";
+                    tempScore = playerScore2;
+                }
+                switch (tempScore) {
+                    case ZERO_SCORE:
+                        score += "Love";
+                        break;
+                    case ONE_POINTS:
+                        score += "Fifteen";
+                        break;
+                    case TWO_POINTS:
+                        score += "Thirty";
+                        break;
+                    case THREE_POINTS:
+                        score += "Forty";
+                        break;
+                }
+            }
+
+        }
+        return score;
     }
 }
