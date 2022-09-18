@@ -1,6 +1,5 @@
-package exercise_0.service.impl;
+package exercise_0.service.impl_teacher;
 
-import exercise_0.model.Student;
 import exercise_0.model.Teacher;
 import exercise_0.service.ITeacherService;
 

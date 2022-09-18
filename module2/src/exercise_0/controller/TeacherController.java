@@ -1,9 +1,7 @@
 package exercise_0.controller;
 
-import exercise_0.service.IStudentService;
 import exercise_0.service.ITeacherService;
-import exercise_0.service.impl.StudentService;
-import exercise_0.service.impl.TeacherService;
+import exercise_0.service.impl_teacher.TeacherService;
 
 import java.util.Scanner;
 
@@ -28,10 +26,14 @@ public class TeacherController {
                     break;
                 case 3:
                     iTeacherService.removeTeacher();
-
                     break;
                 case 4:
+                    Controller.menuCodeGym();
+                    break;
+                default:
+                    System.out.println("Bạn nhập sai rồi");
             }
         }
     }
 }
+

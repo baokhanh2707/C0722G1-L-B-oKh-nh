@@ -1,4 +1,4 @@
-package exercise_0.service.impl;
+package exercise_0.service.impl_student;
 
 import exercise_0.model.Student;
 import exercise_0.service.IStudentService;
@@ -57,7 +57,7 @@ public class StudentService implements IStudentService {
         } else {
             gender = null;
         }
-        System.out.println("Mời bạn nhập ten lớp: ");
+        System.out.println("Mời bạn nhập tên lớp: ");
         String nameClass = scanner.nextLine();
         System.out.println("Mời bạn nhập điểm học sinh: ");
         double score = Double.parseDouble(scanner.nextLine());

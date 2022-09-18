@@ -1,7 +1,7 @@
 package exercise_0.controller;
 
 import exercise_0.service.IStudentService;
-import exercise_0.service.impl.StudentService;
+import exercise_0.service.impl_student.StudentService;
 
 import java.util.Scanner;
 
@@ -27,7 +27,12 @@ public class StudentController {
                 case 3:
                     iStudentService.removeStudent();
                 case 4:
+                    Controller.menuCodeGym();
+                    break;
+                default:
+                    System.out.println("Bạn nhập sai rồi");
             }
+
         }
     }
 }
