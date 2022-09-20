@@ -8,5 +8,6 @@ import exercise_0.model.Student;
 public class Main {
     public static void main(String[] args) {
         Controller.menuCodeGym();
+
     }
 }

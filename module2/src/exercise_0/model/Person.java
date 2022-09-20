@@ -1,6 +1,7 @@
 package exercise_0.model;
 
 public abstract class Person {
+
     private String code;
     private String name;
     private String dateOfBirth;
@@ -57,4 +58,5 @@ public abstract class Person {
                 ", gender=" + gender +
                 '}';
     }
+
 }
