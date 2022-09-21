@@ -11,6 +11,7 @@ public interface IFruitService {
 
     void searchFruit();
 
-    void sortFruit();
+    void sortFruitRaise();
 
+    void sortFruitReduce();
 }
