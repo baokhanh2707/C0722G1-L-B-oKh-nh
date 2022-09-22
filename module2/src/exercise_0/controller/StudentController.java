@@ -15,7 +15,8 @@ public class StudentController {
             System.out.println("1.thêm mới học sinh");
             System.out.println("2.hiển thị danh sách học sinh");
             System.out.println("3.xóa học sinh");
-            System.out.println("4.thoát. ");
+            System.out.println("4.tìm kiếm theo mã học sinh");
+            System.out.println("5.thoát. ");
             int choice = Integer.parseInt(scanner.nextLine());
             switch (choice) {
                 case 1:
@@ -27,8 +28,12 @@ public class StudentController {
                 case 3:
                     iStudentService.removeStudent();
                 case 4:
+                    iStudentService.searchStudent();
+
+                case 5:
                     Controller.menuCodeGym();
                     break;
+
                 default:
                     System.out.println("Bạn nhập sai rồi");
             }

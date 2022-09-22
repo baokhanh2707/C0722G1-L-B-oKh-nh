@@ -15,7 +15,8 @@ public class TeacherController {
             System.out.println("1.thêm mới giáo viên");
             System.out.println("2.hiển thị danh sách giáo viên");
             System.out.println("3.xóa giáo viên");
-            System.out.println("4.thoát. ");
+            System.out.println("4.tìm kiếm theo mã giáo viên");
+            System.out.println("5.thoát. ");
             int choice = Integer.parseInt(scanner.nextLine());
             switch (choice) {
                 case 1:
@@ -28,6 +29,8 @@ public class TeacherController {
                     iTeacherService.removeTeacher();
                     break;
                 case 4:
+                    iTeacherService.searchTeacher();
+                case 5:
                     Controller.menuCodeGym();
                     break;
                 default:

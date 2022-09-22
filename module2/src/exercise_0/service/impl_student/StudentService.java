@@ -34,6 +34,16 @@ public class StudentService implements IStudentService {
     }
 
     @Override
+    public void searchStudent() {
+        System.out.println("nhập vào mã học sinh cần tìm");
+        String code=scanner.nextLine();
+        for (int i = 0; i <studentList.size() ; i++) {
+            if(studentList.get(i).getCode().contains(code)){
+                System.out.println(studentList.get(i));
+            }
+        }
+    }
+    @Override
     public void addStudent() {
         Student student = this.infoStudent();
         studentList.add(student);
