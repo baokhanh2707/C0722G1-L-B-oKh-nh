@@ -1,5 +1,6 @@
 package exercise_0.service.impl_teacher;
 
+import exercise_0.model.Student;
 import exercise_0.model.Teacher;
 import exercise_0.service.ITeacherService;
 
@@ -44,7 +45,7 @@ public class TeacherService implements ITeacherService {
         }
         System.out.print("Mời bạn nhập chuyên môn Giáo Viên: ");
         String specialize = scanner.nextLine();
-        Teacher teacher = new Teacher(code,name,dateOfBirth,gender,specialize);
+        Teacher teacher = new Teacher(code, name, dateOfBirth, gender, specialize);
         return teacher;
     }
 
@@ -72,14 +73,51 @@ public class TeacherService implements ITeacherService {
     }
 
     @Override
-    public void searchTeacher() {
+    public void searchByBiologicalId() {
         System.out.println("nhập vào mã giáo viên cần tìm");
-        String code=scanner.nextLine();
-        for (int i = 0; i <teacherList.size() ; i++) {
-            if(teacherList.get(i).getCode().contains(code)){
+        String code = scanner.nextLine();
+        for (int i = 0; i < teacherList.size(); i++) {
+            if (teacherList.get(i).getCode().equals(code)) {
                 System.out.println(teacherList.get(i));
             }
         }
     }
-}
 
+    @Override
+    public void searchByBiologicaName() {
+        System.out.println("nhập vào tên giáo viên cần tìm");
+        String name = scanner.nextLine();
+        for (int i = 0; i < teacherList.size(); i++) {
+            if (teacherList.get(i).getName().contains(name)) {
+                System.out.println(teacherList.get(i));
+            }
+        }
+    }
+
+    @Override
+    public void sortTeacher() {
+        for (int i = 0; i < teacherList.size() - 1; i++) {
+            Teacher min = teacherList.get(i);
+            int minIndex = i;
+            for (int j = i + 1; j < teacherList.size(); j++) {
+                Teacher test = teacherList.get(j);
+                if (min.getName().compareTo(test.getName()) > 0) {
+                    min = test;
+                    minIndex = j;
+                }
+                if (min.getName().compareTo(test.getName()) == 0) {
+                    int compare = min.getCode().compareTo(teacherList.get(j).getCode());
+                    if (compare > 0) {
+                        min = teacherList.get(j);
+                        minIndex = j;
+                    }
+
+                }
+            }
+            if (minIndex != i) {
+                teacherList.set(minIndex, teacherList.get(i));
+                teacherList.set(i, min);
+            }
+        }
+    }
+}

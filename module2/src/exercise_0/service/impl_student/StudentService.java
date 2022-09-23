@@ -34,15 +34,54 @@ public class StudentService implements IStudentService {
     }
 
     @Override
-    public void searchStudent() {
+    public void searchByBiologicalId() {
         System.out.println("nhập vào mã học sinh cần tìm");
-        String code=scanner.nextLine();
-        for (int i = 0; i <studentList.size() ; i++) {
-            if(studentList.get(i).getCode().contains(code)){
+        String code = scanner.nextLine();
+        for (int i = 0; i < studentList.size(); i++) {
+            if (studentList.get(i).getCode().equals(code)) {
                 System.out.println(studentList.get(i));
             }
         }
     }
+
+    @Override
+    public void searchByBiologicaName() {
+        System.out.println("nhập vào tên học sinh cần tìm");
+        String name = scanner.nextLine();
+        for (int i = 0; i < studentList.size(); i++) {
+            if (studentList.get(i).getName().contains(name)) {
+                System.out.println(studentList.get(i));
+            }
+        }
+    }
+
+    @Override
+    public void sortStudent() {
+        for (int i = 0; i < studentList.size() - 1; i++) {
+            Student min = studentList.get(i);
+            int minIndex = i;
+            for (int j = i + 1; j < studentList.size(); j++) {
+                Student test = studentList.get(j);
+                if (min.getName().compareTo(test.getName()) > 0) {
+                    min = test;
+                    minIndex = j;
+                }
+                if (min.getName().compareTo(test.getName()) == 0) {
+                    int compare = min.getCode().compareTo(studentList.get(j).getCode());
+                    if (compare > 0) {
+                        min = studentList.get(j);
+                        minIndex = j;
+                    }
+
+                }
+            }
+            if (minIndex != i) {
+                studentList.set(minIndex, studentList.get(i));
+                studentList.set(i, min);
+            }
+        }
+    }
+
     @Override
     public void addStudent() {
         Student student = this.infoStudent();

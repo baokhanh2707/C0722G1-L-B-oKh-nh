@@ -3,7 +3,7 @@ package exercise_0.controller;
 import java.util.Scanner;
 
 public class Controller {
-    private static Scanner input = new Scanner(System.in);
+    private static Scanner scanner = new Scanner(System.in);
 
     public static void menuCodeGym() {
         while (true) {
@@ -11,7 +11,7 @@ public class Controller {
             System.out.println("1.quản lý học sinh");
             System.out.println("2.quản lý giáo viên");
             System.out.println("3.Thoát.");
-            int choice = Integer.parseInt(input.nextLine());
+            int choice = Integer.parseInt(scanner.nextLine());
             switch (choice) {
                 case 1:
                     StudentController.menuStudent();
@@ -28,5 +28,4 @@ public class Controller {
 
         }
     }
-
 }

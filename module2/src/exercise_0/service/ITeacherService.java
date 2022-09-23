@@ -7,9 +7,11 @@ public interface ITeacherService {
 
     void displayAllTeacher();
 
-    Teacher infoTeacher();
-
     void removeTeacher();
 
-    void searchTeacher();
+    void searchByBiologicalId();
+
+    void searchByBiologicaName();
+
+    void sortTeacher();
 }

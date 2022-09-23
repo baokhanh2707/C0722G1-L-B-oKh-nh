@@ -8,6 +8,7 @@ import java.util.Scanner;
 public class TeacherController {
     private static Scanner scanner = new Scanner(System.in);
     private static ITeacherService iTeacherService = new TeacherService();
+    private static TeacherController teacherController = new TeacherController();
 
     public static void menuTeacher() {
         while (true) {
@@ -15,8 +16,9 @@ public class TeacherController {
             System.out.println("1.thêm mới giáo viên");
             System.out.println("2.hiển thị danh sách giáo viên");
             System.out.println("3.xóa giáo viên");
-            System.out.println("4.tìm kiếm theo mã giáo viên");
-            System.out.println("5.thoát. ");
+            System.out.println("4.tìm kiếm  giáo viên");
+            System.out.println("5.sắp xếp giáo viên theo tên  ");
+            System.out.println("6.thoáy");
             int choice = Integer.parseInt(scanner.nextLine());
             switch (choice) {
                 case 1:
@@ -29,8 +31,10 @@ public class TeacherController {
                     iTeacherService.removeTeacher();
                     break;
                 case 4:
-                    iTeacherService.searchTeacher();
+                    teacherController.searchTeacher();
                 case 5:
+                    iTeacherService.sortTeacher();
+                case 6:
                     Controller.menuCodeGym();
                     break;
                 default:
@@ -38,5 +42,18 @@ public class TeacherController {
             }
         }
     }
-}
 
+    void searchTeacher() {
+        System.out.println("1.bạn muốn tìm kiếm theo id ");
+        System.out.println("2.bạn muốn tìm kiếm theo tên");
+        int choice = Integer.parseInt(scanner.nextLine());
+        switch (choice) {
+            case 1:
+                iTeacherService.searchByBiologicalId();
+                break;
+            case 2:
+                iTeacherService.searchByBiologicaName();
+                break;
+        }
+    }
+}
