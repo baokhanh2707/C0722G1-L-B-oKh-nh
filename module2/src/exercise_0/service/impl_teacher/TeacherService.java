@@ -3,6 +3,7 @@ package exercise_0.service.impl_teacher;
 import exercise_0.model.Student;
 import exercise_0.model.Teacher;
 import exercise_0.service.ITeacherService;
+import exercise_0.service.impl_student.Exception;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -29,8 +30,17 @@ public class TeacherService implements ITeacherService {
     public Teacher infoTeacher() {
         System.out.print("Mời bạn nhập mã Giáo Viên: ");
         String code = scanner.nextLine();
-        System.out.print("Mời bạn nhập tên Giáo Viên: ");
-        String name = scanner.nextLine();
+        String name;
+        while (true){
+            try {
+                System.out.println("mời nhập tên giáo viên");
+                name= scanner.nextLine();
+                Exception.checkName(name);
+                break;
+            }catch (Exception e){
+                System.out.println(e.getMessage());
+            }
+        }
         System.out.println("Mời nhập ngày sinh Giáo Viên");
         String dateOfBirth = scanner.nextLine();
         System.out.print("Mời bạn nhập giới tính Giáo Viên: ");

@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class Controller {
     private static Scanner scanner = new Scanner(System.in);
 
-    public static void menuCodeGym() {
+    public static void menuCodeGym()  {
         while (true) {
             System.out.println("Nhập lựa chon chương trình của bạn:");
             System.out.println("1.quản lý học sinh");

@@ -92,8 +92,17 @@ public class StudentService implements IStudentService {
     public Student infoStudent() {
         System.out.println("Mời nhập mã học sinh: ");
         String code = scanner.nextLine();
-        System.out.println("Mời nhập tên học sinh: ");
-        String name = scanner.nextLine();
+        String name;
+        while (true){
+            try {
+                System.out.println("mời nhập tên học sinh");
+                name= scanner.nextLine();
+                Exception.checkName(name);
+                break;
+            }catch (Exception e){
+                System.out.println(e.getMessage());
+            }
+        }
         System.out.println("Mời nhập ngày sinh học sinh");
         String dateOfBirth = scanner.nextLine();
         System.out.println("Mời nhập giới tính học sinh: ");
@@ -108,11 +117,20 @@ public class StudentService implements IStudentService {
         }
         System.out.println("Mời bạn nhập tên lớp: ");
         String nameClass = scanner.nextLine();
-        System.out.println("Mời bạn nhập điểm học sinh: ");
-        double score = Double.parseDouble(scanner.nextLine());
+        double score;
+        while (true) {
+            try {
+                System.out.println("Mời bạn nhập điểm học sinh: ");
+                score = Double.parseDouble(scanner.nextLine());
+                break;
+            } catch (NumberFormatException e) {
+                System.out.println(e.getMessage());
+            }
+        }
         Student student = new Student(code, name, dateOfBirth, gender, nameClass, score);
         return student;
     }
+
 
     @Override
     public void displayAllStudent() {
@@ -120,6 +138,6 @@ public class StudentService implements IStudentService {
             System.out.println(student);
         }
     }
-}
 
+}
 
