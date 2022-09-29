@@ -41,4 +41,9 @@ public class Student extends Person {
                 ", score=" + score +
                 "} " + super.toString();
     }
+
+
+    public String getInfor() {
+         return  String.format("%s,%s,%s,%s,%s,%f",getCode(),getName(),getDateOfBirth(),getGender(),getNameClass(),getScore());
+    }
 }

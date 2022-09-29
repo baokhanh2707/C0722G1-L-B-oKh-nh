@@ -2,10 +2,12 @@ package exercise_0.service;
 
 import exercise_0.model.Teacher;
 
-public interface ITeacherService {
-    void addTeacher();
+import java.io.IOException;
 
-    void displayAllTeacher();
+public interface ITeacherService {
+    void addTeacher() throws IOException;
+
+    void displayAllTeacher() throws IOException;
 
     void removeTeacher();
 

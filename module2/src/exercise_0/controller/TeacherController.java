@@ -3,6 +3,7 @@ package exercise_0.controller;
 import exercise_0.service.ITeacherService;
 import exercise_0.service.impl_teacher.TeacherService;
 
+import java.io.IOException;
 import java.util.Scanner;
 
 public class TeacherController {
@@ -10,7 +11,7 @@ public class TeacherController {
     private static ITeacherService iTeacherService = new TeacherService();
     private static TeacherController teacherController = new TeacherController();
 
-    public static void menuTeacher() {
+    public static void menuTeacher() throws IOException {
         while (true) {
             System.out.println("-----------------------------");
             System.out.println("1.thêm mới giáo viên");

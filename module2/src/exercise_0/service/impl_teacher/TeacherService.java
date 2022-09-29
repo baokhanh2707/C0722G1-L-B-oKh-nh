@@ -5,6 +5,7 @@ import exercise_0.model.Teacher;
 import exercise_0.service.ITeacherService;
 import exercise_0.service.impl_student.Exception;
 
+import java.io.*;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
@@ -14,16 +15,44 @@ public class TeacherService implements ITeacherService {
     private static List<Teacher> teacherList = new ArrayList<>();
 
     @Override
-    public void addTeacher() {
+    public void addTeacher() throws IOException {
+        List<Teacher> teacherList=getAllTeacherFromFile();
         Teacher teacher = infoTeacher();
         teacherList.add(teacher);
         System.out.println("Thêm mới thành công");
+        writeFile(teacherList);
     }
 
+    private List<Teacher> getAllTeacherFromFile() throws IOException {
+        File file = new File("D:\\C0722G1-L-B-oKh-nh\\module2\\src\\exercise_0\\data\\ReadTeacher.txt");
+        FileReader fileReader = new FileReader(file);
+        BufferedReader bufferedReader = new BufferedReader(fileReader);
+        String line;
+        List<Teacher> teacherList = new ArrayList<>();
+        while ((line = bufferedReader.readLine()) != null) {
+            String[] list = line.split(",");
+            Teacher teacher = new Teacher(list[0], list[1],list[2],Boolean.getBoolean(list[3]),list[4]);
+            teacherList.add(teacher);
+        }
+        bufferedReader.close();
+        return teacherList;
+    }
+    private void writeFile(List<Teacher>teacherList)throws IOException{
+        File file=new File("D:\\C0722G1-L-B-oKh-nh\\module2\\src\\exercise_0\\data\\ReadTeacher.txt");
+        BufferedWriter bufferedWriter=new BufferedWriter(new FileWriter(file));
+        for (Teacher teacher:teacherList) {
+            bufferedWriter.write(teacher.getInfor());
+            bufferedWriter.newLine();
+        }
+        bufferedWriter.close();
+    }
+
+
     @Override
-    public void displayAllTeacher() {
+    public void displayAllTeacher() throws IOException {
+        teacherList=getAllTeacherFromFile();
         for (Teacher teacher : teacherList) {
-            System.out.println(teacher);
+            System.out.println(teacher.getInfor());
         }
     }
 

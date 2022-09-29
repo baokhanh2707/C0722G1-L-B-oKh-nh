@@ -28,5 +28,11 @@ private String specialize;
         return "Teacher{" +
                 "specialize='" + specialize + '\'' +
                 '}'+super.toString();
+
+    }
+
+
+    public String getInfor() {
+        return String .format("%s,%s,%s,%s,%s",getCode(),getName(),getDateOfBirth(),getGender(),getSpecialize());
     }
 }
