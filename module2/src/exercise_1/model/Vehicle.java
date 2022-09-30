@@ -1,18 +1,20 @@
 package exercise_1.model;
 
-public abstract class  Vehicle {
+import javafx.beans.binding.Bindings;
+
+public abstract class Vehicle {
     private String licensePlate;
-    private  String manufacturerCode;
-    private  String manufacturerName;
+    private String manufacturerCode;
+    private String manufacturerName;
     private String nation;
     private int producedYear;
     private String owner;
 
-    public Vehicle(String licensePlate,String manufacturerCode,String manufacturerName,String nation, int producedYear, String owner) {
+    public Vehicle(String licensePlate, String manufacturerCode, String manufacturerName, String nation, int producedYear, String owner) {
         this.licensePlate = licensePlate;
         this.manufacturerCode = manufacturerCode;
         this.manufacturerName = manufacturerName;
-        this.nation=nation;
+        this.nation = nation;
         this.producedYear = producedYear;
         this.owner = owner;
     }
@@ -80,3 +82,5 @@ public abstract class  Vehicle {
                 '}';
     }
 }
+
+

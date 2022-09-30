@@ -18,6 +18,9 @@ public class Car extends Vehicle {
         this.typeCar = typeCar;
     }
 
+    public Car(int code, String name, String manufacturer, double price) {
+    }
+
     public int getSeatsNumber() {
         return seatsNumber;
     }

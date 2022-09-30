@@ -2,7 +2,6 @@ package exercise_0.service.impl_student;
 
 import exercise_0.model.Student;
 import exercise_0.service.IStudentService;
-import ss16_test_file.exercise.read_file.Nation;
 
 import java.io.*;
 import java.util.ArrayList;
@@ -86,13 +85,13 @@ public class StudentService implements IStudentService {
 
     @Override
     public void addStudent() throws IOException {
-        List<Student> studentList=getAllStudentFromFile();
+        List<Student> studentList= readFile();
         Student student = this.infoStudent();
         studentList.add(student);
         System.out.println("Thêm mới thành công");
         writeFile(studentList);
     }
-    private List<Student> getAllStudentFromFile() throws IOException {
+    private List<Student> readFile() throws IOException {
         File file = new File("D:\\C0722G1-L-B-oKh-nh\\module2\\src\\exercise_0\\data\\readStudent.txt");
         FileReader fileReader = new FileReader(file);
         BufferedReader bufferedReader = new BufferedReader(fileReader);
@@ -160,7 +159,7 @@ public class StudentService implements IStudentService {
 
     @Override
     public void displayAllStudent() throws IOException {
-studentList = getAllStudentFromFile();
+studentList = readFile();
         for (Student student : studentList) {
             System.out.println(student.getInfor());
         }
