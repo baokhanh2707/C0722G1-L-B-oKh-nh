@@ -19,7 +19,7 @@ public class TeacherController {
             System.out.println("3.xóa giáo viên");
             System.out.println("4.tìm kiếm  giáo viên");
             System.out.println("5.sắp xếp giáo viên theo tên  ");
-            System.out.println("6.thoáy");
+            System.out.println("6.thoát");
             int choice = Integer.parseInt(scanner.nextLine());
             switch (choice) {
                 case 1:

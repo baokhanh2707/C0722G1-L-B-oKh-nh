@@ -7,6 +7,8 @@ import java.io.*;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 public class StudentService implements IStudentService {
     private static Scanner scanner = new Scanner(System.in);
@@ -85,12 +87,13 @@ public class StudentService implements IStudentService {
 
     @Override
     public void addStudent() throws IOException {
-        List<Student> studentList= readFile();
+        List<Student> studentList = readFile();
         Student student = this.infoStudent();
         studentList.add(student);
         System.out.println("Thêm mới thành công");
         writeFile(studentList);
     }
+
     private List<Student> readFile() throws IOException {
         File file = new File("D:\\C0722G1-L-B-oKh-nh\\module2\\src\\exercise_0\\data\\readStudent.txt");
         FileReader fileReader = new FileReader(file);
@@ -99,37 +102,51 @@ public class StudentService implements IStudentService {
         List<Student> studentList = new ArrayList<>();
         while ((line = bufferedReader.readLine()) != null) {
             String[] list = line.split(",");
-            Student student = new Student(list[0], list[1],list[2],Boolean.getBoolean(list[3]),list[4],Double.parseDouble(list[5]));
+            Student student = new Student(list[0], list[1], list[2], Boolean.getBoolean(list[3]), list[4], Double.parseDouble(list[5]));
             studentList.add(student);
         }
         bufferedReader.close();
         return studentList;
     }
-    private void writeFile(List<Student>studentList)throws IOException{
-        File file=new File("D:\\C0722G1-L-B-oKh-nh\\module2\\src\\exercise_0\\data\\readStudent.txt");
-        BufferedWriter bufferedWriter=new BufferedWriter(new FileWriter(file));
-        for (Student student:studentList) {
+
+    private void writeFile(List<Student> studentList) throws IOException {
+        File file = new File("D:\\C0722G1-L-B-oKh-nh\\module2\\src\\exercise_0\\data\\readStudent.txt");
+        BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter(file));
+        for (Student student : studentList) {
             bufferedWriter.write(student.getInfor());
             bufferedWriter.newLine();
         }
         bufferedWriter.close();
     }
+
     public Student infoStudent() {
-        System.out.println("Mời nhập mã học sinh: ");
-        String code = scanner.nextLine();
-        String name;
-        while (true){
+        String code;
+        while (true) {
             try {
-                System.out.println("mời nhập tên học sinh");
-                name= scanner.nextLine();
-                Exception.checkName(name);
+                code = Exception.checkCode();
                 break;
-            }catch (Exception e){
+            } catch (Exception e) {
                 System.out.println(e.getMessage());
             }
         }
-        System.out.println("Mời nhập ngày sinh học sinh");
-        String dateOfBirth = scanner.nextLine();
+        String name;
+        while (true) {
+            try {
+                name = Exception.checkName();
+                break;
+            } catch (Exception e) {
+                System.out.println(e.getMessage());
+            }
+        }
+        String dateOfBirth;
+        while (true) {
+            try {
+                dateOfBirth = Exception.checkdateOfBirth();
+                break;
+            } catch (Exception e) {
+                System.out.println(e.getMessage());
+            }
+        }
         System.out.println("Mời nhập giới tính học sinh: ");
         String tempGender = scanner.nextLine();
         Boolean gender;
@@ -140,13 +157,24 @@ public class StudentService implements IStudentService {
         } else {
             gender = null;
         }
-        System.out.println("Mời bạn nhập tên lớp: ");
-        String nameClass = scanner.nextLine();
+        String nameClass;
+        while (true) {
+            try {
+                nameClass = Exception.checkNameClass();
+                break;
+            } catch (Exception e) {
+                System.out.println(e.getMessage());
+            }
+        }
         double score;
         while (true) {
             try {
                 System.out.println("Mời bạn nhập điểm học sinh: ");
                 score = Double.parseDouble(scanner.nextLine());
+                while (score < 0 || score > 10) {
+                    System.out.println("bạn nhập sai điểm mời nhập lại");
+                    score = Double.parseDouble(scanner.nextLine());
+                }
                 break;
             } catch (NumberFormatException e) {
                 System.out.println(e.getMessage());
@@ -159,7 +187,7 @@ public class StudentService implements IStudentService {
 
     @Override
     public void displayAllStudent() throws IOException {
-studentList = readFile();
+        studentList = readFile();
         for (Student student : studentList) {
             System.out.println(student.getInfor());
         }

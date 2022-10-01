@@ -2,4 +2,6 @@
 2,Lê Bảo Khánh,20,false,20,1.000000
 1,Lê Bảo Khánh,2,false,2,2.000000
 1,Lê Bảo Khánh,1,false,1,1.000000
-1,Lê Bảo,2,null,2,2.000000
+1,Lê Bảo,2,false,2,2.000000
+1,null,1,false,1,1.000000
+CG234,Lê Bảo Khánh,27/07/2222,true,C0722G1,9.000000

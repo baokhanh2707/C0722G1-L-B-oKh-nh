@@ -16,7 +16,7 @@ public class TeacherService implements ITeacherService {
 
     @Override
     public void addTeacher() throws IOException {
-        List<Teacher> teacherList=getAllTeacherFromFile();
+        List<Teacher> teacherList = getAllTeacherFromFile();
         Teacher teacher = infoTeacher();
         teacherList.add(teacher);
         System.out.println("Thêm mới thành công");
@@ -31,16 +31,17 @@ public class TeacherService implements ITeacherService {
         List<Teacher> teacherList = new ArrayList<>();
         while ((line = bufferedReader.readLine()) != null) {
             String[] list = line.split(",");
-            Teacher teacher = new Teacher(list[0], list[1],list[2],Boolean.getBoolean(list[3]),list[4]);
+            Teacher teacher = new Teacher(list[0], list[1], list[2], Boolean.getBoolean(list[3]), list[4]);
             teacherList.add(teacher);
         }
         bufferedReader.close();
         return teacherList;
     }
-    private void writeFile(List<Teacher>teacherList)throws IOException{
-        File file=new File("D:\\C0722G1-L-B-oKh-nh\\module2\\src\\exercise_0\\data\\ReadTeacher.txt");
-        BufferedWriter bufferedWriter=new BufferedWriter(new FileWriter(file));
-        for (Teacher teacher:teacherList) {
+
+    private void writeFile(List<Teacher> teacherList) throws IOException {
+        File file = new File("D:\\C0722G1-L-B-oKh-nh\\module2\\src\\exercise_0\\data\\ReadTeacher.txt");
+        BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter(file));
+        for (Teacher teacher : teacherList) {
             bufferedWriter.write(teacher.getInfor());
             bufferedWriter.newLine();
         }
@@ -50,28 +51,40 @@ public class TeacherService implements ITeacherService {
 
     @Override
     public void displayAllTeacher() throws IOException {
-        teacherList=getAllTeacherFromFile();
+        teacherList = getAllTeacherFromFile();
         for (Teacher teacher : teacherList) {
             System.out.println(teacher.getInfor());
         }
     }
 
     public Teacher infoTeacher() {
-        System.out.print("Mời bạn nhập mã Giáo Viên: ");
-        String code = scanner.nextLine();
-        String name;
-        while (true){
+        String code;
+        while (true) {
             try {
-                System.out.println("mời nhập tên giáo viên");
-                name= scanner.nextLine();
-                Exception.checkName(name);
+                code = Exception.checkCode();
                 break;
-            }catch (Exception e){
+            } catch (Exception e) {
                 System.out.println(e.getMessage());
             }
         }
-        System.out.println("Mời nhập ngày sinh Giáo Viên");
-        String dateOfBirth = scanner.nextLine();
+        String name;
+        while (true) {
+            try {
+                name = Exception.checkName();
+                break;
+            } catch (Exception e) {
+                System.out.println(e.getMessage());
+            }
+        }
+        String dateOfBirth;
+        while (true) {
+            try {
+                dateOfBirth = Exception.checkdateOfBirth();
+                break;
+            } catch (Exception e) {
+                System.out.println(e.getMessage());
+            }
+        }
         System.out.print("Mời bạn nhập giới tính Giáo Viên: ");
         String tempGender = scanner.nextLine();
         Boolean gender;
@@ -82,10 +95,18 @@ public class TeacherService implements ITeacherService {
         } else {
             gender = null;
         }
-        System.out.print("Mời bạn nhập chuyên môn Giáo Viên: ");
-        String specialize = scanner.nextLine();
+        String specialize;
+        while (true) {
+            try {
+                specialize = Exception.checkSpecialize();
+                break;
+            } catch (Exception e) {
+                System.out.println(e.getMessage());
+            }
+        }
         Teacher teacher = new Teacher(code, name, dateOfBirth, gender, specialize);
         return teacher;
+
     }
 
     @Override
