@@ -1,6 +1,5 @@
-package exercise_0.service.impl_student;
+package exercise_0.service;
 
-import java.sql.SQLOutput;
 import java.util.Scanner;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;

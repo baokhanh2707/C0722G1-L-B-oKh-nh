@@ -1,9 +1,8 @@
 package exercise_0.service.impl_teacher;
 
-import exercise_0.model.Student;
 import exercise_0.model.Teacher;
 import exercise_0.service.ITeacherService;
-import exercise_0.service.impl_student.Exception;
+import exercise_0.service.Exception;
 
 import java.io.*;
 import java.util.ArrayList;

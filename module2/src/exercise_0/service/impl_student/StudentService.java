@@ -1,14 +1,13 @@
 package exercise_0.service.impl_student;
 
 import exercise_0.model.Student;
+import exercise_0.service.Exception;
 import exercise_0.service.IStudentService;
 
 import java.io.*;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
 
 public class StudentService implements IStudentService {
     private static Scanner scanner = new Scanner(System.in);
