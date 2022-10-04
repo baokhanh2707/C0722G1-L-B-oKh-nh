@@ -2,9 +2,35 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Title</title>
 </head>
 <body>
-$END$
+<!--dạng sóng-->
 </body>
+<script>
+    // let kichThuoc = +prompt('nhập kích thước mảng');
+    // let mang = new Array(kichThuoc);
+    // for (let i = 0; i < kichThuoc; i++) {
+    //     mang[i] = +prompt('nhập phần tử mảng');
+    //
+    // }
+    // alert(mang)
+    mang = [5, 2, 6, 3, 1]
+
+    function kiemtra(mang) {
+        count = 0
+        for (let i = 0; i < mang.length; i++) {
+            if (mang[i] < mang[i + 1] && mang[i + 2] < mang[i + 1] || mang[i] > mang[i + 1] && mang[i + 2] > mang[i + 1]) {
+                count = 1
+            }
+        }
+        if (count === 1) {
+            return true
+        } else {
+            return false
+        }
+    }
+
+    alert(kiemtra(mang))
+</script>
 </html>

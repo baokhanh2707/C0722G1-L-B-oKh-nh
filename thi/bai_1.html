@@ -2,9 +2,25 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Title</title>
 </head>
 <body>
-$END$
+<script>
+    let soNguyen = prompt(' nhập số nguyên');
+    while (soNguyen < 0 || isNaN(soNguyen)) {
+        soNguyen = +prompt('nhập lại số');
+    }
+    let uoc = [];
+    for (let i = 1; i <= soNguyen; i++) {
+
+        if (soNguyen % i === 0) {
+            uoc.push(i);
+
+        }
+    }
+    alert('uớc của số nguyên là' + uoc);
+
+
+</script>
 </body>
 </html>

@@ -11,28 +11,20 @@
 
 </body>
 <script>
-    let kyTu1 = "adadadsad"
-    let kyTu2 = "abcd"
-    let mang1 = kyTu1.split("")
-    let mang2 = kyTu2.split("")
-    let a = []
-    let b = []
+    let kyTu1 = "aabcc";
+    let kyTu2 = "adcaa";
+    let mang1 = kyTu1.split("");
+    let mang2 = kyTu2.split("");
+    let a = [];
     for (let i = 0; i < mang1.length; i++) {
-        for (let j = 0; j < mang2.length; j++) {
-            if (mang2[j].indexOf(mang1[i]) !== -1) {
-                a.push(mang2[j])
-            }
+        let index = mang2.indexOf(mang1[i]);
+        if (index !== -1) {
+            a.push(mang1[i]);
+            mang2.splice(index, 1);
         }
     }
-
-    for (let i = 0; i < a.length; i++) {
-        if (b.indexOf(a[i]) === -1) {
-            b.push(a[i])
-
-        }
-    }
-    alert('các kí tự khác nhau là' + b)
-    alert('số kí tự khác nhau là' + b.length)
+    alert('các kí tự khác nhau là' + a);
+    alert('số kí tự khác nhau là' + a.length);
 
 </script>
 

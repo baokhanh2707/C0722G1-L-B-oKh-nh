@@ -3,9 +3,9 @@ package furama_resort.models;
 public class Employee extends Person {
     String level;
     String location;
-    double wage ;
+    String wage;
 
-    public Employee(String code, String name, String dayOfBirth, String gender, int idNumber, int phoneNumber, String email, String level, String location, double wage) {
+    public Employee(String code, String name, String dayOfBirth, String gender, String idNumber, String phoneNumber, String email, String level, String location, String wage) {
         super(code, name, dayOfBirth, gender, idNumber, phoneNumber, email);
         this.level = level;
         this.location = location;
@@ -31,11 +31,11 @@ public class Employee extends Person {
         this.location = location;
     }
 
-    public double getWage() {
+    public String getWage() {
         return wage;
     }
 
-    public void setWage(double wage) {
+    public void setWage(String wage) {
         this.wage = wage;
     }
 
@@ -45,6 +45,6 @@ public class Employee extends Person {
                 "level='" + level + '\'' +
                 ", location='" + location + '\'' +
                 ", wage=" + wage +
-                '}'+ super.toString();
+                '}' + super.toString();
     }
 }

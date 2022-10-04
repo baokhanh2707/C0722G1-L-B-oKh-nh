@@ -2,9 +2,29 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>bài 3</title>
 </head>
 <body>
-$END$
+<script>
+let kichThuoc = +prompt('nhập độ dài của mảng vào đây');
+let soNguyen = new Array(kichThuoc);
+for (let i = 0; i < soNguyen.length; i++) {
+let phanTu = +prompt("nhập phần tử của mảng");
+soNguyen[i] = phanTu;
+}alert(soNguyen)
+    let soNguyenN=prompt('nhập số nguyên n vào đây');
+    function kiemTra(soNguyen,soNguyenN) {
+        let mang=[]
+        for (let i = 0; i <soNguyen.length ; i++) {
+            if(soNguyen.indexOf(soNguyenN)===-1){
+                mang.push(soNguyen[i]);
+            }
+
+        }
+       alert(mang)
+
+    }
+    alert(kiemTra(soNguyen,soNguyenN))
+</script>
 </body>
 </html>

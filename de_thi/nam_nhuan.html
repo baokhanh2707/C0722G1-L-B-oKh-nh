@@ -2,9 +2,41 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Title</title>
 </head>
 <body>
-$END$
+<script>
+function isValidDate(strDate) {
+if (strDate.length != 10) return false;
+let dateParts = strDate.split("/");
+let date = new Date(dateParts[2], (dateParts[1] - 1), dateParts[0]);
+if (date.getDate() == dateParts[0] && date.getMonth() == (dateParts[1] - 1) && date.getFullYear() == dateParts[2]) {
+return true;
+} else
+return false;
+}
+
+function nhapso(year1) {
+if (year1 % 4 == 0 && year1 % 100 !== 0) {
+alert("Năm này là năm nhuận");
+} else if (year1 % 100 == 0 && year1 % 400 == 0) {
+alert("Năm này là năm nhuận");
+} else {
+alert("Năm này là năm không nhuận");
+}
+}
+
+let str = prompt("nhập ngày tháng năm");
+if (isValidDate(str) == false) {
+alert("Yêu cầu nhập đúng định dạng dd/MM/yyyy");
+} else {
+alert("Chuỗi nhập đúng định dạng");
+}
+
+let year = +prompt("nhập năm cần kiểm tra");
+console.log("year nhập enter: " + year)
+nhapso(year);
+
+</script>
 </body>
 </html>

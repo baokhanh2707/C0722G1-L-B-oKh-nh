@@ -2,9 +2,40 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Title</title>
 </head>
 <body>
-$END$
+<script>
+    let ketQua=[];
+    let kichThuoc = +prompt('nhập độ dài của mảng vào đây');
+    let mang = new Array(kichThuoc);
+    for (let i = 0; i < mang.length; i++) {
+        let n = +prompt("nhập phần tử của mảng");
+        mang[i] = n;
+    }
+    alert(mang);
+
+    function kiemTraSolon(mang) {
+        let soLonNhat = mang[0];
+        for (let i = 0; i < mang.length; i++) {
+            if (soLonNhat < mang[i]) {
+                soLonNhat = mang[i];
+            }
+        }return mang.indexOf(soLonNhat);
+
+    }
+    function kiemTraSoBe(mang) {
+        let soBeNhat = mang[0];
+        for (let i = 0; i < mang.length; i++) {
+            if (soBeNhat > mang[i]) {
+                soBeNhat = mang[i];
+            }
+        }return mang.indexOf(soBeNhat);
+   }
+document.write(kiemTraSoBe(mang));
+    document.write(kiemTraSolon(mang));
+    ketQua.push(kiemTraSolon(mang),kiemTraSoBe(mang));
+
+</script>
 </body>
 </html>

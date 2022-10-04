@@ -6,6 +6,19 @@ public abstract class  Facility {
     private double rentalCosts;
     private int maximumNumberOfPeople;
     private int rentalType;  //theo tháng năm ngày giờ
+    private String serviceCode;
+
+    public String getServiceCode() {
+        return serviceCode;
+    }
+
+    public void setServiceCode(String serviceCode) {
+        this.serviceCode = serviceCode;
+    }
+
+    public Facility(String serviceCode) {
+        this.serviceCode = serviceCode;
+    }
 
     public Facility(String serviceName, double usableArea, double rentalCosts, int maximumNumberOfPeople, int rentalType) {
         this.serviceName = serviceName;
@@ -66,6 +79,7 @@ public abstract class  Facility {
                 ", rentalCosts=" + rentalCosts +
                 ", maximumNumberOfPeople=" + maximumNumberOfPeople +
                 ", rentalType=" + rentalType +
+                ", serviceCode='" + serviceCode + '\'' +
                 '}';
     }
 }

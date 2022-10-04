@@ -1,8 +1,11 @@
 package furama_resort.services.impl_customer;
 
 import furama_resort.models.Customer;
+import furama_resort.models.Employee;
 import furama_resort.services.ICustomerService;
 
+import java.io.*;
+import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Scanner;
@@ -21,9 +24,9 @@ public class CustomerService implements ICustomerService {
         System.out.println("Mời bạn nhập giới tính khách hàng");
         String gender = scanner.nextLine();
         System.out.println("Mời bạn nhập số CMND khách hàng");
-        int idNumber = Integer.parseInt(scanner.nextLine());
+        String idNumber = scanner.nextLine();
         System.out.println("Mời bạn nhập số điện thoại khách hàng");
-        int phoneNumber = Integer.parseInt(scanner.nextLine());
+        String phoneNumber = scanner.nextLine();
         System.out.println("Mời bạn nhập email khách hàng");
         String email = scanner.nextLine();
         System.out.println("Mời bạn nhập lựa chọn  loại khách");
@@ -61,6 +64,7 @@ public class CustomerService implements ICustomerService {
 
     @Override
     public void displayCustomer() {
+        customerList=readLife();
         for (Customer customer : customerList) {
             System.out.println(customer);
         }
@@ -68,13 +72,16 @@ public class CustomerService implements ICustomerService {
 
     @Override
     public void addCustomer() {
+        List<Customer>customerList=readLife();
         Customer customer = infoCustomer();
         customerList.add(customer);
         System.out.println("thêm mới thành công");
+        writeLife(customerList);
     }
 
     @Override
     public void editCustomer() {
+        customerList=readLife();
         System.out.println("mời bạn nhập mã khách hàng cần sửa");
         String code = scanner.nextLine();
         for (int i = 0; i < customerList.size(); i++) {
@@ -89,10 +96,10 @@ public class CustomerService implements ICustomerService {
                 String gender = scanner.nextLine();
                 customerList.get(i).setGender(gender);
                 System.out.println("Mời bạn nhập số CMND mới nhân viên");
-                int idNumber = Integer.parseInt(scanner.nextLine());
+                String idNumber = scanner.nextLine();
                 customerList.get(i).setIdNumber(idNumber);
                 System.out.println("Mời bạn nhập số điện thoại mới khách hàng");
-                int phoneNumber = Integer.parseInt(scanner.nextLine());
+                String phoneNumber = scanner.nextLine();
                 customerList.get(i).setPhoneNumber(phoneNumber);
                 System.out.println("Mời bạn nhập email mới của khách hàng");
                 String email = scanner.nextLine();
@@ -131,5 +138,53 @@ public class CustomerService implements ICustomerService {
                 System.out.println("Sửa đổi thành công");
             }
         }
+        writeLife(customerList);
+    }
+    private List<Customer> readLife() {
+        List<Customer> customerList = new ArrayList<>();
+        BufferedReader bufferedReader = null;
+        try {
+            File file = new File("D:\\C0722G1-L-B-oKh-nh\\module2\\src\\furama_resort\\data\\customer.txt");
+            FileReader fileReader = new FileReader(file);
+            bufferedReader = new BufferedReader(fileReader);
+            String line;
+            while ((line = bufferedReader.readLine()) != null) {
+                String[] list = line.split(",");
+                Customer customer = new Customer(list[0],list[1],list[2],list[3],list[4],list[5],list[6],list[7],list[8]);
+                customerList.add(customer);
+            }
+        } catch (FileNotFoundException e) {
+            e.getMessage();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        try {
+            bufferedReader.close();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return customerList;
+    }
+
+    public void writeLife(List<Customer> customerList) {
+        BufferedWriter bufferedWriter = null;
+        try {
+            File file = new File("D:\\C0722G1-L-B-oKh-nh\\module2\\src\\furama_resort\\data\\customer.txt");
+            bufferedWriter = new BufferedWriter(new FileWriter(file));
+            for (Customer customer : customerList) {
+                bufferedWriter.write(getInfor(customer));
+                bufferedWriter.newLine();
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        try {
+            bufferedWriter.close();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+    private String getInfor(Customer customer) {
+        return customer.getCode() + "," + customer.getName() + "," + customer.getDayOfBirth() + "," + customer.getGender() + "," + customer.getIdNumber() + "," + customer.getPhoneNumber() + "," + customer.getEmail() + "," + customer.getTypeOfGuest() + "," + customer.getAddress();
     }
 }

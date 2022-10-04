@@ -1,13 +1,13 @@
 package furama_resort.models;
 
 public class Contract {
-    private int syncNumber ;
+    private String syncNumber ;
     private String codeBooking;
-    private int advanceDepositAmount;
-    private int totalPaymentAmount;
+    private String advanceDepositAmount;
+    private String totalPaymentAmount;
     private String codeCustomer;
 
-    public Contract(int syncNumber, String codeBooking, int advanceDepositAmount, int totalPaymentAmount, String codeCustomer) {
+    public Contract(String syncNumber, String codeBooking, String advanceDepositAmount, String totalPaymentAmount, String codeCustomer) {
         this.syncNumber = syncNumber;
         this.codeBooking = codeBooking;
         this.advanceDepositAmount = advanceDepositAmount;
@@ -18,11 +18,11 @@ public class Contract {
     public Contract() {
     }
 
-    public int getSyncNumber() {
+    public String getSyncNumber() {
         return syncNumber;
     }
 
-    public void setSyncNumber(int syncNumber) {
+    public void setSyncNumber(String syncNumber) {
         this.syncNumber = syncNumber;
     }
 
@@ -34,19 +34,19 @@ public class Contract {
         this.codeBooking = codeBooking;
     }
 
-    public int getAdvanceDepositAmount() {
+    public String getAdvanceDepositAmount() {
         return advanceDepositAmount;
     }
 
-    public void setAdvanceDepositAmount(int advanceDepositAmount) {
+    public void setAdvanceDepositAmount(String advanceDepositAmount) {
         this.advanceDepositAmount = advanceDepositAmount;
     }
 
-    public int getTotalPaymentAmount() {
+    public String getTotalPaymentAmount() {
         return totalPaymentAmount;
     }
 
-    public void setTotalPaymentAmount(int totalPaymentAmount) {
+    public void setTotalPaymentAmount(String totalPaymentAmount) {
         this.totalPaymentAmount = totalPaymentAmount;
     }
 
