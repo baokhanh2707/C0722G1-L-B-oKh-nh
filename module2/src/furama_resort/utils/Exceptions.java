@@ -1,5 +1,7 @@
 package furama_resort.utils;
 
+import java.time.LocalDate;
+
 public class Exceptions extends Exception {
     public Exceptions(String message) {
         super(message);
@@ -30,35 +32,37 @@ public class Exceptions extends Exception {
     }
 
     public static void checkPhoneNumber(String phoneNumber) throws Exceptions {
-        if (!phoneNumber.matches("^[0-9]{10}$")){
+        if (!phoneNumber.matches("^[0-9]{10}$")) {
             throw new Exceptions("Số điện thoại không hợp lệ mời bạn nhập lại");
         }
     }
-    public static void checkEmail(String email)throws Exceptions{
-        if(!email.matches("[A-Za-z0-9]{16}(@gmail.com|@gmail.com.vn)")){
+
+    public static void checkEmail(String email) throws Exceptions {
+        if (!email.matches("^[a-zA-Z0-9]+(@gmail.com|@gmail.com.vn)$")) {
             throw new Exceptions("Email không hợp lệ mời bạn nhập lại");
         }
     }
-    public static void checkLevel(String level)throws Exceptions{
-        if(!level.matches("^[1-4]{1}$")){
-            throw new Exceptions("Bạn nhập không hợp lệ");
-        }
-    }
-    public static void checkLocation(String location)throws Exceptions{
-        if(!location.matches("^[1-6]{1}$")){
-            throw new Exceptions("bạn nhập không hợp lệ xin nhập lại");
-        }
-    }
-    public static void checkWage(String wage)throws Exceptions{
-        if(!wage.matches("^[0-9]{9}$")){
+
+    public static void checkWage(String wage) throws Exceptions {
+        if (!wage.matches("^[0-9]+$")) {
             throw new Exceptions("bạn nhập lương không hợp lệ xin nhập lại");
         }
     }
-//    public static void employeeAgeCheck(LocalDate birthday) throws CaseStudyFormatException {
-//        LocalDate presentDate = LocalDate.now().plusYears(-18);
-//        LocalDate maxDate = LocalDate.now().plusYears(-100);
-//        if (!birthday.isBefore(presentDate) || !birthday.isAfter(maxDate)) {
-//            throw new CaseStudyFormatException("Employee must not be under 18 or over 100 years old, please try again.");
-//        } else System.out.println("Input Date of Birth Succeeded");
- //   }
+
+    public static void checkAge(LocalDate dayOfBirth) throws Exceptions {
+
+        LocalDate presentDate = LocalDate.now().plusYears(-18);
+        LocalDate maxDate = LocalDate.now().plusYears(-100);
+        if (!dayOfBirth.isBefore(presentDate)) {
+            throw new Exceptions("Không được dưới 18 tuổi mời bạn nhập lại");
+        } else if (!dayOfBirth.isAfter(maxDate)) {
+            throw new Exceptions("Không được trên 100 tuổi mời bạn nhập lại");
+        } else System.out.println("Thêm thành công");
+    }
+
+    public static void checkAddress(String address) throws Exceptions {
+        if (!address.matches("^(T|t)[ổ][ ][0-9]{1,3}[/](P|p)[h][ư][ờ][n][g][ ]+([A-ZĐ][a-záàảãạăâắằấầặẵẫêậéèẻẽẹếềểễệóòỏõọôốồổỗộơớờởỡợíìỉĩịđùúủũụưứửữựỷỹ]+[ ])+[A-ZĐ][a-záàảãạăâắằấầặẵẫậéèẻẽẹếềểễệóòêỏõọôốồổỗộơớờởỡợíìỉĩịđùúủũụưứửữựỷỹ]+$")) {
+            throw new Exceptions("Bạn nhập sai địa chỉ mời bạn nhập lại ");
+        }
+    }
 }

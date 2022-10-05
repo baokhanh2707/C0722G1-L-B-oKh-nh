@@ -2,24 +2,14 @@ package furama_resort.models;
 
 public class Villa extends Facility {
     private String roomStandard ;
-    private double poolArea ;
-    private int  numberOfFloors ;
+    private String poolArea ;
+    private String numberOfFloors ;
 
-    public Villa(String serviceCode, String roomStandard, double poolArea, int numberOfFloors) {
-        super(serviceCode);
-        this.roomStandard = roomStandard;
-        this.poolArea = poolArea;
-        this.numberOfFloors = numberOfFloors;
+    public Villa() {
     }
 
-    public Villa(String serviceName, double usableArea, double rentalCosts, int maximumNumberOfPeople, int rentalType, String roomStandard, double poolArea, int numberOfFloors) {
-        super(serviceName, usableArea, rentalCosts, maximumNumberOfPeople, rentalType);
-        this.roomStandard = roomStandard;
-        this.poolArea = poolArea;
-        this.numberOfFloors = numberOfFloors;
-    }
-
-    public Villa(String roomStandard, double poolArea, int numberOfFloors) {
+    public Villa(String serviceName, String serviceCode, String usableArea, String rentalCosts, String maximumNumberOfPeople, String rentalType, String roomStandard, String poolArea, String numberOfFloors) {
+        super(serviceName, serviceCode, usableArea, rentalCosts, maximumNumberOfPeople, rentalType);
         this.roomStandard = roomStandard;
         this.poolArea = poolArea;
         this.numberOfFloors = numberOfFloors;
@@ -33,19 +23,19 @@ public class Villa extends Facility {
         this.roomStandard = roomStandard;
     }
 
-    public double getPoolArea() {
+    public String getPoolArea() {
         return poolArea;
     }
 
-    public void setPoolArea(double poolArea) {
+    public void setPoolArea(String poolArea) {
         this.poolArea = poolArea;
     }
 
-    public int getNumberOfFloors() {
+    public String getNumberOfFloors() {
         return numberOfFloors;
     }
 
-    public void setNumberOfFloors(int numberOfFloors) {
+    public void setNumberOfFloors(String numberOfFloors) {
         this.numberOfFloors = numberOfFloors;
     }
 

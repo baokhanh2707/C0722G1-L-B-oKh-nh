@@ -1,15 +1,17 @@
 package furama_resort.models;
 
+import java.time.LocalDate;
+
 public abstract class Person {
     private String code;
     private String name;
-    private String dayOfBirth;
+    private LocalDate dayOfBirth;
     private String gender;
     private String idNumber;
     private String phoneNumber;
     private String email;
 
-    public Person(String code, String name, String dayOfBirth, String gender, String idNumber, String phoneNumber, String email) {
+    public Person(String code, String name, LocalDate dayOfBirth, String gender, String idNumber, String phoneNumber, String email) {
         this.code = code;
         this.name = name;
         this.dayOfBirth = dayOfBirth;
@@ -38,11 +40,11 @@ public abstract class Person {
         this.name = name;
     }
 
-    public String getDayOfBirth() {
+    public LocalDate getDayOfBirth() {
         return dayOfBirth;
     }
 
-    public void setDayOfBirth(String dayOfBirth) {
+    public void setDayOfBirth(LocalDate dayOfBirth) {
         this.dayOfBirth = dayOfBirth;
     }
 

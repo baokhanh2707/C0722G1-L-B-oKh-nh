@@ -1,1 +1,1 @@
-1,2,2,2,2,2,2,Member,4
+KH1,Lê Bảo,2000-07-27,Nam,032165498712,1234567890,khanh@gmail.com,Member,Tổ 68/Phường Hòa Khê

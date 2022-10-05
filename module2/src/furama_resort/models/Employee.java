@@ -1,11 +1,13 @@
 package furama_resort.models;
 
+import java.time.LocalDate;
+
 public class Employee extends Person {
     String level;
     String location;
     String wage;
 
-    public Employee(String code, String name, String dayOfBirth, String gender, String idNumber, String phoneNumber, String email, String level, String location, String wage) {
+    public Employee(String code, String name, LocalDate dayOfBirth, String gender, String idNumber, String phoneNumber, String email, String level, String location, String wage) {
         super(code, name, dayOfBirth, gender, idNumber, phoneNumber, email);
         this.level = level;
         this.location = location;

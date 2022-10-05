@@ -1,10 +1,12 @@
 package furama_resort.models;
 
+import java.time.LocalDate;
+
 public class Customer extends Person  {
     private String typeOfGuest;
     private String address;
 
-    public Customer(String code, String name, String dayOfBirth, String gender, String idNumber, String phoneNumber, String email, String typeOfGuest, String address) {
+    public Customer(String code, String name, LocalDate dayOfBirth, String gender, String idNumber, String phoneNumber, String email, String typeOfGuest, String address) {
         super(code, name, dayOfBirth, gender, idNumber, phoneNumber, email);
         this.typeOfGuest = typeOfGuest;
         this.address = address;

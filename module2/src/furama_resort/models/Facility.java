@@ -2,10 +2,10 @@ package furama_resort.models;
 
 public abstract class  Facility {
     private String serviceName;
-    private double usableArea;
-    private double rentalCosts;
-    private int maximumNumberOfPeople;
-    private int rentalType;  //theo tháng năm ngày giờ
+    private String usableArea;
+    private String rentalCosts;
+    private String maximumNumberOfPeople;
+    private String rentalType;  //theo tháng năm ngày giờ
     private String serviceCode;
 
     public String getServiceCode() {
@@ -16,12 +16,11 @@ public abstract class  Facility {
         this.serviceCode = serviceCode;
     }
 
-    public Facility(String serviceCode) {
-        this.serviceCode = serviceCode;
-    }
 
-    public Facility(String serviceName, double usableArea, double rentalCosts, int maximumNumberOfPeople, int rentalType) {
+
+    public Facility(String serviceName,String serviceCode, String usableArea, String rentalCosts, String maximumNumberOfPeople, String rentalType) {
         this.serviceName = serviceName;
+        this.serviceCode=serviceCode;
         this.usableArea = usableArea;
         this.rentalCosts = rentalCosts;
         this.maximumNumberOfPeople = maximumNumberOfPeople;
@@ -39,35 +38,35 @@ public abstract class  Facility {
         this.serviceName = serviceName;
     }
 
-    public double getUsableArea() {
+    public String getUsableArea() {
         return usableArea;
     }
 
-    public void setUsableArea(double usableArea) {
+    public void setUsableArea(String usableArea) {
         this.usableArea = usableArea;
     }
 
-    public double getRentalCosts() {
+    public String getRentalCosts() {
         return rentalCosts;
     }
 
-    public void setRentalCosts(double rentalCosts) {
+    public void setRentalCosts(String rentalCosts) {
         this.rentalCosts = rentalCosts;
     }
 
-    public int getMaximumNumberOfPeople() {
+    public String getMaximumNumberOfPeople() {
         return maximumNumberOfPeople;
     }
 
-    public void setMaximumNumberOfPeople(int maximumNumberOfPeople) {
+    public void setMaximumNumberOfPeople(String maximumNumberOfPeople) {
         this.maximumNumberOfPeople = maximumNumberOfPeople;
     }
 
-    public int getRentalType() {
+    public String getRentalType() {
         return rentalType;
     }
 
-    public void setRentalType(int rentalType) {
+    public void setRentalType(String rentalType) {
         this.rentalType = rentalType;
     }
 
