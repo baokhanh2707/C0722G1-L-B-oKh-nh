@@ -51,8 +51,8 @@ public class ExceptionPerson extends Exception {
 
     public static void checkAge(LocalDate dayOfBirth) throws ExceptionPerson {
 
-        LocalDate presentDate = LocalDate.now().plusYears(-18);
-        LocalDate maxDate = LocalDate.now().plusYears(-100);
+        LocalDate presentDate = LocalDate.now().minusYears(18);
+        LocalDate maxDate = LocalDate.now().minusYears(100);
         if (!dayOfBirth.isBefore(presentDate)) {
             throw new ExceptionPerson("Không được dưới 18 tuổi mời bạn nhập lại");
         } else if (!dayOfBirth.isAfter(maxDate)) {
@@ -63,6 +63,13 @@ public class ExceptionPerson extends Exception {
     public static void checkAddress(String address) throws ExceptionPerson {
         if (!address.matches("^(T|t)[ổ][ ][0-9]{1,3}[/](P|p)[h][ư][ờ][n][g][ ]+([A-ZĐ][a-záàảãạăâắằấầặẵẫêậéèẻẽẹếềểễệóòỏõọôốồổỗộơớờởỡợíìỉĩịđùúủũụưứửữựỷỹ]+[ ])+[A-ZĐ][a-záàảãạăâắằấầặẵẫậéèẻẽẹếềểễệóòêỏõọôốồổỗộơớờởỡợíìỉĩịđùúủũụưứửữựỷỹ]+$")) {
             throw new ExceptionPerson("Bạn nhập sai địa chỉ mời bạn nhập lại ");
+        }
+    }
+    public static void FebDateCheck(LocalDate birthday, String text) throws ExceptionPerson {
+        if ((birthday.isLeapYear() && birthday.getMonthValue() == 2) && (text.contains("30/02") || text.contains("31/02"))) {
+            throw new ExceptionPerson("Tháng 2 năm nhuận chỉ có 29 ngày.");
+        } else if ((!birthday.isLeapYear() && birthday.getMonthValue() == 2) && (text.contains("30/02") || text.contains("29/02") || text.contains("31/02"))){
+            throw new ExceptionPerson("Tháng 2 năm không nhuận chỉ có 28 ngày.");
         }
     }
 }

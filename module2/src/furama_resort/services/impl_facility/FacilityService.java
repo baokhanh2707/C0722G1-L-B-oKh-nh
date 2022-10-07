@@ -218,7 +218,7 @@ LOOP:
                 System.out.println(exceptionFacility.getMessage());
             }
         }
-        Double poolArea;
+        double poolArea;
         while (true) {
             boolean flag = false;
             try {

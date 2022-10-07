@@ -36,14 +36,14 @@ public class BookingService implements IBookingService {
     @Override
     public void editConstracts() {
 
-    }
-    public Booking infoBooking(){
-        System.out.println("Mời bạn nhập mã booking");
-        String codeBooking=scanner.nextLine();
-        System.out.println("Mời bạn nhập ngày bắt đầu");
-        int startDay=Integer.parseInt(scanner.nextLine());
-
-
-    }
-
-}
+    }}
+//    public Booking infoBooking(){
+//        System.out.println("Mời bạn nhập mã booking");
+//        String codeBooking=scanner.nextLine();
+//        System.out.println("Mời bạn nhập ngày bắt đầu");
+//        int startDay=Integer.parseInt(scanner.nextLine());
+//
+//
+//
+//
+//}

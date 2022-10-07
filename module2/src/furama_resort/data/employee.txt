@@ -1,2 +1,0 @@
-NV1,Lê Bảo Khang,1998-09-27,nam,231321321213,0901147093,khang@gmail.com,Sau Đại Học,Phục Vụ,2000000000
-NV2,Đăng Công,1999-09-28,Nam,099090909090,3213213211,nam@gmail.com,Sau Đại Học,Quản Lý,200000000000

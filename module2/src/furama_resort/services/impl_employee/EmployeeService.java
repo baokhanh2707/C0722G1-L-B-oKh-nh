@@ -3,17 +3,13 @@ package furama_resort.services.impl_employee;
 import furama_resort.models.Employee;
 import furama_resort.services.IEmployeeService;
 import furama_resort.utils.ExceptionPerson;
-
-
 import java.io.*;
-import java.time.DateTimeException;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
+import java.time.format.DateTimeParseException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
-
-
 public class EmployeeService implements IEmployeeService {
     private static Scanner scanner = new Scanner(System.in);
     private static List<Employee> employeeList = new ArrayList<>();
@@ -48,19 +44,36 @@ public class EmployeeService implements IEmployeeService {
                 System.out.println(exceptions.getMessage());
             }
         }
+//        LocalDate dayOfBirth;
+//        while (true) {
+//            try {
+//                System.out.println("Mời bạn nhập ngày sinh của nhân viên");
+//                dayOfBirth = LocalDate.parse(scanner.nextLine(), formatter);
+//                ExceptionPerson.checkAge(dayOfBirth);
+//                break;
+//            } catch (ExceptionPerson exceptions) {
+//                System.out.println(exceptions.getMessage());
+//            } catch (DateTimeException e) {
+//                System.out.println("Bạn nhập không hợp lệ");
+//            }
+//        }
         LocalDate dayOfBirth;
         while (true) {
             try {
-                System.out.println("Mời bạn nhập ngày sinh của nhân viên");
-                dayOfBirth = LocalDate.parse(scanner.nextLine(), formatter);
+                System.out.print("Nhập ngày sinh nhân viên (định dạng dd/MM/yyyy): ");
+                String text = scanner.nextLine();
+                dayOfBirth = LocalDate.parse(text, formatter);
+                ExceptionPerson.FebDateCheck(dayOfBirth, text);
                 ExceptionPerson.checkAge(dayOfBirth);
                 break;
-            } catch (ExceptionPerson exceptions) {
-                System.out.println(exceptions.getMessage());
-            } catch (DateTimeException e) {
-                System.out.println("Bạn nhập không hợp lệ");
+            } catch ( ExceptionPerson e) {
+                System.out.println(e.getMessage());
+            }catch (DateTimeParseException e){
+                System.out.println("Sai định dạng");
             }
         }
+
+
         String gender;
         while (true) {
             try {
@@ -133,9 +146,7 @@ public class EmployeeService implements IEmployeeService {
                     default:
                         throw new IllegalStateException("Unexpected value: " + choice);
                 }
-            } catch (NumberFormatException e) {
-                System.out.println("Mời bạn nhập lại");
-            } catch (IllegalStateException e) {
+            } catch (NumberFormatException | IllegalStateException e) {
                 System.out.println("Mời bạn nhập lại");
             }
         }
@@ -175,9 +186,7 @@ public class EmployeeService implements IEmployeeService {
                     default:
                         throw new IllegalStateException("Unexpected value: " + choice1);
                 }
-            } catch (NumberFormatException e) {
-                System.out.println("Mời bạn nhập lại");
-            } catch (IllegalStateException e) {
+            } catch (NumberFormatException | IllegalStateException e) {
                 System.out.println("Mời bạn nhập lại");
             }
         }
@@ -195,6 +204,8 @@ public class EmployeeService implements IEmployeeService {
         Employee employee = new Employee(code, name, dayOfBirth, gender, idNumber, phoneNumber, email, level, location, wage);
         return employee;
     }
+
+
 
     @Override
     public void displayEmployee() {
@@ -238,16 +249,19 @@ public class EmployeeService implements IEmployeeService {
                 LocalDate dayOfBirth;
                 while (true) {
                     try {
-                        System.out.println("Mời bạn nhập ngày sinh mới của nhân viên");
-                        dayOfBirth = LocalDate.parse(scanner.nextLine(), formatter);
+                        System.out.print("Nhập ngày sinh mới nhân viên  (định dạng dd/MM/yyyy): ");
+                        String text = scanner.nextLine();
+                        dayOfBirth = LocalDate.parse(text, formatter);
+                        ExceptionPerson.FebDateCheck(dayOfBirth, text);
                         ExceptionPerson.checkAge(dayOfBirth);
                         break;
-                    } catch (ExceptionPerson exceptions) {
-                        System.out.println(exceptions.getMessage());
-                    } catch (DateTimeException e) {
-                        System.out.println("Bạn nhập không hợp lệ");
+                    } catch ( ExceptionPerson e) {
+                        System.out.println(e.getMessage());
+                    }catch (DateTimeParseException e){
+                        System.out.println("Sai định dạng");
                     }
                 }
+
                 employeeList.get(i).setDayOfBirth(dayOfBirth);
 
                 String gender;
@@ -328,9 +342,7 @@ public class EmployeeService implements IEmployeeService {
                             default:
                                 throw new IllegalStateException("Unexpected value: " + choice);
                         }
-                    } catch (NumberFormatException e) {
-                        System.out.println("Mời bạn nhập lại");
-                    } catch (IllegalStateException e) {
+                    } catch (NumberFormatException | IllegalStateException e) {
                         System.out.println("Mời bạn nhập lại");
                     }
                 }
@@ -371,9 +383,7 @@ public class EmployeeService implements IEmployeeService {
                             default:
                                 throw new IllegalStateException("Unexpected value: " + choice1);
                         }
-                    } catch (NumberFormatException e) {
-                        System.out.println("Mời bạn nhập lại");
-                    } catch (IllegalStateException e) {
+                    } catch (NumberFormatException | IllegalStateException e) {
                         System.out.println("Mời bạn nhập lại");
                     }
                 }
@@ -413,7 +423,7 @@ public class EmployeeService implements IEmployeeService {
             String[] list;
             while ((line = bufferedReader.readLine()) != null) {
                 list = line.split(",");
-                Employee employee = new Employee(list[0], list[1], LocalDate.parse(list[2]), list[3], list[4], list[5],
+                Employee employee = new Employee(list[0], list[1], LocalDate.parse(list[2],formatter), list[3], list[4], list[5],
                         list[6], list[7], list[8], list[9]);
                 employeeList.add(employee);
             }
@@ -450,6 +460,6 @@ public class EmployeeService implements IEmployeeService {
     }
 
     private String getInfor(Employee employee) {
-        return employee.getCode() + "," + employee.getName() + "," + employee.getDayOfBirth() + "," + employee.getGender() + "," + employee.getIdNumber() + "," + employee.getPhoneNumber() + "," + employee.getEmail() + "," + employee.getLevel() + "," + employee.getLocation() + "," + employee.getWage();
+        return employee.getCode() + "," + employee.getName() + "," + employee.getDayOfBirth().format(formatter) + "," + employee.getGender() + "," + employee.getIdNumber() + "," + employee.getPhoneNumber() + "," + employee.getEmail() + "," + employee.getLevel() + "," + employee.getLocation() + "," + employee.getWage();
     }
 }

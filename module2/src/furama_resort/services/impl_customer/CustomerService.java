@@ -8,6 +8,7 @@ import java.io.*;
 import java.time.DateTimeException;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
+import java.time.format.DateTimeParseException;
 import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
@@ -45,14 +46,16 @@ public class CustomerService implements ICustomerService {
         LocalDate dayOfBirth;
         while (true) {
             try {
-                System.out.println("Mời bạn nhập ngày sinh  của khách hàng");
-                dayOfBirth = LocalDate.parse(scanner.nextLine(), formatter);
+                System.out.print("Nhập ngày sinh khách hàng (định dạng dd/MM/yyyy): ");
+                String text = scanner.nextLine();
+                dayOfBirth = LocalDate.parse(text, formatter);
+                ExceptionPerson.FebDateCheck(dayOfBirth, text);
                 ExceptionPerson.checkAge(dayOfBirth);
                 break;
-            } catch (ExceptionPerson exceptions) {
-                System.out.println(exceptions.getMessage());
-            } catch (DateTimeException e) {
-                System.out.println("Bạn nhập không hợp lệ");
+            } catch ( ExceptionPerson e) {
+                System.out.println(e.getMessage());
+            }catch (DateTimeParseException e){
+                System.out.println("Sai định dạng");
             }
         }
 
@@ -131,9 +134,7 @@ public class CustomerService implements ICustomerService {
                     default:
                         throw new IllegalStateException("Unexpected value: " + choice);
                 }
-            } catch (NumberFormatException e) {
-                System.out.println("Mời bạn nhập lại");
-            } catch (IllegalStateException e) {
+            } catch (NumberFormatException | IllegalStateException e) {
                 System.out.println("Mời bạn nhập lại");
             }
         }
@@ -151,7 +152,6 @@ public class CustomerService implements ICustomerService {
         Customer customer = new Customer(code, name, dayOfBirth, gender, idNumber, phoneNumber, email, typeOfGuest, address);
         return customer;
     }
-
     @Override
     public void displayCustomer() {
         customerList = readLife();
@@ -194,18 +194,19 @@ public class CustomerService implements ICustomerService {
                 LocalDate dayOfBirth;
                 while (true) {
                     try {
-                        System.out.println("Mời bạn nhập ngày sinh mới của khách hàng");
-                        dayOfBirth = LocalDate.parse(scanner.nextLine(), formatter);
+                        System.out.print("Nhập ngày sinh mới khách hàng (định dạng dd/MM/yyyy): ");
+                        String text = scanner.nextLine();
+                        dayOfBirth = LocalDate.parse(text, formatter);
+                        ExceptionPerson.FebDateCheck(dayOfBirth, text);
                         ExceptionPerson.checkAge(dayOfBirth);
                         break;
-                    } catch (ExceptionPerson exceptions) {
-                        System.out.println(exceptions.getMessage());
-                    } catch (DateTimeException e) {
-                        System.out.println("Bạn nhập không hợp lệ");
+                    } catch ( ExceptionPerson e) {
+                        System.out.println(  e.getMessage() );
+                    }catch (DateTimeParseException e){
+                        System.out.println("Sai định dạng");
                     }
                 }
                 customerList.get(i).setDayOfBirth(dayOfBirth);
-
                 String gender;
                 while (true) {
                     try {
@@ -288,9 +289,7 @@ public class CustomerService implements ICustomerService {
                             default:
                                 throw new IllegalStateException("Unexpected value: " + choice);
                         }
-                    } catch (NumberFormatException e) {
-                        System.out.println("Mời bạn nhập lại");
-                    } catch (IllegalStateException e) {
+                    } catch (NumberFormatException | IllegalStateException e) {
                         System.out.println("Mời bạn nhập lại");
                     }
                 }
@@ -329,7 +328,7 @@ public class CustomerService implements ICustomerService {
             String line;
             while ((line = bufferedReader.readLine()) != null) {
                 String[] list = line.split(",");
-                Customer customer = new Customer(list[0], list[1], LocalDate.parse(list[2]), list[3], list[4], list[5], list[6], list[7], list[8]);
+                Customer customer = new Customer(list[0], list[1], LocalDate.parse(list[2],formatter), list[3], list[4], list[5], list[6], list[7], list[8]);
                 customerList.add(customer);
             }
         } catch (FileNotFoundException e) {
@@ -365,6 +364,6 @@ public class CustomerService implements ICustomerService {
     }
 
     private String getInfor(Customer customer) {
-        return customer.getCode() + "," + customer.getName() + "," + customer.getDayOfBirth() + "," + customer.getGender() + "," + customer.getIdNumber() + "," + customer.getPhoneNumber() + "," + customer.getEmail() + "," + customer.getTypeOfGuest() + "," + customer.getAddress();
+        return customer.getCode() + "," + customer.getName() + "," + customer.getDayOfBirth().format(formatter) + "," + customer.getGender() + "," + customer.getIdNumber() + "," + customer.getPhoneNumber() + "," + customer.getEmail() + "," + customer.getTypeOfGuest() + "," + customer.getAddress();
     }
 }
