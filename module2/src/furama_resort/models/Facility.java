@@ -2,23 +2,16 @@ package furama_resort.models;
 
 public abstract class  Facility {
     private String serviceName;
-    private String usableArea;
-    private String rentalCosts;
-    private String maximumNumberOfPeople;
+    private Double usableArea;
+    private int rentalCosts;
+    private int maximumNumberOfPeople;
     private String rentalType;  //theo tháng năm ngày giờ
     private String serviceCode;
 
-    public String getServiceCode() {
-        return serviceCode;
-    }
-
-    public void setServiceCode(String serviceCode) {
-        this.serviceCode = serviceCode;
-    }
 
 
 
-    public Facility(String serviceName,String serviceCode, String usableArea, String rentalCosts, String maximumNumberOfPeople, String rentalType) {
+    public Facility(String serviceName, String serviceCode, Double usableArea, int rentalCosts, int maximumNumberOfPeople, String rentalType) {
         this.serviceName = serviceName;
         this.serviceCode=serviceCode;
         this.usableArea = usableArea;
@@ -38,27 +31,27 @@ public abstract class  Facility {
         this.serviceName = serviceName;
     }
 
-    public String getUsableArea() {
+    public Double getUsableArea() {
         return usableArea;
     }
 
-    public void setUsableArea(String usableArea) {
+    public void setUsableArea(Double usableArea) {
         this.usableArea = usableArea;
     }
 
-    public String getRentalCosts() {
+    public int getRentalCosts() {
         return rentalCosts;
     }
 
-    public void setRentalCosts(String rentalCosts) {
+    public void setRentalCosts(int rentalCosts) {
         this.rentalCosts = rentalCosts;
     }
 
-    public String getMaximumNumberOfPeople() {
+    public int getMaximumNumberOfPeople() {
         return maximumNumberOfPeople;
     }
 
-    public void setMaximumNumberOfPeople(String maximumNumberOfPeople) {
+    public void setMaximumNumberOfPeople(int maximumNumberOfPeople) {
         this.maximumNumberOfPeople = maximumNumberOfPeople;
     }
 
@@ -70,11 +63,19 @@ public abstract class  Facility {
         this.rentalType = rentalType;
     }
 
+    public String getServiceCode() {
+        return serviceCode;
+    }
+
+    public void setServiceCode(String serviceCode) {
+        this.serviceCode = serviceCode;
+    }
+
     @Override
     public String toString() {
         return "Facility{" +
                 "serviceName='" + serviceName + '\'' +
-                ", usableArea=" + usableArea +
+                ", usableArea=" + usableArea +"m2" +
                 ", rentalCosts=" + rentalCosts +
                 ", maximumNumberOfPeople=" + maximumNumberOfPeople +
                 ", rentalType=" + rentalType +

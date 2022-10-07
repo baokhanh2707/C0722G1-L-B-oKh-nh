@@ -2,14 +2,20 @@ package furama_resort.models;
 
 public class Villa extends Facility {
     private String roomStandard ;
-    private String poolArea ;
-    private String numberOfFloors ;
+    private Double poolArea ;
+    private int numberOfFloors ;
 
     public Villa() {
     }
 
-    public Villa(String serviceName, String serviceCode, String usableArea, String rentalCosts, String maximumNumberOfPeople, String rentalType, String roomStandard, String poolArea, String numberOfFloors) {
+    public Villa(String serviceName, String serviceCode, Double usableArea, int rentalCosts, int maximumNumberOfPeople, String rentalType, String roomStandard, Double poolArea, int numberOfFloors) {
         super(serviceName, serviceCode, usableArea, rentalCosts, maximumNumberOfPeople, rentalType);
+        this.roomStandard = roomStandard;
+        this.poolArea = poolArea;
+        this.numberOfFloors = numberOfFloors;
+    }
+
+    public Villa(String roomStandard, Double poolArea, int numberOfFloors) {
         this.roomStandard = roomStandard;
         this.poolArea = poolArea;
         this.numberOfFloors = numberOfFloors;
@@ -23,19 +29,19 @@ public class Villa extends Facility {
         this.roomStandard = roomStandard;
     }
 
-    public String getPoolArea() {
+    public Double getPoolArea() {
         return poolArea;
     }
 
-    public void setPoolArea(String poolArea) {
+    public void setPoolArea(Double poolArea) {
         this.poolArea = poolArea;
     }
 
-    public String getNumberOfFloors() {
+    public int getNumberOfFloors() {
         return numberOfFloors;
     }
 
-    public void setNumberOfFloors(String numberOfFloors) {
+    public void setNumberOfFloors(int numberOfFloors) {
         this.numberOfFloors = numberOfFloors;
     }
 
@@ -43,7 +49,7 @@ public class Villa extends Facility {
     public String toString() {
         return "Villa{" +
                 "roomStandard='" + roomStandard + '\'' +
-                ", poolArea=" + poolArea +
+                ", poolArea=" + poolArea +"m2" +
                 ", numberOfFloors=" + numberOfFloors +
                 '}'+ super.toString();
     }

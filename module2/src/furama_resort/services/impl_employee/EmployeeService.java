@@ -2,11 +2,10 @@ package furama_resort.services.impl_employee;
 
 import furama_resort.models.Employee;
 import furama_resort.services.IEmployeeService;
-import furama_resort.utils.Exceptions;
+import furama_resort.utils.ExceptionPerson;
 
 
 import java.io.*;
-import java.text.NumberFormat;
 import java.time.DateTimeException;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
@@ -26,14 +25,14 @@ public class EmployeeService implements IEmployeeService {
             try {
                 System.out.println("Mời bạn nhập mã nhân viên ");
                 code = scanner.nextLine();
-                Exceptions.checkCode(code, "^[N][V][0-9]{1,3}$");
+                ExceptionPerson.checkCode(code, "^[N][V][0-9]{1,3}$");
                 for (int i = 0; i < employeeList.size(); i++) {
                     if (employeeList.get(i).getCode().equals(code)) {
-                        throw new Exceptions("Mã nhân viên đã tồn tại");
+                        throw new ExceptionPerson("Mã nhân viên đã tồn tại");
                     }
                 }
                 break;
-            } catch (Exceptions exceptions) {
+            } catch (ExceptionPerson exceptions) {
                 System.out.println(exceptions.getMessage());
             }
 
@@ -43,9 +42,9 @@ public class EmployeeService implements IEmployeeService {
             try {
                 System.out.println("Mời bạn nhập tên nhân viên");
                 name = scanner.nextLine();
-                Exceptions.checkName(name, "^([A-ZĐ][a-záàảãạăẩâắằấầặẵẫêậéèẻẽẹếềểễệóòỏõọôốồổỗộơớờởỡợíìỉĩịđùúủũụưứửữựỷỹ]+[ ])+[A-ZĐ][a-záàảãạăâắằấầặẵẫậéèẻẽẹếềểễệóòêỏõọôốồổỗộơớờởỡợíìỉĩịđùúủũụưứửữựỷỹ]+$");
+                ExceptionPerson.checkName(name, "^([A-ZĐ][a-záàảãạăẩâắằấầặẵẫêậéèẻẽẹếềểễệóòỏõọôốồổỗộơớờởỡợíìỉĩịđùúủũụưứửữựỷỹ]+[ ])+[A-ZĐ][a-záàảãạăâắằấầặẵẫậéèẻẽẹếềểễệóòêỏõọôốồổỗộơớờởỡợíìỉĩịđùúủũụưứửữựỷỹ]+$");
                 break;
-            } catch (Exceptions exceptions) {
+            } catch (ExceptionPerson exceptions) {
                 System.out.println(exceptions.getMessage());
             }
         }
@@ -54,9 +53,9 @@ public class EmployeeService implements IEmployeeService {
             try {
                 System.out.println("Mời bạn nhập ngày sinh của nhân viên");
                 dayOfBirth = LocalDate.parse(scanner.nextLine(), formatter);
-                Exceptions.checkAge(dayOfBirth);
+                ExceptionPerson.checkAge(dayOfBirth);
                 break;
-            } catch (Exceptions exceptions) {
+            } catch (ExceptionPerson exceptions) {
                 System.out.println(exceptions.getMessage());
             } catch (DateTimeException e) {
                 System.out.println("Bạn nhập không hợp lệ");
@@ -67,9 +66,9 @@ public class EmployeeService implements IEmployeeService {
             try {
                 System.out.println("Mời bạn nhập giới tính nhân viên");
                 gender = scanner.nextLine();
-                Exceptions.checkGender(gender, "^(Nam|Nữ|Không|nam|nữ|không)+$");
+                ExceptionPerson.checkGender(gender, "^(Nam|Nữ|Không|nam|nữ|không)+$");
                 break;
-            } catch (Exceptions exceptions) {
+            } catch (ExceptionPerson exceptions) {
                 exceptions.getMessage();
             }
         }
@@ -78,9 +77,9 @@ public class EmployeeService implements IEmployeeService {
             try {
                 System.out.println("Mời bạn nhập số CMND nhân viên");
                 idNumber = scanner.nextLine();
-                Exceptions.checkIdNumber(idNumber);
+                ExceptionPerson.checkIdNumber(idNumber);
                 break;
-            } catch (Exceptions exceptions) {
+            } catch (ExceptionPerson exceptions) {
                 System.out.println(exceptions.getMessage());
             }
         }
@@ -89,9 +88,9 @@ public class EmployeeService implements IEmployeeService {
             try {
                 System.out.println("Mời bạn nhập số điện thoại nhân viên");
                 phoneNumber = scanner.nextLine();
-                Exceptions.checkPhoneNumber(phoneNumber);
+                ExceptionPerson.checkPhoneNumber(phoneNumber);
                 break;
-            } catch (Exceptions exceptions) {
+            } catch (ExceptionPerson exceptions) {
                 System.out.println(exceptions.getMessage());
             }
         }
@@ -102,9 +101,9 @@ public class EmployeeService implements IEmployeeService {
                 System.out.println("Mời bạn nhập email nhân viên");
                 email = scanner.nextLine();
 
-                Exceptions.checkEmail(email);
+                ExceptionPerson.checkEmail(email);
                 break;
-            } catch (Exceptions exceptions) {
+            } catch (ExceptionPerson exceptions) {
                 System.out.println(exceptions.getMessage());
             }
         }
@@ -187,9 +186,9 @@ public class EmployeeService implements IEmployeeService {
             try {
                 System.out.println("Mời bạn nhập lương nhân viên");
                 wage = scanner.nextLine();
-                Exceptions.checkWage(wage);
+                ExceptionPerson.checkWage(wage);
                 break;
-            } catch (Exceptions exceptions) {
+            } catch (ExceptionPerson exceptions) {
                 System.out.println(exceptions.getMessage());
             }
         }
@@ -199,7 +198,7 @@ public class EmployeeService implements IEmployeeService {
 
     @Override
     public void displayEmployee() {
-        employeeList = readLife();
+        employeeList = readFile();
         for (Employee employee : employeeList) {
             System.out.println(employee);
         }
@@ -207,16 +206,16 @@ public class EmployeeService implements IEmployeeService {
 
     @Override
     public void addEmployee() {
-        List<Employee> employeeList = readLife();
+        List<Employee> employeeList = readFile();
         Employee employee = this.infoEmployee();
         employeeList.add(employee);
         System.out.println("Thêm mới thành công");
-        writeLife(employeeList);
+        writeFile(employeeList);
     }
 
     @Override
     public void editEmployee() {
-        employeeList = readLife();
+        employeeList = readFile();
         System.out.println("mời bạn nhập mã nhân viên cần sửa");
         String code = scanner.nextLine();
         boolean iscode = false;
@@ -228,9 +227,9 @@ public class EmployeeService implements IEmployeeService {
                     try {
                         System.out.println("Mời bạn nhập tên nhân viên mới");
                         name = scanner.nextLine();
-                        Exceptions.checkName(name, "^([A-ZĐ][a-záàảãạăâắằấầặẵẫêậéèẻẽẹếềểễệóòỏõọôốồổỗộơớờởỡợíìỉĩịđùúủũụưứửữựỷỹ]+[ ])+[A-ZĐ][a-záàảãạăâắằấầặẵẫậéèẻẽẹếềểễệóòêỏõọôốồổỗộơớờởỡợíìỉĩịđùúủũụưứửữựỷỹ]+$");
+                        ExceptionPerson.checkName(name, "^([A-ZĐ][a-záàảãạăâắằấầặẵẫêậéèẻẽẹếềểễệóòỏõọôốồổỗộơớờởỡợíìỉĩịđùúủũụưứửữựỷỹ]+[ ])+[A-ZĐ][a-záàảãạăâắằấầặẵẫậéèẻẽẹếềểễệóòêỏõọôốồổỗộơớờởỡợíìỉĩịđùúủũụưứửữựỷỹ]+$");
                         break;
-                    } catch (Exceptions exceptions) {
+                    } catch (ExceptionPerson exceptions) {
                         System.out.println(exceptions.getMessage());
                     }
                 }
@@ -241,9 +240,9 @@ public class EmployeeService implements IEmployeeService {
                     try {
                         System.out.println("Mời bạn nhập ngày sinh mới của nhân viên");
                         dayOfBirth = LocalDate.parse(scanner.nextLine(), formatter);
-                        Exceptions.checkAge(dayOfBirth);
+                        ExceptionPerson.checkAge(dayOfBirth);
                         break;
-                    } catch (Exceptions exceptions) {
+                    } catch (ExceptionPerson exceptions) {
                         System.out.println(exceptions.getMessage());
                     } catch (DateTimeException e) {
                         System.out.println("Bạn nhập không hợp lệ");
@@ -256,9 +255,9 @@ public class EmployeeService implements IEmployeeService {
                     try {
                         System.out.println("Mời bạn nhập giới tính nhân viên mới");
                         gender = scanner.nextLine();
-                        Exceptions.checkGender(gender, "^(Nam|Nữ|Không|nam|nữ|không)+$");
+                        ExceptionPerson.checkGender(gender, "^(Nam|Nữ|Không|nam|nữ|không)+$");
                         break;
-                    } catch (Exceptions exceptions) {
+                    } catch (ExceptionPerson exceptions) {
                         exceptions.getMessage();
                     }
                 }
@@ -269,9 +268,9 @@ public class EmployeeService implements IEmployeeService {
                     try {
                         System.out.println("Mời bạn nhập số CMND nhân viên mới");
                         idNumber = scanner.nextLine();
-                        Exceptions.checkIdNumber(idNumber);
+                        ExceptionPerson.checkIdNumber(idNumber);
                         break;
-                    } catch (Exceptions exceptions) {
+                    } catch (ExceptionPerson exceptions) {
                         System.out.println(exceptions.getMessage());
                     }
                 }
@@ -282,9 +281,9 @@ public class EmployeeService implements IEmployeeService {
                     try {
                         System.out.println("Mời bạn nhập số điện thoại nhân viên mới");
                         phoneNumber = scanner.nextLine();
-                        Exceptions.checkPhoneNumber(phoneNumber);
+                        ExceptionPerson.checkPhoneNumber(phoneNumber);
                         break;
-                    } catch (Exceptions exceptions) {
+                    } catch (ExceptionPerson exceptions) {
                         System.out.println(exceptions.getMessage());
                     }
                 }
@@ -295,9 +294,9 @@ public class EmployeeService implements IEmployeeService {
                     try {
                         System.out.println("Mời bạn nhập email mới của nhân viên ");
                         email = scanner.nextLine();
-                        Exceptions.checkEmail(email);
+                        ExceptionPerson.checkEmail(email);
                         break;
-                    } catch (Exceptions exceptions) {
+                    } catch (ExceptionPerson exceptions) {
                         System.out.println(exceptions.getMessage());
                     }
                 }
@@ -385,9 +384,9 @@ public class EmployeeService implements IEmployeeService {
                     try {
                         System.out.println("Mời bạn nhập lương mới của nhân viên");
                         wage = scanner.nextLine();
-                        Exceptions.checkWage(wage);
+                        ExceptionPerson.checkWage(wage);
                         break;
-                    } catch (Exceptions exceptions) {
+                    } catch (ExceptionPerson exceptions) {
                         System.out.println(exceptions.getMessage());
                     }
                 }
@@ -400,10 +399,10 @@ public class EmployeeService implements IEmployeeService {
         if (!iscode) {
             System.out.println("không tìm thấy mã cần tìm");
         }
-        writeLife(employeeList);
+        writeFile(employeeList);
     }
 
-    private List<Employee> readLife() {
+    private List<Employee> readFile() {
         List<Employee> employeeList = new ArrayList<>();
         BufferedReader bufferedReader = null;
         try {
@@ -431,7 +430,7 @@ public class EmployeeService implements IEmployeeService {
         return employeeList;
     }
 
-    public void writeLife(List<Employee> employeeList) {
+    public void writeFile(List<Employee> employeeList) {
         BufferedWriter bufferedWriter = null;
         try {
             File file = new File("D:\\C0722G1-L-B-oKh-nh\\module2\\src\\furama_resort\\data\\employee.txt");

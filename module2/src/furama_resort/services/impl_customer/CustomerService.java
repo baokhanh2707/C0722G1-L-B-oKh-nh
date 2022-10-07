@@ -1,9 +1,8 @@
 package furama_resort.services.impl_customer;
 
 import furama_resort.models.Customer;
-import furama_resort.models.Employee;
 import furama_resort.services.ICustomerService;
-import furama_resort.utils.Exceptions;
+import furama_resort.utils.ExceptionPerson;
 
 import java.io.*;
 import java.time.DateTimeException;
@@ -25,9 +24,9 @@ public class CustomerService implements ICustomerService {
             try {
                 System.out.println("Mời bạn nhập mã khách hàng ");
                 code = scanner.nextLine();
-                Exceptions.checkCode(code, "^[K][H][0-9]{1,3}$");
+                ExceptionPerson.checkCode(code, "^[K][H][0-9]{1,3}$");
                 break;
-            } catch (Exceptions exceptions) {
+            } catch (ExceptionPerson exceptions) {
                 System.out.println(exceptions.getMessage());
             }
         }
@@ -36,9 +35,9 @@ public class CustomerService implements ICustomerService {
             try {
                 System.out.println("Mời bạn nhập tên khách hàng");
                 name = scanner.nextLine();
-                Exceptions.checkName(name, "^([A-ZĐ][a-záàảãạăâắằấầặẵẫêậéèẻẽẹếềểễệóòỏõọôốồổỗộơớờởỡợíìỉĩịđùúủũụưứửữựỷỹ]+[ ])+[A-ZĐ][a-záàảãạăâắằấầặẵẫậéèẻẽẹếềểễệóòêỏõọôốồổỗộơớờởỡợíìỉĩịđùúủũụưứửữựỷỹ]+$");
+                ExceptionPerson.checkName(name, "^([A-ZĐ][a-záàảãạăâắằấầặẵẫêậéèẻẽẹếềểễệóòỏõọôốồổỗộơớờởỡợíìỉĩịđùúủũụưứửữựỷỹ]+[ ])+[A-ZĐ][a-záàảãạăâắằấầặẵẫậéèẻẽẹếềểễệóòêỏõọôốồổỗộơớờởỡợíìỉĩịđùúủũụưứửữựỷỹ]+$");
                 break;
-            } catch (Exceptions exceptions) {
+            } catch (ExceptionPerson exceptions) {
                 System.out.println(exceptions.getMessage());
             }
         }
@@ -48,9 +47,9 @@ public class CustomerService implements ICustomerService {
             try {
                 System.out.println("Mời bạn nhập ngày sinh  của khách hàng");
                 dayOfBirth = LocalDate.parse(scanner.nextLine(), formatter);
-                Exceptions.checkAge(dayOfBirth);
+                ExceptionPerson.checkAge(dayOfBirth);
                 break;
-            } catch (Exceptions exceptions) {
+            } catch (ExceptionPerson exceptions) {
                 System.out.println(exceptions.getMessage());
             } catch (DateTimeException e) {
                 System.out.println("Bạn nhập không hợp lệ");
@@ -62,9 +61,9 @@ public class CustomerService implements ICustomerService {
             try {
                 System.out.println("Mời bạn nhập giới tính khách hàng");
                 gender = scanner.nextLine();
-                Exceptions.checkGender(gender, "^(Nam|Nữ|Không|nam|nữ|không)+$");
+                ExceptionPerson.checkGender(gender, "^(Nam|Nữ|Không|nam|nữ|không)+$");
                 break;
-            } catch (Exceptions exceptions) {
+            } catch (ExceptionPerson exceptions) {
                 System.out.println(exceptions.getMessage());
             }
         }
@@ -73,9 +72,9 @@ public class CustomerService implements ICustomerService {
             try {
                 System.out.println("Mời bạn nhập số CMND khách hàng");
                 idNumber = scanner.nextLine();
-                Exceptions.checkIdNumber(idNumber);
+                ExceptionPerson.checkIdNumber(idNumber);
                 break;
-            } catch (Exceptions exceptions) {
+            } catch (ExceptionPerson exceptions) {
                 System.out.println(exceptions.getMessage());
             }
         }
@@ -85,9 +84,9 @@ public class CustomerService implements ICustomerService {
             try {
                 System.out.println("Mời bạn nhập số điện thoại khách hàng");
                 phoneNumber = scanner.nextLine();
-                Exceptions.checkPhoneNumber(phoneNumber);
+                ExceptionPerson.checkPhoneNumber(phoneNumber);
                 break;
-            } catch (Exceptions exceptions) {
+            } catch (ExceptionPerson exceptions) {
                 System.out.println(exceptions.getMessage());
             }
         }
@@ -96,9 +95,9 @@ public class CustomerService implements ICustomerService {
             try {
                 System.out.println("Mời bạn nhập email khách hàng");
                 email = scanner.nextLine();
-                Exceptions.checkEmail(email);
+                ExceptionPerson.checkEmail(email);
                 break;
-            } catch (Exceptions exceptions) {
+            } catch (ExceptionPerson exceptions) {
                 System.out.println(exceptions.getMessage());
             }
         }
@@ -143,9 +142,9 @@ public class CustomerService implements ICustomerService {
             try {
                 System.out.println("Mời bạn nhập địa chỉ của khách hàng");
                 address = scanner.nextLine();
-                Exceptions.checkAddress(address);
+                ExceptionPerson.checkAddress(address);
                 break;
-            } catch (Exceptions exceptions) {
+            } catch (ExceptionPerson exceptions) {
                 System.out.println(exceptions.getMessage());
             }
         }
@@ -184,9 +183,9 @@ public class CustomerService implements ICustomerService {
                     try {
                         System.out.println("Mời bạn nhập tên mới khách hàng");
                         name = scanner.nextLine();
-                        Exceptions.checkName(name, "^([A-ZĐ][a-záàảãạăâắằấầặẵẫêậéèẻẽẹếềểễệóòỏõọôốồổỗộơớờởỡợíìỉĩịđùúủũụưứửữựỷỹ]+[ ])+[A-ZĐ][a-záàảãạăâắằấầặẵẫậéèẻẽẹếềểễệóòêỏõọôốồổỗộơớờởỡợíìỉĩịđùúủũụưứửữựỷỹ]+$");
+                        ExceptionPerson.checkName(name, "^([A-ZĐ][a-záàảãạăâắằấầặẵẫêậéèẻẽẹếềểễệóòỏõọôốồổỗộơớờởỡợíìỉĩịđùúủũụưứửữựỷỹ]+[ ])+[A-ZĐ][a-záàảãạăâắằấầặẵẫậéèẻẽẹếềểễệóòêỏõọôốồổỗộơớờởỡợíìỉĩịđùúủũụưứửữựỷỹ]+$");
                         break;
-                    } catch (Exceptions exceptions) {
+                    } catch (ExceptionPerson exceptions) {
                         System.out.println(exceptions.getMessage());
                     }
                 }
@@ -197,9 +196,9 @@ public class CustomerService implements ICustomerService {
                     try {
                         System.out.println("Mời bạn nhập ngày sinh mới của khách hàng");
                         dayOfBirth = LocalDate.parse(scanner.nextLine(), formatter);
-                        Exceptions.checkAge(dayOfBirth);
+                        ExceptionPerson.checkAge(dayOfBirth);
                         break;
-                    } catch (Exceptions exceptions) {
+                    } catch (ExceptionPerson exceptions) {
                         System.out.println(exceptions.getMessage());
                     } catch (DateTimeException e) {
                         System.out.println("Bạn nhập không hợp lệ");
@@ -212,9 +211,9 @@ public class CustomerService implements ICustomerService {
                     try {
                         System.out.println("Mời bạn nhập giới tính mới của khách hàng");
                         gender = scanner.nextLine();
-                        Exceptions.checkGender(gender, "^(Nam|Nữ|Không|nam|nữ|không)+$");
+                        ExceptionPerson.checkGender(gender, "^(Nam|Nữ|Không|nam|nữ|không)+$");
                         break;
-                    } catch (Exceptions exceptions) {
+                    } catch (ExceptionPerson exceptions) {
                         System.out.println(exceptions.getMessage());
                     }
                 }
@@ -225,9 +224,9 @@ public class CustomerService implements ICustomerService {
                     try {
                         System.out.println("Mời bạn nhập số CMND mới khách hàng");
                         idNumber = scanner.nextLine();
-                        Exceptions.checkIdNumber(idNumber);
+                        ExceptionPerson.checkIdNumber(idNumber);
                         break;
-                    } catch (Exceptions exceptions) {
+                    } catch (ExceptionPerson exceptions) {
                         System.out.println(exceptions.getMessage());
                     }
                 }
@@ -238,9 +237,9 @@ public class CustomerService implements ICustomerService {
                     try {
                         System.out.println("Mời bạn nhập số điện thoại mới của khách hàng");
                         phoneNumber = scanner.nextLine();
-                        Exceptions.checkPhoneNumber(phoneNumber);
+                        ExceptionPerson.checkPhoneNumber(phoneNumber);
                         break;
-                    } catch (Exceptions exceptions) {
+                    } catch (ExceptionPerson exceptions) {
                         System.out.println(exceptions.getMessage());
                     }
                 }
@@ -251,9 +250,9 @@ public class CustomerService implements ICustomerService {
                     try {
                         System.out.println("Mời bạn nhập email mới khách hàng");
                         email = scanner.nextLine();
-                        Exceptions.checkEmail(email);
+                        ExceptionPerson.checkEmail(email);
                         break;
-                    } catch (Exceptions exceptions) {
+                    } catch (ExceptionPerson exceptions) {
                         System.out.println(exceptions.getMessage());
                     }
                 }
@@ -302,9 +301,9 @@ public class CustomerService implements ICustomerService {
                     try {
                         System.out.println("Mời bạn nhập địa chỉ của khách hàng");
                         address = scanner.nextLine();
-                        Exceptions.checkAddress(address);
+                        ExceptionPerson.checkAddress(address);
                         break;
-                    } catch (Exceptions exceptions) {
+                    } catch (ExceptionPerson exceptions) {
                         System.out.println(exceptions.getMessage());
                     }
                 }

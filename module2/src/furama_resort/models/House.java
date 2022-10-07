@@ -2,24 +2,18 @@ package furama_resort.models;
 
 public class House extends Facility {
     private String roomStandard ;
-    private String numberOfFloors ;
+    private int numberOfFloors ;
 
-    public House(String serviceCode, String roomStandard, String numberOfFloors) {
-        super(serviceCode);
+    public House() {
+    }
+
+    public House(String serviceName, String serviceCode, Double usableArea, int rentalCosts, int maximumNumberOfPeople, String rentalType, String roomStandard, int numberOfFloors) {
+        super(serviceName, serviceCode, usableArea, rentalCosts, maximumNumberOfPeople, rentalType);
         this.roomStandard = roomStandard;
         this.numberOfFloors = numberOfFloors;
     }
 
-    public House(String serviceName, String usableArea, String rentalCosts, String maximumNumberOfPeople, String rentalType, String roomStandard, String numberOfFloors) {
-        super(serviceName, usableArea, rentalCosts, maximumNumberOfPeople, rentalType);
-        this.roomStandard = roomStandard;
-        this.numberOfFloors = numberOfFloors;
-    }
 
-    public House(String roomStandard, String numberOfFloors) {
-        this.roomStandard = roomStandard;
-        this.numberOfFloors = numberOfFloors;
-    }
 
     public String getRoomStandard() {
         return roomStandard;
@@ -29,11 +23,11 @@ public class House extends Facility {
         this.roomStandard = roomStandard;
     }
 
-    public String getNumberOfFloors() {
+    public int getNumberOfFloors() {
         return numberOfFloors;
     }
 
-    public void setNumberOfFloors(String numberOfFloors) {
+    public void setNumberOfFloors(int numberOfFloors) {
         this.numberOfFloors = numberOfFloors;
     }
 

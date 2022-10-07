@@ -1,22 +1,22 @@
 package furama_resort.models;
 
-public class Booking {
-    private String codeBooking;
-    private String startDay;
-    private String endDay;
-    private String codeCustomer;
-    private String serviceName;
-    private String typeOfService;
+public class Booking  {
+    private String codeBooking;//mã book
+    private int startDay;
+    private int endDay;
+    private String codeCustomer;//mã khách hàng
+    private String serviceCode;//mã dịch vụ
+    private String typeOfService;//loại dịch vụ
 
     public Booking() {
     }
 
-    public Booking(String codeBooking, String startDay, String endDay, String codeCustomer, String serviceName, String typeOfService) {
+    public Booking(String codeBooking, int startDay, int endDay, String codeCustomer, String serviceName, String typeOfService) {
         this.codeBooking = codeBooking;
         this.startDay = startDay;
         this.endDay = endDay;
         this.codeCustomer = codeCustomer;
-        this.serviceName = serviceName;
+        this.serviceCode = serviceName;
         this.typeOfService = typeOfService;
     }
 
@@ -28,19 +28,19 @@ public class Booking {
         this.codeBooking = codeBooking;
     }
 
-    public String getStartDay() {
+    public int getStartDay() {
         return startDay;
     }
 
-    public void setStartDay(String startDay) {
+    public void setStartDay(int startDay) {
         this.startDay = startDay;
     }
 
-    public String getEndDay() {
+    public int getEndDay() {
         return endDay;
     }
 
-    public void setEndDay(String endDay) {
+    public void setEndDay(int endDay) {
         this.endDay = endDay;
     }
 
@@ -52,12 +52,12 @@ public class Booking {
         this.codeCustomer = codeCustomer;
     }
 
-    public String getServiceName() {
-        return serviceName;
+    public String getServiceCode() {
+        return serviceCode;
     }
 
-    public void setServiceName(String serviceName) {
-        this.serviceName = serviceName;
+    public void setServiceCode(String serviceCode) {
+        this.serviceCode = serviceCode;
     }
 
     public String getTypeOfService() {
@@ -75,7 +75,7 @@ public class Booking {
                 ", startDay='" + startDay + '\'' +
                 ", endDay='" + endDay + '\'' +
                 ", codeCustomer='" + codeCustomer + '\'' +
-                ", serviceName='" + serviceName + '\'' +
+                ", serviceName='" + serviceCode + '\'' +
                 ", typeOfService='" + typeOfService + '\'' +
                 '}';
     }
