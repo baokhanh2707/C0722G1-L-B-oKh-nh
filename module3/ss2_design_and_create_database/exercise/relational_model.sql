@@ -1,8 +1,8 @@
 create database relational_model;
 use relational_model;
-CREATE TABLE phieu_xuat (
-    so_phieu_xuat INT PRIMARY KEY,
-    ngay_xuat DATE
+create table phieu_xuat (
+    so_phieu_xuat int primary key,
+    ngay_xuat date
 );
 
 create table vat_tu(
@@ -10,61 +10,61 @@ ma_vat_tu int primary key,
 ten_vat_tu varchar(50)
 );
 
-CREATE TABLE chi_tiet_phieu_xuat (
-    so_luong_san_xuat INT,
-    don_gia_xuat INT,
-    PRIMARY KEY (so_phieu_xuat , ma_vat_tu),
-    so_phieu_xuat INT,
-    ma_vat_tu INT,
-    FOREIGN KEY (so_phieu_xuat)
-        REFERENCES phieu_xuat (so_phieu_xuat),
-    FOREIGN KEY (ma_vat_tu)
-        REFERENCES vat_tu (ma_vat_tu)
+create table chi_tiet_phieu_xuat (
+    so_luong_san_xuat int,
+    don_gia_xuat int,
+    primary key (so_phieu_xuat , ma_vat_tu),
+    so_phieu_xuat int,
+    ma_vat_tu int,
+    foreign key (so_phieu_xuat)
+        references phieu_xuat (so_phieu_xuat),
+    foreign key (ma_vat_tu)
+        references vat_tu (ma_vat_tu)
 );
 
-CREATE TABLE phieu_nhap (
-    so_phieu_nhap INT PRIMARY KEY,
-    ngay_nhap DATE
+create table phieu_nhap (
+    so_phieu_nhap int primary key,
+    ngay_nhap date
 );
 
-CREATE TABLE chi_tiet_phieu_nhap (
-    don_gia_nhap INT,
-    so_luong_nhap INT,
-    PRIMARY KEY (ma_vat_tu , so_phieu_nhap),
-    ma_vat_tu INT,
-    so_phieu_nhap INT,
-    FOREIGN KEY (so_phieu_nhap)
-        REFERENCES phieu_nhap (so_phieu_nhap),
-    FOREIGN KEY (ma_vat_tu)
-        REFERENCES vat_tu (ma_vat_tu)
+create table chi_tiet_phieu_nhap (
+    don_gia_nhap int,
+    so_luong_nhap int,
+    primary key (ma_vat_tu , so_phieu_nhap),
+    ma_vat_tu int,
+    so_phieu_nhap int,
+    foreign key (so_phieu_nhap)
+        references phieu_nhap (so_phieu_nhap),
+    foreign key (ma_vat_tu)
+        references vat_tu (ma_vat_tu)
 );
-CREATE TABLE so_dien_thoai (
-    so_dien_thoai_id INT PRIMARY KEY,
-    so_dien_thoai VARCHAR(50)
+create table so_dien_thoai (
+    so_dien_thoai_id int primary key,
+    so_dien_thoai varchar(50)
 );
     
-    CREATE TABLE nha_cung_cap (
-    ma_nha_cung_cap INT PRIMARY KEY,
-    ten_nha_cung_cap VARCHAR(50),
-    dia_chi VARCHAR(50),
-    so_dien_thoai_id INT,
-    FOREIGN KEY (so_dien_thoai_id)
-        REFERENCES so_dien_thoai (so_dien_thoai_id)
+    create table nha_cung_cap (
+    ma_nha_cung_cap int primary key,
+    ten_nha_cung_cap varchar(50),
+    dia_chi varchar(50),
+    so_dien_thoai_id int,
+    foreign key (so_dien_thoai_id)
+        references so_dien_thoai (so_dien_thoai_id)
 );
-CREATE TABLE don_dat_hang (
-    so_don_hang INT PRIMARY KEY,
-    ngay_dat_hang DATE,
-    ma_nha_cung_cap INT,
-    FOREIGN KEY (ma_nha_cung_cap)
-        REFERENCES nha_cung_cap (ma_nha_cung_cap)
+create table don_dat_hang (
+    so_don_hang int primary key,
+    ngay_dat_hang date,
+    ma_nha_cung_cap int,
+    foreign key (ma_nha_cung_cap)
+        references nha_cung_cap (ma_nha_cung_cap)
 );
-CREATE TABLE chi_tiet_don_dat_hang (
-    PRIMARY KEY (ma_vat_tu , so_don_hang),
-    so_don_hang INT,
-    ma_vat_tu INT,
-    FOREIGN KEY (so_don_hang)
-        REFERENCES don_dat_hang (so_don_hang),
-    FOREIGN KEY (ma_vat_tu)
-        REFERENCES vat_tu (ma_vat_tu)
+create table chi_tiet_don_dat_hang (
+    primary key (ma_vat_tu , so_don_hang),
+    so_don_hang int,
+    ma_vat_tu int,
+    foreign key (so_don_hang)
+        references don_dat_hang (so_don_hang),
+    foreign key (ma_vat_tu)
+        references vat_tu (ma_vat_tu)
 );
 
