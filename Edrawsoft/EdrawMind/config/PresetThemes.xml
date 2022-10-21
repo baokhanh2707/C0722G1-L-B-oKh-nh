@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Themes Version="8.1.0">
+    <Theme Name="Edraw" Effect="0" ID="40" Rainbow="0">
+        <ThemeColor V="3"/>
+        <ThemeEffect V="40"/>
+        <ThemeText V="40"/>
+        <ThemeShape V="40"/>
+    </Theme>
+    <Theme Name="Edraw" Effect="0" ID="41" Rainbow="0">
+        <ThemeColor V="34"/>
+        <ThemeEffect V="41"/>
+        <ThemeText V="40"/>
+        <ThemeShape V="41"/>
+    </Theme>
+    <Theme Name="Edraw" Effect="0" ID="42" Rainbow="1">
+        <ThemeColor V="6"/>
+        <ThemeEffect V="42"/>
+        <ThemeText V="40"/>
+        <ThemeShape V="42"/>
+    </Theme>
+    <Theme Name="Edraw" Effect="0" ID="43" Rainbow="0">
+        <ThemeColor V="3"/>
+        <ThemeEffect V="43"/>
+        <ThemeText V="40"/>
+        <ThemeShape V="43"/>
+    </Theme>
+    <Theme Name="Edraw" Effect="0" ID="44" Rainbow="0">
+        <ThemeColor V="31"/>
+        <ThemeEffect V="44"/>
+        <ThemeText V="40"/>
+        <ThemeShape V="44"/>
+    </Theme>
+    <Theme Name="Edraw" Effect="0" ID="45" Rainbow="1">
+        <ThemeColor V="36"/>
+        <ThemeEffect V="45"/>
+        <ThemeText V="40"/>
+        <ThemeShape V="45"/>
+    </Theme>
+    <Theme Name="Edraw" Effect="0" ID="46" Rainbow="0">
+        <ThemeColor V="31"/>
+        <ThemeEffect V="46"/>
+        <ThemeText V="40"/>
+        <ThemeShape V="46"/>
+    </Theme>
+    <Theme Name="Edraw" Effect="0" ID="47" Rainbow="0">
+        <ThemeColor V="41"/>
+        <ThemeEffect V="47"/>
+        <ThemeText V="40"/>
+        <ThemeShape V="47"/>
+    </Theme>
+    <Theme Name="Edraw" Effect="0" ID="48" Rainbow="1">
+        <ThemeColor V="36"/>
+        <ThemeEffect V="48"/>
+        <ThemeText V="40"/>
+        <ThemeShape V="48"/>
+    </Theme>
+    <Theme Name="Edraw" Effect="0" ID="49" Rainbow="0">
+        <ThemeColor V="42"/>
+        <ThemeEffect V="49"/>
+        <ThemeText V="40"/>
+        <ThemeShape V="49"/>
+    </Theme>
+    <Theme Name="Edraw" Effect="0" ID="50" Rainbow="0">
+        <ThemeColor V="32"/>
+        <ThemeEffect V="50"/>
+        <ThemeText V="40"/>
+        <ThemeShape V="50"/>
+    </Theme>
+    <Theme Name="Edraw" Effect="0" ID="51" Rainbow="1">
+        <ThemeColor V="42"/>
+        <ThemeEffect V="51"/>
+        <ThemeText V="40"/>
+        <ThemeShape V="51"/>
+    </Theme>
+    <Theme Name="Edraw" Effect="0" ID="52" Rainbow="0">
+        <ThemeColor V="36"/>
+        <ThemeEffect V="52"/>
+        <ThemeText V="40"/>
+        <ThemeShape V="52"/>
+    </Theme>
+    <Theme Name="Edraw" Effect="0" ID="53" Rainbow="0">
+        <ThemeColor V="1"/>
+        <ThemeEffect V="53"/>
+        <ThemeText V="40"/>
+        <ThemeShape V="53"/>
+    </Theme>
+    <Theme Name="Edraw" Effect="0" ID="54" Rainbow="1">
+        <ThemeColor V="37"/>
+        <ThemeEffect V="54"/>
+        <ThemeText V="40"/>
+        <ThemeShape V="54"/>
+    </Theme>
+    <Theme Name="Edraw" Effect="0" ID="55" Rainbow="0">
+        <ThemeColor V="44"/>
+        <ThemeEffect V="55"/>
+        <ThemeText V="40"/>
+        <ThemeShape V="55"/>
+    </Theme>
+    <Theme Name="Edraw" Effect="0" ID="56" Rainbow="0">
+        <ThemeColor V="39"/>
+        <ThemeEffect V="56"/>
+        <ThemeText V="40"/>
+        <ThemeShape V="56"/>
+    </Theme>
+    <Theme Name="Edraw" Effect="0" ID="57" Rainbow="1">
+        <ThemeColor V="35"/>
+        <ThemeEffect V="57"/>
+        <ThemeText V="40"/>
+        <ThemeShape V="57"/>
+    </Theme>
+    <Theme Name="Edraw" Effect="0" ID="58" Rainbow="0">
+        <ThemeColor V="40"/>
+        <ThemeEffect V="58"/>
+        <ThemeText V="40"/>
+        <ThemeShape V="58"/>
+    </Theme>
+    <Theme Name="Edraw" Effect="0" ID="59" Rainbow="0">
+        <ThemeColor V="36"/>
+        <ThemeEffect V="59"/>
+        <ThemeText V="40"/>
+        <ThemeShape V="59"/>
+    </Theme>
+    <Theme Name="Edraw" Effect="0" ID="60" Rainbow="0">
+        <ThemeColor V="39"/>
+        <ThemeEffect V="60"/>
+        <ThemeText V="40"/>
+        <ThemeShape V="60"/>
+    </Theme>
+    <Theme Name="Edraw" Effect="0" ID="61" Rainbow="0">
+        <ThemeColor V="31"/>
+        <ThemeEffect V="61"/>
+        <ThemeText V="40"/>
+        <ThemeShape V="61"/>
+    </Theme>
+    <Theme Name="Edraw" Effect="0" ID="62" Rainbow="0">
+        <ThemeColor V="24"/>
+        <ThemeEffect V="62"/>
+        <ThemeText V="40"/>
+        <ThemeShape V="62"/>
+    </Theme>
+    <Theme Name="Edraw" Effect="0" ID="63" Rainbow="0">
+        <ThemeColor V="4"/>
+        <ThemeEffect V="63"/>
+        <ThemeText V="40"/>
+        <ThemeShape V="63"/>
+    </Theme>
+    <Theme Name="Edraw" Effect="0" ID="64" Rainbow="0">
+        <ThemeColor V="39"/>
+        <ThemeEffect V="64"/>
+        <ThemeText V="40"/>
+        <ThemeShape V="64"/>
+    </Theme>
+    <Theme Name="Edraw" Effect="0" ID="65" Rainbow="0">
+        <ThemeColor V="2"/>
+        <ThemeEffect V="65"/>
+        <ThemeText V="40"/>
+        <ThemeShape V="65"/>
+    </Theme>
+    <Theme Name="Edraw" Effect="0" ID="66" Rainbow="1">
+        <ThemeColor V="39"/>
+        <ThemeEffect V="66"/>
+        <ThemeText V="40"/>
+        <ThemeShape V="66"/>
+    </Theme>
+    <Theme Name="Edraw" Effect="0" ID="67" Rainbow="0">
+        <ThemeColor V="3"/>
+        <ThemeEffect V="67"/>
+        <ThemeText V="40"/>
+        <ThemeShape V="67"/>
+    </Theme>
+    <Theme Name="Edraw" Effect="0" ID="68" Rainbow="0">
+        <ThemeColor V="3"/>
+        <ThemeEffect V="68"/>
+        <ThemeText V="40"/>
+        <ThemeShape V="68"/>
+    </Theme>
+    <Theme Name="Edraw" Effect="0" ID="69" Rainbow="0">
+        <ThemeColor V="39"/>
+        <ThemeEffect V="69"/>
+        <ThemeText V="40"/>
+        <ThemeShape V="69"/>
+    </Theme>
+    <Theme Name="Edraw" Effect="0" ID="70" Rainbow="0">
+        <ThemeColor V="5"/>
+        <ThemeEffect V="70"/>
+        <ThemeText V="40"/>
+        <ThemeShape V="70"/>
+    </Theme>
+    <Theme Name="Edraw" Effect="0" ID="71" Rainbow="0">
+        <ThemeColor V="40"/>
+        <ThemeEffect V="71"/>
+        <ThemeText V="40"/>
+        <ThemeShape V="71"/>
+    </Theme>
+    <Theme Name="Edraw" Effect="0" ID="72" Rainbow="0">
+        <ThemeColor V="42"/>
+        <ThemeEffect V="72"/>
+        <ThemeText V="40"/>
+        <ThemeShape V="72"/>
+    </Theme>
+</Themes>

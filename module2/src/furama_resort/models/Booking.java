@@ -1,9 +1,11 @@
 package furama_resort.models;
 
+import java.time.LocalDate;
+
 public class Booking  {
     private String codeBooking;//mã book
-    private int startDay;
-    private int endDay;
+    private LocalDate startDay;
+    private LocalDate endDay;
     private String codeCustomer;//mã khách hàng
     private String serviceCode;//mã dịch vụ
     private String typeOfService;//loại dịch vụ
@@ -11,7 +13,7 @@ public class Booking  {
     public Booking() {
     }
 
-    public Booking(String codeBooking, int startDay, int endDay, String codeCustomer, String serviceName, String typeOfService) {
+    public Booking(String codeBooking, LocalDate startDay, LocalDate endDay, String codeCustomer, String serviceName, String typeOfService) {
         this.codeBooking = codeBooking;
         this.startDay = startDay;
         this.endDay = endDay;
@@ -28,19 +30,19 @@ public class Booking  {
         this.codeBooking = codeBooking;
     }
 
-    public int getStartDay() {
+    public LocalDate getStartDay() {
         return startDay;
     }
 
-    public void setStartDay(int startDay) {
+    public void setStartDay(LocalDate startDay) {
         this.startDay = startDay;
     }
 
-    public int getEndDay() {
+    public LocalDate getEndDay() {
         return endDay;
     }
 
-    public void setEndDay(int endDay) {
+    public void setEndDay(LocalDate endDay) {
         this.endDay = endDay;
     }
 

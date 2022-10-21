@@ -39,6 +39,8 @@ public class CustomerController {
                 }
             } catch (NumberFormatException e) {
                 System.out.println(e.getMessage());
+            } catch (Exception e) {
+                e.getMessage();
             }
         }
     }

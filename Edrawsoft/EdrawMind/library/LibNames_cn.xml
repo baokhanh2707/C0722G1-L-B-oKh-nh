@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Names>
+    <Gallaries>
+        <Gallary NameU="Office" Name="商务办公"/>
+        <Gallary NameU="Education" Name="教育"/>
+        <Gallary NameU="Tourism" Name="旅行"/>
+        <Gallary NameU="Holiday" Name="节日"/>
+        <Gallary NameU="Food" Name="食品"/>
+        <Gallary NameU="Environmental Protection" Name="环境保护"/>
+        <Gallary NameU="Sport" Name="体育器材"/>
+        <Gallary NameU="Technology" Name="科技"/>
+        <Gallary NameU="Professions" Name="职业"/>
+        <Gallary NameU="Expressions" Name="表情"/>
+        <Gallary NameU="Animal" Name="动物"/>
+        <Gallary NameU="Plant" Name="植物"/>
+        <Gallary NameU="Weather" Name="天气"/>
+    </Gallaries>
+</Names>

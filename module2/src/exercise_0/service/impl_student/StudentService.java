@@ -112,7 +112,7 @@ public class StudentService implements IStudentService {
         File file = new File("D:\\C0722G1-L-B-oKh-nh\\module2\\src\\exercise_0\\data\\readStudent.txt");
         BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter(file));
         for (Student student : studentList) {
-            bufferedWriter.write(student.getInfor());
+            bufferedWriter.write(student.getInfo());
             bufferedWriter.newLine();
         }
         bufferedWriter.close();
@@ -188,7 +188,7 @@ public class StudentService implements IStudentService {
     public void displayAllStudent() throws IOException {
         studentList = readFile();
         for (Student student : studentList) {
-            System.out.println(student.getInfor());
+            System.out.println(student.getInfo());
         }
     }
 }

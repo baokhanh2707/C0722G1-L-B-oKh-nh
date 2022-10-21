@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<UrlLink>
+    <cnCloudUrl V="https://masterapi.edrawsoft.cn/"/>
+    <comCloudUrl V="https://masterapi.edrawsoft.com/"/>
+    <cnSvgUrl V="https://masterapi.edrawsoft.cn/api/user/"/>
+    <comSvgUrl V="https://viewer.edrawsoft.com/public/api/user/"/>
+    <cnShareUrl V="https://www.edrawsoft.cn/viewer/"/>
+    <comShareUrl V="https://viewer.edrawsoft.com/"/>
+    <cnHomePageUrl V="https://www.edrawsoft.cn/"/>
+    <comHomePageUrl V="https://www.edrawsoft.com/"/>
+    <cnAccoutUrl V="https://account.edrawsoft.cn/"/>
+    <comAccoutUrl V="https://account.edrawsoft.com/"/>
+    <cnUserapiUrl V="https://userapi.edrawsoft.cn/"/>
+    <comUserapiUrl V="https://userapi.edrawsoft.com/"/>
+    <cnOpenUrl V="https://mm.edrawsoft.cn/pc/files"/>
+    <cnOpenOnlyUrl V="https://mm.edrawsoft.cn/pc/files?left=false"/>
+    <cnSaveOnlyUrl V="https://mm.edrawsoft.cn/pc/files?left=false&amp;action=save"/>
+    <cnCommunityUrl V="https://mm.edrawsoft.cn/pc/store"/>
+    <cnOpenTeamUrl V="https://mm.edrawsoft.cn/teams?left=false"/>
+    <cnSaveTeamUrl V="https://mm.edrawsoft.cn/teams?left=false&amp;action=save"/>
+    <comOpenUrl V="https://mm.edrawsoft.com/files"/>
+    <comOpenOnlyUrl V="https://mm.edrawsoft.com/files?left=false"/>
+    <comSaveOnlyUrl V="https://mm.edrawsoft.com/files?left=false&amp;action=save"/>
+    <comCommunityUrl V="https://mm.edrawsoft.com/store"/>
+    <comOpenTeamUrl V="https://mm.edrawsoft.com/pc/teams?left=false"/>
+    <comSaveTeamUrl V="https://mm.edrawsoft.com/pc/teams?left=false&amp;action=save"/>
+    <outLinerUrl V="/Config/outline/index.html"/>
+    <cnFormulaUrl V="/Config/formula/index.html"/>
+    <comFormulaUrl V="/Config/formula/index.html"/>
+    <latexFormulaUrl V="/Config/formula/index.html"/>
+    <welfareGetOnlineUrl V="https://account.edrawsoft.cn/coupon.html"/>
+    <cnWebBuy V="https://mm.edrawsoft.cn/cef/buy"/>
+    <Test V="false"/>
+    <TestBuy V="hello-world"/>
+</UrlLink>

@@ -10,11 +10,9 @@ import java.util.*;
 public class FacilityService implements IFacilityService {
     Scanner scanner = new Scanner(System.in);
     LinkedHashMap<Facility, Integer> facilityList = new LinkedHashMap<Facility, Integer>();
-    LinkedHashMap<Villa,Integer>villaList=new LinkedHashMap<>();
-    LinkedHashMap<House,Integer>houseList=new LinkedHashMap<>();
-    LinkedHashMap<Room,Integer>roomList=new LinkedHashMap<>();
-
-
+   public LinkedHashMap<Villa,Integer>villaList=new LinkedHashMap<>();
+   public LinkedHashMap<House,Integer>houseList=new LinkedHashMap<>();
+   public LinkedHashMap<Room,Integer>roomList=new LinkedHashMap<>();
     @Override
     public void displayFacility() {
 LOOP:
@@ -27,12 +25,7 @@ LOOP:
                 int option = Integer.parseInt(scanner.nextLine());
                 switch (option){
                     case 1:
-                        villaList=readFileVilla();
-                        Set<Villa> villas;
-                        villas=villaList.keySet();
-                        for(Villa villa :villas){
-                            System.out.println(villa);
-                        }
+                        displayVilla();
                         break;
                     case 2:
                         houseList=readFileHouse();
@@ -61,6 +54,15 @@ LOOP:
             }
         }
 
+    }
+
+    public void displayVilla() {
+        villaList=readFileVilla();
+        Set<Villa> villas;
+        villas=villaList.keySet();
+        for(Villa villa :villas){
+            System.out.println(villa);
+        }
     }
 
 
@@ -529,7 +531,7 @@ LOOP:
         Room room = new Room(serviceName, serviceCode, usableArea, rentalCosts, maximumNumberOfPeople, rentalType, freeServiceIncluded);
         return room;
     }
-    private LinkedHashMap<Villa,Integer> readFileVilla() {
+    public static LinkedHashMap<Villa,Integer> readFileVilla() {
         LinkedHashMap<Villa,Integer> villaList = new LinkedHashMap<>();
         BufferedReader bufferedReader = null;
         try {
@@ -556,7 +558,7 @@ LOOP:
         }
         return villaList;
     }
-    private LinkedHashMap<House,Integer> readFileHouse() {
+    public static LinkedHashMap<House,Integer> readFileHouse() {
         LinkedHashMap<House,Integer> houseList = new LinkedHashMap<>();
         BufferedReader bufferedReader = null;
         try {
@@ -585,7 +587,7 @@ LOOP:
         }
         return houseList;
     }
-    private LinkedHashMap<Room,Integer> readFileRoom() {
+    public static LinkedHashMap<Room,Integer> readFileRoom() {
         LinkedHashMap<Room,Integer> roomList = new LinkedHashMap<>();
         BufferedReader bufferedReader = null;
         try {
@@ -612,7 +614,7 @@ LOOP:
         }
         return roomList;
     }
-    private void writeFileVilla(LinkedHashMap<Villa,Integer>villaList){
+    public void writeFileVilla(LinkedHashMap<Villa, Integer> villaList){
         BufferedWriter bufferedWriter = null;
         try {
             File file = new File("D:\\C0722G1-L-B-oKh-nh\\module2\\src\\furama_resort\\data\\villa.txt");
@@ -632,7 +634,7 @@ LOOP:
             e.printStackTrace();
         }
     }
-    private void writeFileHouse(LinkedHashMap<House,Integer>houseList){
+    public void writeFileHouse(LinkedHashMap<House, Integer> houseList){
         BufferedWriter bufferedWriter = null;
         try {
             File file = new File("D:\\C0722G1-L-B-oKh-nh\\module2\\src\\furama_resort\\data\\house.txt");
@@ -652,7 +654,7 @@ LOOP:
             e.printStackTrace();
         }
     }
-    private void writeFileRoom(LinkedHashMap<Room,Integer>roomList){
+    public void writeFileRoom(LinkedHashMap<Room, Integer> roomList){
         BufferedWriter bufferedWriter = null;
         try {
             File file = new File("D:\\C0722G1-L-B-oKh-nh\\module2\\src\\furama_resort\\data\\room.txt");

@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DataFormats>	
+	<DTUnits>
+		<Unit NameU="Year" Local="Ano"></Unit>
+		<Unit NameU="Quarter" Local="Trimestre"></Unit>
+		<Unit NameU="Month" Local="Mês"></Unit>
+		<Unit NameU="Week" Local="Semana"></Unit>
+		<Unit NameU="Day" Local="Dia"></Unit>
+		<Unit NameU="Hour" Local="Hora"></Unit>
+		<Unit NameU="Minute"	Local="Minuto"></Unit>
+		<Unit NameU="Second"	Local="Segundo"></Unit>			
+	</DTUnits>				
+	<Strings>
+		<String NameU="Normal"	Local="Normal"></String>
+		<String NameU="Uppercase"	Local="Maiúsculas"></String>
+		<String NameU="Lowercase"	Local="Minúsculas"></String>
+	</Strings>
+	<Durations>
+		<Unit NameU="Week"	Local="s."></Unit>
+		<Unit NameU="Day"	Local="d."></Unit>		
+		<Unit NameU="Hour"	Local="h."></Unit>
+		<Unit NameU="Minute"	Local="m."></Unit>
+		<Unit NameU="Second"	Local="s."></Unit>
+		<Unit NameU="Hour&amp;Minute"	Local="h:m"></Unit>
+		<Unit NameU="Minute&amp;Second"	Local="m:s"></Unit>	
+	</Durations>
+	<Dates Default="0">
+		<Date Format="yyyy-MM-dd"></Date>
+		<Date Format="yyyy/M/d"></Date>
+		<Date Format="M/d/yyyy"></Date>
+		<Date Format="M/d/yy"></Date>
+		<Date Format="d/M/yyyy"></Date>
+		<Date Format="d/M/yy"></Date>
+		<Date Format="M.d.yyyy"></Date>
+		<Date Format="d.M.yyyy"></Date>
+		<Date Format="yy-M-d"></Date>	
+		<Date Format="MM-dd-yy"></Date>		
+		<Date Format="MMMM d,yyyy"></Date>
+		<Date Format="dddd,MMMM dd,yyyy"></Date>
+		<Date Format="d MMMM yyyy"></Date>	
+		<Date Format="d-MMM-yy"></Date>	
+		<Date Format="MMM.d,yy"></Date>
+		<Date Format="MMMM yy"></Date>
+		<Date Format="MMM-yy"></Date>
+		<Date Format="yyyy"></Date>		
+		<Date Format="MMM"></Date>
+	</Dates>
+	<Times Default="2">
+		<Time Format="h:mm ap"></Time>
+		<Time Format="h:mm:ss ap"></Time>
+		<Time Format="hh:mm"></Time>	
+		<Time Format="hh:mm:ss"></Time>
+		<Time Format="hh"></Time>
+		<Time Format="mm"></Time>
+		<Time Format="ss"></Time>
+	</Times>
+	<Units Default="0">
+		<Unit NameU="None" Flag="" Local="Nenhum"></Unit>
+		<Unit NameU="Page's Unit" Flag="" Local="Unidade de Página"></Unit>
+		<Unit NameU="kilometre" Flag="km" Local="Quilômetro"></Unit>
+		<Unit NameU="hectometre" Flag="hm" Local="Hectômetro"></Unit>
+		<Unit NameU="dehcametre" Flag="dam" Local="Decâmetro"></Unit>
+		<Unit NameU="metre" Flag="m" Local="metro"></Unit>		
+		<Unit NameU="decimetre" Flag="dm" Local="decímetro"></Unit>
+		<Unit NameU="centimetre" Flag="cm" Local="centímetro"></Unit>
+		<Unit NameU="millimetre" Flag="mm" Local="milímetro"></Unit>
+		<Unit NameU="decimillimetre" Flag="dmm" Local="décima de milímetro"></Unit>
+		<Unit NameU="centimillimetre" Flag="cmm" Local="centésima de milímetro"></Unit>
+		<Unit NameU="micrometre" Flag="um" Local="micrômetro"></Unit>
+		<Unit NameU="nautical mile" Flag="n.m" Local="milha marítima"></Unit>
+		<Unit NameU="mile" Flag="mi" Local="milha"></Unit>
+		<Unit NameU="yard" Flag="yd" Local="jarda"></Unit>
+		<Unit NameU="foot" Flag="ft" Local="pé"></Unit>
+		<Unit NameU="inch" Flag="in" Local="polegada"></Unit>
+		<Unit NameU="square kilometre" Flag="sq.km" Local="quilômetro quadrado"></Unit>
+		<Unit NameU="hectare" Flag="ha" Local="hectare"></Unit>
+		<Unit NameU="are" Flag="a" Local="are"></Unit>		
+		<Unit NameU="square metre" Flag="sq.m" Local="metro quadrado"></Unit>
+		<Unit NameU="square centimetre" Flag="sq.cm" Local="centímetro quadrado"></Unit>
+		<Unit NameU="square mile" Flag="sq.mi" Local="milha quadrada"></Unit>
+		<Unit NameU="acre" Flag="ac" Local="acre"></Unit>
+		<Unit NameU="square yard" Flag="sq.yd" Local="jarda quadrada"></Unit>
+		<Unit NameU="square foot" Flag="sq.ft" Local="pé quadrado"></Unit>
+		<Unit NameU="square inch" Flag="sq.in" Local="polegada quadrada"></Unit>
+		<Unit NameU="tonne" Flag="t" Local="tonelada"></Unit>
+		<Unit NameU="quintal" Flag="q" Local="quintal"></Unit>
+		<Unit NameU="kilogram" Flag="kg" Local="quilograma"></Unit>
+		<Unit NameU="hectogramme" Flag="hg" Local="hectograma"></Unit>
+		<Unit NameU="decagramme" Flag="dag" Local="decagrama"></Unit>
+		<Unit NameU="gramme" Flag="g" Local="grama"></Unit>
+		<Unit NameU="decigramme" Flag="dg" Local="decigrama"></Unit>
+		<Unit NameU="centigramme" Flag="cg" Local="centigrama"></Unit>
+		<Unit NameU="milligramme" Flag="mg" Local="miligrama"></Unit>
+		<Unit NameU="microgramme" Flag="ug" Local="micrograma"></Unit>
+		<Unit NameU="long ton" Flag="l.t" Local="tonelada longa"></Unit>
+		<Unit NameU="short ton" Flag="s.t" Local="tonelada curta"></Unit>
+		<Unit NameU="hundredweight" Flag="cwt" Local="quintal britânico"></Unit>
+		<Unit NameU="stone" Flag="stone" Local="stone"></Unit>
+		<Unit NameU="pound" Flag="lb" Local="libra"></Unit>
+		<Unit NameU="ounce" Flag="oz" Local="onça"></Unit>
+		<Unit NameU="dram" Flag="dr" Local="dracma"></Unit>
+		<Unit NameU="grain" Flag="gr" Local="grão"></Unit>	
+		<Unit NameU="kilolitre" Flag="kl" Local="quilolitro"></Unit>
+		<Unit NameU="hectolitre" Flag="hl" Local="hectolitro"></Unit>
+		<Unit NameU="decalitre" Flag="dal" Local="decalitro"></Unit>
+		<Unit NameU="litre" Flag="l" Local="litro"></Unit>
+		<Unit NameU="decilitre" Flag="dl" Local="decilitro"></Unit>
+		<Unit NameU="centilitre" Flag="cl" Local="centilitro"></Unit>
+		<Unit NameU="millilitre" Flag="ml" Local="mililitro"></Unit>	
+		<Unit NameU="microlitre" Flag="ul" Local="microlitro"></Unit>
+		<Unit NameU="bushel" Flag="bsh" Local="alqueire"></Unit>
+		<Unit NameU="peck" Flag="pk" Local="peck"></Unit>
+		<Unit NameU="gallon" Flag="gal" Local="galão"></Unit>
+		<Unit NameU="quart" Flag="qt" Local="quarto"></Unit>
+		<Unit NameU="pint" Flag="p" Local="quartilho"></Unit>
+		<Unit NameU="ampere" Flag="A" Local="ampere"></Unit>
+		<Unit NameU="kelvin" Flag="K" Local="kelvin"></Unit>
+		<Unit NameU="mole" Flag="mol" Local="mol"></Unit>
+		<Unit NameU="candela" Flag="cd" Local="candela"></Unit>
+		<Unit NameU="second" Flag="s" Local="segundo"></Unit>
+		<Unit NameU="hertz" Flag="Hz" Local="hertz"></Unit>
+		<Unit NameU="pascal" Flag="Pa" Local="pascal"></Unit>
+		<Unit NameU="newton" Flag="N" Local="newton"></Unit>
+		<Unit NameU="joule" Flag="J" Local="joule"></Unit>
+		<Unit NameU="watt" Flag="W" Local="watt"></Unit>
+		<Unit NameU="coulomb" Flag="C" Local="coulomb"></Unit>
+		<Unit NameU="volt" Flag="V" Local="volt"></Unit>
+		<Unit NameU="ohm" Flag="Ω" Local="ohm"></Unit>
+		<Unit NameU="farad" Flag="F" Local="farad"></Unit>
+		<Unit NameU="henry" Flag="H" Local="henry"></Unit>	
+		<Unit NameU="centigrade" Flag="°C" Local="centígrado"></Unit>
+		<Unit NameU="radian" Flag="rad" Local="radiano"></Unit>
+		<Unit NameU="steradian" Flag="sr" Local="esterradiano"></Unit>
+		<Unit NameU="Custom" Flag="" Local="Personalizado"></Unit>	
+	</Units>	
+	<Currency Default="9">
+		<Cur Country="None" Flag="" NewFlag="" Local="Nenhum"></Cur>
+		<Cur Country="Australian" Flag="$A." NewFlag="AUD" Local="Dólar Australiano"></Cur>
+		<Cur Country="Canada" Flag="$" NewFlag="CAD" Local="Dólar Canadiano"></Cur>
+		<Cur Country="Denmark" Flag="D.Kr." NewFlag="DKK" Local="Coroa Dinamarquesa"></Cur>
+		<Cur Country="Hong Kong" Flag="HK$" NewFlag="HKD" Local="Dólar Hong Kong"></Cur>
+		<Cur Country="Japan" Flag="¥" NewFlag="JPY" Local="Iene Japonês"></Cur>
+		<Cur Country="United Kiongdom" Flag="£" NewFlag="GBP" Local="Libra Esterlina"></Cur>		
+		<Cur Country="Sweden" Flag="S.Kr." NewFlag="SEK" Local="Coroa Sueca"></Cur>				
+		<Cur Country="United States" Flag="$" NewFlag="USD" Local="Dólar Americano"></Cur>	
+		<Cur Country="Europe" Flag="€" NewFlag="EUR" Local="Euro"></Cur>	
+		<Cur Country="China" Flag="￥" NewFlag="CNY" Local="Yuan Renminbi"></Cur>
+		<Cur Country="India" Flag="Re." NewFlag="INR" Local="Rupia Indiana"></Cur>
+		<Cur Country="Korea" Flag="KRW" NewFlag="KRW" Local="Won Sul-Coreano"></Cur>
+		<Cur Country="Malaysia" Flag="M.$" NewFlag="MYR" Local="Ringgit da Malásia"></Cur>
+		<Cur Country="Mexico" Flag="$" NewFlag="MXN" Local="Peso Mexicano"></Cur>
+		<Cur Country="South Africa" Flag="R." NewFlag="ZAR" Local="Ran Sul Africano"></Cur>
+		<Cur Country="Custom" Flag="" NewFlag="" Local="Personalizado"></Cur>	
+	</Currency>
+</DataFormats>

@@ -1,0 +1,793 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Libraries>
+    <Lib Path="./Symbols/Office.mdt">
+		<Item Prompt="Badge" Name="徽章"/>
+		<Item Prompt="Glue" Name="胶水"/>
+		<Item Prompt="Resume" Name="简历"/>
+		<Item Prompt="Seal" Name="邮戳"/>
+		<Item Prompt="Printer" Name="打印机"/>
+		<Item Prompt="Gold" Name="黄金"/>
+		<Item Prompt="Gold" Name="黄金"/>
+		<Item Prompt="Purse" Name="钱包"/>
+		<Item Prompt="Purse" Name="钱包"/>
+		<Item Prompt="Table lamp" Name="台灯"/>
+		<Item Prompt="Pen" Name="笔"/>
+		<Item Prompt="Stapler" Name="订书机"/>
+		<Item Prompt="Clip" Name="夹子"/>
+		<Item Prompt="Taxi" Name="出租车"/>
+		<Item Prompt="Aircraft" Name="飞机"/>
+		<Item Prompt="Globe" Name="地球仪"/>
+		<Item Prompt="Great" Name="点赞"/>
+		<Item Prompt="Difference" Name="点踩"/>
+		<Item Prompt="Earth" Name="地球"/>
+		<Item Prompt="Mouse" Name="鼠标"/>
+		<Item Prompt="VIP" Name="贵宾"/>
+		<Item Prompt="File" Name="文件"/>
+		<Item Prompt="Calendar" Name="日历"/>
+		<Item Prompt="Open mail" Name="打开邮件"/>
+		<Item Prompt="Mail" Name="邮件"/>
+		<Item Prompt="Briefcase" Name="公文包"/>
+		<Item Prompt="Store" Name="商店"/>
+		<Item Prompt="Alarm clock" Name="闹钟"/>
+		<Item Prompt="Touch screen" Name="触摸屏"/>
+		<Item Prompt="Communication" Name="沟通"/>
+		<Item Prompt="Smart phone" Name="智能手机"/>
+		<Item Prompt="Scissors" Name="剪刀"/>
+		<Item Prompt="Empathy" Name="同理心"/>
+		<Item Prompt="Uniform" Name="制服"/>
+		<Item Prompt="Desktop PC" Name="电脑"/>
+		<Item Prompt="Notebook" Name="笔记本"/>
+		<Item Prompt="Cart" Name="车"/>
+		<Item Prompt="Shopping cart" Name="购物车"/>
+		<Item Prompt="Calculator" Name="计算器"/>
+		<Item Prompt="Warehouse" Name="仓库"/>
+		<Item Prompt="Bank" Name="银行"/>
+		<Item Prompt="Bank" Name="银行"/>
+		<Item Prompt="Exchange" Name="交换"/>
+		<Item Prompt="Address book" Name="地址本"/>
+		<Item Prompt="Fair" Name="天平"/>
+		<Item Prompt="Light bulb" Name="灯泡"/>
+		<Item Prompt="Video" Name="视频"/>
+		<Item Prompt="Location" Name="位置"/>
+		<Item Prompt="Positioning" Name="定位"/>
+		<Item Prompt="Map" Name="地图"/>
+		<Item Prompt="Route" Name="路线"/>
+		<Item Prompt="Label" Name="标签"/>
+		<Item Prompt="Shopping Bag" Name="购物袋"/>
+		<Item Prompt="Cooperation" Name="合作"/>
+		<Item Prompt="Time" Name="时间"/>
+		<Item Prompt="Aims" Name="目标"/>
+		<Item Prompt="Increase" Name="增加"/>
+		<Item Prompt="Decline" Name="下降"/>
+		<Item Prompt="Unity" Name="团结"/>
+		<Item Prompt="Histogram" Name="柱状图"/>
+		<Item Prompt="Telephone communication" Name="电话通信"/>
+		<Item Prompt="Paper clip" Name="纸夹"/>
+		<Item Prompt="Pie chart" Name="饼状图"/>
+		<Item Prompt="U Disk" Name="U盘"/>
+		<Item Prompt="Press peg" Name="图钉"/>
+		<Item Prompt="Global" Name="全球"/>
+		<Item Prompt="Notebook" Name="笔记本"/>
+		<Item Prompt="Safety" Name="安全"/>
+		<Item Prompt="Protection" Name="保护"/>
+		<Item Prompt="Bullion" Name="黄金"/>
+		<Item Prompt="Paper money" Name="纸币"/>
+		<Item Prompt="Cash register" Name="收银机"/>
+		<Item Prompt="Business card" Name="名片"/>
+		<Item Prompt="Personal" Name="个人"/>
+		<Item Prompt="Employee" Name="员工"/>
+		<Item Prompt="Looking for business opportunities" Name="寻找商机"/>
+		<Item Prompt="Folder" Name="文件夹"/>
+		<Item Prompt="Invoice" Name="发票"/>
+		<Item Prompt="Save money" Name="省钱"/>
+		<Item Prompt="Publicity" Name="宣传"/>
+		<Item Prompt="Trophy" Name="奖杯"/>
+		<Item Prompt="Competition" Name="竞争"/>
+		<Item Prompt="Game" Name="游戏"/>
+		<Item Prompt="Medals" Name="奖牌"/>
+		<Item Prompt="Gift" Name="礼物"/>
+		<Item Prompt="Protection" Name="保护"/>
+		<Item Prompt="Performance" Name="绩效"/>
+		<Item Prompt="Video" Name="视频"/>
+		<Item Prompt="Planning" Name="规划"/>
+		<Item Prompt="Carton" Name="纸箱"/>
+		<Item Prompt="Magnifier" Name="放大镜"/>
+		<Item Prompt="Save" Name="保存"/>
+		<Item Prompt="Fingerprint" Name="指纹"/>
+		<Item Prompt="Upcoming" Name="日程"/>
+		<Item Prompt="Customer service" Name="客户服务"/>
+		<Item Prompt="Lock" Name="锁"/>
+		<Item Prompt="Plant" Name="植物"/>
+		<Item Prompt="Woman" Name="女人"/>
+		<Item Prompt="The man" Name="男人"/>
+		<Item Prompt="Organizational structure" Name="组织结构"/>
+		<Item Prompt="Meeting" Name="会议"/>
+		<Item Prompt="Preach" Name="宣讲"/>
+		<Item Prompt="Business" Name="业务"/>
+		<Item Prompt="Label" Name="标签"/>
+		<Item Prompt="Overtime" Name="加班"/>
+		<Item Prompt="Coffee" Name="咖啡"/>
+		<Item Prompt="Auction" Name="拍卖"/>
+		<Item Prompt="Recharge" Name="充电"/>
+		<Item Prompt="Project management" Name="项目管理"/>
+		<Item Prompt="Set up" Name="设置"/>
+		<Item Prompt="Trash can" Name="垃圾桶"/>
+		<Item Prompt="Accelerate" Name="加速"/>
+		<Item Prompt="Upload" Name="上传"/>
+		<Item Prompt="Download" Name="下载"/>
+		<Item Prompt="View" Name="视图"/>
+		<Item Prompt="Record video" Name="录制视频"/>
+		<Item Prompt="Documentation" Name="文件"/>
+    </Lib>
+    <Lib Path="./Symbols/Education.mdt">
+		<Item Prompt="Table lamp" Name="台灯"/>
+		<Item Prompt="Ruler" Name="尺子"/>
+		<Item Prompt="Blackboard" Name="黑板"/>
+		<Item Prompt="Pencil" Name="铅笔"/>
+		<Item Prompt="School bag" Name="书包"/>
+		<Item Prompt="Books" Name="书"/>
+		<Item Prompt="English language" Name="英语"/>
+		<Item Prompt="Chemistry" Name="化学"/>
+		<Item Prompt="Biological" Name="生物"/>
+		<Item Prompt="Mathematics" Name="数学"/>
+		<Item Prompt="Physical" Name="物理"/>
+		<Item Prompt="History" Name="历史"/>
+		<Item Prompt="Geography" Name="地理"/>
+		<Item Prompt="Astronomy" Name="天文学"/>
+		<Item Prompt="Physical education" Name="体育"/>
+		<Item Prompt="Music" Name="音乐"/>
+		<Item Prompt="Molecular Structure" Name="分子结构"/>
+		<Item Prompt="Magnifier" Name="放大镜"/>
+		<Item Prompt="Light bulb" Name="灯泡"/>
+		<Item Prompt="Eraser" Name="橡皮擦"/>
+		<Item Prompt="Watch" Name="手表"/>
+		<Item Prompt="Compass" Name="指南针"/>
+		<Item Prompt="Pen holder" Name="笔筒"/>
+		<Item Prompt="Medals" Name="奖牌"/>
+		<Item Prompt="Doctor hat" Name="学士帽"/>
+		<Item Prompt="School" Name="学校"/>
+		<Item Prompt="Certificate" Name="证书"/>
+		<Item Prompt="Compass" Name="圆规"/>
+		<Item Prompt="Palette" Name="调色板"/>
+		<Item Prompt="Hourglass" Name="沙漏"/>
+		<Item Prompt="Microscope" Name="显微镜"/>
+		<Item Prompt="Textbook" Name="教科书"/>
+		<Item Prompt="School bus" Name="校车"/>
+		<Item Prompt="Notebook" Name="笔记本"/>
+		<Item Prompt="Knife" Name="刀"/>
+		<Item Prompt="Dancing" Name="跳舞"/>
+		<Item Prompt="Alarm clock" Name="闹钟"/>
+		<Item Prompt="Glasses" Name="眼镜"/>
+		<Item Prompt="Clock" Name="时钟"/>
+		<Item Prompt="Raise hand" Name="举手"/>
+		<Item Prompt="Footprint" Name="足迹"/>
+		<Item Prompt="Upcoming" Name="日程"/>
+		<Item Prompt="Video" Name="视频"/>
+		<Item Prompt="Game" Name="游戏"/>
+		<Item Prompt="Pencil sharpener" Name="卷笔刀"/>
+		<Item Prompt="Graduation certificate" Name="毕业证书"/>
+		<Item Prompt="List" Name="列表"/>
+		<Item Prompt="Psychology" Name="心理学"/>
+		<Item Prompt="Headset" Name="耳机"/>
+		<Item Prompt="Online course" Name="在线课程"/>
+		<Item Prompt="Teaching" Name="教学"/>
+		<Item Prompt="Go to school" Name="去上学"/>
+		<Item Prompt="Web page" Name="网页"/>
+		<Item Prompt="Microphone" Name="麦克风"/>
+		<Item Prompt="Abacus" Name="算盘"/>
+		<Item Prompt="Pen" Name="笔"/>
+		<Item Prompt="Watercolor pen" Name="水彩的钢笔"/>
+		<Item Prompt="Brush" Name="毛笔"/>
+    </Lib>
+    <Lib Path="./Symbols/Tourism.mdt">
+		<Item Prompt="Bank card" Name="银行卡"/>
+		<Item Prompt="Wallet" Name="钱包"/>
+		<Item Prompt="Recording" Name="记录"/>
+		<Item Prompt="Time" Name="时间"/>
+		<Item Prompt="Tickets" Name="票"/>
+		<Item Prompt="Landscape" Name="景观"/>
+		<Item Prompt="Compass" Name="指南针"/>
+		<Item Prompt="Tote bag" Name="手提袋"/>
+		<Item Prompt="Visa" Name="签证"/>
+		<Item Prompt="Air ticket" Name="机票"/>
+		<Item Prompt="Taxi" Name="出租车"/>
+		<Item Prompt="Camera" Name="相机"/>
+		<Item Prompt="Trunk" Name="行李箱"/>
+		<Item Prompt="Building" Name="建筑"/>
+		<Item Prompt="Fruit juice" Name="果汁"/>
+		<Item Prompt="Coconut tree" Name="椰子树"/>
+		<Item Prompt="Ice cream" Name="冰淇淋"/>
+		<Item Prompt="Exchange" Name="交换"/>
+		<Item Prompt="Ice cream" Name="冰淇淋"/>
+		<Item Prompt="Indicator" Name="路牌"/>
+		<Item Prompt="Route" Name="路线"/>
+		<Item Prompt="Breakfast" Name="早餐"/>
+		<Item Prompt="Flip flop" Name="人字拖"/>
+		<Item Prompt="Hot air balloon" Name="热气球"/>
+		<Item Prompt="Train" Name="火车"/>
+		<Item Prompt="Umbrella" Name="伞"/>
+		<Item Prompt="Bus" Name="公共汽车"/>
+		<Item Prompt="Sunglasses" Name="墨镜"/>
+		<Item Prompt="Hair dryer" Name="吹风机"/>
+		<Item Prompt="Hat" Name="帽子"/>
+		<Item Prompt="School bag" Name="书包"/>
+		<Item Prompt="Cart" Name="行李车"/>
+		<Item Prompt="Address" Name="地址"/>
+		<Item Prompt="Aircraft" Name="飞机"/>
+		<Item Prompt="Motorcycle" Name="摩托车"/>
+		<Item Prompt="Car" Name="车"/>
+		<Item Prompt="High-speed rail" Name="高铁"/>
+		<Item Prompt="Tour car" Name="旅游大巴"/>
+		<Item Prompt="Traffic light" Name="红绿灯"/>
+		<Item Prompt="Motorcycle" Name="摩托车"/>
+		<Item Prompt="Bus" Name="公共汽车"/>
+		<Item Prompt="Steamship" Name="轮船"/>
+		<Item Prompt="Yacht" Name="游艇"/>
+		<Item Prompt="Truck" Name="卡车"/>
+		<Item Prompt="Tractor" Name="拖拉机"/>
+		<Item Prompt="Bicycle" Name="自行车"/>
+		<Item Prompt="Boat" Name="船"/>
+		<Item Prompt="Roller" Name="压路机"/>
+		<Item Prompt="Motorcycle" Name="摩托车"/>
+		<Item Prompt="Submarine" Name="潜艇"/>
+		<Item Prompt="Motorcycle" Name="电瓶车"/>
+		<Item Prompt="Telescope" Name="望远镜"/>
+		<Item Prompt="Red flag" Name="红旗"/>
+		<Item Prompt="Bathe" Name="洗澡"/>
+		<Item Prompt="Sun bath" Name="太阳浴"/>
+		<Item Prompt="Tent" Name="帐篷"/>
+		<Item Prompt="Cable car" Name="缆车"/>
+		<Item Prompt="Aircraft" Name="直升机"/>
+		<Item Prompt="Flashlight" Name="手电筒"/>
+    </Lib>
+    <Lib Path="./Symbols/Holiday.mdt">
+        <Item Prompt="Christmas ring" Name="圣诞花环"/>
+		<Item Prompt="House" Name="房子"/>
+		<Item Prompt="Christmas balls" Name="圣诞球"/>
+		<Item Prompt="Christmas tree" Name="圣诞树"/>
+		<Item Prompt="Christmas hat" Name="圣诞帽"/>
+		<Item Prompt="Christmas hat" Name="圣诞帽"/>
+		<Item Prompt="Snowflake" Name="雪花"/>
+		<Item Prompt="Snowman" Name="雪人"/>
+		<Item Prompt="Antlers" Name="鹿角"/>
+		<Item Prompt="Gift" Name="礼物"/>
+		<Item Prompt="Crystal ball" Name="水晶球"/>
+		<Item Prompt="Santa Claus" Name="圣诞老人"/>
+		<Item Prompt="Deer" Name="驯鹿"/>
+		<Item Prompt="Christmas red fruit" Name="冬青"/>
+		<Item Prompt="Lollipop" Name="棒棒糖"/>
+		<Item Prompt="Candy" Name="糖果"/>
+		<Item Prompt="Gloves" Name="手套"/>
+		<Item Prompt="Crutch" Name="拐杖"/>
+		<Item Prompt="Christmas socks" Name="圣诞袜"/>
+		<Item Prompt="Bells" Name="钟"/>
+		<Item Prompt="Christmas tree" Name="圣诞树"/>
+		<Item Prompt="Christmas balls" Name="圣诞球"/>
+		<Item Prompt="Sled" Name="雪橇"/>
+		<Item Prompt="Cookie man" Name="姜饼人"/>
+		<Item Prompt="Firecracker" Name="爆竹"/>
+		<Item Prompt="Gongs and drums" Name="锣鼓"/>
+		<Item Prompt="Lucky bag" Name="幸运袋"/>
+		<Item Prompt="Red envelope" Name="红包"/>
+		<Item Prompt="Dumplings" Name="饺子"/>
+		<Item Prompt="Lantern" Name="灯笼"/>
+		<Item Prompt="Spring couplets" Name="福字"/>
+		<Item Prompt="Ingots" Name="元宝"/>
+		<Item Prompt="Drum" Name="鼓"/>
+		<Item Prompt="Fireworks" Name="烟花"/>
+		<Item Prompt="Glutinous rice balls" Name="驴打滚"/>
+		<Item Prompt="Fireworks" Name="烟花"/>
+		<Item Prompt="Chinese knot" Name="中国结"/>
+		<Item Prompt="Sugar-coated haws" Name="冰糖葫芦"/>
+		<Item Prompt="Cotton" Name="棉花"/>
+		<Item Prompt="Gift" Name="礼物"/>
+		<Item Prompt="Rose flower" Name="玫瑰花"/>
+		<Item Prompt="Pierce your heart" Name="一箭穿心"/>
+		<Item Prompt="Concentric lock" Name="同心锁"/>
+		<Item Prompt="Chocolate" Name="巧克力"/>
+		<Item Prompt="Bird" Name="鸳鸯"/>
+		<Item Prompt="Love words" Name="爱"/>
+		<Item Prompt="Wedding dress" Name="婚纱"/>
+		<Item Prompt="Ring" Name="截止"/>
+		<Item Prompt="Necklace" Name="项链"/>
+		<Item Prompt="Love letter" Name="情书"/>
+		<Item Prompt="Crown" Name="皇冠"/>
+		<Item Prompt="Photo sticker" Name="情侣照"/>
+		<Item Prompt="Skull" Name="头骨"/>
+		<Item Prompt="Cemetery" Name="墓地"/>
+		<Item Prompt="Magic hat" Name="巫师帽"/>
+		<Item Prompt="Maple leaf" Name="枫叶"/>
+		<Item Prompt="Easter eggs" Name="复活节彩蛋"/>
+		<Item Prompt="Pumpkin lantern" Name="南瓜灯笼"/>
+		<Item Prompt="Ghost" Name="鬼"/>
+		<Item Prompt="Bat" Name="蝙蝠"/>
+		<Item Prompt="Mask" Name="面具"/>
+		<Item Prompt="Dragon boat" Name="龙舟"/>
+		<Item Prompt="Duck eggs" Name="咸鸭蛋"/>
+		<Item Prompt="Zongye" Name="粽叶"/>
+		<Item Prompt="Zongzi" Name="粽子"/>
+		<Item Prompt="Hat" Name="帽子"/>
+		<Item Prompt="Small cake" Name="小蛋糕"/>
+		<Item Prompt="Candle" Name="蜡烛"/>
+		<Item Prompt="Balloon" Name="气球"/>
+		<Item Prompt="Wine glass" Name="酒杯"/>
+		<Item Prompt="Cake" Name="蛋糕"/>
+    </Lib>
+    <Lib Path="./Symbols/Food.mdt">
+		<Item Prompt="Pine nuts" Name="松子"/>
+		<Item Prompt="Almond" Name="杏仁"/>
+		<Item Prompt="Ginkgo" Name="开心果"/>
+		<Item Prompt="Macadamia" Name="夏威夷果"/>
+		<Item Prompt="Cashew" Name="腰果"/>
+		<Item Prompt="Walnut" Name="核桃"/>
+		<Item Prompt="Red dates" Name="红枣"/>
+		<Item Prompt="Chestnut" Name="栗子"/>
+		<Item Prompt="Hazelnut" Name="榛子"/>
+		<Item Prompt="Sandwich" Name="三明治"/>
+		<Item Prompt="Peanut" Name="花生"/>
+		<Item Prompt="Melon seeds" Name="瓜子"/>
+		<Item Prompt="Raisin" Name="葡萄干"/>
+		<Item Prompt="Donuts" Name="甜甜圈"/>
+		<Item Prompt="Pizza" Name="披萨"/>
+		<Item Prompt="Croissant" Name="牛角包"/>
+		<Item Prompt="Bread" Name="面包"/>
+		<Item Prompt="Pudding" Name="布丁"/>
+		<Item Prompt="Cake" Name="蛋糕"/>
+		<Item Prompt="Sandwich bread" Name="虎皮卷"/>
+		<Item Prompt="Biscuit" Name="饼干"/>
+		<Item Prompt="Biscuit" Name="饼干"/>
+		<Item Prompt="Macaron" Name="马卡龙"/>
+		<Item Prompt="Dorayaki" Name="铜锣烧"/>
+		<Item Prompt="Cheese" Name="奶酪"/>
+		<Item Prompt="Hamburg" Name="汉堡"/>
+		<Item Prompt="Waffle" Name="华夫饼"/>
+		<Item Prompt="Toast bread" Name="吐司面包"/>
+		<Item Prompt="Pineapple buns" Name="菠萝面包"/>
+		<Item Prompt="Pear" Name="梨"/>
+		<Item Prompt="Orange" Name="橙子"/>
+		<Item Prompt="Cherry" Name="樱桃"/>
+		<Item Prompt="Avocado" Name="牛油果"/>
+		<Item Prompt="Strawberry" Name="草莓"/>
+		<Item Prompt="Kiwi" Name="猕猴桃"/>
+		<Item Prompt="Mango" Name="芒果"/>
+		<Item Prompt="Apple" Name="苹果"/>
+		<Item Prompt="Watermelon" Name="西瓜"/>
+		<Item Prompt="Pineapple" Name="菠萝"/>
+		<Item Prompt="Durian" Name="榴莲"/>
+		<Item Prompt="Raisins" Name="葡萄干"/>
+		<Item Prompt="Cucumber" Name="黄瓜"/>
+		<Item Prompt="Lemon" Name="柠檬"/>
+		<Item Prompt="Coconut" Name="椰子"/>
+		<Item Prompt="Loquat" Name="枇杷"/>
+		<Item Prompt="Blueberry" Name="蓝莓"/>
+		<Item Prompt="Pitaya" Name="火龙果"/>
+		<Item Prompt="Banana" Name="香蕉"/>
+		<Item Prompt="Peach" Name="桃子"/>
+		<Item Prompt="Pomegranate" Name="石榴"/>
+		<Item Prompt="Carambola" Name="杨桃"/>
+		<Item Prompt="Longan" Name="龙眼"/>
+		<Item Prompt="Litchi" Name="荔枝"/>
+		<Item Prompt="Ice cream" Name="冰淇淋"/>
+		<Item Prompt="Chocolate" Name="巧克力"/>
+		<Item Prompt="Ice cream" Name="冰淇淋"/>
+		<Item Prompt="Candy" Name="糖果"/>
+		<Item Prompt="Lollipop" Name="棒棒糖"/>
+		<Item Prompt="Yogurt" Name="酸奶"/>
+		<Item Prompt="Ham sausage" Name="火腿香肠"/>
+		<Item Prompt="Popcorn" Name="爆米花"/>
+		<Item Prompt="French fries" Name="炸薯条"/>
+		<Item Prompt="Egg" Name="煎蛋"/>
+		<Item Prompt="Shrimp" Name="虾"/>
+		<Item Prompt="Chicken wings" Name="鸡翅"/>
+		<Item Prompt="Seashell" Name="扇贝"/>
+		<Item Prompt="Saury" Name="秋刀鱼"/>
+		<Item Prompt="Barbecue" Name="烧烤"/>
+		<Item Prompt="Chicken leg" Name="鸡腿"/>
+		<Item Prompt="Bun" Name="包子"/>
+		<Item Prompt="Crab" Name="蟹"/>
+		<Item Prompt="Steak" Name="牛排"/>
+		<Item Prompt="Chicken" Name="鸡"/>
+		<Item Prompt="Zongzi" Name="粽子"/>
+		<Item Prompt="Noodles" Name="面条"/>
+		<Item Prompt="Rice" Name="米饭"/>
+		<Item Prompt="Rice ball" Name="饭团"/>
+		<Item Prompt="Honey" Name="蜂蜜"/>
+		<Item Prompt="Bacon" Name="培根"/>
+		<Item Prompt="Lotus root" Name="莲藕"/>
+		<Item Prompt="Tomato" Name="番茄"/>
+		<Item Prompt="Corn" Name="玉米"/>
+		<Item Prompt="Carrot" Name="胡萝卜"/>
+		<Item Prompt="Broccoli" Name="西兰花"/>
+		<Item Prompt="Eggplant" Name="茄子"/>
+		<Item Prompt="Onion" Name="洋葱"/>
+		<Item Prompt="Bitter gourd" Name="苦瓜"/>
+		<Item Prompt="Shiitake" Name="香菇"/>
+		<Item Prompt="Chili" Name="辣椒"/>
+		<Item Prompt="Pumpkin" Name="南瓜"/>
+		<Item Prompt="Pea" Name="豌豆"/>
+		<Item Prompt="Cauliflower" Name="菜花"/>
+		<Item Prompt="Cabbage" Name="卷心菜"/>
+		<Item Prompt="Radish" Name="萝卜"/>
+		<Item Prompt="Vegetables" Name="蔬菜"/>
+		<Item Prompt="Ginger" Name="姜"/>
+		<Item Prompt="Okra" Name="秋葵"/>
+		<Item Prompt="Garlic" Name="大蒜"/>
+		<Item Prompt="Potato" Name="土豆"/>
+		<Item Prompt="Lettuce" Name="生菜"/>
+		<Item Prompt="Celery" Name="芹菜"/>
+		<Item Prompt="Bamboo shoots" Name="竹笋"/>
+		<Item Prompt="Shallot" Name="葱"/>
+		<Item Prompt="Tofu" Name="豆腐"/>
+		<Item Prompt="Beer" Name="啤酒"/>
+		<Item Prompt="Coffee" Name="咖啡"/>
+		<Item Prompt="Fruit juice" Name="果汁"/>
+		<Item Prompt="Coke" Name="可乐"/>
+		<Item Prompt="Milk tea" Name="奶茶"/>
+		<Item Prompt="Milk" Name="牛奶"/>
+		<Item Prompt="Green tea" Name="绿茶"/>
+		<Item Prompt="Scented tea" Name="花茶"/>
+    </Lib>
+    <Lib Path="./Symbols/EnvironmentalProtection.mdt">
+		<Item Prompt="Protect water resources" Name="保护水资源"/>
+		<Item Prompt="Protect the Earth" Name="保护地球"/>
+		<Item Prompt="Energy saving lamp" Name="节能灯泡"/>
+		<Item Prompt="Electric car" Name="电动汽车"/>
+		<Item Prompt="Solar energy" Name="太阳能"/>
+		<Item Prompt="Trash can" Name="垃圾桶"/>
+		<Item Prompt="Bicycle" Name="自行车"/>
+		<Item Prompt="Sun" Name="太阳"/>
+		<Item Prompt="Waste treatment center" Name="废物处理中心"/>
+		<Item Prompt="Windmill" Name="风车"/>
+		<Item Prompt="Windmill" Name="风车"/>
+		<Item Prompt="Eco Bag" Name="环保袋"/>
+		<Item Prompt="Water cycle" Name="水循环"/>
+		<Item Prompt="Water cycle" Name="水循环"/>
+		<Item Prompt="Environmental label" Name="环保标签"/>
+		<Item Prompt="Environmental Award" Name="环境奖"/>
+		<Item Prompt="Green leaf" Name="绿色的叶子"/>
+		<Item Prompt="Green leaf" Name="绿色的叶子"/>
+		<Item Prompt="Glass" Name="玻璃"/>
+		<Item Prompt="Recharge" Name="充电"/>
+		<Item Prompt="Paper products" Name="纸"/>
+		<Item Prompt="Hot air balloon" Name="热气球"/>
+		<Item Prompt="Cactus" Name="仙人掌"/>
+		<Item Prompt="Cloud" Name="云"/>
+		<Item Prompt="Environmental protection" Name="环境保护"/>
+		<Item Prompt="Factory" Name="工厂"/>
+		<Item Prompt="Smoke" Name="烟"/>
+		<Item Prompt="Thick smoke" Name="浓烟"/>
+		<Item Prompt="Sewage plant" Name="污水处理厂"/>
+		<Item Prompt="Faucet" Name="水龙头"/>
+		<Item Prompt="Direction" Name="方向"/>
+		<Item Prompt="Carton" Name="纸箱"/>
+		<Item Prompt="Cactus" Name="仙人掌"/>
+		<Item Prompt="Plant" Name="植物"/>
+		<Item Prompt="Big tree" Name="树"/>
+		<Item Prompt="Waste treatment center" Name="废物处理中心"/>
+		<Item Prompt="Clean" Name="清洁"/>
+    </Lib>
+    <Lib Path="./Symbols/Sport.mdt">
+		<Item Prompt="Basketball" Name="篮球"/>
+		<Item Prompt="Volleyball" Name="排球"/>
+		<Item Prompt="Football" Name="足球"/>
+		<Item Prompt="Softball" Name="棒球"/>
+		<Item Prompt="Billiards" Name="台球"/>
+		<Item Prompt="Shot put" Name="铅球"/>
+		<Item Prompt="Tennis" Name="网球"/>
+		<Item Prompt="Jersey" Name="运动衫"/>
+		<Item Prompt="Ball" Name="球"/>
+		<Item Prompt="Football" Name="橄榄球"/>
+		<Item Prompt="Billiards" Name="台球"/>
+		<Item Prompt="Badminton" Name="羽毛球"/>
+		<Item Prompt="Skateboard" Name="滑板"/>
+		<Item Prompt="Pingpong" Name="乒乓球"/>
+		<Item Prompt="Golf" Name="高尔夫球"/>
+		<Item Prompt="Skates" Name="溜冰鞋"/>
+		<Item Prompt="Swimming goggles" Name="泳镜"/>
+		<Item Prompt="Roller skates" Name="溜冰鞋"/>
+		<Item Prompt="Weightlifting" Name="举重"/>
+		<Item Prompt="Boxing" Name="拳击"/>
+		<Item Prompt="Bowling" Name="保龄球"/>
+		<Item Prompt="Hula Hoop" Name="呼啦圈"/>
+		<Item Prompt="Rank" Name="排名"/>
+		<Item Prompt="Lifebuoy" Name="救生圈"/>
+		<Item Prompt="Red flag" Name="红旗"/>
+		<Item Prompt="Tennis helmet" Name="橄榄球头盔"/>
+		<Item Prompt="Luggage" Name="行李"/>
+		<Item Prompt="Whistle" Name="吹口哨"/>
+		<Item Prompt="Boating" Name="划船"/>
+		<Item Prompt="Football" Name="足球场"/>
+		<Item Prompt="Medals" Name="奖牌"/>
+		<Item Prompt="Diving" Name="潜水"/>
+		<Item Prompt="Rope skipping" Name="跳绳"/>
+		<Item Prompt="Fencing" Name="击剑"/>
+		<Item Prompt="Taekwondo" Name="跆拳道"/>
+		<Item Prompt="Hockey" Name="曲棍球"/>
+		<Item Prompt="Grip" Name="握力器"/>
+		<Item Prompt="Yoga mat" Name="瑜伽垫"/>
+		<Item Prompt="Trophy" Name="奖杯"/>
+    </Lib>
+    <Lib Path="./Symbols/Technology.mdt">
+        <Item Prompt="Alien" Name="外星人"/>
+		<Item Prompt="Radar" Name="雷达"/>
+		<Item Prompt="Robot" Name="机器人"/>
+		<Item Prompt="Satellite" Name="卫星"/>
+		<Item Prompt="Rocket" Name="火箭"/>
+		<Item Prompt="Satellite" Name="卫星"/>
+		<Item Prompt="Light" Name="光"/>
+		<Item Prompt="Technology" Name="技术"/>
+		<Item Prompt="Microscope" Name="显微镜"/>
+		<Item Prompt="Radar" Name="雷达"/>
+		<Item Prompt="USB" Name="USB"/>
+		<Item Prompt="MP3" Name="MP3"/>
+		<Item Prompt="Mouse" Name="鼠标"/>
+		<Item Prompt="Container" Name="烧瓶"/>
+		<Item Prompt="Headset" Name="耳机"/>
+		<Item Prompt="Router" Name="路由器"/>
+		<Item Prompt="Satellite" Name="卫星"/>
+		<Item Prompt="Radar" Name="雷达"/>
+		<Item Prompt="Microphone" Name="麦克风"/>
+		<Item Prompt="Volume" Name="音量"/>
+		<Item Prompt="Telescope" Name="望远镜"/>
+		<Item Prompt="Brain" Name="大脑"/>
+		<Item Prompt="Double helix" Name="双螺旋结构"/>
+		<Item Prompt="ECG" Name="心电图"/>
+		<Item Prompt="Molecular Structure" Name="分子结构"/>
+		<Item Prompt="Fetus" Name="胎儿"/>
+		<Item Prompt="Family" Name="家庭"/>
+		<Item Prompt="Microscope" Name="显微镜"/>
+		<Item Prompt="Form" Name="形式"/>
+		<Item Prompt="First aid kit" Name="急救箱"/>
+		<Item Prompt="Respirator" Name="呼吸器"/>
+		<Item Prompt="Pill" Name="药丸"/>
+		<Item Prompt="Capsule" Name="胶囊"/>
+		<Item Prompt="Hospital" Name="医院"/>
+		<Item Prompt="Thermometer" Name="温度计"/>
+		<Item Prompt="Ambulance" Name="救护车"/>
+		<Item Prompt="Experiment" Name="实验"/>
+		<Item Prompt="Crutch" Name="拐杖"/>
+		<Item Prompt="Crutch" Name="拐杖"/>
+		<Item Prompt="Wheelchair" Name="轮椅"/>
+		<Item Prompt="Infusion" Name="输液"/>
+		<Item Prompt="Stretcher" Name="担架"/>
+		<Item Prompt="Body weight" Name="体重"/>
+		<Item Prompt="Hospital bed" Name="病床"/>
+		<Item Prompt="Stretcher" Name="担架"/>
+		<Item Prompt="Virus" Name="病毒"/>
+		<Item Prompt="Wheelchair" Name="轮椅"/>
+		<Item Prompt="Tooth" Name="牙"/>
+		<Item Prompt="Stethoscope" Name="听诊器"/>
+		<Item Prompt="Nurse hat" Name="护士帽"/>
+		<Item Prompt="Heart" Name="心"/>
+		<Item Prompt="Liver" Name="肝"/>
+		<Item Prompt="Lung" Name="肺"/>
+		<Item Prompt="Stomach" Name="胃"/>
+		<Item Prompt="Kidney" Name="肾脏"/>
+		<Item Prompt="Ear" Name="耳朵"/>
+		<Item Prompt="The large intestine" Name="大肠"/>
+		<Item Prompt="Syringe" Name="注射器"/>
+		<Item Prompt="Filming" Name="X线"/>
+		<Item Prompt="Potion" Name="药水"/>
+		<Item Prompt="Virus" Name="病毒"/>
+		<Item Prompt="Virus" Name="病毒"/>
+		<Item Prompt="Heart" Name="心"/>
+		<Item Prompt="Dentist" Name="牙医"/>
+		<Item Prompt="Nurse" Name="护士"/>
+		<Item Prompt="Desktop monitor" Name="桌面显示器"/>
+		<Item Prompt="Flat" Name="平板"/>
+		<Item Prompt="Computer" Name="电脑"/>
+		<Item Prompt="TV" Name="电视"/>
+		<Item Prompt="Notebook" Name="笔记本"/>
+		<Item Prompt="Cell phone" Name="手机"/>
+		<Item Prompt="Watch" Name="手表"/>
+		<Item Prompt="Watch" Name="智能手表"/>
+		<Item Prompt="Watch" Name="智能手表"/>
+		<Item Prompt="Glasses" Name="眼镜"/>
+		<Item Prompt="Database" Name="数据库"/>
+		<Item Prompt="AR" Name="AR"/>
+		<Item Prompt="Fax" Name="传真"/>
+		<Item Prompt="Aircraft" Name="无人机"/>
+		<Item Prompt="Camera" Name="摄像头"/>
+		<Item Prompt="Mp3" Name="Mp3"/>
+		<Item Prompt="Hand-painted board" Name="手绘板"/>
+		<Item Prompt="Projector" Name="投影仪"/>
+		<Item Prompt="Save" Name="保存"/>
+		<Item Prompt="Cell phone" Name="手机"/>
+		<Item Prompt="Game console" Name="游戏机"/>
+		<Item Prompt="Chip" Name="芯片"/>
+		<Item Prompt="Oven" Name="烤箱"/>
+		<Item Prompt="5G" Name="5G"/>
+    </Lib>
+    <Lib Path="./Symbols/Professions.mdt">
+		<Item Prompt="Programmer" Name="程序员"/>
+		<Item Prompt="White collar" Name="白领"/>
+		<Item Prompt="Teacher" Name="老师"/>
+		<Item Prompt="Flight attendant" Name="空乘"/>
+		<Item Prompt="Basketball player" Name="运动员"/>
+		<Item Prompt="Initial" Name="厨师"/>
+		<Item Prompt="Student" Name="学生"/>
+		<Item Prompt="Nurse" Name="护士"/>
+		<Item Prompt="Doctors" Name="医生"/>
+		<Item Prompt="Dentist" Name="牙医"/>
+		<Item Prompt="Chairman" Name="主席"/>
+		<Item Prompt="Policemen" Name="警察"/>
+		<Item Prompt="Customer service" Name="客户服务"/>
+		<Item Prompt="White collar" Name="白领"/>
+		<Item Prompt="Arab" Name="阿拉伯"/>
+		<Item Prompt="Nun" Name="修女"/>
+		<Item Prompt="Female employee" Name="员工"/>
+		<Item Prompt="Manager" Name="经理"/>
+		<Item Prompt="Hairstylist" Name="发型师"/>
+		<Item Prompt="Worker" Name="工人"/>
+		<Item Prompt="Santa Claus" Name="圣诞老人"/>
+		<Item Prompt="Engineer" Name="工程师"/>
+		<Item Prompt="Flight attendant" Name="空乘"/>
+		<Item Prompt="Soldier" Name="军人"/>
+		<Item Prompt="Waiter" Name="服务员"/>
+		<Item Prompt="Priest" Name="牧师"/>
+		<Item Prompt="Judge" Name="法官"/>
+		<Item Prompt="The man" Name="男人"/>
+		<Item Prompt="Housewife" Name="家庭主妇"/>
+		<Item Prompt="Boy" Name="男孩"/>
+		<Item Prompt="Girl" Name="女孩"/>
+		<Item Prompt="The man" Name="男人"/>
+		<Item Prompt="Boy" Name="男孩"/>
+		<Item Prompt="Farmer" Name="农民"/>
+    </Lib>
+    <Lib Path="./Symbols/Expressions.mdt">
+		<Item Prompt="Stay" Name="平静"/>
+		<Item Prompt="Laughing out loud" Name="大小"/>
+		<Item Prompt="Surprised" Name="惊讶"/>
+		<Item Prompt="Kiss" Name="亲亲"/>
+		<Item Prompt="Sad" Name="悲伤"/>
+		<Item Prompt="Cry and laugh" Name="笑哭"/>
+		<Item Prompt="To shut up" Name="闭嘴"/>
+		<Item Prompt="Pain" Name="痛苦"/>
+		<Item Prompt="Like" Name="喜欢"/>
+		<Item Prompt="Giggle" Name="咯咯地笑"/>
+		<Item Prompt="Smile" Name="微笑"/>
+		<Item Prompt="Sinister smile" Name="邪魅一笑"/>
+		<Item Prompt="Sleep soundly" Name="睡觉"/>
+		<Item Prompt="Naughty" Name="淘气的"/>
+		<Item Prompt="Speechless" Name="尴尬"/>
+		<Item Prompt="Smile" Name="微笑"/>
+		<Item Prompt="Cry" Name="哭"/>
+		<Item Prompt="Cool" Name="酷"/>
+		<Item Prompt="Pissed off" Name="很生气"/>
+		<Item Prompt="Gosh" Name="晕"/>
+		<Item Prompt="Poker face" Name="无语"/>
+		<Item Prompt="Daze" Name="目瞪口呆"/>
+		<Item Prompt="Injured" Name="受伤的"/>
+		<Item Prompt="Mask" Name="口罩"/>
+		<Item Prompt="sleep" Name="睡觉"/>
+		<Item Prompt="sleep" Name="白眼"/>
+		<Item Prompt="Clever" Name="鬼脸"/>
+		<Item Prompt="Vomiting" Name="呕吐"/>
+		<Item Prompt="Smirk" Name="奸笑"/>
+		<Item Prompt="Struggle" Name="奋斗"/>
+		<Item Prompt="See the money" Name="见钱眼开"/>
+		<Item Prompt="Cute" Name="可爱的"/>
+		<Item Prompt="Grit your teeth" Name="刺激"/>
+    </Lib>
+    <Lib Path="./Symbols/Animal.mdt">
+		<Item Prompt="Hippo" Name="河马"/>
+		<Item Prompt="Bee" Name="蜜蜂"/>
+		<Item Prompt="Cattle" Name="牛"/>
+		<Item Prompt="Rabbit" Name="兔子"/>
+		<Item Prompt="Tiger" Name="老虎"/>
+		<Item Prompt="Mouse" Name="老鼠"/>
+		<Item Prompt="Horse" Name="马"/>
+		<Item Prompt="Cock" Name="鸡"/>
+		<Item Prompt="Duck" Name="鸭"/>
+		<Item Prompt="Deer" Name="鹿"/>
+		<Item Prompt="Lion" Name="狮子"/>
+		<Item Prompt="Elephant" Name="大象"/>
+		<Item Prompt="Panda" Name="熊猫"/>
+		<Item Prompt="Bear" Name="熊"/>
+		<Item Prompt="Dog" Name="狗"/>
+		<Item Prompt="Sheep" Name="羊"/>
+		<Item Prompt="Owl" Name="猫头鹰"/>
+		<Item Prompt="Hedgehog" Name="刺猬"/>
+		<Item Prompt="Pig" Name="猪"/>
+		<Item Prompt="Giraffe" Name="长颈鹿"/>
+		<Item Prompt="Koala" Name="考拉"/>
+		<Item Prompt="Cat" Name="猫"/>
+		<Item Prompt="Fox" Name="狐狸"/>
+		<Item Prompt="Monkey" Name="猴子"/>
+		<Item Prompt="Frog" Name="青蛙"/>
+		<Item Prompt="Crab" Name="蟹"/>
+		<Item Prompt="Shrimp" Name="虾"/>
+		<Item Prompt="Octopus" Name="章鱼"/>
+		<Item Prompt="Seaweed" Name="海藻"/>
+		<Item Prompt="Hippocampus" Name="海马"/>
+		<Item Prompt="Lobster" Name="龙虾"/>
+		<Item Prompt="Conch" Name="海螺"/>
+		<Item Prompt="Jellyfish" Name="水母"/>
+		<Item Prompt="Starfish" Name="海星"/>
+		<Item Prompt="Dolphin" Name="海豚"/>
+		<Item Prompt="Goldfish" Name="金鱼"/>
+		<Item Prompt="Tortoise" Name="乌龟"/>
+		<Item Prompt="Octopus" Name="章鱼"/>
+		<Item Prompt="Cuttlefish" Name="墨鱼"/>
+		<Item Prompt="Sea lion" Name="海狮"/>
+		<Item Prompt="Seal" Name="海报"/>
+		<Item Prompt="Pufferfish" Name="河豚"/>
+		<Item Prompt="Rajiformes" Name="魔鬼鱼"/>
+		<Item Prompt="Fish" Name="鱼"/>
+		<Item Prompt="Whale" Name="鲸鱼"/>
+		<Item Prompt="Shell" Name="贝壳"/>
+		<Item Prompt="Triangle fish" Name="三角鱼"/>
+		<Item Prompt="Kelp" Name="海带"/>
+		<Item Prompt="Sole" Name="海藻"/>
+		<Item Prompt="Bee" Name="蜜蜂"/>
+		<Item Prompt="Ladybug" Name="瓢虫"/>
+		<Item Prompt="Ant" Name="蚂蚁"/>
+		<Item Prompt="Housefly" Name="苍蝇"/>
+		<Item Prompt="Butterfly" Name="蝴蝶"/>
+		<Item Prompt="Dragonfly" Name="蜻蜓"/>
+		<Item Prompt="Caterpillar" Name="毛毛虫"/>
+		<Item Prompt="Mosquito" Name="蚊子"/>
+		<Item Prompt="Cicada" Name="蝉"/>
+		<Item Prompt="Centipede" Name="蜈蚣"/>
+		<Item Prompt="Scorpion" Name="蝎子"/>
+    </Lib>
+    <Lib Path="./Symbols/Plant.mdt">
+		<Item Prompt="Plant" Name="植物"/>
+		<Item Prompt="Cactus" Name="仙人掌"/>
+		<Item Prompt="Flower" Name="花"/>
+		<Item Prompt="Plant" Name="植物"/>
+		<Item Prompt="Flower" Name="花"/>
+		<Item Prompt="Flower" Name="花"/>
+		<Item Prompt="Plant" Name="植物"/>
+		<Item Prompt="Plant" Name="植物"/>
+		<Item Prompt="Plant" Name="植物"/>
+		<Item Prompt="Flower" Name="花"/>
+		<Item Prompt="Plant" Name="植物"/>
+		<Item Prompt="Plant" Name="植物"/>
+		<Item Prompt="Plant" Name="植物"/>
+		<Item Prompt="Plant" Name="植物"/>
+		<Item Prompt="Plant" Name="植物"/>
+		<Item Prompt="Plant" Name="植物"/>
+		<Item Prompt="Plant" Name="植物"/>
+		<Item Prompt="Cactus" Name="仙人掌"/>
+		<Item Prompt="Flower" Name="花"/>
+		<Item Prompt="Plant" Name="植物"/>
+		<Item Prompt="Bamboo" Name="竹子"/>
+		<Item Prompt="Plant" Name="植物"/>
+		<Item Prompt="Plant" Name="植物"/>
+		<Item Prompt="Plant" Name="植物"/>
+		<Item Prompt="Flower" Name="花"/>
+		<Item Prompt="Plant" Name="植物"/>
+		<Item Prompt="Plant" Name="植物"/>
+		<Item Prompt="Flower" Name="花"/>
+		<Item Prompt="Flower" Name="花"/>
+    </Lib>
+    <Lib Path="./Symbols/Weather.mdt">
+        <Item Prompt="Cloudy day" Name="多云"/>
+		<Item Prompt="Cloudy day" Name="多云"/>
+		<Item Prompt="Sunny day" Name="晴天"/>
+		<Item Prompt="Rain" Name="雨"/>
+		<Item Prompt="Heavy rain" Name="大雨"/>
+		<Item Prompt="Partly cloudy" Name="晴转多云"/>
+		<Item Prompt="Sun rain" Name="晴转阵雨"/>
+		<Item Prompt="Sleet" Name="雨夹雪"/>
+		<Item Prompt="Sleet" Name="雨夹雪"/>
+		<Item Prompt="Snow" Name="雪"/>
+		<Item Prompt="Snow" Name="大学"/>
+		<Item Prompt="Heavy snow" Name="暴雪"/>
+		<Item Prompt="Heavy snow at night" Name="夜间降雪"/>
+		<Item Prompt="Heavy rain at night" Name="夜间降雨"/>
+		<Item Prompt="Sunrise" Name="日出"/>
+		<Item Prompt="At night" Name="完善"/>
+		<Item Prompt="Rainbow" Name="彩虹"/>
+		<Item Prompt="Wind direction" Name="风向"/>
+		<Item Prompt="Thundershower" Name="雷阵雨"/>
+		<Item Prompt="Hail" Name="冰雹"/>
+		<Item Prompt="Cloudy at night" Name="多云的夜晚"/>
+		<Item Prompt="High temperature" Name="高温"/>
+		<Item Prompt="Low temperature" Name="低温"/>
+		<Item Prompt="Tornado" Name="龙卷风"/>
+		<Item Prompt="Star" Name="星星"/>
+		<Item Prompt="Sand dust" Name="沙尘"/>
+    </Lib>
+</Libraries>

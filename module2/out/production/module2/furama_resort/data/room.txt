@@ -1,0 +1,2 @@
+Nam,SVRO1234,30.0,30,17,Thuê theo năm,2
+Ma,SVRO1234,30.0,30,16,Thuê theo tháng,2

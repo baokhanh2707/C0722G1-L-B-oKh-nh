@@ -16,6 +16,11 @@ public class Student extends Person {
         this.score = score;
     }
 
+    @Override
+    public String getInfo() {
+        return  String.format("%s,%s,%s,%s,%s,%f",getCode(),getName(),getDateOfBirth(),getGender(),getNameClass(),getScore());
+    }
+
     public Student() {
     }
     public String getNameClass() {
@@ -43,7 +48,5 @@ public class Student extends Person {
     }
 
 
-    public String getInfor() {
-         return  String.format("%s,%s,%s,%s,%s,%f",getCode(),getName(),getDateOfBirth(),getGender(),getNameClass(),getScore());
-    }
+
 }

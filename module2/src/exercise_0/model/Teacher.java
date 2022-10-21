@@ -12,6 +12,11 @@ private String specialize;
         this.specialize = specialize;
     }
 
+    @Override
+    public String getInfo() {
+        return String .format("%s,%s,%s,%s,%s",getCode(),getName(),getDateOfBirth(),getGender(),getSpecialize());
+    }
+
     public Teacher() {
     }
 
@@ -29,10 +34,5 @@ private String specialize;
                 "specialize='" + specialize + '\'' +
                 '}'+super.toString();
 
-    }
-
-
-    public String getInfor() {
-        return String .format("%s,%s,%s,%s,%s",getCode(),getName(),getDateOfBirth(),getGender(),getSpecialize());
     }
 }

@@ -41,7 +41,7 @@ public class TeacherService implements ITeacherService {
         File file = new File("D:\\C0722G1-L-B-oKh-nh\\module2\\src\\exercise_0\\data\\ReadTeacher.txt");
         BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter(file));
         for (Teacher teacher : teacherList) {
-            bufferedWriter.write(teacher.getInfor());
+            bufferedWriter.write(teacher.getInfo());
             bufferedWriter.newLine();
         }
         bufferedWriter.close();
@@ -52,7 +52,7 @@ public class TeacherService implements ITeacherService {
     public void displayAllTeacher() throws IOException {
         teacherList = getAllTeacherFromFile();
         for (Teacher teacher : teacherList) {
-            System.out.println(teacher.getInfor());
+            System.out.println(teacher.getInfo());
         }
     }
 

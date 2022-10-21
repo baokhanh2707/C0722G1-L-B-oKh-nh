@@ -1,0 +1,47 @@
+﻿<Gallery NameU= "Mind Map" Name= "Mapa Mental" Version= "1.0" Help= "create-mind-map.php" Description= "Criar mapas mentais (representações gráficas de processos de pensamento) para brainstorming, resolução de problemas, análise racional e tomadas de decisão.">
+    <Template NameU= "Radial Map" Name= "Mapa Radial" Layout= "8" Theme= "40" DarkTheme= "69" Icon= "./radial_map.png" Description= "Criar mapas mentais para representação de ideias e conceitos.">
+    </Template>
+
+    <Template NameU= "Right Map" Name= "Mapa Direito" Layout= "6" Theme= "40" DarkTheme= "69" Icon= "./right_map.png" Description= "Criar mapas mentais com layout hierárquico direito.">
+    </Template>
+
+    <Template NameU= "Tree Map" Name= "Mapa em Árvore" Layout= "3" Theme= "40" DarkTheme= "69" Icon= "./tree_map.png" Description= "O mapa em árvore é ideal para exibir vária informação estruturada hierarquicamente.">
+    </Template>
+	
+	<Template NameU= "Tree Map Right" Name= "Mapa em Árvore" Layout= "5" Theme= "40" DarkTheme= "69" Icon= "./tree_mapR.png" Description= "O mapa em árvore é ideal para exibir vária informação estruturada hierarquicamente.">
+    </Template>
+
+    <Template NameU= "Org-Chart Map" Name= "Quadro Organizacional" Layout= "2" Theme= "40" DarkTheme= "69" Icon= "./org_map.png" Description= "Os organogramas exibem a estrutura de uma organização, as relações e classificações relativas de suas partes e posições.">
+    </Template>
+
+    <Template NameU= "Fish Bone Right" Name= "Espinha de peixe" Layout= "23" Theme= "40" DarkTheme= "69" Icon= "./right_fishbone.png" Description= "Os diagramas de espinha de peixe são usados para encontrar a raíz do problema. Também pode ser chamado como diagrama Causa-Efeito.">
+    </Template>
+
+    <Template NameU= "Fish Bone Left" Name= "Diagrama de Espinha de Peixe Esquerdo" Layout= "24" Theme= "40" DarkTheme= "69" Icon= "./left_fishbone.png" Description= "Os diagramas de espinha de peixe são usados para encontrar a raíz do problema. Também pode ser chamado como diagrama Causa-Efeito.">
+    </Template>
+
+    <Template NameU= "Horizontal Timeline" Name= "Cronograma Horizontal" Layout= "17" Theme= "40" DarkTheme= "69" Icon= "./line_horizontal.png" Description= "Os cronogramas são um tipo de código gerado pelo cérebro humano para gravar eventos passados.">
+    </Template>
+
+    <Template NameU= "Winding Timeline" Name= "Cronograma de Enrolamento" Layout= "18" Theme= "40" DarkTheme= "69" Icon= "./line_turn.png" Description= "Os cronogramas são um tipo de código gerado pelo cérebro humano para gravar eventos passados.">
+    </Template>
+
+    <Template NameU= "Vertical Timeline" Name= "Cronograma Vertical" Layout= "19" Theme= "40" DarkTheme= "69" Icon= "./line_vertical.png" Description= "Os cronogramas são um tipo de código gerado pelo cérebro humano para gravar eventos passados.">
+    </Template>
+  
+	<Template NameU= "Circle Map" Name= "Mapa Circular" Layout= "32" Theme= "40" DarkTheme= "69" Icon= "./circle.png" Description= 
+	"Os diagramas circulares são divergentes e são usados para definir, listar ou pensar em eventos (brainstorm).">
+    </Template>
+  
+	<Template NameU= "Bubble Map" Name= "Mapa de Bolha" Layout= "31" Theme= "40" DarkTheme= "69" Icon= "./bubble.png" Description= 
+	"Os mapas de bolha podem ser usados para comparar conceitos, reconhecer áreas ou aplicar no planeamento e desenvolvimento de estratégias, etc.">
+    </Template>
+  
+	<Template NameU= "Sector Map" Name= "Mapa de Setores" Layout= "30" Theme= "40" DarkTheme= "69" Icon= "./sector.png" Description= 
+	"Os mapas de setores podem exibir claramente ideias criativas bem estruturadas.">
+    </Template>
+	
+	<!-- <Template NameU= "Markdown" Name= "Markdown" Layout= "31" Theme= "16" DarkTheme= "15" Icon= "./sector.png" Description=  -->
+	<!-- "Get rid of typography and focus on writing"> -->
+    <!-- </Template> -->
+</Gallery>

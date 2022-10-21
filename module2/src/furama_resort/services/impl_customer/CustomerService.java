@@ -5,7 +5,6 @@ import furama_resort.services.ICustomerService;
 import furama_resort.utils.ExceptionPerson;
 
 import java.io.*;
-import java.time.DateTimeException;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.time.format.DateTimeParseException;
@@ -19,7 +18,7 @@ public class CustomerService implements ICustomerService {
     List<Customer> customerList = new LinkedList<>();
     private static DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy");
 
-    public Customer infoCustomer() {
+    public Customer infoCustomer() throws Exception {
         String code;
         while (true) {
             try {
@@ -154,15 +153,15 @@ public class CustomerService implements ICustomerService {
     }
     @Override
     public void displayCustomer() {
-        customerList = readLife();
+        customerList = readFile();
         for (Customer customer : customerList) {
             System.out.println(customer);
         }
     }
 
     @Override
-    public void addCustomer() {
-        List<Customer> customerList = readLife();
+    public void addCustomer() throws Exception {
+        List<Customer> customerList = readFile();
         Customer customer = infoCustomer();
         customerList.add(customer);
         System.out.println("thêm mới thành công");
@@ -170,8 +169,8 @@ public class CustomerService implements ICustomerService {
     }
 
     @Override
-    public void editCustomer() {
-        customerList = readLife();
+    public void editCustomer() throws Exception {
+        customerList = readFile();
         System.out.println("mời bạn nhập mã khách hàng cần sửa");
         String code = scanner.nextLine();
         boolean iscode = false;
@@ -318,7 +317,7 @@ public class CustomerService implements ICustomerService {
         writeLife(customerList);
     }
 
-    private List<Customer> readLife() {
+    public List<Customer> readFile() {
         List<Customer> customerList = new ArrayList<>();
         BufferedReader bufferedReader = null;
         try {

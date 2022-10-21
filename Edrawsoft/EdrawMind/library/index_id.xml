@@ -1,0 +1,793 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Libraries>
+    <Lib Path="./Symbols/Office.mdt">
+        <Item Prompt="Badge" Name="Lencana" />
+		<Item Prompt="Glue" Name="Lem" />
+		<Item Prompt="Resume" Name="Lanjutkan" />
+		<Item Prompt="Seal" Name="Segel" />
+		<Item Prompt="Printer" Name="Printer" />
+		<Item Prompt="Gold" Name="Emas" />
+		<Item Prompt="Gold" Name="Emas" />
+		<Item Prompt="Purse" Name="Tas kecil" />
+		<Item Prompt="Purse" Name="Tas kecil" />
+		<Item Prompt="Table lamp" Name="Lampu meja" />
+		<Item Prompt="Pen" Name="Pena" />
+		<Item Prompt="Stapler" Name="Stapler" />
+		<Item Prompt="Clip" Name="Klip" />
+		<Item Prompt="Taxi" Name="Taksi" />
+		<Item Prompt="Aircraft" Name="Pesawat" />
+		<Item Prompt="Globe" Name="Bola Dunia" />
+		<Item Prompt="Great" Name="Besar" />
+		<Item Prompt="Difference" Name="Selisih" />
+		<Item Prompt="Earth" Name="Bumi" />
+		<Item Prompt="Mouse" Name="Mouse" />
+		<Item Prompt="VIP" Name="VIP" />
+		<Item Prompt="File" Name="File" />
+		<Item Prompt="Calendar" Name="Kalender" />
+		<Item Prompt="Open mail" Name="Buka kotak surat" />
+		<Item Prompt="Mail" Name="Kotak Surat" />
+		<Item Prompt="Briefcase" Name="Tas kantor" />
+		<Item Prompt="Store" Name="Toko" />
+		<Item Prompt="Alarm clock" Name="Jam alarm" />
+		<Item Prompt="Touch screen" Name="Sentuh layar" />
+		<Item Prompt="Communication" Name="Komunikasi" />
+		<Item Prompt="Smart phone" Name="Ponsel pintar" />
+		<Item Prompt="Scissors" Name="Gunting" />
+		<Item Prompt="Empathy" Name="Empati" />
+		<Item Prompt="Uniform" Name="Seragam" />
+		<Item Prompt="Desktop PC" Name="PC Desktop" />
+		<Item Prompt="Laptop" Name="Laptop" />
+		<Item Prompt="Cart" Name="Keranjang" />
+		<Item Prompt="Shopping cart" Name="Keranjang belanja" />
+		<Item Prompt="Calculator" Name="Kalkulator" />
+		<Item Prompt="Warehouse" Name="Gudang" />
+		<Item Prompt="Bank" Name="Bank" />
+		<Item Prompt="Bank" Name="Bank" />
+		<Item Prompt="Exchange" Name="Tukarkan" />
+		<Item Prompt="Address book" Name="Buku alamat" />
+		<Item Prompt="Fair" Name="Wajar" />
+		<Item Prompt="Light bulb" Name="Bohlam" />
+		<Item Prompt="Video" Name="Video" />
+		<Item Prompt="Location" Name="Lokasi" />
+		<Item Prompt="Positioning" Name="Posisi" />
+		<Item Prompt="Map" Name="Peta" />
+		<Item Prompt="Route" Name="Rute" />
+		<Item Prompt="Label" Name="Label" />
+		<Item Prompt="Shopping Bag" Name="Tas Belanja" />
+		<Item Prompt="Cooperation" Name="Kerja sama" />
+		<Item Prompt="Time" Name="Waktu" />
+		<Item Prompt="Aims" Name="Tujuan" />
+		<Item Prompt="Increase" Name="Meningkat" />
+		<Item Prompt="Decline" Name="Tolak" />
+		<Item Prompt="Unity" Name="Persatuan" />
+		<Item Prompt="Histogram" Name="Histogram" />
+		<Item Prompt="Telephone communication" Name="Komunikasi telepon" />
+		<Item Prompt="Paper clip" Name="Penjepit kertas" />
+		<Item Prompt="Pie chart" Name="Diagram lingkaran" />
+		<Item Prompt="U Disk" Name="Disk U" />
+		<Item Prompt="Press peg" Name="Tekan pasak" />
+		<Item Prompt="Global" Name="Global" />
+		<Item Prompt="Notebook" Name="Notebook" />
+		<Item Prompt="Safety" Name="Keselamatan" />
+		<Item Prompt="Protection" Name="Perlindungan" />
+		<Item Prompt="Bullion" Name="Bulion" />
+		<Item Prompt="Paper money" Name="Uang kertas" />
+		<Item Prompt="Cash register" Name="Kasir" />
+		<Item Prompt="Business card" Name="Kartu nama" />
+		<Item Prompt="Personal" Name="Personal" />
+		<Item Prompt="Employee" Name="Karyawan" />
+		<Item Prompt="Looking for business opportunities" Name="Mencari peluang bisnis" />
+		<Item Prompt="Folder" Name="Folder" />
+		<Item Prompt="Invoice" Name="Faktur" />
+		<Item Prompt="Save money" Name="Menghemat uang" />
+		<Item Prompt="Publicity" Name="Publikasi" />
+		<Item Prompt="Trophy" Name="Piala" />
+		<Item Prompt="Competition" Name="Persaingan" />
+		<Item Prompt="Game" Name="Game" />
+		<Item Prompt="Medals" Name="Medali" />
+		<Item Prompt="Gift" Name="Hadiah" />
+		<Item Prompt="Protection" Name="Perlindungan" />
+		<Item Prompt="Performance" Name="Kinerja" />
+		<Item Prompt="Video" Name="Video" />
+		<Item Prompt="Planning" Name="Perencanaan" />
+		<Item Prompt="Carton" Name="Kardus" />
+		<Item Prompt="Magnifier" Name="kaca Pembesar" />
+		<Item Prompt="Save" Name="Simpan" />
+		<Item Prompt="Fingerprint" Name="Sidik jari" />
+		<Item Prompt="Upcoming" Name="Akan datang" />
+		<Item Prompt="Customer service" Name="Layanan pelanggan" />
+		<Item Prompt="Lock" Name="Kunci" />
+		<Item Prompt="Plant" Name="Tumbuhan" />
+		<Item Prompt="Woman" Name="Wanita" />
+		<Item Prompt="The man" Name="Laki-laki" />
+		<Item Prompt="Organizational structure" Name="Struktur organisasi" />
+		<Item Prompt="Meeting" Name="Rapat" />
+		<Item Prompt="Preach" Name="Khotbah" />
+		<Item Prompt="Business" Name="Bisnis" />
+		<Item Prompt="Label" Name="Label" />
+		<Item Prompt="Overtime" Name="Lembur" />
+		<Item Prompt="Coffee" Name="Kopi" />
+		<Item Prompt="Auction" Name="Lelang" />
+		<Item Prompt="Recharge" Name="Isi ulang" />
+		<Item Prompt="Project management" Name="Manajemen proyek" />
+		<Item Prompt="Set up" Name="Siapkan" />
+		<Item Prompt="Trash can" Name="Tempat sampah" />
+		<Item Prompt="Accelerate" Name="Percepat" />
+		<Item Prompt="Upload" Name="Unggah" />
+		<Item Prompt="Download" Name="Unduh" />
+		<Item Prompt="View" Name="Tampilkan" />
+		<Item Prompt="Record video" Name="Rekam video" />
+		<Item Prompt="Documentation" Name="Dokumentasi" />
+    </Lib>
+    <Lib Path="./Symbols/Education.mdt">
+		<Item Prompt="Table lamp" Name="Lampu meja" />
+		<Item Prompt="Ruler" Name="Penggaris" />
+		<Item Prompt="Blackboard" Name="Papan tulis hitam" />
+		<Item Prompt="Pencil" Name="Pensil" />
+		<Item Prompt="School bag" Name="Tas sekolah" />
+		<Item Prompt="Books" Name="Buku" />
+		<Item Prompt="English language" Name="Bahasa Inggris" />
+		<Item Prompt="Chemistry" Name="Kimia" />
+		<Item Prompt="Biological" Name="Biologi" />
+		<Item Prompt="Mathematics" Name="Matematika" />
+		<Item Prompt="Physical" Name="Jasmani" />
+		<Item Prompt="History" Name="Sejarah" />
+		<Item Prompt="Geography" Name="Geografi" />
+		<Item Prompt="Astronomy" Name="Astronomi" />
+		<Item Prompt="Physical education" Name="Pendidikan jasmani" />
+		<Item Prompt="Music" Name="Musik" />
+		<Item Prompt="Molecular Structure" Name="Struktur Molekular" />
+		<Item Prompt="Magnifier" Name="kaca Pembesar" />
+		<Item Prompt="Light bulb" Name="Bohlam" />
+		<Item Prompt="Eraser" Name="Penghapus" />
+		<Item Prompt="Watch" Name="Arloji" />
+		<Item Prompt="Compass" Name="Kompas" />
+		<Item Prompt="Pen holder" Name="Tempat pena" />
+		<Item Prompt="Medals" Name="Medali" />
+		<Item Prompt="Doctor hat" Name="Topi dokter" />
+		<Item Prompt="School" Name="Sekolah" />
+		<Item Prompt="Certificate" Name="Sertifikat" />
+		<Item Prompt="Compass" Name="Kompas" />
+		<Item Prompt="Palette" Name="Palet" />
+		<Item Prompt="Hourglass" Name="Jam pasir" />
+		<Item Prompt="Microscope" Name="Mikroskop" />
+		<Item Prompt="Textbook" Name="Buku teks" />
+		<Item Prompt="School bus" Name="Bus sekolah" />
+		<Item Prompt="Notebook" Name="Notebook" />
+		<Item Prompt="Knife" Name="Pisau" />
+		<Item Prompt="Dancing" Name="Menari" />
+		<Item Prompt="Alarm clock" Name="Jam alarm" />
+		<Item Prompt="Glasses" Name="Kacamata" />
+		<Item Prompt="Clock" Name="Jam" />
+		<Item Prompt="Raise hand" Name="Angkat tangan" />
+		<Item Prompt="Footprint" Name="Jejak kaki" />
+		<Item Prompt="Upcoming" Name="Akan datang" />
+		<Item Prompt="Video" Name="Video" />
+		<Item Prompt="Game" Name="Game" />
+		<Item Prompt="Pencil sharpener" Name="Peraut pensil" />
+		<Item Prompt="Graduation certificate" Name="Sertifikat kelulusan" />
+		<Item Prompt="List" Name="Daftar" />
+		<Item Prompt="Psychology" Name="Psikologi" />
+		<Item Prompt="Headset" Name="Headset" />
+		<Item Prompt="Online course" Name="Kursus Online" />
+		<Item Prompt="Teaching" Name="Mengajar" />
+		<Item Prompt="Go to school" Name="Pergi ke sekolah" />
+		<Item Prompt="Web page" Name="Halaman web" />
+		<Item Prompt="Microphone" Name="Mikrofon" />
+		<Item Prompt="Abacus" Name="Sempoa" />
+		<Item Prompt="Pen" Name="Pena" />
+		<Item Prompt="Watercolor pen" Name="Pena Cat Air" />
+		<Item Prompt="Brush" Name="Sikat" />
+    </Lib>
+    <Lib Path="./Symbols/Tourism.mdt">
+        <Item Prompt="Bank card" Name="Kartu bank" />
+		<Item Prompt="Wallet" Name="Dompet" />
+		<Item Prompt="Recording" Name="Merekam" />
+		<Item Prompt="Time" Name="Waktu" />
+		<Item Prompt="Tickets" Name="Tiket" />
+		<Item Prompt="Landscape" Name="Lanskap" />
+		<Item Prompt="Compass" Name="Kompas" />
+		<Item Prompt="Tote bag" Name="Tas tote" />
+		<Item Prompt="Visa" Name="Visa" />
+		<Item Prompt="Air ticket" Name="Tiket pesawat" />
+		<Item Prompt="Taxi" Name="Taksi" />
+		<Item Prompt="Camera" Name="Kamera" />
+		<Item Prompt="Suitcase" Name="Koper" />
+		<Item Prompt="Building" Name="Gedung" />
+		<Item Prompt="Fruit juice" Name="Jus buah" />
+		<Item Prompt="Coconut tree" Name="Pohon kelapa" />
+		<Item Prompt="Ice cream" Name="Es krim" />
+		<Item Prompt="Exchange" Name="Tukarkan" />
+		<Item Prompt="Ice cream" Name="Es krim" />
+		<Item Prompt="Indicator" Name="Indikator" />
+		<Item Prompt="Route" Name="Rute" />
+		<Item Prompt="Breakfast" Name="Sarapan" />
+		<Item Prompt="Flip flop" Name="Sandal jepit" />
+		<Item Prompt="Hot air balloon" Name="Balon udara" />
+		<Item Prompt="Train" Name="Kereta" />
+		<Item Prompt="Umbrella" Name="Payung" />
+		<Item Prompt="Bus" Name="Bus" />
+		<Item Prompt="Sunglasses" Name="Kacamata Hitam" />
+		<Item Prompt="Hair dryer" Name="Pengering rambut" />
+		<Item Prompt="Hat" Name="Topi" />
+		<Item Prompt="School bag" Name="Tas sekolah" />
+		<Item Prompt="Cart" Name="Keranjang" />
+		<Item Prompt="Address" Name="Alamat" />
+		<Item Prompt="Aircraft" Name="Pesawat" />
+		<Item Prompt="Motorcycle" Name="Sepeda motor" />
+		<Item Prompt="Car" Name="Mobil" />
+		<Item Prompt="High-speed rail" Name="Kereta kecepatan tinggi" />
+		<Item Prompt="Tour car" Name="Mobil tur" />
+		<Item Prompt="Traffic light" Name="Lampu lalu lintas" />
+		<Item Prompt="Motorcycle" Name="Sepeda motor" />
+		<Item Prompt="Bus" Name="Bus" />
+		<Item Prompt="Steamship" Name="Kapal Uap" />
+		<Item Prompt="Yacht" Name="Kapal pesiar" />
+		<Item Prompt="Truck" Name="Truk" />
+		<Item Prompt="Tractor" Name="Traktor" />
+		<Item Prompt="Bicycle" Name="Sepeda" />
+		<Item Prompt="Boat" Name="Perahu" />
+		<Item Prompt="Roller" Name="Sepatu Roda" />
+		<Item Prompt="Motorcycle" Name="Sepeda motor" />
+		<Item Prompt="Submarine" Name="Kapal selam" />
+		<Item Prompt="Motorcycle" Name="Sepeda motor" />
+		<Item Prompt="Telescope" Name="Teleskop" />
+		<Item Prompt="Red flag" Name="Bendera merah" />
+		<Item Prompt="Bathe" Name="Mandi" />
+		<Item Prompt="Sun bath" Name="Berjemur" />
+		<Item Prompt="Tent" Name="Tenda" />
+		<Item Prompt="Cable car" Name="Kereta gantung" />
+		<Item Prompt="Aircraft" Name="Pesawat" />
+		<Item Prompt="Flashlight" Name="Lampu kilat" />
+    </Lib>
+    <Lib Path="./Symbols/Holiday.mdt">
+        <Item Prompt="Christmas ring" Name="Cincin natal" />
+        <Item Prompt="House" Name="Rumah" />
+        <Item Prompt="Christmas balls" Name="Bola Natal" />
+        <Item Prompt="Christmas tree" Name="Pohon Natal" />
+        <Item Prompt="Christmas hat" Name="Topi Natal" />
+        <Item Prompt="Christmas hat" Name="Topi Natal" />
+        <Item Prompt="Snowflake" Name="Keping salju" />
+        <Item Prompt="Snowman" Name="Manusia salju" />
+        <Item Prompt="Antlers" Name="Tanduk" />
+        <Item Prompt="Gift" Name="Hadiah" />
+        <Item Prompt="Crystal ball" Name="Bola kristal" />
+        <Item Prompt="Santa Claus" Name="Santa Claus" />
+        <Item Prompt="Deer" Name="Rusa" />
+        <Item Prompt="Christmas red fruit" Name="Buah merah Natal" />
+        <Item Prompt="Lollipop" Name="Permen Loli" />
+        <Item Prompt="Candy" Name="Permen" />
+        <Item Prompt="Gloves" Name="Sarung tangan" />
+        <Item Prompt="Crutch" Name="Kruk" />
+        <Item Prompt="Christmas socks" Name="Kaos kaki natal" />
+        <Item Prompt="Bells" Name="Lonceng" />
+        <Item Prompt="Christmas tree" Name="Pohon Natal" />
+        <Item Prompt="Christmas balls" Name="Bola Natal" />
+        <Item Prompt="Sled" Name="Kereta luncur" />
+        <Item Prompt="Cookie man" Name="Kue natal" />
+        <Item Prompt="Firecracker" Name="Petasan" />
+        <Item Prompt="Gongs and drums" Name="Gong dan drum" />
+        <Item Prompt="Lucky bag" Name="Tas keberuntungan" />
+        <Item Prompt="Red envelope" Name="Amplop merah" />
+        <Item Prompt="Dumplings" Name="Dumpling" />
+        <Item Prompt="Lantern" Name="Lentera" />
+        <Item Prompt="Spring couplets" Name="Bait pegas" />
+        <Item Prompt="Ingots" Name="Batang Logam" />
+        <Item Prompt="Drum" Name="Drum" />
+        <Item Prompt="Fireworks" Name="Kembang api" />
+        <Item Prompt="Glutinous rice balls" Name="Bola beras ketan" />
+        <Item Prompt="Fireworks" Name="Kembang api" />
+        <Item Prompt="Chinese knot" Name="Simpul Cina" />
+        <Item Prompt="Sugar-coated haws" Name="Tekstur berlapis gula" />
+        <Item Prompt="Cotton" Name="Katun" />
+        <Item Prompt="Gift" Name="Hadiah" />
+        <Item Prompt="Rose flower" Name="Bunga mawar" />
+        <Item Prompt="Pierce your heart" Name="Gambar Tusuk jantung Anda" />
+        <Item Prompt="Concentric lock" Name="Kunci konsentris" />
+        <Item Prompt="Chocolate" Name="Coklat" />
+        <Item Prompt="Bird" Name="Burung" />
+        <Item Prompt="Love words" Name="Kata-kata cinta" />
+        <Item Prompt="Wedding dress" Name="Gaun pernikahan" />
+        <Item Prompt="Ring" Name="Cincin" />
+        <Item Prompt="Necklace" Name="Kalung" />
+        <Item Prompt="Love letter" Name="Surat cinta" />
+        <Item Prompt="Crown" Name="Mahkota" />
+        <Item Prompt="Photo sticker" Name="Stiker foto" />
+        <Item Prompt="Skull" Name="Tengkorak" />
+        <Item Prompt="Cemetery" Name="Kuburan" />
+        <Item Prompt="Magic hat" Name="Topi Ajaib" />
+        <Item Prompt="Maple leaf" Name="Daun Maple" />
+        <Item Prompt="Easter eggs" Name="Telur Paskah" />
+        <Item Prompt="Pumpkin lantern" Name="Lentera labu" />
+        <Item Prompt="Ghost" Name="Hantu" />
+        <Item Prompt="Bat" Name="Kelelawar" />
+        <Item Prompt="Mask" Name="Topeng" />
+        <Item Prompt="Dragon boat" Name="Perahu naga" />
+        <Item Prompt="Duck eggs" Name="Telur bebek" />
+        <Item Prompt="Zongye" Name="Zongye" />
+        <Item Prompt="Zongzi" Name="Zongzi" />
+        <Item Prompt="Hat" Name="Topi" />
+        <Item Prompt="Small cake" Name="Kue kecil" />
+        <Item Prompt="Candle" Name="Lilin" />
+        <Item Prompt="Balloon" Name="Balon" />
+        <Item Prompt="Wine glass" Name="Gelas anggur" />
+        <Item Prompt="Cake" Name="Kue" />
+    </Lib>
+    <Lib Path="./Symbols/Food.mdt">
+        <Item Prompt="Pine nuts" Name="Kacang pinus" />
+		<Item Prompt="Almond" Name="Almond/Badam" />
+		<Item Prompt="Ginkgo" Name="Ginkgo" />
+		<Item Prompt="Macadamia" Name="Macadamia" />
+		<Item Prompt="Cashew" Name="Kacang mete" />
+		<Item Prompt="Walnut" Name="Kenari" />
+		<Item Prompt="Red dates" Name="Kurma merah" />
+		<Item Prompt="Chestnut" Name="Kastanye" />
+		<Item Prompt="Hazelnut" Name="Kacang Hazel" />
+		<Item Prompt="Sandwich" Name="Roti lapis" />
+		<Item Prompt="Peanut" Name="Kacang" />
+		<Item Prompt="Melon seeds" Name="Biji melon" />
+		<Item Prompt="Raisin" Name="Kismis" />
+		<Item Prompt="Donuts" Name="Donat" />
+		<Item Prompt="Pizza" Name="Pizza" />
+		<Item Prompt="Croissant" Name="Croissant" />
+		<Item Prompt="Bread" Name="Roti" />
+		<Item Prompt="Pudding" Name="Puding" />
+		<Item Prompt="Cake" Name="Kue" />
+		<Item Prompt="Sandwich bread" Name="Roti untuk roti lapis" />
+		<Item Prompt="Biscuit" Name="Biskuit" />
+		<Item Prompt="Biscuit" Name="Biskuit" />
+		<Item Prompt="Macaron" Name="Macaron" />
+		<Item Prompt="Dorayaki" Name="Dorayaki" />
+		<Item Prompt="Cheese" Name="Keju" />
+		<Item Prompt="Hamburg" Name="Hamburger" />
+		<Item Prompt="Waffle" Name="Wafel" />
+		<Item Prompt="Toast bread" Name="Roti panggang" />
+		<Item Prompt="Pineapple buns" Name="Roti nanas" />
+		<Item Prompt="Pear" Name="Pir" />
+		<Item Prompt="Orange" Name="Jeruk" />
+		<Item Prompt="Cherry" Name="Ceri" />
+		<Item Prompt="Avocado" Name="Alpukat" />
+		<Item Prompt="Strawberry" Name="Stroberi" />
+		<Item Prompt="Kiwi" Name="Kiwi" />
+		<Item Prompt="Mango" Name="Mangga" />
+		<Item Prompt="Apple" Name="Apel" />
+		<Item Prompt="Watermelon" Name="Semangka" />
+		<Item Prompt="Pineapple" Name="Nanas" />
+		<Item Prompt="Durian" Name="Durian" />
+		<Item Prompt="Raisins" Name="Kismis" />
+		<Item Prompt="Cucumber" Name="Mentimun" />
+		<Item Prompt="Lemon" Name="Lemon" />
+		<Item Prompt="Coconut" Name="Kelapa" />
+		<Item Prompt="Loquat" Name="Biwa" />
+		<Item Prompt="Blueberry" Name="Bluberi" />
+		<Item Prompt="Pitaya" Name="Pitaya" />
+		<Item Prompt="Banana" Name="Pisang" />
+		<Item Prompt="Peach" Name="Persik" />
+		<Item Prompt="Pomegranate" Name="Delima" />
+		<Item Prompt="Carambola" Name="Belimbing" />
+		<Item Prompt="Longan" Name="Kelengkeng" />
+		<Item Prompt="Litchi" Name="Leci" />
+		<Item Prompt="Ice cream" Name="Es krim" />
+		<Item Prompt="Chocolate" Name="Coklat" />
+		<Item Prompt="Ice cream" Name="Es krim" />
+		<Item Prompt="Candy" Name="Permen" />
+		<Item Prompt="Lollipop" Name="Permen Loli" />
+		<Item Prompt="Yogurt" Name="Yogurt" />
+		<Item Prompt="Ham sausage" Name="Sosis ham" />
+		<Item Prompt="Popcorn" Name="Berondong jagung" />
+		<Item Prompt="French fries" Name="Kentang goreng" />
+		<Item Prompt="Egg" Name="Telur" />
+		<Item Prompt="Shrimp" Name="Udang" />
+		<Item Prompt="Chicken wings" Name="Sayap ayam" />
+		<Item Prompt="Seashell" Name="Kerang laut" />
+		<Item Prompt="Saury" Name="Sauri" />
+		<Item Prompt="Barbecue" Name="Barbekyu" />
+		<Item Prompt="Chicken leg" Name="Kaki ayam" />
+		<Item Prompt="Bun" Name="Roti bun" />
+		<Item Prompt="Crab" Name="Kepiting" />
+		<Item Prompt="Steak" Name="Steik" />
+		<Item Prompt="Chicken" Name="Ayam" />
+		<Item Prompt="Zongzi" Name="Zongzi" />
+		<Item Prompt="Noodles" Name="Mie" />
+		<Item Prompt="Rice" Name="Beras" />
+		<Item Prompt="Rice ball" Name="Bola nasi" />
+		<Item Prompt="Honey" Name="Madu" />
+		<Item Prompt="Bacon" Name="Daging asap" />
+		<Item Prompt="Lotus root" Name="Akar teratai" />
+		<Item Prompt="Tomato" Name="Tomat" />
+		<Item Prompt="Corn" Name="Jagung" />
+		<Item Prompt="Carrot" Name="Wortel" />
+		<Item Prompt="Broccoli" Name="Brokoli" />
+		<Item Prompt="Eggplant" Name="Terung" />
+		<Item Prompt="Onion" Name="Bawang bombay" />
+		<Item Prompt="Bitter gourd" Name="Labu pahit" />
+		<Item Prompt="Shiitake" Name="Jamur Shiitake" />
+		<Item Prompt="Chili" Name="Cabe" />
+		<Item Prompt="Pumpkin" Name="Labu kuning" />
+		<Item Prompt="Pea" Name="Kacang polong" />
+		<Item Prompt="Cauliflower" Name="Kembang kol" />
+		<Item Prompt="Cabbage" Name="Kubis" />
+		<Item Prompt="Radish" Name="Lobak" />
+		<Item Prompt="Vegetables" Name="Sayuran" />
+		<Item Prompt="Ginger" Name="Jahe" />
+		<Item Prompt="Okra" Name="Okra" />
+		<Item Prompt="Garlic" Name="Bawang putih" />
+		<Item Prompt="Potato" Name="Kentang" />
+		<Item Prompt="Lettuce" Name="Selada" />
+		<Item Prompt="Celery" Name="Seledri" />
+		<Item Prompt="Bamboo shoots" Name="Tunas bambu" />
+		<Item Prompt="Shallot" Name="Bawang merah" />
+		<Item Prompt="Tofu" Name="Tahu" />
+		<Item Prompt="Beer" Name="Bir" />
+		<Item Prompt="Coffee" Name="Kopi" />
+		<Item Prompt="Fruit juice" Name="Jus buah" />
+		<Item Prompt="Coke" Name="Minuman Soda" />
+		<Item Prompt="Milk tea" Name="Teh susu" />
+		<Item Prompt="Milk" Name="Susu" />
+		<Item Prompt="Green tea" Name="Teh hijau" />
+		<Item Prompt="Scented tea" Name="Teh beraroma" />
+    </Lib>
+    <Lib Path="./Symbols/EnvironmentalProtection.mdt">
+		<Item Prompt="Protect water resources" Name="Lindungi sumber air" />
+		<Item Prompt="Protect the Earth" Name="Lindungi Bumi" />
+		<Item Prompt="Energy saving lamp" Name="Lampu hemat energi" />
+		<Item Prompt="Electric car" Name="Mobil listrik" />
+		<Item Prompt="Solar energy" Name="Energi matahari" />
+		<Item Prompt="Trash can" Name="Tempat sampah" />
+		<Item Prompt="Bicycle" Name="Sepeda" />
+		<Item Prompt="Sun" Name="Matahari" />
+		<Item Prompt="Waste treatment center" Name="Pusat pengolahan limbah" />
+		<Item Prompt="Windmill" Name="Kincir angin" />
+		<Item Prompt="Windmill" Name="Kincir angin" />
+		<Item Prompt="Eco Bag" Name="Tas Ramah Lingkungan" />
+		<Item Prompt="Water cycle" Name="Siklus air" />
+		<Item Prompt="Water cycle" Name="Siklus air" />
+		<Item Prompt="Environmental label" Name="Label lingkungan" />
+		<Item Prompt="Environmental Award" Name="Penghargaan Lingkungan" />
+		<Item Prompt="Green leaf" Name="Daun hijau" />
+		<Item Prompt="Green leaf" Name="Daun hijau" />
+		<Item Prompt="Glass" Name="Kaca" />
+		<Item Prompt="Recharge" Name="Isi ulang" />
+		<Item Prompt="Paper products" Name="Produk kertas" />
+		<Item Prompt="Hot air balloon" Name="Balon udara" />
+		<Item Prompt="Cactus" Name="Kaktus" />
+		<Item Prompt="Cloud" Name="Awan" />
+		<Item Prompt="Environmental protection" Name="Perlindungan lingkungan" />
+		<Item Prompt="Factory" Name="Pabrik" />
+		<Item Prompt="Smoke" Name="Asap" />
+		<Item Prompt="Thick smoke" Name="Asap tebal" />
+		<Item Prompt="Sewage plant" Name="Pabrik limbah" />
+		<Item Prompt="Faucet" Name="Keran" />
+		<Item Prompt="Direction" Name="Arah" />
+		<Item Prompt="Carton" Name="Kardus" />
+		<Item Prompt="Cactus" Name="Kaktus" />
+		<Item Prompt="Plant" Name="Tumbuhan" />
+		<Item Prompt="Big tree" Name="Pohon besar" />
+		<Item Prompt="Waste treatment center" Name="Pusat pengolahan limbah" />
+		<Item Prompt="Clean" Name="Bersih" />
+    </Lib>
+    <Lib Path="./Symbols/Sport.mdt">
+		<Item Prompt="Basketball" Name="Basket" />
+		<Item Prompt="Volleyball" Name="Voli" />
+		<Item Prompt="Football" Name="Sepak bola" />
+		<Item Prompt="Softball" Name="Sofbol" />
+		<Item Prompt="Billiards" Name="Biliar" />
+		<Item Prompt="Shot put" Name="Tembakan" />
+		<Item Prompt="Tennis" Name="Tenis" />
+		<Item Prompt="Jersey" Name="Jersey" />
+		<Item Prompt="Ball" Name="Bola" />
+		<Item Prompt="Football" Name="Sepak bola" />
+		<Item Prompt="Billiards" Name="Biliar" />
+		<Item Prompt="Badminton" Name="Bulutangkis" />
+		<Item Prompt="Skateboard" Name="Papan Luncur" />
+		<Item Prompt="Pingpong" Name="Pingpong" />
+		<Item Prompt="Golf" Name="Golf" />
+		<Item Prompt="Skates" Name="Seluncur" />
+		<Item Prompt="Swimming goggles" Name="Kacamata renang" />
+		<Item Prompt="Roller skates" Name="Sepatu roda" />
+		<Item Prompt="Weightlifting" Name="Angkat berat" />
+		<Item Prompt="Boxing" Name="Tinju" />
+		<Item Prompt="Bowling" Name="Bowling" />
+		<Item Prompt="Hula Hoop" Name="Hulahop" />
+		<Item Prompt="Rank" Name="Peringkat" />
+		<Item Prompt="Lifebuoy" Name="Pelampung Berenang" />
+		<Item Prompt="Red flag" Name="Bendera merah" />
+		<Item Prompt="Helmet" Name="Helm" />
+		<Item Prompt="Luggage" Name="Bagasi" />
+		<Item Prompt="Whistle" Name="Siul" />
+		<Item Prompt="Boating" Name="Berperahu" />
+		<Item Prompt="Football" Name="Sepak bola" />
+		<Item Prompt="Medals" Name="Medali" />
+		<Item Prompt="Diving" Name="Menyelam" />
+		<Item Prompt="Rope skipping" Name="Lompat tali" />
+		<Item Prompt="Fencing" Name="Anggar" />
+		<Item Prompt="Taekwondo" Name="Taekwondo" />
+		<Item Prompt="Hockey" Name="Hoki" />
+		<Item Prompt="Grip" Name="Gagang" />
+		<Item Prompt="Yoga mat" Name="Matras yoga" />
+		<Item Prompt="Trophy" Name="Piala" />
+    </Lib>
+    <Lib Path="./Symbols/Technology.mdt">
+        <Item Prompt="Alien" Name="Alien" />
+		<Item Prompt="Radar" Name="Radar" />
+		<Item Prompt="Robot" Name="Robot" />
+		<Item Prompt="Satellite" Name="Satelit" />
+		<Item Prompt="Rocket" Name="Roket" />
+		<Item Prompt="Satellite" Name="Satelit" />
+		<Item Prompt="Light" Name="Lampu" />
+		<Item Prompt="Technology" Name="Teknologi" />
+		<Item Prompt="Microscope" Name="Mikroskop" />
+		<Item Prompt="Radar" Name="Radar" />
+		<Item Prompt="USB" Name="USB" />
+		<Item Prompt="MP3" Name="MP3" />
+		<Item Prompt="Mouse" Name="Mouse" />
+		<Item Prompt="Container" Name="Wadah" />
+		<Item Prompt="Headset" Name="Headset" />
+		<Item Prompt="Router" Name="Router" />
+		<Item Prompt="Satellite" Name="Satelit" />
+		<Item Prompt="Radar" Name="Radar" />
+		<Item Prompt="Microphone" Name="Mikrofon" />
+		<Item Prompt="Volume" Name="Volume" />
+		<Item Prompt="Telescope" Name="Teleskop" />
+		<Item Prompt="Brain" Name="Otak" />
+		<Item Prompt="Double helix" Name="Heliks ganda" />
+		<Item Prompt="ECG" Name="ECG" />
+		<Item Prompt="Molecular Structure" Name="Struktur Molekular" />
+		<Item Prompt="Fetus" Name="Janin" />
+		<Item Prompt="Family" Name="Keluarga" />
+		<Item Prompt="Microscope" Name="Mikroskop" />
+		<Item Prompt="Form" Name="Formulir" />
+		<Item Prompt="First aid kit" Name="Kit pertolongan pertama" />
+		<Item Prompt="Respirator" Name="Respirator" />
+		<Item Prompt="Pill" Name="Pil" />
+		<Item Prompt="Capsule" Name="Kapsul" />
+		<Item Prompt="Hospital" Name="Rumah sakit" />
+		<Item Prompt="Thermometer" Name="Termometer" />
+		<Item Prompt="Ambulance" Name="Ambulans" />
+		<Item Prompt="Experiment" Name="Eksperimen" />
+		<Item Prompt="Crutch" Name="Kruk" />
+		<Item Prompt="Crutch" Name="Kruk" />
+		<Item Prompt="Wheelchair" Name="Kursi roda" />
+		<Item Prompt="Infusion" Name="Infusi" />
+		<Item Prompt="Stretcher" Name="Tandu" />
+		<Item Prompt="Body weight" Name="Berat badan" />
+		<Item Prompt="Hospital bed" Name="Tempat tidur rumah sakit" />
+		<Item Prompt="Stretcher" Name="Tandu" />
+		<Item Prompt="Virus" Name="Virus" />
+		<Item Prompt="Wheelchair" Name="Kursi roda" />
+		<Item Prompt="Tooth" Name="Gigi" />
+		<Item Prompt="Stethoscope" Name="Stetoskop" />
+		<Item Prompt="Nurse hat" Name="Topi perawat" />
+		<Item Prompt="Heart" Name="Jantung" />
+		<Item Prompt="Liver" Name="Hati" />
+		<Item Prompt="Lung" Name="Paru-Paru" />
+		<Item Prompt="Stomach" Name="Perut" />
+		<Item Prompt="Kidney" Name="Ginjal" />
+		<Item Prompt="Ear" Name="Telinga" />
+		<Item Prompt="The large intestine" Name="Usus besar" />
+		<Item Prompt="Syringe" Name="Suntikan" />
+		<Item Prompt="Filming" Name="Merekam video" />
+		<Item Prompt="Potion" Name="Obat" />
+		<Item Prompt="Virus" Name="Virus" />
+		<Item Prompt="Virus" Name="Virus" />
+		<Item Prompt="Heart" Name="Jantung" />
+		<Item Prompt="Dentist" Name="Dokter gigi" />
+		<Item Prompt="Nurse" Name="Perawat" />
+		<Item Prompt="Desktop monitor" Name="Monitor desktop" />
+		<Item Prompt="Pad" Name="Bantalan" />
+		<Item Prompt="Computer" Name="Komputer" />
+		<Item Prompt="TV" Name="TV" />
+		<Item Prompt="Laptop" Name="Laptop" />
+		<Item Prompt="Cell phone" Name="Telepon seluler" />
+		<Item Prompt="Watch" Name="Arloji" />
+		<Item Prompt="Watch" Name="Arloji" />
+		<Item Prompt="Watch" Name="Arloji" />
+		<Item Prompt="Glasses" Name="Kacamata" />
+		<Item Prompt="Database" Name="Basis data" />
+		<Item Prompt="AR" Name="AR" />
+		<Item Prompt="Fax" Name="Faks" />
+		<Item Prompt="Aircraft" Name="Pesawat" />
+		<Item Prompt="Camera" Name="Kamera" />
+		<Item Prompt="Mp3" Name="Mp3" />
+		<Item Prompt="Hand-painted board" Name="Papan Cat tangan" />
+		<Item Prompt="Projector" Name="Proyektor" />
+		<Item Prompt="Save" Name="Simpan" />
+		<Item Prompt="Cell phone" Name="Telepon seluler" />
+		<Item Prompt="Game console" Name="Konsol game" />
+		<Item Prompt="Chip" Name="Cip" />
+		<Item Prompt="Oven" Name="Oven" />
+		<Item Prompt="5G" Name="5G" />
+    </Lib>
+    <Lib Path="./Symbols/Professions.mdt">
+        <Item Prompt="Programmer" Name="Pemrogram" />
+        <Item Prompt="White collar" Name="Kerah putih" />
+        <Item Prompt="Teacher" Name="Guru" />
+        <Item Prompt="Flight attendant" Name="Pramugari" />
+        <Item Prompt="Basketball player" Name="Pemain bola basket" />
+        <Item Prompt="Initial" Name="Paraf" />
+        <Item Prompt="Student" Name="Siswa" />
+        <Item Prompt="Nurse" Name="Perawat" />
+        <Item Prompt="Doctors" Name="Dokter" />
+        <Item Prompt="Dentist" Name="Dokter gigi" />
+        <Item Prompt="Chairman" Name="Direktur Utama" />
+        <Item Prompt="Policemen" Name="Polisi" />
+        <Item Prompt="Customer service" Name="Layanan pelanggan" />
+        <Item Prompt="White collar" Name="Kerah putih" />
+        <Item Prompt="Arab" Name="Arab" />
+        <Item Prompt="Nun" Name="Biarawati" />
+        <Item Prompt="Female employee" Name="Karyawati" />
+        <Item Prompt="Manager" Name="Manajer" />
+        <Item Prompt="Hairstylist" Name="Penata rambut" />
+        <Item Prompt="Worker" Name="Pekerja" />
+        <Item Prompt="Santa Claus" Name="Santa Claus" />
+        <Item Prompt="Engineer" Name="Insinyur" />
+        <Item Prompt="Flight attendant" Name="Pramugari" />
+        <Item Prompt="Soldier" Name="Prajurit" />
+        <Item Prompt="Waiter" Name="Pelayan" />
+        <Item Prompt="Priest" Name="Pendeta" />
+        <Item Prompt="Judge" Name="Hakim" />
+        <Item Prompt="The man" Name="Laki-laki" />
+        <Item Prompt="Housewife" Name="Ibu rumah tangga" />
+        <Item Prompt="Boy" Name="Anak laki-laki" />
+        <Item Prompt="Girl" Name="Anak perempuan" />
+        <Item Prompt="The man" Name="Laki-laki" />
+        <Item Prompt="Boy" Name="Anak laki-laki" />
+        <Item Prompt="Farmer" Name="Petani" />
+    </Lib>
+    <Lib Path="./Symbols/Expressions.mdt">
+        <Item Prompt="Stay" Name="Menginap" />
+        <Item Prompt="Laughing out loud" Name="Tertawa keras" />
+        <Item Prompt="Surprised" Name="Terkejut" />
+        <Item Prompt="Kiss" Name="Cium" />
+        <Item Prompt="Sad" Name="Sedih" />
+        <Item Prompt="Cry and laugh" Name="Menangis dan tertawa" />
+        <Item Prompt="To shut up" Name="Untuk mematikan" />
+        <Item Prompt="Pain" Name="Nyeri" />
+        <Item Prompt="Like" Name="Suka" />
+        <Item Prompt="Giggle" Name="Terkekeh" />
+        <Item Prompt="Smile" Name="Senyum" />
+        <Item Prompt="Sinister smile" Name="Senyum seram" />
+        <Item Prompt="Sleep soundly" Name="Tidur lelap" />
+        <Item Prompt="Naughty" Name="Nakal" />
+        <Item Prompt="Speechless" Name="Tanpa kata-kata" />
+        <Item Prompt="Smile" Name="Senyum" />
+        <Item Prompt="Cry" Name="Menangis" />
+        <Item Prompt="Cool" Name="Keren" />
+        <Item Prompt="Pissed off" Name="Kesal" />
+        <Item Prompt="Gosh" Name="Wah" />
+        <Item Prompt="Poker face" Name="Wajah tanpa ekspresi" />
+        <Item Prompt="Daze" Name="Linglung" />
+        <Item Prompt="Injured" Name="Cedera" />
+        <Item Prompt="Mask" Name="Topeng" />
+        <Item Prompt="sleep" Name="tidur" />
+        <Item Prompt="sleep" Name="tidur" />
+        <Item Prompt="Clever" Name="Cerdas" />
+        <Item Prompt="Vomiting" Name="Muntah" />
+        <Item Prompt="Smirk" Name="Seringai" />
+        <Item Prompt="Struggle" Name="Berjuang" />
+        <Item Prompt="See the money" Name="Lihat uang" />
+        <Item Prompt="Cute" Name="Imut" />
+        <Item Prompt="Grit your teeth" Name="Gertakkan gigi Anda" />
+    </Lib>
+    <Lib Path="./Symbols/Animal.mdt">
+        <Item Prompt="Hippo" Name="Kuda Nil" />
+        <Item Prompt="Bee" Name="Lebah" />
+        <Item Prompt="Cattle" Name="Sapi" />
+        <Item Prompt="Rabbit" Name="Kelinci" />
+        <Item Prompt="Tiger" Name="Harimau" />
+        <Item Prompt="Mouse" Name="Tikus" />
+        <Item Prompt="Horse" Name="Kuda" />
+        <Item Prompt="Cock" Name="Ayam jago" />
+        <Item Prompt="Duck" Name="Bebek" />
+        <Item Prompt="Deer" Name="Rusa" />
+        <Item Prompt="Lion" Name="Singa" />
+        <Item Prompt="Elephant" Name="Gajah" />
+        <Item Prompt="Panda" Name="Panda" />
+        <Item Prompt="Bear" Name="Beruang" />
+        <Item Prompt="Dog" Name="Anjing" />
+        <Item Prompt="Sheep" Name="Domba" />
+        <Item Prompt="Owl" Name="Burung hantu" />
+        <Item Prompt="Hedgehog" Name="Landak" />
+        <Item Prompt="Pig" Name="Babi" />
+        <Item Prompt="Giraffe" Name="Jerapah" />
+        <Item Prompt="Koala" Name="Koala" />
+        <Item Prompt="Cat" Name="Kucing" />
+        <Item Prompt="Fox" Name="Rubah" />
+        <Item Prompt="Monkey" Name="Monyet" />
+        <Item Prompt="Frog" Name="Kodok" />
+        <Item Prompt="Crab" Name="Kepiting" />
+        <Item Prompt="Shrimp" Name="Udang" />
+        <Item Prompt="Octopus" Name="Gurita" />
+        <Item Prompt="Seaweed" Name="Rumput laut" />
+        <Item Prompt="Hippocampus" Name="Kuda nil" />
+        <Item Prompt="Lobster" Name="Lobster" />
+        <Item Prompt="Conch" Name="Kerang besar" />
+        <Item Prompt="Jellyfish" Name="Ubur-ubur" />
+        <Item Prompt="Starfish" Name="Bintang laut" />
+        <Item Prompt="Dolphin" Name="Lumba-lumba" />
+        <Item Prompt="Goldfish" Name="Ikan mas" />
+        <Item Prompt="Tortoise" Name="Kura-kura" />
+        <Item Prompt="Octopus" Name="Gurita" />
+        <Item Prompt="Cuttlefish" Name="Sotong" />
+        <Item Prompt="Sea lion" Name="Singa laut" />
+        <Item Prompt="Seal" Name="Anjing laut" />
+        <Item Prompt="Pufferfish" Name="Ikan buntal" />
+        <Item Prompt="Rajiformes" Name="Pari" />
+        <Item Prompt="Fish" Name="Ikan" />
+        <Item Prompt="Whale" Name="Paus" />
+        <Item Prompt="Shell" Name="Kerang" />
+        <Item Prompt="Triangle fish" Name="Ikan segitiga" />
+        <Item Prompt="Kelp" Name="Ganggang laut" />
+        <Item Prompt="Sole" Name="Ikan lidah" />
+        <Item Prompt="Bee" Name="Lebah" />
+        <Item Prompt="Ladybug" Name="Kepik" />
+        <Item Prompt="Ant" Name="Semut" />
+        <Item Prompt="Housefly" Name="Lalat rumah" />
+        <Item Prompt="Butterfly" Name="Kupu-kupu" />
+        <Item Prompt="Dragonfly" Name="Capung" />
+        <Item Prompt="Caterpillar" Name="Ulat" />
+        <Item Prompt="Mosquito" Name="Nyamuk" />
+        <Item Prompt="Cicada" Name="Jangkrik" />
+        <Item Prompt="Centipede" Name="Kelabang" />
+        <Item Prompt="Scorpion" Name="Kalajengking" />
+    </Lib>
+    <Lib Path="./Symbols/Plant.mdt">
+		<Item Prompt="Plant" Name="Tumbuhan" />
+		<Item Prompt="Cactus" Name="Kaktus" />
+		<Item Prompt="Flower" Name="Bunga" />
+		<Item Prompt="Plant" Name="Tumbuhan" />
+		<Item Prompt="Flower" Name="Bunga" />
+		<Item Prompt="Flower" Name="Bunga" />
+		<Item Prompt="Plant" Name="Tumbuhan" />
+		<Item Prompt="Plant" Name="Tumbuhan" />
+		<Item Prompt="Plant" Name="Tumbuhan" />
+		<Item Prompt="Flower" Name="Bunga" />
+		<Item Prompt="Plant" Name="Tumbuhan" />
+		<Item Prompt="Plant" Name="Tumbuhan" />
+		<Item Prompt="Plant" Name="Tumbuhan" />
+		<Item Prompt="Plant" Name="Tumbuhan" />
+		<Item Prompt="Plant" Name="Tumbuhan" />
+		<Item Prompt="Plant" Name="Tumbuhan" />
+		<Item Prompt="Plant" Name="Tumbuhan" />
+		<Item Prompt="Cactus" Name="Kaktus" />
+		<Item Prompt="Flower" Name="Bunga" />
+		<Item Prompt="Plant" Name="Tumbuhan" />
+		<Item Prompt="Bamboo" Name="Bambu" />
+		<Item Prompt="Plant" Name="Tumbuhan" />
+		<Item Prompt="Plant" Name="Tumbuhan" />
+		<Item Prompt="Plant" Name="Tumbuhan" />
+		<Item Prompt="Flower" Name="Bunga" />
+		<Item Prompt="Plant" Name="Tumbuhan" />
+		<Item Prompt="Plant" Name="Tumbuhan" />
+		<Item Prompt="Flower" Name="Bunga" />
+		<Item Prompt="Flower" Name="Bunga" />
+    </Lib>
+    <Lib Path="./Symbols/Weather.mdt">
+        <Item Prompt="Cloudy day" Name="Hari mendung" />
+        <Item Prompt="Cloudy day" Name="Hari mendung" />
+        <Item Prompt="Sunny day" Name="Hari cerah" />
+        <Item Prompt="Rain" Name="Hujan" />
+        <Item Prompt="Heavy rain" Name="Hujan lebat" />
+        <Item Prompt="Partly cloudy" Name="Sebagian berawan" />
+        <Item Prompt="Sun rain" Name="Hujan Gerimis" />
+        <Item Prompt="Sleet" Name="Hujan salju" />
+        <Item Prompt="Sleet" Name="Hujan salju" />
+        <Item Prompt="Snow" Name="Salju" />
+        <Item Prompt="Snow" Name="Salju" />
+        <Item Prompt="Heavy snow" Name="Salju lebat" />
+        <Item Prompt="Heavy snow at night" Name="Salju lebat di malam hari" />
+        <Item Prompt="Heavy rain at night" Name="Hujan lebat di malam hari" />
+        <Item Prompt="Sunrise" Name="Matahari terbit" />
+        <Item Prompt="At night" Name="Di malam hari" />
+        <Item Prompt="Rainbow" Name="Pelangi" />
+        <Item Prompt="Wind direction" Name="Arah angin" />
+        <Item Prompt="Thundershower" Name="Hujan petir" />
+        <Item Prompt="Hail" Name="Hujan es" />
+        <Item Prompt="Cloudy at night" Name="Berawan di malam hari" />
+        <Item Prompt="High temperature" Name="Temperatur tinggi" />
+        <Item Prompt="Low temperature" Name="Suhu rendah" />
+        <Item Prompt="Tornado" Name="Topan" />
+        <Item Prompt="Star" Name="Bintang" />
+        <Item Prompt="Sand dust" Name="Debu pasir" />
+    </Lib>
+</Libraries>

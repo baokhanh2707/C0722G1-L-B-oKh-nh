@@ -1,0 +1,18 @@
+"<?xml version=""1.0"" encoding=""utf-8""?>
+<Names>
+    <Gallaries>
+        <Gallary NameU="Office" Name="Bureau"/>
+        <Gallary NameU="Education" Name="Éducation"/>
+        <Gallary NameU="Tourism" Name="Voyage"/>
+        <Gallary NameU="Holiday" Name="Vacances"/>
+        <Gallary NameU="Food" Name="Nourriture"/>
+        <Gallary NameU="Environmental Protection" Name="Protection de l'environnement"/>
+        <Gallary NameU="Sport" Name="Équipement sportif"/>
+        <Gallary NameU="Technology" Name="Technologie"/>
+        <Gallary NameU="Professions" Name="Profession"/>
+        <Gallary NameU="Expressions" Name="Émoticône"/>
+        <Gallary NameU="Animal" Name="Animal"/>
+        <Gallary NameU="Plant" Name="Plante"/>
+        <Gallary NameU="Weather" Name="Météo"/>
+    </Gallaries>
+</Names>"

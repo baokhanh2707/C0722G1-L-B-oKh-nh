@@ -6,6 +6,7 @@ public abstract class Person {
     private String name;
     private String dateOfBirth;
     private Boolean gender;
+    public abstract String getInfo();
 
     public Person(String code, String name, String dateOfBirth, Boolean gender) {
         this.code = code;

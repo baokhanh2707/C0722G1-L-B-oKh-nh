@@ -1,0 +1,47 @@
+﻿<Gallery NameU= "Mind Map" Name= "Mind Map" Version= "1.0" Help= "create-mind-map.php" Description= "브레인스토밍, 문제 해결, 데이터 분석 및 의사 결정을 위한 마인드맵">
+   <Template NameU= "Radial Map" Name= "마인드맵" Layout= "8" Theme= "31" DarkTheme= "9" Icon= "./radial_map.png" Description= "기본 마인드맵을 작성해 드립니다.기본 주제가 중심 주제 양쪽에 방사형으로 배치할 수 있습니다.">
+    </Template>
+
+    <Template NameU= "Right Map" Name= "마인드맵 (단방향)" Layout= "6" Theme= "31" DarkTheme= "9" Icon= "./right_map.png" Description= "하위 주제가 중심 주제 오른쪽에 배치되는 마인드맵을 작성합니다.">
+	</Template>
+
+    <Template NameU= "Tree Map" Name= "나무형 맵" Layout= "3" Theme= "31" DarkTheme= "9" Icon= "./tree_map.png" Description= "중심 주제를 하위 주제로 레이아웃되는 나무형 구조의 마인드맵을 작성합니다.">
+    </Template>
+	
+	<Template NameU= "Tree Map Right" Name= "나무형 맵" Layout= "5" Theme= "31" DarkTheme= "9" Icon= "./tree_mapR.png" Description= "중심 주제를 하위 주제로 레이아웃되는 나무형 구조의 마인드맵을 작성합니다.">
+    </Template>
+
+    <Template NameU= "Org-Chart Map" Name= "조직도" Layout= "2" Theme= "32" DarkTheme= "3" Icon= "./org_map.png" Description= "조직 다이어그램 구조에 대한 마인드맵입니다.조직 다이어그램은 중앙 주제 아래에 하위 주제를 배치할 수 있습니다.">
+    </Template>
+
+	<Template NameU= "Fish Bone Right" Name= "피쉬본" Layout= "23" Theme= "31" DarkTheme= "9" Icon= "./right_fishbone.png" Description= "Fish Bone 다이어그램은 문제가 발생한 [근본적인 원인]을 발굴하는데 최상이며 인과관계 처리 맵으로도 불릴 수 있습니다.">
+	</Template>
+
+	<Template NameU= "Fish Bone Left" Name= "피쉬본" Layout= "24" Theme= "31" DarkTheme= "9" Icon= "./left_fishbone.png" Description= "Fish Bone 다이어그램은 문제가 발생한 [근본적인 원인]을 발굴하는데 최상이며 인과관계 처리 맵으로도 불릴 수 있습니다.">
+	</Template>
+
+	<Template NameU= "Horizontal Timeline" Name= "타임라인（가로）" Layout= "17" Theme= "31" DarkTheme= "9" Icon= "./line_horizontal.png" Description= " 타임라인은 이전과 미래의 사항을 시간별로 정리하여 표현할 수 있습니다.">
+	</Template>
+
+	<Template NameU= "Winding Timeline" Name= "타임라인(S형)" Layout= "18" Theme= "31" DarkTheme= "9" Icon= "./line_turn.png" Description= " 타임라인은 이전과 미래의 사항을 시간별로 정리하여 표현할 수 있습니다.">
+	</Template>
+
+	<Template NameU= "Vertical Timeline" Name= "타임라인（세로）" Layout= "19" Theme= "31" DarkTheme= "9" Icon= "./line_vertical.png" Description= "타임라인은 이전과 미래의 사항을 시간별로 정리하여 표현할 수 있습니다.">
+	</Template>
+	
+	<Template NameU= "Circle Map" Name= "싸이클 맵" Layout= "32" Theme= "31" DarkTheme= "3" Icon= "./circle.png" Description= 
+	"싸이클 맵은 정보의 분렬,합병을 명확히 표현할 수 있습니다.">
+    </Template>
+	
+	<Template NameU= "Bubble Map" Name= "버블 맵" Layout= "31" Theme= "31" DarkTheme= "3" Icon= "./bubble.png" Description= 
+	"버블 맵은 물품의 개념,개발 전략과 같은 정보를 표현할 수 있습니다.">
+    </Template>
+	
+	<Template NameU= "Sector Map" Name= "섹터 맵" Layout= "30" Theme= "31" DarkTheme= "3" Icon= "./sector.png" Description= 
+	"섹터 맵으로 아이디어를 더욱 명확히 타인에게 표현할 수 있습니다.">
+    </Template>
+	
+	<!-- <Template NameU= "Markdown" Name= "Markdown" Layout= "31" Theme= "16" DarkTheme= "15" Icon= "./sector.png" Description=  -->
+	<!-- "摆脱排版的困扰，专注于写作"> -->
+    <!-- </Template> -->	
+</Gallery>

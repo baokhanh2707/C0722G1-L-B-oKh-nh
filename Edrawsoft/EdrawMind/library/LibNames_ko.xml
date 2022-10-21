@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Names>
+    <Gallaries>
+        <Gallary NameU="Office" Name="비지니스"/>
+        <Gallary NameU="Education" Name="교육"/>
+        <Gallary NameU="Tourism" Name="여행"/>
+        <Gallary NameU="Holiday" Name="명절"/>
+        <Gallary NameU="Food" Name="식품"/>
+        <Gallary NameU="Environmental Protection" Name="환경보호"/>
+        <Gallary NameU="Sport" Name="체육"/>
+        <Gallary NameU="Technology" Name="과학기술"/>
+        <Gallary NameU="Professions" Name="직업"/>
+        <Gallary NameU="Expressions" Name="표정"/>
+        <Gallary NameU="Animal" Name="동물"/>
+        <Gallary NameU="Plant" Name="식물"/>
+        <Gallary NameU="Weather" Name="날씨"/>
+    </Gallaries>
+</Names>

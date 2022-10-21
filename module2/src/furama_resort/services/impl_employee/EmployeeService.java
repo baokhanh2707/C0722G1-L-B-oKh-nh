@@ -83,6 +83,8 @@ public class EmployeeService implements IEmployeeService {
                 break;
             } catch (ExceptionPerson exceptions) {
                 exceptions.getMessage();
+            } catch (Exception e) {
+                e.getMessage();
             }
         }
         String idNumber;
@@ -273,6 +275,8 @@ public class EmployeeService implements IEmployeeService {
                         break;
                     } catch (ExceptionPerson exceptions) {
                         exceptions.getMessage();
+                    } catch (Exception e) {
+                        e.getMessage();
                     }
                 }
                 employeeList.get(i).setGender(gender);
