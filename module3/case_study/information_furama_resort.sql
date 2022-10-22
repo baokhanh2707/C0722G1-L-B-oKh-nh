@@ -22,7 +22,7 @@ value
 insert into nhan_vien(ma_nhan_vien, ho_ten, ngay_sinh, so_cmnd, luong, so_dien_thoai, email, dia_chi, ma_vi_tri, ma_trinh_do, ma_bo_phan)
 value
 (1,"Nguyễn Văn An","1970-11-07","4562317861",10000000,"0901234121","annguyen@gamil.com","295 Nguyễn Tất Thành, Đà Nẵng",1,3,1),
-(2,"Lê Văn Bình","1997-04-09","654231234",70000000,"0934212314","binhlv@gmail.com","22 Yên Bái, Đà Nẵng",1,2,2),
+(2,"Lê Văn Bình","1997-04-09","654231234",70000000,"0934212314","binhlv@gmail.com","22 Yên Bái, Đà Nẵng",1,2,2),
 (3,"Hồ Thị Yến","1995-12-12","999231723",14000000,"0412352315","thiyen@gamil.com","K234/11 Điện Biên Phủ, Gia Lai",1,3,2),
 (4,"Võ Công Toản","1980-04-04","123231365",17000000,"0374443232","toan0404@gmail.com","77 Hoàng Diệu, Quảng Trị",1,4,4),
 (5,"Nguyễn Bỉnh Phát","1999-12-09","454363232",6000000,"0902341231","phatphat@gmail.com","43 Yên Bái, Đà Nẵng",2,1,1),
