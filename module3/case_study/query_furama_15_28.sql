@@ -42,17 +42,17 @@ WHERE
                 IFNULL(dich_vu.chi_phi_thue, 0) + SUM(IFNULL(dich_vu_di_kem.gia, 0) * IFNULL(hop_dong_chi_tiet.so_luong, 0)) AS tong_tien
         FROM
             hop_dong
-		LEFT JOIN khach_hang on hop_dong.ma_khach_hang = khach_hang.ma_khach_hang
-        LEFT JOIN loai_khach on loai_khach.ma_loai_khach = khach_hang.ma_loai_khach
+        LEFT JOIN khach_hang ON hop_dong.ma_khach_hang = khach_hang.ma_khach_hang
+        LEFT JOIN loai_khach ON loai_khach.ma_loai_khach = khach_hang.ma_loai_khach
         LEFT JOIN hop_dong_chi_tiet ON hop_dong.ma_hop_dong = hop_dong_chi_tiet.ma_hop_dong
         LEFT JOIN dich_vu_di_kem ON dich_vu_di_kem.ma_dich_vu_di_kem = hop_dong_chi_tiet.ma_dich_vu_di_kem
         LEFT JOIN dich_vu ON dich_vu.ma_dich_vu = hop_dong.ma_dich_vu
         WHERE
-            YEAR(hop_dong.ngay_lam_hop_dong) = 2021 and loai_khach.ma_loai_khach = 2
+            YEAR(hop_dong.ngay_lam_hop_dong) = 2021
+                AND loai_khach.ma_loai_khach = 2
         GROUP BY hop_dong.ma_hop_dong
         HAVING (tong_tien) > 1000000) AS a
-        group by mkh
-        );
+    GROUP BY mkh);
         
      --    task 18
      
@@ -97,7 +97,7 @@ WHERE
     dia_chi
 FROM
     nhan_vien 
-UNION SELECT 
+UNION all SELECT 
     ma_khach_hang,
     ho_ten,
     email,
@@ -109,10 +109,16 @@ FROM
      
   --   task 21
   
- create view v_nhan_vien as
- select nhan_vien.*   from nhan_vien
-join hop_dong on nhan_vien.ma_nhan_vien =  hop_dong.ma_nhan_vien
- where (hop_dong.ngay_lam_hop_dong) between '2021-04-01' and '2021-04-30' and nhan_vien.dia_chi like '% Đà Nẵng' ;
+ CREATE VIEW v_nhan_vien AS
+    SELECT 
+        nhan_vien.*
+    FROM
+        nhan_vien
+            JOIN
+        hop_dong ON nhan_vien.ma_nhan_vien = hop_dong.ma_nhan_vien
+    WHERE
+        (hop_dong.ngay_lam_hop_dong) BETWEEN '2021-04-01' AND '2021-04-30'
+            AND nhan_vien.dia_chi LIKE '% Đà Nẵng';
 
  SELECT * FROM v_nhan_vien;
 drop view v_nhan_vien;
@@ -139,11 +145,94 @@ call sp_xoa_khach_hang (3)
 -- task 24
 
 Delimiter //
-create procedure sp_them_moi_hop_dong ()
+create procedure sp_them_moi_hop_dong (id int, ngay_lam_hop_dong datetime, ngay_ket_thuc datetime, tien_dat_coc double, ma_nhan_vien int, ma_khach_hang int, ma_dich_vu int)
     begin
     insert into hop_dong 
-    value (13,'2022-04-01','2022-04-30',0,10,10,6);
+    value (id,ngay_lam_hop_dong, ngay_ket_thuc, tien_dat_coc,ma_nhan_vien,ma_khach_hang, ma_dich_vu);
    end //
 DELIMITER ;
 
-call sp_them_moi_hop_dong ()
+call sp_them_moi_hop_dong (14,'2022-05-02','2022-08-12',0,10,10,6);
+drop procedure sp_them_moi_hop_dong;
+-- task 25
+SET FOREIGN_KEY_CHECKS=0;
+create table so_luong_hop_dong_sau_khi_xoa (
+so_luong int
+);
+delimiter //
+create trigger tr_xoa_hop_dong
+after delete on hop_dong for each row
+begin  
+insert into so_luong_hop_dong_sau_khi_xoa 
+select count(*) from hop_dong;
+end //
+delimiter ;
+drop  trigger tr_xoa_hop_dong;
+DELETE FROM hop_dong 
+WHERE
+    ma_hop_dong = 10;
+select * from  so_luong_hop_dong_sau_khi_xoa;
+
+-- task 26
+
+SET FOREIGN_KEY_CHECKS=0;
+delimiter //
+create trigger tr_cap_nhat_hop_dong 
+before update on hop_dong for each row
+begin  
+if(datediff(new.ngay_ket_thuc, old.ngay_lam_hop_dong)  < 2  )  then
+ SIGNAL SQLSTATE '45000' SET MESSAGE_TEXT = 'Ngày kết thúc hợp đồng phải lớn hơn ngày làm hợp đồng ít nhất là 2 ngày';
+  END IF;
+end //
+delimiter ; 
+drop trigger tr_cap_nhat_hop_dong ;
+update hop_dong set ngay_ket_thuc = "2021-06-05" where hop_dong.ma_hop_dong=6;
+
+-- task 27
+-- ý a 
+
+CREATE VIEW result AS
+    SELECT 
+        dich_vu.ma_dich_vu
+    FROM
+        dich_vu
+            JOIN
+        hop_dong ON hop_dong.ma_dich_vu = dich_vu.ma_dich_vu
+    GROUP BY dich_vu.ma_dich_vu
+    HAVING SUM(dich_vu.chi_phi_thue) > 2000000;
+
+delimiter //
+create function func_dem_dich_vu ()
+returns int
+deterministic
+begin 
+ return ( select count(ma_dich_vu) from result)  ;
+end //
+delimiter ; 
+
+select  func_dem_dich_vu () ;
+drop function func_dem_dich_vu ;
+drop view result;
+
+-- ý b
+create view thoi_gian as 
+select hop_dong.ma_hop_dong , khach_hang.ma_khach_hang , DATEDIFF(ngay_ket_thuc,ngay_lam_hop_dong) as ket_qua  from hop_dong 
+left join  khach_hang on khach_hang.ma_khach_hang = hop_dong.ma_khach_hang 
+
+delimiter //
+create function func_tinh_thoi_gian_hop_dong(ma_kh int)
+returns int
+deterministic
+begin
+declare max INT;
+set max=(select max(ket_qua) from thoi_gian where thoi_gian.ma_khach_hang = ma_kh);
+return max;
+end //
+delimiter ; 
+drop function func_tinh_thoi_gian_hop_dong;
+set sql_safe_updates = 0;
+select func_tinh_thoi_gian_hop_dong(2);
+drop view thoi_gian;
+
+-- task 28
+

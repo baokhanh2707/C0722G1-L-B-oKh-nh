@@ -81,13 +81,15 @@ FROM
     nhan_vien
         JOIN
     hop_dong ON hop_dong.ma_nhan_vien = nhan_vien.ma_nhan_vien
-    join bo_phan on bo_phan.ma_bo_phan = nhan_vien.ma_bo_phan
-    join trinh_do on trinh_do.ma_trinh_do=nhan_vien.ma_trinh_do
-    
-where YEAR(hop_dong.ngay_lam_hop_dong) BETWEEN '2020' AND '2021'
+        JOIN
+    bo_phan ON bo_phan.ma_bo_phan = nhan_vien.ma_bo_phan
+        JOIN
+    trinh_do ON trinh_do.ma_trinh_do = nhan_vien.ma_trinh_do
+WHERE
+    YEAR(hop_dong.ngay_lam_hop_dong) BETWEEN '2020' AND '2021'
 GROUP BY nhan_vien.ho_ten
-  having COUNT(hop_dong.ma_nhan_vien) <= 3 
-  order by nhan_vien.ma_nhan_vien;
+HAVING COUNT(hop_dong.ma_nhan_vien) <= 3
+ORDER BY nhan_vien.ma_nhan_vien;
      
     
 
