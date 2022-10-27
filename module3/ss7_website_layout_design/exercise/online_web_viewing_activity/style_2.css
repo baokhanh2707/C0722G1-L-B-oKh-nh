@@ -1,0 +1,164 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.header {
+    background-color: #a6a9ad;
+    padding: 10px;
+    text-align: left;
+}
+#img{
+    width: 200px;
+    height: 50px;
+}
+
+.head-link{
+    height: 30px;
+    width: 200%;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    background-color: #a6a9ad;
+}
+.head-link a{
+    padding-right: 20px;
+    text-decoration: none;}
+.container{
+    height: 70%;
+    background-color:honeydew ;
+}
+
+.footer{
+    background-color: #8c939d;
+    border: 1px solid white;
+    height: 40px;
+    width: 100%;
+    z-index: 1;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+}
+.row-1{
+    width: 100%;
+    background-color: white;
+    float: left;
+    display: flex;
+    min-height: 1000px;
+    margin-bottom: 10px;
+}
+#r4{
+    background-color: white;
+    margin-right: 9px;
+}
+.row {
+    width: 90%;
+    margin: 5%;
+}
+.aa{
+    width: 100%;
+    height: 250px;
+}
+#c8{
+    width: 95%;
+    margin: 2.5%;
+}
+.col-m-8{
+    background-color: white;
+}
+.aac{
+    width: 100%;
+    height: 600px;
+}
+#vb1{
+    font-size: 1em;
+    width: 90%;
+    margin: 5%;
+    text-align: justify;
+
+}
+
+/*Màn hinh laptop và máy tính bảng*/
+@media only screen and (min-width:741px)and (max-width:1240px){
+    .col-m-1 {width: 8.33333%;}
+    .col-m-2 {width: 16.66667%;}
+    .col-m-3 {width: 25%;}
+    .col-m-4 {width: 33.33333%;}
+    .col-m-5 {width: 41.66667%;}
+    .col-m-6 {width: 50%;}
+    .col-m-7 {width: 58.33333%;}
+    .col-m-8 {width: 66.66667%;}
+    .col-m-9 {width: 75%;}
+    .col-m-10 {width: 83.33333%;}
+    .col-m-11 {width: 91.66667%;}
+    .col-m-12 {width: 100%;}
+}
+/*Màn hình máy tính pc và tivi smart*/
+@media only screen and (min-width:1241px){
+    .col-l-1 {width: 8.33333%;}
+    .col-l-2 {width: 16.66667%;}
+    .col-l-3 {width: 25%;}
+    .col-l-4 {width: 33.33333%;}
+    .col-l-5 {width: 41.66667%;}
+    .col-l-6 {width: 50%;}
+    .col-l-7 {width: 58.33333%;}
+    .col-l-8 {width: 66.66667%;}
+    .col-l-9 {width: 75%;}
+    .col-l-10 {width: 83.33333%;}
+    .col-l-11 {width: 91.66667%;}
+    .col-l-12 {width: 100%;}
+}
+/*màn hình điện thoai*/
+@media only screen and (max-width:740px ) {
+    .col-s-1 {
+        width: 8.33333%;
+    }
+
+    .col-s-2 {
+        width: 16.66667%;
+    }
+
+    .col-s-3 {
+        width: 25%;
+    }
+
+    .col-s-4 {
+        width: 33.33333%;
+    }
+
+    .col-s-5 {
+        width: 41.66667%;
+    }
+
+    .col-s-6 {
+        width: 50%;
+    }
+
+    .col-s-7 {
+        width: 58.33333%;
+    }
+
+    .col-s-8 {
+        width: 66.66667%;
+    }
+
+    .col-s-9 {
+        width: 75%;
+    }
+
+    .col-s-10 {
+        width: 83.33333%;
+    }
+
+    .col-s-11 {
+        width: 91.66667%;
+    }
+
+    .col-s-12 {
+        width: 100%;
+    }
+
+    /*tăng kích thước font cho dễ đọc*/
+}
