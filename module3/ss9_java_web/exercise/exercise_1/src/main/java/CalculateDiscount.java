@@ -13,15 +13,15 @@ public class CalculateDiscount extends HttpServlet {
         float price = Float.parseFloat(request.getParameter("price"));
         float percent = Float.parseFloat(request.getParameter("percent"));
 String product = request.getParameter("product");
-        float discount_amount = (price * percent * 0.01f);
-        float discount_price = price-discount_amount;
+        float discountAmount = (price * percent * 0.01f);
+        float discountPrice = price - discountAmount;
 
         PrintWriter writer = response.getWriter();
         writer.println("<html>");
         writer.println("<h1>ReSult</h1>");
         writer.println("<h1>" +product + "</h1>");
-        writer.println("<h1> discount_amount: " + discount_amount + "</h1>");
-        writer.println("<h1>discount_price: " + discount_price + "</h1>");
+        writer.println("<h1> discount_amount: " + discountAmount + "</h1>");
+        writer.println("<h1>discount_price: " + discountPrice + "</h1>");
         writer.println("</html>");
     }
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
