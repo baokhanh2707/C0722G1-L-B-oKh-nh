@@ -1,13 +1,13 @@
-public class customer {
+public class Customer {
     private String name;
     private String birthday;
     private String address;
     private String picture;
 
-    public customer() {
+    public Customer() {
     }
 
-    public customer(String name, String birthday, String address, String picture) {
+    public Customer(String name, String birthday, String address, String picture) {
         this.name = name;
         this.birthday = birthday;
         this.address = address;
