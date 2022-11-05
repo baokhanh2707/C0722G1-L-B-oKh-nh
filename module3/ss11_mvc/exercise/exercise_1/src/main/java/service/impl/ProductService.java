@@ -36,4 +36,14 @@ productRepository.add(product);
         productRepository.delete(idProduct);
     }
 
+    @Override
+    public List<Product> search(String nameProduct) {
+       return productRepository.search(nameProduct);
+    }
+
+    @Override
+    public Product findByName(String nameProduct) {
+        return productRepository.findByName(nameProduct);
+    }
+
 }

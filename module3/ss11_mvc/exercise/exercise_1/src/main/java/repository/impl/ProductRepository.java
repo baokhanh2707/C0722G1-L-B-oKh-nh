@@ -52,5 +52,27 @@ public class ProductRepository implements IProductRepository {
             if (productList.get(i).getIdProduct() == idProduct) {
                 productList.remove(productList.get(i));
             }
-    }}
+        }
+    }
+
+    @Override
+    public List<Product> search(String nameProduct) {
+        List<Product> findProductList = new ArrayList<>();
+        for (int i = 0; i < productList.size(); i++) {
+            if (productList.get(i).getNameProduct().contains(nameProduct) ) {
+                findProductList.add(productList.get(i));
+            }
+        }
+        return null;
+    }
+
+    @Override
+    public Product findByName(String nameProduct) {
+        for (int i = 0; i < productList.size(); i++) {
+            if (productList.get(i).getNameProduct() == nameProduct) {
+                return productList.get(i);
+            }
+        }
+        return null;
+    }
 }

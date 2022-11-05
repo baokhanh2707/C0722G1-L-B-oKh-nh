@@ -1,6 +1,7 @@
 package controller;
 
 import model.Product;
+import repository.IProductRepository;
 import service.IProductService;
 import service.impl.ProductService;
 
@@ -32,8 +33,21 @@ public class ProductServlet extends HttpServlet {
             case "delete":
                 delete(request,response);
                 break;
+            case "search":
+                    search(request,response);
             default:
                 showListProduct(request, response);
+        }
+    }
+
+    private void search(HttpServletRequest request, HttpServletResponse response) {
+        String nameProduct = request.getParameter("nameProduct");
+        Product product = productService.findByName(nameProduct);
+        request.setAttribute("products", product);
+        try {
+            request.getRequestDispatcher("view/product/search.jsp").forward(request, response);
+        } catch (ServletException | IOException e) {
+            e.printStackTrace();
         }
     }
 
@@ -114,9 +128,19 @@ public class ProductServlet extends HttpServlet {
                 break;
             case "view":
                 showDetail(request, response);
+            case "search":
+                showSearch(request,response);
             default:
                 showListProduct(request, response);
         }
+    }
+
+    private void showSearch(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+       String nameProduct=request.getParameter("nameProduct");
+        Product product = productService.findByName(nameProduct);
+        request.setAttribute("product", product);
+        request.getRequestDispatcher("/view/product/search.jsp").forward(request,response);
+
     }
 
     private void showDetail(HttpServletRequest request, HttpServletResponse response) {
@@ -147,7 +171,7 @@ public class ProductServlet extends HttpServlet {
 
     private void showEditForm(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         int idProduct = Integer.parseInt(request.getParameter("idProduct"));
-        Product product = productService.findById(idProduct); /** **/
+        Product product = productService.findById(idProduct);
         if (product == null) {
             request.getRequestDispatcher("view/product/error-404.jsp").forward(request, response);
         } else {

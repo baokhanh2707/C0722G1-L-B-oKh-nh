@@ -12,5 +12,7 @@ public interface IProductService {
 
     Product findById(int idProduct);
     void delete(int idProduct);
+     List<Product> search(String nameProduct);
+    Product findByName(String nameProduct);
 
 }
