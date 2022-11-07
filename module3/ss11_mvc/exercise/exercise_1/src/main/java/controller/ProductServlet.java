@@ -42,15 +42,17 @@ public class ProductServlet extends HttpServlet {
 
     private void search(HttpServletRequest request, HttpServletResponse response) {
         String nameProduct = request.getParameter("nameProduct");
-        Product product = productService.findByName(nameProduct);
-        request.setAttribute("products", product);
+        List<Product>  findProductList = productService.search(nameProduct);
+        request.setAttribute("findProductList", findProductList);
         try {
             request.getRequestDispatcher("view/product/search.jsp").forward(request, response);
-        } catch (ServletException | IOException e) {
+            response.sendRedirect("view/product/search.jsp");
+        } catch (ServletException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
             e.printStackTrace();
         }
     }
-
     private void delete(HttpServletRequest request, HttpServletResponse response) {
         int idProduct = Integer.parseInt(request.getParameter("idProduct"));
         Product product = productService.findById(idProduct);
@@ -136,9 +138,7 @@ public class ProductServlet extends HttpServlet {
     }
 
     private void showSearch(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-       String nameProduct=request.getParameter("nameProduct");
-        Product product = productService.findByName(nameProduct);
-        request.setAttribute("product", product);
+
         request.getRequestDispatcher("/view/product/search.jsp").forward(request,response);
 
     }

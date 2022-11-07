@@ -15,6 +15,9 @@
 </head>
 <body>
 <h1 class="align-bottom text-center">Danh Sách Sản Phẩm</h1>
+<a href="/product?action=search">
+    Search
+</a>
 <table class="table">
     <thead>
     <tr>
@@ -24,8 +27,7 @@
         <th scope="col">Thêm mới</th>
         <th scope="col">Sửa thông tin</th>
         <th scope="col">Xóa sản phẩm</th>
-        <th scope="col">Xem thong tin chi tiết</th>
-        <th scope="col">Tìm kiếm sản phẩm</th>
+        <th scope="col">Xem thông tin chi tiết</th>
     </tr>
     </thead>
     <tbody>
@@ -51,9 +53,6 @@
         </td>
         <td><a href="/product?action=view&idProduct=${product.getIdProduct()}">
             <button class="btn btn-outline-success my-2 my-sm-0" type="submit">View</button>
-        </a></td>
-        <td><a href="/product?action=search&nameProduct=${product.getNameProduct()}">
-            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
         </a></td>
     </tr>
     </c:forEach>
