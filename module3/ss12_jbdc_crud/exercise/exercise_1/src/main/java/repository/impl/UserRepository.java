@@ -12,7 +12,6 @@ import java.util.List;
 
 public class UserRepository implements IUserRepository {
     private final String SELECT_ALL = "select*from `user`;";
-
     @Override
     public List<User> findAll() {
         List<User> userList = new ArrayList<>();

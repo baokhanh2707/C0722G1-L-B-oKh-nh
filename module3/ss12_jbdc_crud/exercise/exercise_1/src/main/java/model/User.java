@@ -50,7 +50,7 @@ public class User {
         return countryUser;
     }
 
-    public void setCountryUser(String countryUser) {
+    public void setCountryUser(User user ,String countryUser) {
         this.countryUser = countryUser;
     }
 }

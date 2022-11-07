@@ -2,7 +2,7 @@
   Created by IntelliJ IDEA.
   User: win
   Date: 07/11/2022
-  Time: 13:28
+  Time: 16:51
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
@@ -12,32 +12,29 @@
 <html>
 <head>
     <title>Title</title>
-
 </head>
 <body>
-<h1 class="align-bottom text-center">Danh Sách Người Dùng</h1>
-<a href="/user?action=search">
-    Search
-</a>
+<h1 class="align-bottom text-center">Danh Sách Người Dùng Sau khi sắp xếp</h1>
 
 <table class="table">
-<thead>
-<tr>
-    <th scope="col">STT</th>
-    <th scope="col">Tên Người Dùng</th>
-    <th scope="col">Email Người Dùng</th>
-    <th scope="col">Quê Quán</th>
-
-</tr>
-</thead>
-<tbody>
-<c:forEach var="user" items="${userList}">
+    <thead>
     <tr>
-    <td scope="row">${user.getIdUser()}</td>
-    <td>${user.getNameUser()}</td>
-    <td>${user.getEmailUser()}</td>
-    <td>${user.getCountryUser()}</td>
+        <th scope="col">STT</th>
+        <th scope="col">Tên Người Dùng</th>
+        <th scope="col">Email Người Dùng</th>
+        <th scope="col">Quê Quán</th>
+
     </tr>
-</c:forEach>
+    </thead>
+    <tbody>
+    <c:forEach var="user" items="${userlist}">
+    <tr>
+        <td scope="row">${user.getIdUser()}</td>
+        <td>${user.getNameUser()}</td>
+        <td>${user.getEmailUser()}</td>
+        <td>${user.getCountryUser()}</td>
+    </tr>
+    </c:forEach>
+
 </body>
 </html>

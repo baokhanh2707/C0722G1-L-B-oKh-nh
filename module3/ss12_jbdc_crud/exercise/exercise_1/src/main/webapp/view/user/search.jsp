@@ -1,8 +1,8 @@
 <%--
   Created by IntelliJ IDEA.
   User: win
-  Date: 05/11/2022
-  Time: 22:59
+  Date: 07/11/2022
+  Time: 15:19
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
@@ -15,22 +15,27 @@
 </head>
 <body>
 <h1>Trang tìm kiếm </h1>
-<a href="/product">Quay lại list</a>
+<a href="/user">Quay lại list</a>
 
-<form action="/product?action=search" method="post">
-    <pre>Tên Sản Phẩm:<input type="text" name="nameProduct"></pre>
+<form action="/user?action=search" method="post">
+    <pre>Quê quán:<input type="text" name="countryUser"></pre>
     <pre><button>Search</button></pre>
     <table class="table">
+
         <tr>
             <th scope="col">STT</th>
-            <th scope="col">Tên Sản Phẩm</th>
-            <th scope="col">Giá</th>
+            <th scope="col">Tên Người Dùng</th>
+            <th scope="col">Email Người Dùng</th>
+            <th scope="col">Quê Quán</th>
+
         </tr>
-        <c:forEach var='product' items='${findProductList}' varStatus="status">
+
+        <c:forEach var="user" items="${findUserList}">
             <tr>
-                <td scope="row">${status.count}</td>
-                <td>${product.getNameProduct()}</td>
-                <td>${product.getCost()}</td>
+                <td scope="row">${user.getIdUser()}</td>
+                <td>${user.getNameUser()}</td>
+                <td>${user.getEmailUser()}</td>
+                <td>${user.getCountryUser()}</td>
             </tr>
         </c:forEach>
 
