@@ -5,21 +5,19 @@ import model.User;
 import java.util.List;
 
 public interface IUserService {
-    List<User>finAll();
-     List<User>search(String countryUser);
-    List<User>sort(String nameUser);
-    User getUserById(int id);
+    boolean add(User user);
 
-    void insertUserStore(User user);
+    List<User> findByCountry(String user);
 
-    void insertUpdateWithoutTransaction();
+    List<User> findAll();
 
-    void insertUpdateUseTransaction();
-    User selectUser(int id);
+    boolean remove(int id);
 
-    void insertUser(User newUser);
+    boolean update(int id, User user);
 
-    boolean updateUser(User book);
+    List<User> getUserById(int id);
 
-    boolean deleteUser(int id);
+    boolean insertUserStore(User user);
+
+    void addUserTransaction();
 }

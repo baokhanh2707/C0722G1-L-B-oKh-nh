@@ -7,39 +7,50 @@
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
-      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 <html>
 <head>
-    <title>Title</title>
+    <title>Product View</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
 </head>
 <body>
-<h1>Trang tìm kiếm </h1>
-<a href="/user">Quay lại list</a>
 
-<form action="/user?action=search" method="post">
-    <pre>Quê quán:<input type="text" name="countryUser"></pre>
-    <pre><button>Search</button></pre>
-    <table class="table">
-
+<div class="row text-center">
+    <div class="col-md-3">
+    </div>
+    <div class="col-md-6"><h1>Search</h1></div>
+    <div class="col-md-3"></div>
+</div>
+<div class="row ">
+    <div class="col-md-3">
+        <button class="btn btn-success" onclick="location.href='/user'">Back to list</button>
+    </div>
+    <div class="col-md-6"></div>
+    <div class="col-md-3"></div>
+</div>
+<table class="table table-striped table-hover">
+    <tr>
+        <th>Id</th>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Country</th>
+    </tr>
+    <c:forEach var="user" items="${userList}">
         <tr>
-            <th scope="col">STT</th>
-            <th scope="col">Tên Người Dùng</th>
-            <th scope="col">Email Người Dùng</th>
-            <th scope="col">Quê Quán</th>
 
+            <td>${user.getId()}</td>
+            <td>${user.getName()}</td>
+            <td>${user.getEmail()}</td>
+            <td>${user.getCountry()}</td>
         </tr>
+    </c:forEach>
 
-        <c:forEach var="user" items="${findUserList}">
-            <tr>
-                <td scope="row">${user.getIdUser()}</td>
-                <td>${user.getNameUser()}</td>
-                <td>${user.getEmailUser()}</td>
-                <td>${user.getCountryUser()}</td>
-            </tr>
-        </c:forEach>
 
-    </table>
-</form>
+</table>
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+        crossorigin="anonymous"></script>
 </body>
 </html>
