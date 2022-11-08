@@ -14,41 +14,23 @@
 </head>
 <body>
 <h1 class="align-bottom text-center">Thêm Mới Khách Hàng</h1>
-<a href="/user=">
-    Quay lại list
-</a>
 
-<table class="table">
-    <thead>
-    <tr>
-        <th scope="col">STT</th>
-        <th scope="col">Id type</th>
-        <th scope="col">Name</th>
-        <th scope="col">Birthday</th>
-        <th scope="col">Gender</th>
-        <th scope="col">Id Card</th>
-        <th scope="col">Phone Number</th>
-        <th scope="col">Email</th>
-        <th scope="col">Address</th>
-
-    </tr>
-    </thead>
-    <tbody>
-    <c:forEach var="customer" items="${customerList}">
-        <tr>
-            <td scope="row">${customer.getId()}</td>
-            <td>${customer.rgetIdType()}</td>
-            <td>${customer.getName()}</td>
-            <td>${customer.getDayOfBirth()}</td>
-            <td>${customer.getGender()}</td>
-            <td>${customer.getIdCard()}</td>
-            <td>${customer.getPhoneNumber()}</td>
-            <td>${customer.getEmail()}</td>
-            <td>${customer.getAddress()}</td>
-        </tr>
-    </c:forEach>
-    </tbody>
-</table>
+<c:if test="${mess!=null}">
+    <span style="color: red" >${mess}</span>
+</c:if>
+<a href="/customer">Quay lại list</a>
+<form action="/customer?action=add" method="post">
+    <pre>id <input type="text" name="id"> </pre>
+    <pre>idType<input type="text" name="idType"> </pre>
+    <pre> name<input type="text" name="name"> </pre>
+    <pre> dayOfBirth<input type="date" name="dayOfBirth"> </pre>
+    <pre> gender<input type="text" name="gender"> </pre>
+    <pre> idCard<input type="text" name="idCard"> </pre>
+    <pre> phoneNumber<input type="text" name="phoneNumber"> </pre>
+    <pre> email<input type="text" name="email"> </pre>
+    <pre> address<input type="text" name="address"> </pre>
+    <pre><button>Save</button></pre>
+</form>
 </body>
 </body>
 </html>

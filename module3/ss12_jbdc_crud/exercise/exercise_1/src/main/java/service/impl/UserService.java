@@ -15,55 +15,67 @@ import java.util.List;
 
 public class UserService implements IUserService {
 
-    private final String SEARCH="select*from `user` where country = ?;";
+    private final String SEARCH = "select*from `user` where country = ?;";
     private final String SORT = "SELECT * FROM `user` ORDER BY `name`;";
+
     private IUserRepository userRepository = new UserRepository();
+
     @Override
     public List<User> finAll() {
         return userRepository.findAll();
     }
 
     @Override
-    public  List<User> search(String countryUser) {
-        List<User>findUserList=new ArrayList<>();
-        Connection connection = BaseRepository.getConnectDB();
+    public List<User> search(String countryUser) {
 
-        try {
-            PreparedStatement ps =connection.prepareStatement(SEARCH);
-            ps.setString(1,countryUser);
-           ResultSet rs =  ps.executeQuery();
-            while (rs.next()) {
-                int idUser = rs.getInt("id");
-                String nameUser = rs.getString("name");
-                String emailUser = rs.getString("email");
-                User user = new User(idUser, nameUser, emailUser,countryUser);
-                findUserList.add(user);
-            }
-
-        } catch (SQLException throwables) {
-            throwables.printStackTrace();
-        }
-        return findUserList;
+        return userRepository.search(countryUser);
     }
 
     @Override
     public List<User> sort(String nameUser) {
-        List<User> userList = new ArrayList<>();
-        Connection connection = BaseRepository.getConnectDB();
-        try {
-            PreparedStatement ps = connection.prepareStatement(SORT);
-            ResultSet resultSet = ps.executeQuery();
-            while (resultSet.next()) {
-                int idUser = resultSet.getInt("id");
-                String emailUser = resultSet.getString("email");
-                String countryUser = resultSet.getString("country");
-                User user = new User(idUser, nameUser, emailUser, countryUser);
-                userList.add(user);
-            }
-        } catch (SQLException throwables) {
-            throwables.printStackTrace();
-        }
-        return userList;
-    }
-}
 
+        return userRepository.sort(nameUser);
+    }
+
+    @Override
+    public User getUserById(int id) {
+        return userRepository.getUserById(id);
+    }
+
+    @Override
+    public void insertUserStore(User user) {
+        userRepository.insertUser(user);
+    }
+
+    @Override
+    public void insertUpdateWithoutTransaction() {
+        userRepository.insertUpdateWithoutTransaction();
+    }
+
+    @Override
+    public void insertUpdateUseTransaction() {
+        userRepository.insertUpdateUseTransaction();
+    }
+
+    @Override
+    public User selectUser(int id) {
+        return userRepository.selectUser(id);
+    }
+
+    @Override
+    public void insertUser(User newUser) {
+        userRepository.insertUser(newUser);
+    }
+
+    @Override
+    public boolean updateUser(User book) {
+        return userRepository.updateUser(book);
+    }
+
+    @Override
+    public boolean deleteUser(int id) {
+        return userRepository.deleteUser(id);
+    }
+
+
+}

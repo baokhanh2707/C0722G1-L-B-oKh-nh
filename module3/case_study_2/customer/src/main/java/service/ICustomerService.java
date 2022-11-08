@@ -7,4 +7,5 @@ import java.util.List;
 public interface ICustomerService {
     List<Customer> finAll();
     boolean add(Customer customer);
+    boolean delete(int id);
 }

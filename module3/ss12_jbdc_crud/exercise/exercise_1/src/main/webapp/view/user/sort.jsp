@@ -16,25 +16,37 @@
 <body>
 <h1 class="align-bottom text-center">Danh Sách Người Dùng Sau khi sắp xếp</h1>
 
-<table class="table">
-    <thead>
-    <tr>
-        <th scope="col">STT</th>
-        <th scope="col">Tên Người Dùng</th>
-        <th scope="col">Email Người Dùng</th>
-        <th scope="col">Quê Quán</th>
-
-    </tr>
-    </thead>
-    <tbody>
-    <c:forEach var="user" items="${userlist}">
-    <tr>
-        <td scope="row">${user.getIdUser()}</td>
-        <td>${user.getNameUser()}</td>
-        <td>${user.getEmailUser()}</td>
-        <td>${user.getCountryUser()}</td>
-    </tr>
-    </c:forEach>
-
+    <h2>
+        <a href="/user?action=create">Add New User</a>
+    </h2>
+    <form action="/user?action=search" method="post">
+        <input type="text" name="country" placeholder="Search follow country">
+        <input type="submit" value="Search" >
+    </form>
+    </center>
+    <div align="center">
+        <table border="1" cellpadding="5">
+            <caption><h2>List of Users</h2></caption>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Country</th>
+                <th>Actions</th>
+            </tr>
+            <c:forEach var="user" items="${orderListUser}">
+                <tr>
+                    <td><c:out value="${user.id}"/></td>
+                    <td><c:out value="${user.name}"/></td>
+                    <td><c:out value="${user.email}"/></td>
+                    <td><c:out value="${user.country}"/></td>
+                    <td>
+                        <a href="/user?action=edit&id=${user.id}">Edit</a>
+                        <a href="/user?action=delete&id=${user.id}">Delete</a>
+                    </td>
+                </tr>
+            </c:forEach>
+        </table>
+    </div>
 </body>
 </html>
