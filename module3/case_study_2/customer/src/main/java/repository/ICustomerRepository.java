@@ -8,7 +8,7 @@ public interface ICustomerRepository {
     List<Customer>findAll();
     boolean add(Customer customer);
     boolean delete(int id);
-    boolean edit(int id);
+    boolean edit(int id , Customer customer);
 
 
 }

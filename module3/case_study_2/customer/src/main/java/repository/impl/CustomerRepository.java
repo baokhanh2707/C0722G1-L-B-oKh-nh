@@ -75,13 +75,20 @@ return customerList;
     }
 
     @Override
-    public boolean edit(int id) {
+    public boolean edit(int id , Customer customer) {
         Connection connection = BaseRepository.getConnectDB();
         try {
-            PreparedStatement preparedStatement=connection.prepareStatement(UPDATE);
-            ResultSet resultSet = preparedStatement.executeQuery();
-            
-
+            PreparedStatement ps=connection.prepareStatement(UPDATE);
+            ps.setInt(1,customer.getId());
+            ps.setInt(2,customer.getIdType());
+            ps.setString(3,customer.getName());
+            ps.setDate(4, Date.valueOf(customer.getDayOfBirth()));
+            ps.setBoolean(5, Boolean.parseBoolean(customer.getGender()));
+            ps.setString(6,customer.getIdCard());
+            ps.setString(7,customer.getPhoneNumber());
+            ps.setString(8,customer.getEmail());
+            ps.setString(9,customer.getAddress());
+            return ps.executeUpdate()>0;
         } catch (SQLException throwables) {
             throwables.printStackTrace();
         }

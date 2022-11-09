@@ -19,6 +19,9 @@
 <a href="/customer?action=add" class="btn btn-outline-success my-2 my-sm-0">
     Create
 </a>
+<a href="/customer?action=edit" class="btn btn-outline-success my-2 my-sm-0">
+    Edit
+</a>
 <%--<a href="/user?action=search">--%>
 <%--    Search--%>
 <%--</a>--%>
@@ -36,6 +39,7 @@
         <th scope="col">Email</th>
         <th scope="col">Address</th>
         <th scope="col">Xóa </th>
+        <th scope="col">Sửa </th>
 
     </tr>
     </thead>
@@ -55,6 +59,11 @@
                 data-bs-target="#exampleModal">
             Delete
         </button>
+        </td>
+        <td>
+            <button class="btn btn-outline-success my-2 my-sm-0" onclick="location.href='customer?action=edit&id=${customer.getId()}'">
+                Edit
+            </button>
         </td>
     </tr>
     </c:forEach>
