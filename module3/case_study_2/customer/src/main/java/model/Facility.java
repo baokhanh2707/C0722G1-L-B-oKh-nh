@@ -14,7 +14,8 @@ public class Facility {
     private int numberOfFloors;
     private String text ;
     private String typeName ;
-    private String  rentTypeName;
+    private String rentTypeName;
+
     public String getTypeName() {
         return typeName;
     }
