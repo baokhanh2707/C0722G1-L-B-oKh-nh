@@ -12,6 +12,6 @@
     <title>$Title$</title>
   </head>
   <body>
-  <c:redirect url="/customer"></c:redirect>
+  <c:redirect url="view/home_page.jsp"></c:redirect>
   </body>
 </html>

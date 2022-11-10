@@ -19,18 +19,19 @@
 <h1>Edit Product</h1>
 
 <c:if test="${mess!=null}">
-    <span style="color: red" >${mess}</span>
+    <span style="color: #ff0000" >${mess}</span>
 </c:if>
 <a href="/customer">Quay lại list</a>
 <form action="/customer?action=edit" method="post">
-    <pre>idType<input type="text" name="idType"> </pre>
-    <pre> name<input type="text" name="name"> </pre>
-    <pre> dayOfBirth<input type="date" name="dayOfBirth"> </pre>
-    <pre> gender<input type="text" name="gender"> </pre>
-    <pre> idCard<input type="text" name="idCard"> </pre>
-    <pre> phoneNumber<input type="text" name="phoneNumber"> </pre>
-    <pre> email<input type="text" name="email"> </pre>
-    <pre> address<input type="text" name="address"> </pre>
+    <pre > idCustomer <input type="text" hidden  name="id" value="${customer.getId()}"></pre>
+    <pre>idType<input type="text" name="idType" value="${customer.getIdType()}"> </pre>
+    <pre> name<input type="text" name="name" value="${customer.getName()}"> </pre>
+    <pre> dayOfBirth<input type="date" name="dayOfBirth" value="${customer.getDayOfBirth()}" > </pre>
+    <pre> gender<input type="text" name="gender" value="${customer.getGender()}"> </pre>
+    <pre> idCard<input type="text" name="idCard" value=${customer.getIdCard()}""> </pre>
+    <pre> phoneNumber<input type="text" name="phoneNumber" value="${customer.getPhoneNumber()}"> </pre>
+    <pre> email<input type="text" name="email" value="${customer.getEmail()}"> </pre>
+    <pre> address<input type="text" name="address" value="${customer.getAddress()}"> </pre>
     <pre><button type="submit">Edit</button></pre>
 </form>
 

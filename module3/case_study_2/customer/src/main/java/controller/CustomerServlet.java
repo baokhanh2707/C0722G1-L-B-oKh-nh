@@ -4,6 +4,7 @@ import model.Customer;
 import service.ICustomerService;
 import service.impl.CustomerService;
 
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -26,10 +27,27 @@ public class CustomerServlet extends javax.servlet.http.HttpServlet {
                 break;
             case "delete":
                 delete(request, response);
+                break;
             case "edit":
                 update(request, response);
+                break;
+            case "search":
+                search(request,response);
             default:
                 showListCustomer(request, response);
+        }
+    }
+
+    private void search(HttpServletRequest request, HttpServletResponse response) {
+        String name = request.getParameter("name");
+        List<Customer>customerList=customerService.search(name);
+        request.setAttribute("customerList",customerList);
+        try {
+            request.getRequestDispatcher("view/customer/list.jsp").forward(request,response);
+        } catch (ServletException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
         }
     }
 
@@ -43,22 +61,20 @@ public class CustomerServlet extends javax.servlet.http.HttpServlet {
         String phoneNumber = request.getParameter("phoneNumber");
         String email = request.getParameter("email");
         String address = request.getParameter("address");
-        Customer customer = new Customer(id, idType, name, dayOfBirth, gender, idCard, phoneNumber, email, address);
-        customerService.edit(id,customer);
-        boolean check=customerService.edit(id,customer);
-        String mess="Sửa không thành công";
-        if (check){
-            mess="Sửa thành công";
+        Customer customerEdit = new Customer(id, idType,name,dayOfBirth,gender,idCard,phoneNumber,email,address);
+        boolean check = customerService.edit(customerEdit);
+        String mess = "Sửa không thành công";
+        if (check) {
+            mess = "Sửa thành công";
         }
-        request.setAttribute("mess",mess);
+        request.setAttribute("mess", mess);
         try {
-            request.getRequestDispatcher("view/customer/edit.jsp").forward(request,response);
-        } catch (ServletException e) {
-            e.printStackTrace();
-        } catch (IOException e) {
+            request.getRequestDispatcher("view/customer/edit.jsp").forward(request, response);
+        } catch (ServletException | IOException e) {
             e.printStackTrace();
         }
     }
+
 
     private void delete(HttpServletRequest request, HttpServletResponse response) {
         int id = Integer.parseInt(request.getParameter("deleteId"));
@@ -88,7 +104,7 @@ public class CustomerServlet extends javax.servlet.http.HttpServlet {
         if (check) {
             mess = "Thêm mới thành công";
         }
-        request.setAttribute("mess", "Thêm mới thành công");
+        request.setAttribute("mess", mess);
         try {
             request.getRequestDispatcher("view/customer/create.jsp").forward(request, response);
         } catch (ServletException e) {
@@ -97,7 +113,6 @@ public class CustomerServlet extends javax.servlet.http.HttpServlet {
             e.printStackTrace();
         }
     }
-
     private void showListCustomer(HttpServletRequest request, HttpServletResponse response) {
         List<Customer> customerList = customerService.finAll();
         request.setAttribute("customerList", customerList);
@@ -130,25 +145,15 @@ public class CustomerServlet extends javax.servlet.http.HttpServlet {
 
     private void showEditForm(HttpServletRequest request, HttpServletResponse response) {
         int id = Integer.parseInt(request.getParameter("id"));
-        List<Customer> userList=customerService.finAll();
-        Customer customer = null;
-        String str="";
-        for (Customer customer1:userList){
-            if (customer1.getId()==id){
-                customer=customer1;
-                break;
-            }
+        Customer customer  =customerService.findById(id);
+        try {
+            request.setAttribute("customer",customer);
+            request.getRequestDispatcher("view/customer/edit.jsp").forward(request,response);
+        } catch (ServletException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
         }
-        request.setAttribute("id",customer.getId());
-        request.setAttribute("idType",customer.getIdType());
-        request.setAttribute("name",customer.getName());
-        request.setAttribute("dayOfBirth", Date.valueOf(customer.getDayOfBirth()));
-        request.setAttribute("gender", Boolean.parseBoolean(customer.getGender()));
-        request.setAttribute("idCard",customer.getIdCard());
-        request.setAttribute("phoneNumber",customer.getPhoneNumber());
-        request.setAttribute("email",customer.getEmail());
-        request.setAttribute("address",customer.getAddress());
-        request.getRequestDispatcher("view/customer/edit.jsp");
     }
 
     private void showInputForm(HttpServletRequest request, HttpServletResponse response) {
