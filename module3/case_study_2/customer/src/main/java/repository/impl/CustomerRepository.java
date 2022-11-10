@@ -27,7 +27,7 @@ public class CustomerRepository implements ICustomerRepository {
                 int idType = resultSet.getInt("customer_type_id");
                 String name = resultSet.getString("customer_name");
                 String dayOfBirth = resultSet.getString("customer_day_of_birth");
-                String gender = resultSet.getString("customer_gender");
+                boolean gender = resultSet.getBoolean("customer_gender");
                 String idCard = resultSet.getString("customer_id_card");
                 String phoneNumber = resultSet.getString("customer_phone_number");
                 String email = resultSet.getString("customer_email");
@@ -50,7 +50,7 @@ public class CustomerRepository implements ICustomerRepository {
             ps.setInt(2, customer.getIdType());
             ps.setString(3, customer.getName());
             ps.setDate(4, Date.valueOf(customer.getDayOfBirth()));
-            ps.setBoolean(5, Boolean.parseBoolean(customer.getGender()));
+            ps.setBoolean(5, customer.isGender());
             ps.setString(6, customer.getIdCard());
             ps.setString(7, customer.getPhoneNumber());
             ps.setString(8, customer.getEmail());
@@ -85,7 +85,7 @@ public class CustomerRepository implements ICustomerRepository {
             ps.setInt(1, customer.getIdType());
             ps.setString(2, customer.getName());
             ps.setDate(3, Date.valueOf(customer.getDayOfBirth()));
-            ps.setBoolean(4, Boolean.parseBoolean(customer.getGender()));
+            ps.setBoolean(4, customer.isGender());
             ps.setString(5, customer.getIdCard());
             ps.setString(6, customer.getPhoneNumber());
             ps.setString(7, customer.getEmail());
@@ -111,7 +111,7 @@ public class CustomerRepository implements ICustomerRepository {
                 int customerTypeId = resultSet.getInt("customer_type_id");
                 String name = resultSet.getString("customer_name");
                 String birthday = resultSet.getString("customer_day_of_birth");
-                String gender = resultSet.getString("customer_gender");
+                boolean gender = resultSet.getBoolean("customer_gender");
                 String idCard = resultSet.getString("customer_id_card");
                 String phoneNumber = resultSet.getString("customer_phone_number");
                 String email = resultSet.getString("customer_email");
@@ -138,14 +138,14 @@ public class CustomerRepository implements ICustomerRepository {
             while (resultSet.next()) {
                 int id = resultSet.getInt("customer_id");
                 int idType = resultSet.getInt("customer_type_id");
-                String name1 = resultSet.getString("customer_name");
+                String nameCustomer = resultSet.getString("customer_name");
                 String dayOfBirth = resultSet.getString("customer_day_of_birth");
-                String gender = resultSet.getString("customer_gender");
+                boolean gender = resultSet.getBoolean("customer_gender");
                 String idCard = resultSet.getString("customer_id_card");
                 String phoneNumber = resultSet.getString("customer_phone_number");
                 String email = resultSet.getString("customer_email");
                 String address = resultSet.getString("customer_address");
-                customerSearch.add(new Customer(id, idType, name1, dayOfBirth, gender, idCard, phoneNumber, email, address));
+                customerSearch.add(new Customer(id, idType, nameCustomer, dayOfBirth, gender, idCard, phoneNumber, email, address));
             }
         } catch (SQLException throwables) {
             throwables.printStackTrace();

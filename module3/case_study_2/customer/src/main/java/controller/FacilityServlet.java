@@ -40,7 +40,34 @@ public class FacilityServlet extends HttpServlet {
     }
 
     private void save(HttpServletRequest request, HttpServletResponse response) {
+        int id = Integer.parseInt(request.getParameter("id"));
+        String name = request.getParameter("name");
+        int area=Integer.parseInt(request.getParameter("area"));
+        Double cost = Double.parseDouble(request.getParameter("cost"));
+        int maxPeople=Integer.parseInt(request.getParameter("maxPeople"));
+        int renTypeId=Integer.parseInt(request.getParameter("renTypeId"));
+        int typeId=Integer.parseInt(request.getParameter("typeId"));
+        String standardRoom = request.getParameter("standardRoom");
+        String description = request.getParameter("description");
+        Double poolArea = Double.parseDouble(request.getParameter("poolArea"));
+        int numberOfFloors=Integer.parseInt(request.getParameter("numberOfFloors"));
+        String text = request.getParameter("text");
+        Facility facility = new Facility(id,name,area,cost,maxPeople,renTypeId,typeId,standardRoom,description,poolArea,numberOfFloors,text);
+        boolean check = facilityService.add(facility);
+        String mess = "Thêm mới không thành công";
+        if (check) {
+            mess = "Thêm mới thành công";
+        }
+        request.setAttribute("mess", mess);
+        try {
+            request.getRequestDispatcher("view/facility/create.jsp").forward(request, response);
+        } catch (ServletException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
+
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String action = request.getParameter("action");
@@ -60,7 +87,13 @@ public class FacilityServlet extends HttpServlet {
     }
 
     private void showInputForm(HttpServletRequest request, HttpServletResponse response) {
-        request.setAttribute("");
+        try {
+            request.getRequestDispatcher("view/facility/create.jsp").forward(request, response);
+        } catch (ServletException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 
     private void showListCustomer(HttpServletRequest request, HttpServletResponse response) {

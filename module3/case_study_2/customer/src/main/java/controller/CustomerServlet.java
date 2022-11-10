@@ -56,7 +56,7 @@ public class CustomerServlet extends javax.servlet.http.HttpServlet {
         int idType = Integer.parseInt(request.getParameter("idType"));
         String name = request.getParameter("name");
         String dayOfBirth = request.getParameter("dayOfBirth");
-        String gender = request.getParameter("gender");
+        boolean gender = Boolean.parseBoolean(request.getParameter("gender"));
         String idCard = request.getParameter("idCard");
         String phoneNumber = request.getParameter("phoneNumber");
         String email = request.getParameter("email");
@@ -93,7 +93,7 @@ public class CustomerServlet extends javax.servlet.http.HttpServlet {
         int idType = Integer.parseInt(request.getParameter("idType"));
         String name = request.getParameter("name");
         String dayOfBirth = request.getParameter("dayOfBirth");
-        String gender = request.getParameter("gender");
+        boolean gender = Boolean.parseBoolean(request.getParameter("gender"));
         String idCard = request.getParameter("idCard");
         String phoneNumber = request.getParameter("phoneNumber");
         String email = request.getParameter("email");

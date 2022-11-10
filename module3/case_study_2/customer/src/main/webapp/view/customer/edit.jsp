@@ -27,7 +27,11 @@
     <pre>idType<input type="text" name="idType" value="${customer.getIdType()}"> </pre>
     <pre> name<input type="text" name="name" value="${customer.getName()}"> </pre>
     <pre> dayOfBirth<input type="date" name="dayOfBirth" value="${customer.getDayOfBirth()}" > </pre>
-    <pre> gender<input type="text" name="gender" value="${customer.getGender()}"> </pre>
+    <pre>
+<input class="form-check-input" type="radio" value="false" name="gender"
+       id="femaleGender"/> <label class="form-check-label" for="femaleGender">Nữ</label> </pre>
+    <pre><input class="form-check-input" type="radio" value="true" name="gender"
+                id="maleGender"/> <label class="form-check-label" for="maleGender">Nam</label></pre>
     <pre> idCard<input type="text" name="idCard" value=${customer.getIdCard()}""> </pre>
     <pre> phoneNumber<input type="text" name="phoneNumber" value="${customer.getPhoneNumber()}"> </pre>
     <pre> email<input type="text" name="email" value="${customer.getEmail()}"> </pre>

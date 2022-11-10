@@ -49,8 +49,8 @@
             <td>${facility.getArea()}</td>
             <td>${facility.getCost()}</td>
             <td>${facility.getMaxPeople()} </td>
-            <td>${facility.getRentTypeId()}</td>
-            <td>${facility.getTypeId()}</td>
+            <td>${facility.getRentTypeName()}</td>
+            <td>${facility.getTypeName()}</td>
             <td>${facility.getStandardRoom()}</td>
             <td>${facility.getDescription()}</td>
             <td>${facility.getPoolArea()}</td>

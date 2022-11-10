@@ -16,7 +16,7 @@
 <h1 class="align-bottom text-center">Thêm Mới Khách Hàng</h1>
 
 <c:if test="${mess!=null}">
-    <span style="color: red" >${mess}</span>
+    <span style="color: red">${mess}</span>
 </c:if>
 <a href="/customer">Quay lại list</a>
 <form action="/customer?action=add" method="post">
@@ -24,7 +24,12 @@
     <pre>idType<input type="text" name="idType"> </pre>
     <pre> name<input type="text" name="name"> </pre>
     <pre> dayOfBirth<input type="date" name="dayOfBirth"> </pre>
-    <pre> gender<input type="text" name="gender"> </pre>
+    <pre> <h6 class="mb-0 me-4">Giới Tính: </h6> </pre>
+    <pre>
+<input class="form-check-input" type="radio" value="false" name="gender"
+       id="femaleGender"/> <label class="form-check-label" for="femaleGender">Nữ</label> </pre>
+    <pre><input class="form-check-input" type="radio" value="true" name="gender"
+                id="maleGender"/> <label class="form-check-label" for="maleGender">Nam</label></pre>
     <pre> idCard<input type="text" name="idCard"> </pre>
     <pre> phoneNumber<input type="text" name="phoneNumber"> </pre>
     <pre> email<input type="text" name="email"> </pre>

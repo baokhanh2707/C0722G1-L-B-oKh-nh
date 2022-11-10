@@ -52,7 +52,7 @@
             <td>${customer.getIdType()}</td>
             <td>${customer.getName()}</td>
             <td>${customer.getDayOfBirth()}</td>
-            <td>${customer.getGender()} </td>
+            <td>${customer.isGender() == true ? "Nam" : "Nữ"} </td>
             <td>${customer.getIdCard()}</td>
             <td>${customer.getPhoneNumber()}</td>
             <td>${customer.getEmail()}</td>

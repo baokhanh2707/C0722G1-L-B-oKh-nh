@@ -14,8 +14,39 @@ public class Facility {
     private int numberOfFloors;
     private String text ;
     private String typeName ;
-    private String  ;
+    private String  rentTypeName;
+    public String getTypeName() {
+        return typeName;
+    }
 
+    public void setTypeName(String typeName) {
+        this.typeName = typeName;
+    }
+
+    public String getRentTypeName() {
+        return rentTypeName;
+    }
+
+    public void setRentTypeName(String rentTypeName) {
+        this.rentTypeName = rentTypeName;
+    }
+
+    public Facility(int id, String name, int area, double cost, int maxPeople, int rentTypeId, int typeId, String standardRoom, String description, double poolArea, int numberOfFloors, String text, String typeName, String rentTypeName) {
+        this.id = id;
+        this.name = name;
+        this.area = area;
+        this.cost = cost;
+        this.maxPeople = maxPeople;
+        this.rentTypeId = rentTypeId;
+        this.typeId = typeId;
+        this.standardRoom = standardRoom;
+        this.description = description;
+        this.poolArea = poolArea;
+        this.numberOfFloors = numberOfFloors;
+        this.text = text;
+        this.typeName = typeName;
+        this.rentTypeName = rentTypeName;
+    }
 
     public Facility() {
     }
