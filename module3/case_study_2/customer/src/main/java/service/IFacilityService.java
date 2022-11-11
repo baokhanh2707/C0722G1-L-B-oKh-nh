@@ -9,4 +9,5 @@ public interface IFacilityService {
     boolean add(Facility facility);
     boolean delete(int id);
     boolean edit(int id , Facility facility);
+    List<Facility> search(String name);
 }

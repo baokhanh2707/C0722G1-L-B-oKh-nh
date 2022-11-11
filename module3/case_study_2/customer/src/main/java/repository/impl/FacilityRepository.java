@@ -13,7 +13,9 @@ import java.util.List;
 public class FacilityRepository implements IFacilityRepository {
 private final String SELECT_ALL= "call select_facility();";
 private final String INSERT="INSERT INTO facility (`facility_id`, `facility_name`, `facility_area`, `facility_cost`, `facility_max_people`, `rent_type_id`, `facility_type_id`, `facility_standard_room`, `description_other_convenience`, `facility_pool_area`, `facility_number_of_floors`, `facility_free`) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);";
-    @Override
+ private final String DELETE="call delete_id_facility(?);";
+ private  final String SEARCH="select*from facility where facility_name like ? ;";
+@Override
     public List<Facility> findAll() {
         List<Facility> facilityList = new ArrayList<>();
         Connection connection = BaseRepository.getConnectDB();
@@ -73,11 +75,53 @@ private final String INSERT="INSERT INTO facility (`facility_id`, `facility_name
 
     @Override
     public boolean delete(int id) {
+        Connection connection =BaseRepository.getConnectDB();
+        try {
+            PreparedStatement preparedStatement =connection.prepareStatement(DELETE);
+            preparedStatement.setInt(1,id);
+            preparedStatement.executeUpdate();
+            return preparedStatement.executeUpdate()>0;
+
+        } catch (SQLException throwables) {
+            throwables.printStackTrace();
+        }
         return false;
     }
 
     @Override
     public boolean edit(int id, Facility facility) {
         return false;
+    }
+
+    @Override
+    public List<Facility> search(String name) {
+    List<Facility>facilitySearch=new ArrayList<>();
+    Connection connection = BaseRepository.getConnectDB();
+        try {
+            PreparedStatement ps =connection.prepareStatement(SEARCH);
+            ps.setString(1, "%" + name + "%");
+            ResultSet rl=ps.executeQuery();
+            while (rl.next()) {
+                int id = rl.getInt("facility_id");
+                String nameFacility = rl.getString("facility_name");
+                int area = rl.getInt("facility_area");
+                double cost = rl.getDouble("facility_cost");
+                int maxPeople = rl.getInt("facility_max_people");
+                int rentTypeId = rl.getInt("rent_type_id");
+                int typeId = rl.getInt("facility_type_id");
+                String standardRoom = rl.getString("facility_standard_room");
+                String description = rl.getString("description_other_convenience");
+                double poolArea = rl.getDouble("facility_pool_area");
+                int numberOfFloors = rl.getInt("facility_number_of_floors");
+                String text = rl.getString("facility_free");
+                Facility facility = new Facility(id, nameFacility, area, cost, maxPeople, rentTypeId, typeId, standardRoom, description, poolArea, numberOfFloors, text);
+                facilitySearch.add(facility);
+            }
+        } catch (SQLException throwables) {
+            throwables.printStackTrace();
+
+        }
+
+        return facilitySearch;
     }
 }

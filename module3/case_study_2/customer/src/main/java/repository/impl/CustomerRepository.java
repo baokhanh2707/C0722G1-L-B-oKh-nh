@@ -8,7 +8,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class CustomerRepository implements ICustomerRepository {
-    private final String SELECT_ALL = "select*from customer;";
+    private final String SELECT_ALL = "call select_customer();";
     private final String INSERT = "insert into customer(customer_id  ,customer_type_id,customer_name ,customer_day_of_birth,customer_gender ,customer_id_card ,customer_phone_number,customer_email,customer_address)value (?,?,?,?,?,?,?,?,?);";
     private final String DELETE = "call delete_id(?);";
     private final String UPDATE = " update customer set customer_type_id= ?,customer_name =? ,customer_day_of_birth=? , customer_gender=? , customer_id_card=? , customer_phone_number=? , customer_email=? , customer_address=? where customer_id =? ;";
@@ -32,7 +32,8 @@ public class CustomerRepository implements ICustomerRepository {
                 String phoneNumber = resultSet.getString("customer_phone_number");
                 String email = resultSet.getString("customer_email");
                 String address = resultSet.getString("customer_address");
-                Customer customer = new Customer(id, idType, name, dayOfBirth, gender, idCard, phoneNumber, email, address);
+                String typeName=resultSet.getString("customer_type_name");
+                Customer customer = new Customer(id, idType, name, dayOfBirth, gender, idCard, phoneNumber, email, address,typeName);
                 customerList.add(customer);
             }
         } catch (SQLException throwables) {
@@ -152,5 +153,6 @@ public class CustomerRepository implements ICustomerRepository {
         }
         return customerSearch;
     }
+
 }
 

@@ -12,6 +12,28 @@ public class Customer {
     private String phoneNumber;
     private String email;
     private String address;
+    private String typeName;
+
+    public String getTypeName() {
+        return typeName;
+    }
+
+    public void setTypeName(String typeName) {
+        this.typeName = typeName;
+    }
+
+    public Customer(int id, int idType, String name, String dayOfBirth, boolean gender, String idCard, String phoneNumber, String email, String address, String typeName) {
+        this.id = id;
+        this.idType = idType;
+        this.name = name;
+        this.dayOfBirth = dayOfBirth;
+        this.gender = gender;
+        this.idCard = idCard;
+        this.phoneNumber = phoneNumber;
+        this.email = email;
+        this.address = address;
+        this.typeName = typeName;
+    }
 
     public Customer() {
     }

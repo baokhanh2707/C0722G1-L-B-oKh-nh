@@ -1,5 +1,6 @@
 package controller;
 
+import model.Customer;
 import model.Facility;
 import service.IFacilityService;
 import service.impl.FacilityService;
@@ -25,19 +26,46 @@ public class FacilityServlet extends HttpServlet {
             case "add":
                 save(request, response);
                 break;
-//            case "delete":
-//                delete(request, response);
-//                break;
-//            case "edit":
-//                update(request, response);
-//                break;
-//            case "search":
-//                search(request,response);
+            case "delete":
+                delete(request, response);
+                break;
+            case "edit":
+                update(request, response);
+                break;
+            case "search":
+                search(request,response);
             default:
-                showListCustomer(request, response);
+                showListFacility(request, response);
         }
 
     }
+
+    private void search(HttpServletRequest request, HttpServletResponse response) {
+        String name = request.getParameter("name");
+        List<Facility>facilityList=facilityService.search(name);
+        request.setAttribute("facilityList",facilityList);
+        try {
+            request.getRequestDispatcher("view/facility/list.jsp").forward(request,response);
+        } catch (ServletException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+    private void update(HttpServletRequest request, HttpServletResponse response) {
+    }
+
+    private void delete(HttpServletRequest request, HttpServletResponse response) {
+        int id = Integer.parseInt(request.getParameter("deleteId"));
+        boolean check = facilityService.delete(id);
+        String mess = "Xóa không thành công";
+        if (check) {
+            mess = "Xóa thành công";
+        }
+        request.setAttribute("mess", mess);
+        showListFacility(request, response);
+    }
+
 
     private void save(HttpServletRequest request, HttpServletResponse response) {
         int id = Integer.parseInt(request.getParameter("id"));
@@ -45,7 +73,7 @@ public class FacilityServlet extends HttpServlet {
         int area=Integer.parseInt(request.getParameter("area"));
         Double cost = Double.parseDouble(request.getParameter("cost"));
         int maxPeople=Integer.parseInt(request.getParameter("maxPeople"));
-        int renTypeId=Integer.parseInt(request.getParameter("renTypeId"));
+        int renTypeId=Integer.parseInt(request.getParameter("rentTypeId"));
         int typeId=Integer.parseInt(request.getParameter("typeId"));
         String standardRoom = request.getParameter("standardRoom");
         String description = request.getParameter("description");
@@ -78,12 +106,16 @@ public class FacilityServlet extends HttpServlet {
             case "add":
                 showInputForm(request, response);
                 break;
-//            case "edit":
-//                showEditForm(request,response);
-//                break;
+            case "edit":
+                showEditForm(request,response);
+                break;
             default:
-                showListCustomer(request, response);
+                showListFacility(request, response);
         }
+    }
+
+    private void showEditForm(HttpServletRequest request, HttpServletResponse response) {
+
     }
 
     private void showInputForm(HttpServletRequest request, HttpServletResponse response) {
@@ -96,7 +128,7 @@ public class FacilityServlet extends HttpServlet {
         }
     }
 
-    private void showListCustomer(HttpServletRequest request, HttpServletResponse response) {
+    private void showListFacility(HttpServletRequest request, HttpServletResponse response) {
         List<Facility> facilityList = facilityService.findAll();
         request.setAttribute("facilityList",facilityList);
         try {

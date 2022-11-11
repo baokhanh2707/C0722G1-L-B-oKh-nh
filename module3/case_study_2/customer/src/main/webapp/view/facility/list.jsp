@@ -20,7 +20,7 @@
     Create
 </a>
 <form action="/facility?action=search" method="post">
-    <input  type="text" placeholder="Search by name" name="name">
+    <input type="text" placeholder="Search by name" name="name">
     <input class="btn btn-outline-success my-2 my-sm-0" type="submit" value="search">
 </form>
 <table class="table" id="tableFacility">
@@ -38,11 +38,13 @@
         <th scope="col">Pool Area</th>
         <th scope="col">Number Of Floor</th>
         <th scope="col">Text</th>
+        <th scope="col">Xóa</th>
+
 
     </tr>
     </thead>
     <tbody>
-    <c:forEach var="facility"  items="${facilityList}">
+    <c:forEach var="facility" items="${facilityList}">
         <tr>
             <td scope="row">${facility.getId()}</td>
             <td>${facility.getName()}</td>
@@ -73,6 +75,38 @@
     </c:forEach>
     </tbody>
 </table>
-
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+     aria-hidden="true">
+    <form action="/facility" method="post">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Delete Facility</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                            aria-label="Close"></button>
+                </div>
+                <div class="modal-body text-black">
+                    <input type="text" hidden name="action" value="delete">
+                    <input type="text" hidden id="deleteId" name="deleteId">
+                    Are you want to delete this Facility?
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Close
+                    </button>
+                    <button type="submit" class="btn btn-danger btnDelete">Delete</button>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
 </body>
+</body>
+<script>
+    function infoDelete(id) {
+        document.getElementById("deleteId").value = id;
+    }
+</script>
 </html>

@@ -15,29 +15,122 @@
     <title>Title</title>
 </head>
 <body>
-
-<h1>Edit Product</h1>
-
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+        <div>
+            <img src="https://www.furama.com/images/LOGOFurama_4C_Normal.png" height="100" width="800"/>
+        </div>
+    </div>
+</nav>
+<nav class="navbar navbar-expand-lg navbar-light bg-warning">
+    <div class="container">
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a style="color: white;" class="nav-link" aria-current="page"
+                       href="furama_resort.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a style="color: white;" class="nav-link"
+                       href="">Employee</a>
+                </li>
+                <li class="nav-item">
+                    <a style="color: white;" class="nav-link"
+                       href="/customer">Customer</a>
+                </li>
+                <li class="nav-item">
+                    <a style="color: white;" class="nav-link"
+                       href="/facility">Facility</a>
+                </li>
+                <li class="nav-item">
+                    <a style="color: white;" class="nav-link"
+                       href="/Layout/Contract/contract_list.html">Contract</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<h1 class="align-bottom text-center">Edit Product</h1>
 <c:if test="${mess!=null}">
-    <span style="color: #ff0000" >${mess}</span>
+    <h4 style="color: blue">${mess}</h4>
 </c:if>
-<a href="/customer">Quay lại list</a>
+<a class="btn btn-outline-warning" href="/customer">Quay lại list</a>
 <form action="/customer?action=edit" method="post">
-    <pre > idCustomer <input type="text" hidden  name="id" value="${customer.getId()}"></pre>
-    <pre>idType<input type="text" name="idType" value="${customer.getIdType()}"> </pre>
-    <pre> name<input type="text" name="name" value="${customer.getName()}"> </pre>
-    <pre> dayOfBirth<input type="date" name="dayOfBirth" value="${customer.getDayOfBirth()}" > </pre>
-    <pre>
-<input class="form-check-input" type="radio" value="false" name="gender"
-       id="femaleGender"/> <label class="form-check-label" for="femaleGender">Nữ</label> </pre>
-    <pre><input class="form-check-input" type="radio" value="true" name="gender"
-                id="maleGender"/> <label class="form-check-label" for="maleGender">Nam</label></pre>
-    <pre> idCard<input type="text" name="idCard" value=${customer.getIdCard()}""> </pre>
-    <pre> phoneNumber<input type="text" name="phoneNumber" value="${customer.getPhoneNumber()}"> </pre>
-    <pre> email<input type="text" name="email" value="${customer.getEmail()}"> </pre>
-    <pre> address<input type="text" name="address" value="${customer.getAddress()}"> </pre>
-    <pre><button type="submit">Edit</button></pre>
+    <div class="form-content">
+        <div class="row">
+            <div class="col-md-6">
+                <br>
+                <div class="form-group">
+                    <label hidden>Id</label>
+                    <input hidden type="text" class="form-control" name="id" placeholder="CUSTOMER ID *" value="${customer.getId()}"/>
+                </div>
+                <br>
+                <div class="form-group">
+                    <label>Select Customer Type</label>
+                    <select name="idType" value="${customer.getIdType()}" class="form-select" aria-label="Default select example"
+                            style="border-radius: 30px">
+                        <option selected>SELECT CUSTOMER TYPE *</option>
+                        <option value="1">Diamond</option>
+                        <option value="2">Platinum</option>
+                        <option value="3">Gold</option>
+                        <option value="4">Silver</option>
+                        <option value="5">Member</option>
+                    </select>
+                </div>
+                <br>
+                <div class="form-group" >
+                    <label>Name</label>
+                    <input style="border-radius: 30px" type="text" class="form-control" value="${customer.getName()}" name="name"
+                           placeholder="NAME *"/>
+                </div>
+                <br>
+                <div class="form-group" >
+                    <label for="birtdDateAdd">Birth Day</label>
+                    <input style="border-radius: 30px" name="dayOfBirth" value="${customer.getDayOfBirth()}" id="birtdDateAdd" class="form-control" type="date"/>
+                </div>
+                <div class="form-group">
+                    <br>
+                    <label>Gender</label>
+                    <select  style="border-radius: 30px"  name="gender"   class="form-select" aria-label="Default select example"
+                            style="border-radius: 30px" >
+                        <option selected>SELECT GENDER *</option>
+                        <option value="true">Male</option>
+                        <option value="false">Female</option>
+                    </select>
+                </div>
+                <br>
+            </div>
+            <div class="col-md-6">
+<br>
+                <br>
+                <div class="form-group" >
+                    <label>Id Card</label>
+                    <input type="text" style="border-radius: 30px" class="form-control" name="idCard" value=${customer.getIdCard()}""
+                           placeholder="ID CARD *"/>
+                </div>
+                <br>
+                <div class="form-group" >
+                    <label >Phone Number</label>
+                    <input type="text" style="border-radius: 30px" class="form-control" name="phoneNumber" value="${customer.getPhoneNumber()}"
+                           placeholder="PHONE NUMBER *"/>
+                </div>
+                <br>
+                <div class="form-group">
+                    <label for="birtdDateAdd">E-mail</label>
+                    <input type="text"  style="border-radius: 30px" class="form-control" name="email" value="${customer.getEmail()}"
+                           placeholder="EMAIL *"/>
+                </div>
+                <br>
+                <div class="form-group">
+                    <label for="birtdDateAdd">Address</label>
+                    <input  style="border-radius: 30px" type="text" class="form-control" name="address" value="${customer.getAddress()}"
+                            placeholder="ADDRESS *"/>
+                </div>
+            </div>
+        </div>
+        <br>
+        <button type="submit" class="btn btn-outline-warning">Edit</button>
+    </div>
 </form>
-
 </body>
 </html>

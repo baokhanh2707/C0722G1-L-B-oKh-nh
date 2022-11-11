@@ -21,7 +21,7 @@
         </div>
         </ul>
         <form class="d-flex">
-            <button class="btn btn-outline-warning" type="submit">Login <img src="baseline_login_black_24dp.png"
+            <button class="btn btn-outline-warning" type="submit">Login <img src="customer/jquery/baseline_login_black_24dp.png"
                                                                              height="24" width="24"></button>
         </form>
     </div>
