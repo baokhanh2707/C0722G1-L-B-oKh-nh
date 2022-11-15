@@ -74,13 +74,11 @@ public class FacilityServlet extends HttpServlet {
         Double cost = Double.parseDouble(request.getParameter("cost"));
         int maxPeople=Integer.parseInt(request.getParameter("maxPeople"));
         int renTypeId=Integer.parseInt(request.getParameter("rentTypeId"));
-        int typeId=Integer.parseInt(request.getParameter("typeId"));
         String standardRoom = request.getParameter("standardRoom");
         String description = request.getParameter("description");
         Double poolArea = Double.parseDouble(request.getParameter("poolArea"));
         int numberOfFloors=Integer.parseInt(request.getParameter("numberOfFloors"));
-        String text = request.getParameter("text");
-        Facility facility = new Facility(id,name,area,cost,maxPeople,renTypeId,typeId,standardRoom,description,poolArea,numberOfFloors,text);
+        Facility facility = new Facility(id,name,area,cost,maxPeople,renTypeId,standardRoom,description,poolArea,numberOfFloors);
         boolean check = facilityService.add(facility);
         String mess = "Thêm mới không thành công";
         if (check) {

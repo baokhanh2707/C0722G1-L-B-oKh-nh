@@ -16,6 +16,19 @@ public class Facility {
     private String typeName ;
     private String rentTypeName;
 
+    public Facility(int id, String name, int area, double cost, int maxPeople, int rentTypeId, String standardRoom, String description, double poolArea, int numberOfFloors) {
+        this.id = id;
+        this.name = name;
+        this.area = area;
+        this.cost = cost;
+        this.maxPeople = maxPeople;
+        this.rentTypeId = rentTypeId;
+        this.standardRoom = standardRoom;
+        this.description = description;
+        this.poolArea = poolArea;
+        this.numberOfFloors = numberOfFloors;
+    }
+
     public String getTypeName() {
         return typeName;
     }

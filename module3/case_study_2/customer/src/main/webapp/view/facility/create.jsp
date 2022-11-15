@@ -29,9 +29,10 @@
                 </div>
                 <div class="form-group">
                     <label>Name</label>
-
-                    <input style="border-radius: 30px" type="text" class="form-control" name="name"
-                           placeholder="name *"/>
+                    <select name="name" class="form-select" aria-label="Default select example"
+                            style="border-radius: 30px">
+                        <option selected value="Villa">Villa</option>
+                    </select>
                 </div>
                 <br>
                 <div class="form-group">
@@ -77,7 +78,7 @@
                     </select>
                 </div>
                 <br>
-                <div class="form-group">
+                <div hidden class="form-group">
                     <label>Facility Type Id</label>
                     <select name="typeId" class="form-select" aria-label="Default select example"
                             style="border-radius: 30px">
@@ -85,7 +86,6 @@
                     </select>
                 </div>
                 <br>
-
             </div>
             <div class="col-md-6">
 
@@ -108,7 +108,6 @@
                 <br>
                 <div  class="form-group">
                     <label>Pool Area</label>
-
                     <input style="border-radius: 30px" type="text" class="form-control" name="poolArea"
                            placeholder="poolArea *"/>
                 </div>
@@ -120,9 +119,9 @@
                            placeholder="numberOfFloors *"/>
                 </div>
                 <br>
-                <div class="form-group">
+                <div hidden class="form-group">
                     <label>Facility Free</label>
-                    <input style="border-radius: 30px" type="text" class="form-control" name="text"
+                    <input style="border-radius: 30px" type="text" class="form-control" name="text" value="null"
                            placeholder="facilityFree *"/>
                 </div>
             </div>

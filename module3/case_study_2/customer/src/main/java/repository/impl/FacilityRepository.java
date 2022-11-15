@@ -66,7 +66,6 @@ private final String INSERT="INSERT INTO facility (`facility_id`, `facility_name
             ps.setInt(11,facility.getNumberOfFloors());
             ps.setString(12,facility.getText());
             return ps.executeUpdate()>0;
-
         } catch (SQLException throwables) {
             throwables.printStackTrace();
         }
