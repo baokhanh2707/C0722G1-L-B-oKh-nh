@@ -61,7 +61,7 @@
             <div class="col-md-6">
                 <div class="form-group" >
                     <label>Id</label>
-                    <input type="text" style="border-radius: 30px" class="form-control" name="id" placeholder="ID *"/>
+                    <input required pattern="[0-9]{1,4}" type="text" style="border-radius: 30px" class="form-control" name="id" placeholder="ID *"/>
                 </div>
                 <br>
                 <div class="form-group">
@@ -79,7 +79,7 @@
                 <br>
                 <div class="form-group" >
                     <label>Name</label>
-                    <input style="border-radius: 30px" type="text" class="form-control" name="name"
+                    <input required pattern="([A-Z][a-z]+[ ])+([A-Z][a-z]+)" title="vui lòng nhập đúng định dạng" style="border-radius: 30px" type="text" class="form-control" name="name"
                            placeholder="NAME *"/>
                 </div>
                 <br>
@@ -103,19 +103,19 @@
 
                 <div class="form-group" >
                     <label>Id Card</label>
-                    <input type="text" style="border-radius: 30px" class="form-control" name="idCard"
+                    <input required pattern="[0-9]{9}" title="số CMND phải đúng định dạng  " type="text" style="border-radius: 30px" class="form-control" name="idCard"
                            placeholder="ID CARD *"/>
                 </div>
                 <br>
                 <div class="form-group" >
                     <label >Phone Number</label>
-                    <input type="text" style="border-radius: 30px" class="form-control" name="phoneNumber"
+                    <input required pattern="090[0-9]{7}|091[0-9]{7}" title="số phải đúng định dạng " type="text" style="border-radius: 30px" class="form-control" name="phoneNumber"
                            placeholder="PHONE NUMBER *"/>
                 </div>
                 <br>
                 <div class="form-group">
                     <label for="birtdDateAdd">E-mail</label>
-                    <input type="text"  style="border-radius: 30px" class="form-control" name="email"
+                    <input required pattern="[a-z]{5,20}+[@gmail]" title="gmail phải đúng định dạng" type="text"  style="border-radius: 30px" class="form-control" name="email"
                            placeholder="EMAIL *"/>
                 </div>
                 <br>
