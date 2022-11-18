@@ -11,6 +11,13 @@
     <title>Title</title>
 </head>
 <body>
-
+<form action="dictionary" method="post">
+<p>nhập chữ tiếng anh cần chuyển đổi sang tiếng việt</p>
+<input type="text" name="tiengAnh">
+<button type="submit">translate</button>
+</form>
+<p>
+    kết quả :${translate}
+</p>
 </body>
 </html>
