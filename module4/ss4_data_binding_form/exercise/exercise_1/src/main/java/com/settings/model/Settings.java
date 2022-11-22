@@ -3,13 +3,13 @@ package com.settings.model;
 public class Settings {
     private String language;
     private int pageSize;
-    private boolean spamsFilter;
+    private String spamsFilter;
     private String signature;
 
     public Settings() {
     }
 
-    public Settings(String language, int pageSize, boolean spamsFilter, String signature) {
+    public Settings(String language, int pageSize, String spamsFilter, String signature) {
         this.language = language;
         this.pageSize = pageSize;
         this.spamsFilter = spamsFilter;
@@ -32,11 +32,11 @@ public class Settings {
         this.pageSize = pageSize;
     }
 
-    public boolean isSpamsFilter() {
+    public String getSpamsFilter() {
         return spamsFilter;
     }
 
-    public void setSpamsFilter(boolean spamsFilter) {
+    public void setSpamsFilter(String spamsFilter) {
         this.spamsFilter = spamsFilter;
     }
 
