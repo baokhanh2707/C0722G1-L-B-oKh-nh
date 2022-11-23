@@ -6,6 +6,15 @@
 </head>
 <body>
 <h1>List Products</h1>
+<p>
+    <a th:href="@{/create}">
+        Add new products
+    </a>
+</p>
+<form th:action="@{/search}" method="get">
+    <input name="name">
+    <input type="submit" value="Search"/>
+</form>
 <table id = "table">
     <thead>
     <tr>
@@ -14,15 +23,20 @@
         <th>count</th>
         <th>description</th>
         <th>producer</th>
+        <th>Edit</th>
+        <th>View</th>
     </tr>
     </thead>
     <tbody>
-    <tr th:each="products, varStatus : ${productsList}">
-        <td th:text="${varStatus.id}"></td>
-        <td th:text="${varStatus.name}"></td>
-        <td th:text="${varStatus.count}"></td>
-        <td th:text="${varStatus.description}"></td>
-        <td th:text="${varStatus.producer}"></td>
+    <tr th:each="products : ${productsList}">
+        <td th:text="${products.id}"></td>
+        <td th:text="${products.name}"></td>
+        <td th:text="${products.count}"></td>
+        <td th:text="${products.description}"></td>
+        <td th:text="${products.producer}"></td>
+        <td><a th:href="@{/{id}/edit(id=${products.id})}">edit</a></td>
+        <td><a th:href="@{/{id}/view(id=${products.id})}">view</a></td>
+        <td><a th:href="@{/{id}/delete(id=${products.id})}">delete</a></td>
     </tr>
     </tbody>
 </table>
