@@ -1,8 +1,8 @@
 package com.products.model;
 
 public class Products {
-    private int id ;
-    private String name ;
+    private int id;
+    private String name;
     private int count;
     private String description;
     private String producer;

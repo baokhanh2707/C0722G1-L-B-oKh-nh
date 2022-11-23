@@ -7,10 +7,12 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+
 @Service
 public class ProductsService implements IProductsService {
     @Autowired
     IProductsRepository iProductsRepository;
+
     @Override
     public List<Products> findAll() {
 
@@ -19,7 +21,7 @@ public class ProductsService implements IProductsService {
 
     @Override
     public void add(Products products) {
-iProductsRepository.add(products);
+        iProductsRepository.add(products);
     }
 
     @Override
@@ -35,7 +37,7 @@ iProductsRepository.add(products);
 
     @Override
     public void delete(int idProducts) {
-iProductsRepository.delete(idProducts);
+        iProductsRepository.delete(idProducts);
     }
 
     @Override

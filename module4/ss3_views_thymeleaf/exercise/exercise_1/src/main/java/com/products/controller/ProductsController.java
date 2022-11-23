@@ -25,41 +25,41 @@ public class ProductsController {
     }
 
     @GetMapping("{id}/edit")
-    public String update(@PathVariable int id , Model model){
-        Products products=iProductsService.findById(id);
-        model.addAttribute("products",products);
+    public String update(@PathVariable int id, Model model) {
+        Products products = iProductsService.findById(id);
+        model.addAttribute("products", products);
         return "/edit";
     }
 
     @PostMapping("/edit")
     public String edit(Products products, RedirectAttributes redirectAttributes) {
         iProductsService.update(products.getId(), products);
-        redirectAttributes.addFlashAttribute("message","Chỉnh sửa thành công");
+        redirectAttributes.addFlashAttribute("message", "Chỉnh sửa thành công");
         return "redirect:/";
     }
 
     @GetMapping("/create")
-    public String create(Model model){
-        model.addAttribute("products",new Products());
+    public String create(Model model) {
+        model.addAttribute("products", new Products());
         return "/create";
     }
 
     @PostMapping("/save")
-    public String save(Products products){
+    public String save(Products products) {
         iProductsService.add(products);
         return "redirect:/";
     }
 
     @GetMapping("{id}/view")
-    public String view(@PathVariable int id ,Model model){
-        model.addAttribute("products",iProductsService.findById(id));
+    public String view(@PathVariable int id, Model model) {
+        model.addAttribute("products", iProductsService.findById(id));
         return "/view";
     }
 
     @GetMapping("/search")
-    public String search(String name,Model model){
-        List<Products>productsList=iProductsService.search(name);
-        model.addAttribute("productsList",productsList);
+    public String search(String name, Model model) {
+        List<Products> productsList = iProductsService.search(name);
+        model.addAttribute("productsList", productsList);
         return "/list";
     }
 
