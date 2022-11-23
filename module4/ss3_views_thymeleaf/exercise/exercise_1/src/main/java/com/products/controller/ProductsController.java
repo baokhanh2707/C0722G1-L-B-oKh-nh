@@ -72,7 +72,7 @@ public class ProductsController {
     @PostMapping("/delete")
     public String delete(Products products, RedirectAttributes redirect) {
         iProductsService.delete(products.getId());
-        redirect.addFlashAttribute("success", "Removed product successfully!");
+        redirect.addFlashAttribute("message", "Xóa thành công");
         return "redirect:/";
     }
 
