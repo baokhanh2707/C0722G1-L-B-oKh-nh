@@ -16,16 +16,16 @@
 <h1>Sandwich Condiments</h1>
 <p>nhập lựa chọn của bạn vào đây</p>
 <form action="sandwich" method="post">
-    <input type="checkbox" name="Lettuce" value="Lettuce"><label>Lettuce</label>
-    <input type="checkbox" name="Tomato" value="Tomato"><label>Tomato</label>
-    <input type="checkbox" name="Mustard" value="Mustard"><label>Mustard</label>
-    <input type="checkbox" name="Sprouts" value="Sprouts"><label>Sprouts</label>
+    <input type="checkbox" name="condiment" value="Lettuce"><label>Lettuce</label>
+    <input type="checkbox" name="condiment" value="Tomato"><label>Tomato</label>
+    <input type="checkbox" name="condiment" value="Mustard"><label>Mustard</label>
+    <input type="checkbox" name="condiment" value="Sprouts"><label>Sprouts</label>
     <button type="submit">Save</button>
 
 </form>
 <p>kết quả :</p>
-<c:if test="${result!=null}">
-    <c:forEach var="list" items="${result}">
+<c:if test="${condiment!=null}">
+    <c:forEach var="list" items="${condiment}">
         <p>${list}</p>
     </c:forEach>
 </c:if>
