@@ -25,8 +25,8 @@ public class ProductsService implements IProductsService {
     }
 
     @Override
-    public void update(int idProducts, Products products) {
-        iProductsRepository.update(idProducts, products);
+    public void update( Products products) {
+        iProductsRepository.update( products);
     }
 
     @Override
@@ -36,12 +36,12 @@ public class ProductsService implements IProductsService {
 
 
     @Override
-    public void delete(int idProducts) {
-        iProductsRepository.delete(idProducts);
+    public void delete(Products products) {
+        iProductsRepository.delete(products);
     }
 
     @Override
     public List<Products> search(String nameProducts) {
-        return iProductsRepository.search(nameProducts);
+        return iProductsRepository.search( nameProducts );
     }
 }

@@ -136,7 +136,7 @@ public class CustomerRepository implements ICustomerRepository {
             ps.setString(1, "%" + name + "%");
             ps.setString(2, "%" + name + "%");
             ResultSet resultSet = ps.executeQuery();
-            while (resultSet.next()) {
+            while (resultSet.next()) {x
                 int id = resultSet.getInt("customer_id");
                 int idType = resultSet.getInt("customer_type_id");
                 String nameCustomer = resultSet.getString("customer_name");

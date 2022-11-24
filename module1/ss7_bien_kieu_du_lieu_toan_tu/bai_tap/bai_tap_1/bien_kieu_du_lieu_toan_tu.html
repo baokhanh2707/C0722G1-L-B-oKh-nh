@@ -8,10 +8,10 @@
 
 </body>
 <script>
-    let vatLy = parseFloat(prompt("vật lý"))
-    let hoaHoc = parseFloat(prompt("hoá học"))
-    let sinhHoc = parseFloat(prompt("sinh học"))
-    let gpa = parseFloat(vatLy + hoaHoc + sinhHoc) / 3
+    let vatLy = +prompt("vật lý")
+    let hoaHoc = +prompt("hoá học")
+    let sinhHoc = +prompt("sinh học")
+    let gpa = (vatLy + hoaHoc + sinhHoc) / 3
     let sum = parseFloat(vatLy + hoaHoc + sinhHoc)
     document.write('trungbìnhcộng =' + gpa)
     document.write('tổng=' + sum)

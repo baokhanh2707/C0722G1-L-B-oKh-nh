@@ -2,6 +2,8 @@ package com.products.reponsitory.impl;
 
 import com.products.model.Products;
 import com.products.reponsitory.IProductsRepository;
+import org.hibernate.Session;
+import org.hibernate.Transaction;
 import org.springframework.stereotype.Repository;
 
 import java.util.ArrayList;
@@ -22,37 +24,96 @@ public class ProductsRepository implements IProductsRepository {
 
     @Override
     public List<Products> findAll() {
-        return new ArrayList<>(productsList.values());
+        Session session = null;
+        List<Products> productsList = null;
+        try {
+            session = ConnectionUtil.sessionFactory.openSession();
+            productsList = session.createQuery("FROM Products ").getResultList();
+        } finally {
+            if (session != null) {
+                session.close();
+            }
+        }
+        return productsList;
     }
 
     @Override
     public void add(Products products) {
-        productsList.put(products.getId(), products);
+        Session session = null;
+        Transaction transaction = null;
+        try {
+            session = ConnectionUtil.sessionFactory.openSession();
+            transaction = session.beginTransaction();
+            session.save(products);
+            transaction.commit();
+        } finally {
+            if (session != null) {
+                session.close();
+            }
+        }
     }
 
     @Override
-    public void update(int idProducts, Products products) {
-        productsList.put(products.getId(), products);
+    public void update(Products products) {
+        Session session = null;
+        Transaction transaction = null;
+        try {
+            session = ConnectionUtil.sessionFactory.openSession();
+            transaction = session.beginTransaction();
+            session.merge(products);
+            transaction.commit();
+        } finally {
+            if (session != null) {
+                session.close();
+            }
+        }
     }
 
     @Override
     public Products findById(int idProducts) {
-        return productsList.get(idProducts);
+        Session session = null;
+        Products products = null;
+        try {
+            session = ConnectionUtil.sessionFactory.openSession();
+            products = (Products) session.createQuery("from Products p where id = : id").setParameter("id", idProducts).getSingleResult();
+        } finally {
+            if (session != null) {
+                session.close();
+            }
+        }
+        return products;
     }
 
+
     @Override
-    public void delete(int idProducts) {
-        productsList.remove(idProducts);
+    public void delete(Products products) {
+        Session session = null;
+        Transaction transaction = null;
+        try {
+            session = ConnectionUtil.sessionFactory.openSession();
+            transaction = session.beginTransaction();
+            session.delete(products);
+            transaction.commit();
+        } finally {
+            if (session != null) {
+                session.close();
+            }
+        }
     }
 
     @Override
     public List<Products> search(String nameProducts) {
-        List<Products> productsMap = new ArrayList<>();
-        for (Products products : productsList.values()) {
-            if (products.getName().contains(nameProducts)) {
-                productsMap.add(products);
+        Session session = null;
+        List<Products> productsList = null;
+        try {
+            session = ConnectionUtil.sessionFactory.openSession();
+            productsList = session.createQuery("from Products p where name  like :names ").setParameter("names", "%" + nameProducts + "%").getResultList();
+
+        } finally {
+            if (session != null) {
+                session.close();
             }
         }
-        return productsMap;
+        return productsList;
     }
 }

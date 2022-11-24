@@ -8,7 +8,6 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
-import java.util.ArrayList;
 import java.util.List;
 
 @Controller
@@ -33,7 +32,7 @@ public class ProductsController {
 
     @PostMapping("/edit")
     public String edit(Products products, RedirectAttributes redirectAttributes) {
-        iProductsService.update(products.getId(), products);
+        iProductsService.update(products);
         redirectAttributes.addFlashAttribute("message", "Chỉnh sửa thành công");
         return "redirect:/";
     }
@@ -45,8 +44,9 @@ public class ProductsController {
     }
 
     @PostMapping("/save")
-    public String save(Products products) {
+    public String save(Products products, RedirectAttributes redirect) {
         iProductsService.add(products);
+        redirect.addFlashAttribute("message", "thêm mới thành công");
         return "redirect:/";
     }
 
@@ -71,7 +71,7 @@ public class ProductsController {
 
     @PostMapping("/delete")
     public String delete(Products products, RedirectAttributes redirect) {
-        iProductsService.delete(products.getId());
+        iProductsService.delete(products);
         redirect.addFlashAttribute("message", "Xóa thành công");
         return "redirect:/";
     }
