@@ -63,11 +63,11 @@ public class ProductsController {
         return "/list";
     }
 
-    @GetMapping("/{id}/delete")
-    public String delete(@PathVariable int id, Model model) {
-        model.addAttribute("products", iProductsService.findById(id));
-        return "/delete";
-    }
+//    @GetMapping("/{id}/delete")
+//    public String delete(@PathVariable int id, Model model) {
+//        model.addAttribute("products", iProductsService.findById(id));
+//        return "/delete";
+//    }
 
     @PostMapping("/delete")
     public String delete(Products products, RedirectAttributes redirect) {

@@ -39,10 +39,53 @@
         <td th:text="${products.description}"></td>
         <td th:text="${products.producer}"></td>
         <td><a class="btn btn-outline-warning my-2 my-sm-0" th:href="@{/{id}/edit(id=${products.id})}">edit</a></td>
+        <td>
+            <form>
+                <button th:onclick="'javascript:idRemove(\''+${products.id}+'\',\''+${products.name}+'\');'"
+                        class="btn btn-outline-warning my-2 my-sm-0" type="button" data-bs-toggle="modal"
+                        data-bs-target="#exampleModal">
+                    delete
+                </button>
+            </form>
+        </td>
         <td><a class="btn btn-outline-warning my-2 my-sm-0" th:href="@{/{id}/view(id=${products.id})}">view</a></td>
-        <td><a class="btn btn-outline-warning my-2 my-sm-0" th:href="@{/{id}/delete(id=${products.id})}">delete</a></td>
     </tr>
     </tbody>
+
 </table>
+<!--REMOVE-->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+     aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">DELETE</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                        aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <span>Are you sure to delete:  <span style="color: #db365d " id="deleteModal"></span></span>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close
+                </button>
+                <form th:action="@{/delete}" method="post">
+                    <input type="hidden" name="id" id="idInput">
+                    <button class="btn btn-primary">DELETE</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+<script th:inline="javascript">
+    function idRemove(id, name) {
+        debugger
+        document.getElementById("idInput").value = id;
+        document.getElementById("deleteModal").innerText = name;
+    }
+</script>
 </body>
 </html>

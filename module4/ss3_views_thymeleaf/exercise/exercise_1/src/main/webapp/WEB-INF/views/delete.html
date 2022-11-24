@@ -1,38 +1,38 @@
-<!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
-<h3>Remove Product</h3>
-<p>
-    <a th:href="@{/}">
-        Back to product list
-    </a>
-</p>
-<div id="form">
-    <form action="#" th:action="@{/delete}" th:object="${products}"
-          method="POST" novalidate="novalidate">
-        <input type="hidden" th:field="*{id}"/>
-        <div>
-            <label>Name</label>
-            <input type="text" th:field="*{name}"/>
-        </div>
-        <div>
-            <label>Count</label>
-            <input type="text" th:field="*{count}"/>
-        </div>
-        <div>
-            <label>description</label>
-            <input type="text" th:field="*{description}"/>
-        </div>
-        <div>
-            <label>producer</label>
-            <input type="text" th:field="*{producer}"/>
-        </div>
-        <input type="submit" value="Remove"/>
-    </form>
-</div>
-</body>
-</html>
+<!--<!DOCTYPE html>-->
+<!--<html xmlns:th="http://www.thymeleaf.org">-->
+<!--<head>-->
+<!--    <meta charset="UTF-8">-->
+<!--    <title>Title</title>-->
+<!--</head>-->
+<!--<body>-->
+<!--<h3>Remove Product</h3>-->
+<!--<p>-->
+<!--    <a th:href="@{/}">-->
+<!--        Back to product list-->
+<!--    </a>-->
+<!--</p>-->
+<!--<div id="form">-->
+<!--    <form action="#" th:action="@{/delete}" th:object="${products}"-->
+<!--          method="POST" novalidate="novalidate">-->
+<!--        <input type="hidden" th:field="*{id}"/>-->
+<!--        <div>-->
+<!--            <label>Name</label>-->
+<!--            <input type="text" th:field="*{name}"/>-->
+<!--        </div>-->
+<!--        <div>-->
+<!--            <label>Count</label>-->
+<!--            <input type="text" th:field="*{count}"/>-->
+<!--        </div>-->
+<!--        <div>-->
+<!--            <label>description</label>-->
+<!--            <input type="text" th:field="*{description}"/>-->
+<!--        </div>-->
+<!--        <div>-->
+<!--            <label>producer</label>-->
+<!--            <input type="text" th:field="*{producer}"/>-->
+<!--        </div>-->
+<!--        <input type="submit" value="Remove"/>-->
+<!--    </form>-->
+<!--</div>-->
+<!--</body>-->
+<!--</html>-->
