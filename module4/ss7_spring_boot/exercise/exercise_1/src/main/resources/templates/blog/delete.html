@@ -7,9 +7,9 @@
 <body>
 <h1>Delete blog</h1>
 <p>
-    <a href="/">Blog list</a>
+    <a href="/blog">Blog list</a>
 </p>
-<form th:action="@{/delete}" th:object="${blog}" method="post">
+<form th:action="@{/blog/delete}" th:object="${blog}" method="post">
     <table>
         <input type="hidden" th:field="*{id}"/>
         <div>
@@ -23,6 +23,14 @@
         <div>
             <label>author</label>
             <input type="text" th:field="*{author}"/>
+        </div>
+        <div>
+            <label>Category</label>
+            <td>
+                <select  th:field="*{category}">
+                    <option th:each="category: ${categoryList}" th:value="${category.id}" th:text="${category.name}"></option>
+                </select>
+            </td>
         </div>
         <tr>
             <td><input type="submit" value="Delete blog"></td>

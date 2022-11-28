@@ -7,12 +7,12 @@
 <body>
 <h1>View Blog</h1>
 <p>
-    <a th:href="@{/}">
+    <a th:href="@{/blog}">
         Back to list
     </a>
 </p>
 <h1>Blog View</h1>
-<form th:action="@{/view}" th:object="${blog}">
+<form  th:object="${blog}">
     <table>
         <tr>
             <td>Name:</td>
@@ -26,8 +26,16 @@
             <td>Author:</td>
             <td><textarea th:field="*{author}"></textarea></td>
         </tr>
+        <tr>
+            <td>Author:</td>
+<!--            <td><textarea  th:text="${blog.category.name}"  ></textarea></td>-->
+            <td><select th:readonly="category" id="category" th:field="*{category}">
+                <option th:each="category : ${blogList}"
+                        th:value="${category.id}"
+                        th:text="${category.name}"></option>
+            </select></td>
+        </tr>
     </table>
-
 </form>
 </body>
 </html>

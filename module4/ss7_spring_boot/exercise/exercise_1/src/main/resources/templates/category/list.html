@@ -9,8 +9,8 @@
 <body>
 <h1>Blog</h1>
 <p>
-    <a class="btn btn-outline-warning my-2 my-sm-0" th:href="@{/create}">
-        Add Blog
+    <a class="btn btn-outline-warning my-2 my-sm-0" th:href="@{/category/create}">
+        Add Category
     </a>
 </p>
 <p th:text="${message}" style="color: crimson">
@@ -19,24 +19,19 @@
     <tr>
         <th>STT</th>
         <th>Name</th>
-        <th>Content</th>
-        <th>author</th>
         <th>Edit</th>
-        <th>View</th>
         <th>Delete</th>
 
     </tr>
-    <th:block th:each="blog, stt : ${blogList}">
-        <tr>
+<!--    <th:block th:each="category, stt : ${categoryList}">-->
+        <tr th:each="category, stt : ${categoryList}">
             <td th:text="${stt.count}"></td>
-            <td th:text="${blog.name}"></td>
-            <td th:text="${blog.content}"></td>
-            <td th:text="${blog.author}"></td>
-            <td><a th:href="@{/edit(id=${blog.id})}">Edit</a></td>
-            <td><a th:href="@{/view(id=${blog.id})}">View</a></td>
-            <td><a th:href="@{/delete(id=${blog.id})}">Xóa</a></td>
+            <td th:text="${category.name}"></td>
+            <td><a th:href="@{/category/edit(id=${category.id})}">Edit</a></td>
+            <td><a th:href="@{/category/delete(id=${category.id})}">Xóa</a></td>
         </tr>
-    </th:block>
+<!--    </th:block>-->
 </table>
+
 </body>
 </html>
