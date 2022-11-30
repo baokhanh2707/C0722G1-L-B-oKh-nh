@@ -13,23 +13,14 @@ public class Song {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
-    @NotEmpty(message = " không được rỗng")
-    @Size(max = 800, message = "không được quá 800 kí tự")
-    @Pattern(regexp = "^([A-Z][a-záàảạãăắằặẵâấầẫậẩéèẻẽẹêếềểễệóòỏõọôốồổỗộơớờởỡợíìỉĩịùúủũụưứửữựỵỷỹýỳ]*[ ])*([A-Z][a-záàảạãăắằặẵâấầẫậẩéèẻẽẹêếềểễệóòỏõọôốồổỗộơớờởỡợíìỉĩịùúủũụưứửữựỵỷỹýỳ]*)$", message = "Tên bài hát không đúng định dạng")
     private String nameSong;
-    @NotEmpty(message = " không được rỗng")
-    @Size(max = 300, message = "không được quá 300 kí tự")
-    @Pattern(regexp = "^([A-Z][a-záàảạãăắằặẵâấầẫậẩéèẻẽẹêếềểễệóòỏõọôốồổỗộơớờởỡợíìỉĩịùúủũụưứửữựỵỷỹýỳ]*[ ])*([A-Z][a-záàảạãăắằặẵâấầẫậẩéèẻẽẹêếềểễệóòỏõọôốồổỗộơớờởỡợíìỉĩịùúủũụưứửữựỵỷỹýỳ]*)$", message = "Tên Ca sĩ không đúng định dạng")
     private String nameSinger;
-    @NotEmpty(message = " không được rỗng")
-    @Size(max = 300, message = "không được quá 300 kí tự")
-    @Pattern(regexp = "^([A-Z][a-záàảạãăắằặẵâấầẫậẩéèẻẽẹêếềểễệóòỏõọôốồổỗộơớờởỡợíìỉĩịùúủũụưứửữựỵỷỹýỳ]*[ ])*([A-Z][a-záàảạãăắằặẵâấầẫậẩéèẻẽẹêếềểễệóòỏõọôốồổỗộơớờởỡợíìỉĩịùúủũụưứửữựỵỷỹýỳ,]*)$", message = "Thể loại nhạc không đúng định dạng")
     private String category;
 
     public Song() {
     }
 
-    public Song(Integer id, @NotEmpty(message = " không được rỗng") @Size(max = 800, message = "không được quá 800 kí tự") @Pattern(regexp = "^([A-Z][a-záàảạãăắằặẵâấầẫậẩéèẻẽẹêếềểễệóòỏõọôốồổỗộơớờởỡợíìỉĩịùúủũụưứửữựỵỷỹýỳ]*[ ])*([A-Z][a-záàảạãăắằặẵâấầẫậẩéèẻẽẹêếềểễệóòỏõọôốồổỗộơớờởỡợíìỉĩịùúủũụưứửữựỵỷỹýỳ]*)$", message = "Tên bài hát không đúng định dạng") String nameSong, @NotEmpty(message = " không được rỗng") @Size(max = 300, message = "không được quá 300 kí tự") @Pattern(regexp = "^([A-Z][a-záàảạãăắằặẵâấầẫậẩéèẻẽẹêếềểễệóòỏõọôốồổỗộơớờởỡợíìỉĩịùúủũụưứửữựỵỷỹýỳ]*[ ])*([A-Z][a-záàảạãăắằặẵâấầẫậẩéèẻẽẹêếềểễệóòỏõọôốồổỗộơớờởỡợíìỉĩịùúủũụưứửữựỵỷỹýỳ]*)$", message = "Tên Ca sĩ không đúng định dạng") String nameSinger, @NotEmpty(message = " không được rỗng") @Size(max = 300, message = "không được quá 300 kí tự") @Pattern(regexp = "^([A-Z][a-záàảạãăắằặẵâấầẫậẩéèẻẽẹêếềểễệóòỏõọôốồổỗộơớờởỡợíìỉĩịùúủũụưứửữựỵỷỹýỳ]*[ ])*([A-Z][a-záàảạãăắằặẵâấầẫậẩéèẻẽẹêếềểễệóòỏõọôốồổỗộơớờởỡợíìỉĩịùúủũụưứửữựỵỷỹýỳ,]*)$", message = "Thể loại nhạc không đúng định dạng") String category) {
+    public Song(Integer id, String nameSong, String nameSinger, String category) {
         this.id = id;
         this.nameSong = nameSong;
         this.nameSinger = nameSinger;

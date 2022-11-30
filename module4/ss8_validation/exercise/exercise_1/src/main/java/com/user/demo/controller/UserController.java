@@ -26,6 +26,7 @@ public class UserController {
         if (bindingResult.hasErrors()) {
             return "/index";
         }
+
         iUserService.save(user);
         model.addAttribute("user", user);
         return "/result";
