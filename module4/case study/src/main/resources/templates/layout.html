@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div class="row" th:fragment="header">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+            <div>
+                <img src="https://www.furama.com/images/LOGOFurama_4C_Normal.png" height="100" width="800"/>
+            </div>
+            </ul>
+            <form class="d-flex">
+                <button class="btn btn-outline-warning" type="submit">Login <img src="data:image/png;base64,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"
+                                                                                 height="24" width="24"></button>
+            </form>
+        </div>
+    </nav>
+    <nav class="navbar navbar-expand-lg navbar-light bg-warning">
+        <div class="container-fluid mx-5">
+            <a class="navbar-brand font-weight-bold" th:href="@{/}">
+                <i class="fa-solid fa-house-chimney h5 mx-1"></i> Trang chủ
+            </a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent"
+                    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <!--                    <li class="nav-item dropdown ms-3" sec:authorize="hasRole('ADMIN')">-->
+                    <li class="nav-item dropdown ms-3">
+                        <a class="nav-link dropdown-toggle text-dark" href="#" role="button" data-bs-toggle="dropdown"
+                           aria-expanded="false">Nhân viên</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" th:href="@{/employee}">Danh sách nhân viên</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" th:href="@{/employee/create}">Thêm nhân viên mới</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="nav-item dropdown ms-3">
+                        <a class="nav-link dropdown-toggle text-dark" href="#" role="button" data-bs-toggle="dropdown"
+                           aria-expanded="false">Khách hàng</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" th:href="@{/customer}">Danh sách khách hàng</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" th:href="@{/customer/create}">Thêm khách hàng mới</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="nav-item dropdown ms-3">
+                        <a class="nav-link dropdown-toggle text-dark" href="#" role="button" data-bs-toggle="dropdown"
+                           aria-expanded="false">Dịch vụ</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" th:href="@{/facility}">Danh sách dịch vụ</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" th:href="@{/facility/create}">Thêm dịch vụ mới</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="nav-item dropdown ms-3">
+                        <a class="nav-link dropdown-toggle text-dark" href="#" role="button" data-bs-toggle="dropdown"
+                           aria-expanded="false">Hợp đồng</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" th:href="@{/contract}">Danh sách hợp đồng</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" data-bs-toggle="modal"
+                                   data-bs-target="#addContract">Thêm hợp đồng mới</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</div>
+</body>
+</html>
