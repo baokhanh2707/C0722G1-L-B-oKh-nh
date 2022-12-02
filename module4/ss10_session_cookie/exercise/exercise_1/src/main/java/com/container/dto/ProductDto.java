@@ -1,36 +1,32 @@
-package com.container.model;
+package com.container.dto;
 
-import javax.persistence.*;
+import java.util.Objects;
 
-@Entity
-@Table(name = "product")
-public class Product {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+public class ProductDto {
+    private long id;
     private String name;
-    private String image;
+    private String img;
     private double price;
     private String description;
     private short discount;
 
-    public Product() {
-    }
-
-    public Product(long id, String name, String img, double price, String description, short discount) {
+    public ProductDto(long id, String name, String image, double price, String description, short discount) {
         this.id = id;
         this.name = name;
-        this.image = img;
+        this.img = image;
         this.price = price;
         this.description = description;
         this.discount = discount;
     }
 
-    public Long getId() {
+    public ProductDto() {
+    }
+
+    public long getId() {
         return id;
     }
 
-    public void setId(Long id) {
+    public void setId(long id) {
         this.id = id;
     }
 
@@ -42,12 +38,12 @@ public class Product {
         this.name = name;
     }
 
-    public String getImage() {
-        return image;
+    public String getImg() {
+        return img;
     }
 
-    public void setImage(String img) {
-        this.image = img;
+    public void setImg(String img) {
+        this.img = img;
     }
 
     public double getPrice() {
@@ -72,5 +68,18 @@ public class Product {
 
     public void setDiscount(short discount) {
         this.discount = discount;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        ProductDto that = (ProductDto) o;
+        return id == that.id;
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(id);
     }
 }
