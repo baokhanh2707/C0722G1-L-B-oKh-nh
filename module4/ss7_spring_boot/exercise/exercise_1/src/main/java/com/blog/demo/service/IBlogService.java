@@ -18,4 +18,6 @@ public interface IBlogService {
     void delete(Blog blog);
 
     Page<Blog> searchByName(String name, Pageable pageable);
+
+    Page<Blog>search(Pageable pageable ,int id);
 }

@@ -12,5 +12,4 @@ public interface ICustomerRepository extends JpaRepository<Customer,Integer> {
             countQuery ="select * from customer c where c.name like concat('%',:name,'%')"
             ,nativeQuery = true)
     Page<Customer> searchByName(@Param("name") String name, Pageable pageable);
-
 }

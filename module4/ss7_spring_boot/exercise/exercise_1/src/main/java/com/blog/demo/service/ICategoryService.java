@@ -1,6 +1,7 @@
 package com.blog.demo.service;
 
 
+import com.blog.demo.model.Blog;
 import com.blog.demo.model.Category;
 
 import java.util.List;
@@ -14,5 +15,8 @@ public interface ICategoryService {
     Optional<Category> findById(Integer id);
 
     void delete(Category category);
+
+
+
 
 }

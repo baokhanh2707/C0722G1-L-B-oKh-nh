@@ -8,6 +8,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.web.PageableDefault;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
@@ -69,7 +71,6 @@ public class BlogController {
         model.addAttribute("blogList", blogList);
         return "/blog/view";
     }
-
     @GetMapping("/edit")
     public String update(@RequestParam(required = false) Integer id, Model model) {
         Optional<Blog> blog = iBlogService.findById(id);

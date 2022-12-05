@@ -27,7 +27,6 @@ public class CategoryService implements ICategoryService {
     public Optional<Category> findById(Integer id) {
         return iCategoryRepository.findById(id);
     }
-
     @Override
     public void delete(Category blog) {
         iCategoryRepository.delete(blog);

@@ -1,6 +1,8 @@
 package com.case_study.demo.model;
 
 import javax.persistence.*;
+import javax.validation.constraints.NotEmpty;
+import javax.validation.constraints.Pattern;
 
 @Entity
 public class Customer {

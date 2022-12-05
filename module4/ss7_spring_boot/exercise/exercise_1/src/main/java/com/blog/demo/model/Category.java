@@ -1,5 +1,6 @@
 package com.blog.demo.model;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import org.springframework.boot.context.properties.bind.DefaultValue;
 
 import javax.persistence.*;
@@ -15,8 +16,8 @@ public class Category {
     private String name;
 
     @OneToMany(mappedBy = "category")
+    @JsonBackReference
     private Set<Blog> blogs;
-
     public Category() {
     }
 
