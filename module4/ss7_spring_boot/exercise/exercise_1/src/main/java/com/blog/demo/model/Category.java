@@ -1,10 +1,7 @@
 package com.blog.demo.model;
 
 import com.fasterxml.jackson.annotation.JsonBackReference;
-import org.springframework.boot.context.properties.bind.DefaultValue;
-
 import javax.persistence.*;
-import java.util.List;
 import java.util.Set;
 
 @Entity

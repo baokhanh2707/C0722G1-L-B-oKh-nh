@@ -17,7 +17,7 @@ public class CustomerDto implements Validator {
     private String gender;
     @Pattern(regexp = "^[0-9]{9}|[0-9]{12}$",message = "số CMND không đúng định dạng")
     private String idCard;
-    @Pattern(regexp = "^(090|091|(84)[+](90)|(84)[+](90)([0-9]){7})$", message = "Số điện thoại phải đúng định dạng")
+    @Pattern(regexp = "^(((\\\\+|)84)|0)(3|5|7|8|9)+([0-9]{8})$", message = "Số điện thoại phải đúng định dạng")
     private String phoneNumber;
     @Pattern(regexp = "^(?=.{1,64}@)[A-Za-z0-9_-]+(\\.[A-Za-z0-9_-]+)*@"
             + "[^-][A-Za-z0-9-]+(\\.[A-Za-z0-9-]+)*(\\.[A-Za-z]{2,})$", message = "Email chưa đúng định dạng(***@**.***)")
