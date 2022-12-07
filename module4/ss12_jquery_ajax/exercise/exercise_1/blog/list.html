@@ -42,10 +42,10 @@
 <script>
     var pageNumber = 0;
     $(document).ready(function () {
-        BlogList(pageNumber);
+        blogList(pageNumber);
         $("#showMore").click(function () {
             pageNumber++;
-            BlogList(pageNumber);
+            blogList(pageNumber);
         })
         $("#searchByName").click(function () {
             let search = $("#search").val();
@@ -61,14 +61,14 @@
                         $("#STT").val(parseInt(stt) + 1);
                         tableSearch +=
                             `
-                <tr>
-    <td>${stt}</td>
-    <td>${data.content[i].name}</td>
-    <td>${data.content[i].content}</td>
-    <td>${data.content[i].author}</td>
-    <td>${data.content[i].category.name}</td>
-</tr>
-`
+                             <tr>
+                                <td>${stt}</td>
+                                <td>${data.content[i].name}</td>
+                                <td>${data.content[i].content}</td>
+                                <td>${data.content[i].author}</td>
+                                <td>${data.content[i].category.name}</td>
+                            </tr>
+                            `
                     }
                     debugger
                     $("#myBody").empty();
@@ -79,7 +79,7 @@
         })
     });
 
-    function BlogList(pageNumber) {
+    function blogList(pageNumber) {
         $.ajax({
             url: 'http://localhost:8080/blogRest?page=' + pageNumber,
             type: 'GET',
@@ -92,14 +92,14 @@
                     $("#STT").val(parseInt(stt) + 1);
                     myTable +=
                         `
-<tr>
-    <td>${stt}</td>
-    <td>${data.content[i].name}</td>
-    <td>${data.content[i].content}</td>
-    <td>${data.content[i].author}</td>
-    <td>${data.content[i].category.name}</td>
-</tr>
-`
+                            <tr>
+                                <td>${stt}</td>
+                                <td>${data.content[i].name}</td>
+                                <td>${data.content[i].content}</td>
+                                <td>${data.content[i].author}</td>
+                                <td>${data.content[i].category.name}</td>
+                            </tr>
+                             `
                 }
                 debugger
                 $("#myBody").append(myTable);

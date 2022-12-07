@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org" xmlns="http://www.w3.org/1999/html">
+<html xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <title>Edit Customer</title>
@@ -39,7 +39,7 @@
                     <div class="card" style="border-radius: 15px;">
                         <div class="card-body p-5">
                             <h2 class="text-uppercase text-center mb-5">Edit Customer</h2>
-                            <form th:action="@{/customer/update}" th:object="${customer}"
+                            <form th:action="@{/customer/update}" th:object="${customerDto}"
                                   method="post" novalidate="novalidate">
                                 <div class="row" id="form">
                                     <p>
@@ -48,12 +48,13 @@
                                         </a>
                                     </p>
                                     <div class="col-lg-6">
-                                            <input hidden type="text"  th:field="*{id}"
+                                            <input hidden type="text" th:field="*{id}"
                                                    class="form-control form-control-lg"/>
                                         <div class="form-outline mb-4">
                                             <label class="form-label" for="form3Example1cg">Name</label>
                                             <input type="text" id="form3Example1cg" th:field="*{name}"
                                                    class="form-control form-control-lg"/>
+                                            <td><p th:errors="*{name}"></p></td>
                                         </div>
                                         <div class="form-outline mb-4">
                                             <label class="form-label" for="customerType">Customer Type</label>
@@ -84,6 +85,7 @@
                                             <label class="form-label" for="form3Example4cdg">Id Card</label>
                                             <input type="text" id="form3Example4cdg" th:field="*{idCard}"
                                                    class="form-control form-control-lg"/>
+                                            <td><p th:errors="*{idCard}"></p></td>
                                         </div>
                                     </div>
                                     <div class="col-lg-6">
@@ -96,11 +98,13 @@
                                         <div class="form-outline mb-4">
                                             <input type="text" th:field="*{phoneNumber}"
                                                    class="form-control form-control-lg"/>
+                                            <td><p th:errors="*{phoneNumber}"></p></td>
                                         </div>
                                         <div class="form-outline mb-4">
                                             <label class="form-label" for="form3Example4cdg">Email</label>
                                             <input th:field="*{email}" type="text"
                                                    class="form-control form-control-lg"/>
+                                            <td><p th:errors="*{email}"></p></td>
                                         </div>
                                         <div class="form-outline mb-4">
                                             <label class="form-label" for="form3Example4cdg">Address</label>

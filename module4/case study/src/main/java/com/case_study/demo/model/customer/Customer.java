@@ -1,8 +1,6 @@
-package com.case_study.demo.model;
+package com.case_study.demo.model.customer;
 
 import javax.persistence.*;
-import javax.validation.constraints.NotEmpty;
-import javax.validation.constraints.Pattern;
 
 @Entity
 public class Customer {
@@ -19,6 +17,8 @@ public class Customer {
     @ManyToOne
     @JoinColumn(name = "customer_type_id",referencedColumnName = "id")
     private CustomerType customerType;
+//    @OneToMany(mappedBy = "customer")
+//    private Set<Contract> contracts;
 
     public CustomerType getCustomerType() {
         return customerType;

@@ -1,7 +1,7 @@
 package com.case_study.demo.controller;
 
 import com.case_study.demo.dto.CustomerDto;
-import com.case_study.demo.model.Customer;
+import com.case_study.demo.model.customer.Customer;
 import com.case_study.demo.service.customer.ICustomerService;
 import com.case_study.demo.service.customer.ICustomerTypeService;
 import org.springframework.beans.BeanUtils;
@@ -58,12 +58,19 @@ public class CustomerController {
     public String edit(@RequestParam(required = false) Integer id, Model model) {
         Optional<Customer> customer = iCustomerService.findById(id);
         model.addAttribute("customerTypeList", iCustomerTypeService.findAll());
-        model.addAttribute("customer", customer);
+        model.addAttribute("customerDto", new CustomerDto());
         return "/customer/edit";
     }
 
     @PostMapping("/update")
-    public String update(@ModelAttribute("customer") Customer customer, RedirectAttributes redirect) {
+    public String update(@Validated @ModelAttribute("customerDto") CustomerDto customerDto,BindingResult bindingResult , RedirectAttributes redirect,Model model) {
+        new CustomerDto().validate(customerDto,bindingResult);
+        if(bindingResult.hasErrors()){
+            model.addAttribute("customerTypeList", iCustomerTypeService.findAll());
+            return "/customer/edit";
+        }
+        Customer customer=new Customer();
+        BeanUtils.copyProperties(customerDto,customer);
         iCustomerService.save(customer);
         redirect.addFlashAttribute("message", "Sửa thành công");
         return "redirect:/customer";

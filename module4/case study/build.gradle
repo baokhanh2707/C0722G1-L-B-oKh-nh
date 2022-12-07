@@ -4,7 +4,7 @@ plugins {
     id 'java'
 }
 
-group = 'com.case_study'
+group = 'com.example'
 version = '0.0.1-SNAPSHOT'
 sourceCompatibility = '1.8'
 
@@ -22,10 +22,6 @@ dependencies {
 
 //    implementation 'org.springframework.boot:spring-boot-starter-security'
 //    implementation 'org.thymeleaf.extras:thymeleaf-extras-springsecurity5'
-}
-
-tasks.named('test') {
-    useJUnitPlatform()
 }
 
 tasks.named('test') {

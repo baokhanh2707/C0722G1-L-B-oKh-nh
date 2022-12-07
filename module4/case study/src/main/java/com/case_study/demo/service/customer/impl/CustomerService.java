@@ -1,6 +1,6 @@
 package com.case_study.demo.service.customer.impl;
 
-import com.case_study.demo.model.Customer;
+import com.case_study.demo.model.customer.Customer;
 import com.case_study.demo.repository.customer.ICustomerRepository;
 import com.case_study.demo.service.customer.ICustomerService;
 import org.springframework.beans.factory.annotation.Autowired;

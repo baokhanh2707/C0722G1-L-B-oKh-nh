@@ -1,9 +1,7 @@
 package com.case_study.demo.service.customer;
 
 
-import com.case_study.demo.model.CustomerType;
-import org.springframework.data.domain.Page;
-import org.springframework.data.domain.Pageable;
+import com.case_study.demo.model.customer.CustomerType;
 
 import java.util.List;
 
