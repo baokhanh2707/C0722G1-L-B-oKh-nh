@@ -8,7 +8,7 @@ import java.util.Optional;
 
 public interface ICustomerService {
     Customer save(Customer customer);
-    Page<Customer>searchByName(String name,Pageable pageable);
+    Page<Customer>searchByName(String name,String email,String customerType,Pageable pageable);
     Optional<Customer>findById(Integer id);
     void delete(Integer id);
 }

@@ -13,7 +13,9 @@ public class CustomerDto implements Validator {
     @NotEmpty(message = " không được rỗng")
     @Pattern(regexp = "^([A-Z][a-záàảạãăắằặẵâấầẫậẩéèẻẽẹêếềểễệóòỏõọôốồổỗộơớờởỡợíìỉĩịùúủũụưứửữựỵỷỹýỳ]*[ ])*([A-Z][a-záàảạãăắằặẵâấầẫậẩéèẻẽẹêếềểễệóòỏõọôốồổỗộơớờởỡợíìỉĩịùúủũụưứửữựỵỷỹýỳ]*)$", message = "Tên Khách Hàng không đúng định dạng")
     private String name;
+    @NotEmpty(message = " không được rỗng")
     private String dateOfBirth;
+    @NotEmpty(message = " không được rỗng")
     private String gender;
     @Pattern(regexp = "^[0-9]{9}|[0-9]{12}$",message = "số CMND không đúng định dạng")
     private String idCard;
@@ -22,14 +24,15 @@ public class CustomerDto implements Validator {
     @Pattern(regexp = "^(?=.{1,64}@)[A-Za-z0-9_-]+(\\.[A-Za-z0-9_-]+)*@"
             + "[^-][A-Za-z0-9-]+(\\.[A-Za-z0-9-]+)*(\\.[A-Za-z]{2,})$", message = "Email chưa đúng định dạng(***@**.***)")
     private String email;
+    @NotEmpty(message = " không được rỗng")
     private String address;
     private CustomerType customerType;
 
     public CustomerDto() {
     }
 
-    public CustomerDto(Integer id, @NotEmpty(message = " không được rỗng") @Pattern(regexp = "^([A-Z][a-záàảạãăắằặẵâấầẫậẩéèẻẽẹêếềểễệóòỏõọôốồổỗộơớờởỡợíìỉĩịùúủũụưứửữựỵỷỹýỳ]*[ ])*([A-Z][a-záàảạãăắằặẵâấầẫậẩéèẻẽẹêếềểễệóòỏõọôốồổỗộơớờởỡợíìỉĩịùúủũụưứửữựỵỷỹýỳ]*)$", message = "Tên Khách Hàng không đúng định dạng") String name, String dateOfBirth, String gender, @Pattern(regexp = "^[0-9]{9}|[0-9]{12}") String idCard, @Pattern(regexp = "^(090|091|(84)[+](90)|(84)[+](90)+([0-9]){8})$", message = "Số điện thoại phải đúng định dạng") String phoneNumber, @Pattern(regexp = "^(?=.{1,64}@)[A-Za-z0-9_-]+(\\.[A-Za-z0-9_-]+)*@"
-            + "[^-][A-Za-z0-9-]+(\\.[A-Za-z0-9-]+)*(\\.[A-Za-z]{2,})$", message = "Email chưa đúng định dạng(***@**.***)") String email, String address, CustomerType customerType) {
+    public CustomerDto(Integer id, @NotEmpty(message = " không được rỗng") @Pattern(regexp = "^([A-Z][a-záàảạãăắằặẵâấầẫậẩéèẻẽẹêếềểễệóòỏõọôốồổỗộơớờởỡợíìỉĩịùúủũụưứửữựỵỷỹýỳ]*[ ])*([A-Z][a-záàảạãăắằặẵâấầẫậẩéèẻẽẹêếềểễệóòỏõọôốồổỗộơớờởỡợíìỉĩịùúủũụưứửữựỵỷỹýỳ]*)$", message = "Tên Khách Hàng không đúng định dạng") String name, @NotEmpty(message = " không được rỗng") String dateOfBirth, @NotEmpty(message = " không được rỗng") String gender, @Pattern(regexp = "^[0-9]{9}|[0-9]{12}$", message = "số CMND không đúng định dạng") String idCard, @Pattern(regexp = "^(((\\\\+|)84)|0)(3|5|7|8|9)+([0-9]{8})$", message = "Số điện thoại phải đúng định dạng") String phoneNumber, @Pattern(regexp = "^(?=.{1,64}@)[A-Za-z0-9_-]+(\\.[A-Za-z0-9_-]+)*@"
+            + "[^-][A-Za-z0-9-]+(\\.[A-Za-z0-9-]+)*(\\.[A-Za-z]{2,})$", message = "Email chưa đúng định dạng(***@**.***)") String email, @NotEmpty(message = " không được rỗng") String address, CustomerType customerType) {
         this.id = id;
         this.name = name;
         this.dateOfBirth = dateOfBirth;

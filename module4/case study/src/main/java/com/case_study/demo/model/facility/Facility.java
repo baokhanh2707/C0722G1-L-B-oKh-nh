@@ -1,9 +1,6 @@
 package com.case_study.demo.model.facility;
 
-import com.case_study.demo.model.contract.Contract;
-
 import javax.persistence.*;
-import java.util.Set;
 
 @Entity
     @Table(name = "facility")
@@ -19,7 +16,7 @@ import java.util.Set;
 
         private double cost;
 
-        private int maxPeoPel;
+        private int maxPeople;
 
         @ManyToOne
         @JoinColumn(name = "facility_type_id", referencedColumnName = "id")
@@ -46,12 +43,12 @@ import java.util.Set;
     public Facility() {
     }
 
-    public Facility(Long id, String name, int area, double cost, int maxPeoPel, FacilityType facilityType, RentType rentType, String standardRoom, String descriptionOtherConvenience, double poolArea, int numberOfFloors, String facilityFree) {
+    public Facility(Long id, String name, int area, double cost, int maxPeople, FacilityType facilityType, RentType rentType, String standardRoom, String descriptionOtherConvenience, double poolArea, int numberOfFloors, String facilityFree) {
         this.id = id;
         this.name = name;
         this.area = area;
         this.cost = cost;
-        this.maxPeoPel = maxPeoPel;
+        this.maxPeople = maxPeople;
         this.facilityType = facilityType;
         this.rentType = rentType;
         this.standardRoom = standardRoom;
@@ -93,12 +90,12 @@ import java.util.Set;
         this.cost = cost;
     }
 
-    public int getMaxPeoPel() {
-        return maxPeoPel;
+    public int getMaxPeople() {
+        return maxPeople;
     }
 
-    public void setMaxPeoPel(int maxPeoPel) {
-        this.maxPeoPel = maxPeoPel;
+    public void setMaxPeople(int maxPeople) {
+        this.maxPeople = maxPeople;
     }
 
     public FacilityType getFacilityType() {

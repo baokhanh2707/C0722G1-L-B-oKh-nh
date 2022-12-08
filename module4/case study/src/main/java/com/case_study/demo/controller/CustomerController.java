@@ -27,9 +27,10 @@ public class CustomerController {
     private ICustomerTypeService iCustomerTypeService;
 
     @GetMapping("")
-    public String listCustomer(@RequestParam(defaultValue = "") String search, @PageableDefault(page = 0, size = 5) Pageable pageable, Model model) {
-        Page<Customer> customerList = iCustomerService.searchByName(search, pageable);
+    public String listCustomer(@RequestParam(defaultValue = "") String searchByName,@RequestParam(defaultValue = "") String searchByEmail,@RequestParam(defaultValue = "") String searchByType, @PageableDefault(page = 0, size = 5) Pageable pageable, Model model) {
+        Page<Customer> customerList = iCustomerService.searchByName(searchByName,searchByEmail,searchByType, pageable);
         model.addAttribute("customerList", customerList);
+        model.addAttribute("customerTypeList", iCustomerTypeService.findAll());
         return "customer/list";
     }
 
@@ -58,7 +59,7 @@ public class CustomerController {
     public String edit(@RequestParam(required = false) Integer id, Model model) {
         Optional<Customer> customer = iCustomerService.findById(id);
         model.addAttribute("customerTypeList", iCustomerTypeService.findAll());
-        model.addAttribute("customerDto", new CustomerDto());
+        model.addAttribute("customerDto", customer.get());
         return "/customer/edit";
     }
 
@@ -82,4 +83,5 @@ public class CustomerController {
         redirect.addFlashAttribute("message", "Xóa thành công");
         return "redirect:/customer";
     }
+
 }

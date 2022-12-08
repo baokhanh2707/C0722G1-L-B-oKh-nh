@@ -8,7 +8,7 @@ import java.util.Optional;
 
 public interface IFacilityService {
     Facility save(Facility facility);
-    Page<Facility> searchByName(String name, Pageable pageable);
+    Page<Facility> search(String name,String facilityType, Pageable pageable);
     Optional<Facility> findById(Long id);
     void delete(Long id);
 }
