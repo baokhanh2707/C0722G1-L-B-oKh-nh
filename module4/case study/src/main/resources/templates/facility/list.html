@@ -14,12 +14,14 @@
         Add Facility
     </a>
 </p>
-<form class="d-flex" style="width: 300px; text-align: right">
-    <input name="searchByName" class="form-control me-2" type="text" placeholder="searchByName" aria-label="Search">
-    <input class="btn btn-outline-warning my-2 my-sm-0" type="submit" value="Search" >
-</form>
-<form class="d-flex" style="width: 300px; text-align: right">
-    <input name="searchByFacilityType" class="form-control me-2" type="text" placeholder="searchByFacilityType" aria-label="Search">
+<form class="d-flex" style="text-align: right">
+    <div class="pt-2">Search By:</div>
+    <input style="width: 200px" name="searchByName" class="form-control me-2" type="text" placeholder="searchByName" aria-label="Search">
+    <select style="width: 200px" name="searchByFacilityType" class="form-control me-2" placeholder="searchByFacilityType" aria-label="Search">
+        <option th:value="${''}" class="text-danger">Chọn loại dịch vụ..</option>
+        <option th:each="item : ${facilityTypeList}" th:value="${item.id}"
+                th:text="${item.name}"></option>
+    </select>
     <input class="btn btn-outline-warning my-2 my-sm-0" type="submit" value="Search" >
 </form>
 <p th:text="${message}" style="color: crimson">
@@ -123,10 +125,5 @@
     </ul>
 </div>
 </div>
-<!--<div>-->
-<!--    <a th:href="@{/facility(page=${facilityList.number - 1})}" th:if="${facilityList.hasPrevious()}">Previous</a>-->
-<!--    <span th:text="${facilityList.number + 1} + '/' +${facilityList.totalPages}"></span>-->
-<!--    <a th:href="@{/facility(page=${facilityList.number + 1})}" th:if="${facilityList.hasNext()}">Next</a>-->
-<!--</div>-->
 </body>
 </html>

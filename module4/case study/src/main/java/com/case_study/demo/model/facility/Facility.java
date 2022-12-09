@@ -1,6 +1,9 @@
 package com.case_study.demo.model.facility;
 
+import com.case_study.demo.model.contract.Contract;
+
 import javax.persistence.*;
+import java.util.Set;
 
 @Entity
     @Table(name = "facility")
@@ -26,8 +29,8 @@ import javax.persistence.*;
         @JoinColumn(name = "rent_type_id", referencedColumnName = "id")
         private RentType rentType;
 
-//        @OneToMany(mappedBy = "facility")
-//        private Set<Contract> contracts;
+        @OneToMany(mappedBy = "facility")
+        private Set<Contract> contracts;
 
         private String standardRoom;
 

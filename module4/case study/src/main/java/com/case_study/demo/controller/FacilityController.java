@@ -19,6 +19,7 @@ import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import java.util.Optional;
 
+
 @Controller
 @RequestMapping("/facility")
 public class FacilityController {
@@ -40,14 +41,14 @@ public class FacilityController {
 
     @GetMapping("/create")
     public String create(Model model) {
-        model.addAttribute("facilityDto", new Facility());
+        model.addAttribute("facility", new Facility());
         model.addAttribute("facilityTypeList", iFacilityTypeService.finAll());
         model.addAttribute("rentTypeList", iRentTypeService.finAll());
         return "/facility/create";
     }
 
     @PostMapping("/save")
-    public String save( @ModelAttribute("facilityDto") Facility facility, RedirectAttributes redirectAttributes) {
+    public String save( @ModelAttribute("facility") Facility facility, RedirectAttributes redirectAttributes) {
         iFacilityService.save(facility);
         redirectAttributes.addFlashAttribute("message", "Thêm mới thành công");
         return "redirect:/facility";
@@ -63,8 +64,8 @@ public class FacilityController {
     @GetMapping("/edit")
     public String edit(@RequestParam(required = false) Long id, Model model) {
         Optional<Facility> facility = iFacilityService.findById(id);
-        model.addAttribute("facility",facility);
-        model.addAttribute("customerTypeList", iFacilityTypeService.finAll());
+        model.addAttribute("facility",facility.get());
+        model.addAttribute("facilityTypeList", iFacilityTypeService.finAll());
         model.addAttribute("rentTypeList", iRentTypeService.finAll());
         return "/facility/edit";
     }

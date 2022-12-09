@@ -50,43 +50,56 @@
                             <form th:action="@{/facility/update}" th:object="${facility}"
                                   method="post" novalidate="novalidate">
                                 <div class="row" id="form">
-
                                     <div class="col-lg-6">
-                                        <input hidden type="text"th:field="*{id}"
+                                        <input hidden type="text" th:field="*{id}"
                                                class="form-control form-control-lg"/>
                                         <div class="form-outline mb-4">
-                                            <label class="form-label" >Name</label>
-                                            <input type="text" th:field="*{name}"
+                                            <label class="form-label" for="facilityType">Facility Type</label>
+                                            <div class="input-group">
+                                                <select style="height: 49px" id="facilityType" class="form-select" th:field="*{facilityType.id}"
+                                                        onchange="changeForm(this)">
+                                                    <option th:value="${''}" class="text-danger">Chọn loại dịch vụ..</option>
+                                                    <option th:each="item : ${facilityTypeList}" th:value="${item.id}"
+                                                            th:text="${item.name}"></option>
+                                                </select>
+                                                <span class="input-group-text"><i
+                                                        class="fa-solid fa-ranking-star"></i></span>
+                                            </div>
+                                        </div>
+                                        <div class="form-outline mb-4">
+                                            <label id="name" class="form-label" >Name</label>
+                                            <input type="text"th:field="*{name}"
                                                    class="form-control form-control-lg"/>
                                             <p th:errors="*{name}"></p>
                                         </div>
-                                        <div class="form-outline mb-4">
+                                        <div id="area" class="form-outline mb-4">
                                             <label class="form-label" for="form3Example1cg">Area</label>
                                             <input type="text" id="form3Example1cg" th:field="*{area}"
                                                    class="form-control form-control-lg"/>
                                             <p th:errors="*{area}"></p>
                                         </div>
-                                            <div class="form-outline mb-4">
-                                                <label class="form-label" for="form3Example1cg">Cost</label>
-                                                <input type="text" th:field="*{cost}"
-                                                       class="form-control form-control-lg"/>
-                                                <p th:errors="*{cost}"></p>
-                                            </div>
-                                        <div class="form-outline mb-4">
+                                        <div id="cost" class="form-outline mb-4">
+                                            <label class="form-label" for="form3Example1cg">Cost</label>
+                                            <input type="text" th:field="*{cost}"
+                                                   class="form-control form-control-lg"/>
+                                            <p th:errors="*{cost}"></p>
+                                        </div>
+                                        <div id="maxPeople" class="form-outline mb-4">
                                             <label class="form-label" for="form3Example1cg">Max PeoPle</label>
                                             <input type="text" th:field="*{maxPeople}"
                                                    class="form-control form-control-lg"/>
                                             <p th:errors="*{maxPeople}"></p>
                                         </div>
-                                        <div class="form-outline mb-4">
-                                            <label class="form-label" for="customerType">Rent Type Id</label>
+
+                                        <div>
+                                            <label id="rentTypeForm" class="form-label" for="rentType">Rent Type</label>
                                             <div class="input-group">
-                                                <select style="height: 49px" id="customerType"
+                                                <select style="height: 49px" id="rentType"
                                                         class="form-select"
-                                                        th:field="*{facilityType}">
-                                                    <option th:each="facilityType: ${facilityTypeList}"
-                                                            th:value="${facilityType.id}"
-                                                            th:text="${facilityType.name}"></option>
+                                                        th:field="*{rentType}">
+                                                    <option th:each="rentType: ${rentTypeList}"
+                                                            th:value="${rentType.id}"
+                                                            th:text="${rentType.name}"></option>
                                                 </select>
                                                 <span class="input-group-text"><i
                                                         class="fa-solid fa-ranking-star"></i></span>
@@ -96,12 +109,12 @@
 
                                     <div class="col-lg-6">
 
-                                        <div class="form-outline mb-4">
+                                        <div id="standard" class="form-outline mb-4">
                                             <label class="form-label">Standard Room</label>
                                             <div class="input-group">
                                                 <select style="height: 49px" class="form-select"
                                                         th:field="*{standardRoom}">
-                                                    <option value="null" selected>SELECT Standard Room *
+                                                    <option value="" selected>SELECT Standard Room *
                                                     </option>
                                                     <option value="Vip">Vip</option>
                                                     <option value="Bình Thường">Normal</option>
@@ -110,25 +123,27 @@
                                                         class="fa-solid fa-ranking-star"></i></span>
                                             </div>
                                         </div>
-                                        <label class="form-label">Description Other Convenience</label>
-                                        <div class="form-outline mb-4">
-                                            <input type="text" th:field="*{descriptionOtherConvenience}"
-                                                   class="form-control form-control-lg"/>
+                                        <div id="descrip">
+                                            <label  class="form-label">Description Other Convenience</label>
+                                            <div class="form-outline mb-4">
+                                                <input type="text" th:field="*{descriptionOtherConvenience}"
+                                                       class="form-control form-control-lg"/>
+                                            </div>
                                         </div>
-                                        <div class="form-outline mb-4">
+                                        <div id="poolArea" class="form-outline mb-4">
                                             <label class="form-label">Pool Area</label>
                                             <input th:field="*{poolArea}" type="text"
                                                    class="form-control form-control-lg"/>
                                             <p th:errors="*{poolArea}"></p>
                                         </div>
-                                        <div class="form-outline mb-4">
+                                        <div id="numberOfFloors" class="form-outline mb-4">
                                             <label class="form-label">Number Of Floors</label>
                                             <input th:field="*{numberOfFloors}" type="text"
                                                    class="form-control form-control-lg"/>
                                             <p th:errors="*{numberOfFloors}"></p>
                                         </div>
-                                        <div class="form-outline mb-4">
-                                            <label class="form-label" for="form3Example1cg">Text</label>
+                                        <div id="text" class="form-outline mb-4">
+                                            <label class="form-label" for="form3Example1cg">Facility Free</label>
                                             <input type="text" th:field="*{facilityFree}"
                                                    class="form-control form-control-lg"/>
                                         </div>
@@ -139,7 +154,6 @@
                                             class="btn btn-success btn-block btn-lg gradient-custom-4 text-body">
                                         Edit
                                     </button>
-
                                 </div>
                             </form>
                         </div>
@@ -149,8 +163,41 @@
         </div>
     </div>
 </section>
-
 </body>
+<script>
+    function changeForm(type) {
+        let facilityType = type.value;
+        switch (facilityType) {
+            case "1":
+                document.getElementById("standard").style.display = "block";
+                document.getElementById("descrip").style.display = "block";
+                document.getElementById("poolArea").style.display = "block";
+                document.getElementById("numberOfFloors").style.display = "block";
+                document.getElementById("text").style.display = "none";
+                break;
+            case "2":
+                document.getElementById("standard").style.display = "block";
+                document.getElementById("descrip").style.display = "block";
+                document.getElementById("poolArea").style.display = "none";
+                document.getElementById("numberOfFloors").style.display = "block";
+                document.getElementById("text").style.display = "none";
+                break;
+            case "3":
+                document.getElementById("standard").style.display = "none";
+                document.getElementById("descrip").style.display = "none";
+                document.getElementById("poolArea").style.display = "none";
+                document.getElementById("numberOfFloors").style.display = "none";
+                document.getElementById("text").style.display = "block";
+                break
+            default:
+                document.getElementById("standardRoomForm").style.display = "none";
+                document.getElementById("descrip").style.display = "none";
+                document.getElementById("poolArea").style.display = "none";
+                document.getElementById("numberOfFloors").style.display = "none";
+                document.getElementById("text").style.display = "none";
+        }
+    }
+</script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
         crossorigin="anonymous"></script>

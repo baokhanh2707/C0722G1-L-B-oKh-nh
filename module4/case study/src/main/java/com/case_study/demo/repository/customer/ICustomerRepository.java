@@ -13,8 +13,10 @@ public interface ICustomerRepository extends JpaRepository<Customer,Integer> {
 //            ,nativeQuery = true)
 //    Page<Customer> searchByName(@Param("name") String name, Pageable pageable);
 
-    @Query(value = "select * from customer as c where  (c.name like concat('%',:name,'%') and c.email like concat('%',:email,'%') and c.customer_type_id like concat ('%',:customerTypeId,'%') )"
-            , countQuery = "select * from customer as c where  (c.name like concat('%',:name,'%') and c.email like concat('%',:email,'%') and c.customer_type_id like concat ('%',:customerTypeId,'%') )"
+    @Query(value = "select * from customer as c where  (c.name like concat('%',:name,'%') and c.email like concat('%',:email,'%') " +
+            "and c.customer_type_id like concat ('%',:customerTypeId,'%') )"
+            , countQuery = "select * from customer as c where  (c.name like concat('%',:name,'%') and c.email like concat('%',:email,'%') " +
+            "and c.customer_type_id like concat ('%',:customerTypeId,'%') )"
             , nativeQuery = true)
     Page<Customer> searchByName(@Param("name") String name, @Param("email") String email, @Param("customerTypeId") String customerTypeId, Pageable pageable);
 }
