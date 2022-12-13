@@ -8,6 +8,7 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
 import java.util.Optional;
 @Service
 public class FacilityService implements IFacilityService {
@@ -31,5 +32,10 @@ public class FacilityService implements IFacilityService {
     @Override
     public void delete(Long id) {
         iFacilityRepository.deleteById(id);
+    }
+
+    @Override
+    public List<Facility> finAll() {
+        return iFacilityRepository.findAll();
     }
 }

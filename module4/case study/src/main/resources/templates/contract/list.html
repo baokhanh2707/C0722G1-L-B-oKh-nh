@@ -9,7 +9,14 @@
 <body>
 <div th:insert="~{layout::header}"></div>
 <h1 class="align-bottom text-center">Contract List</h1>
-
+<p>
+    <a class="btn btn-outline-warning my-2 my-sm-0" th:href="@{/contract/create}">
+        Add Contract
+    </a>
+</p>
+<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+    Add Contract Detail
+</button>
 <p th:text="${message}" style="color: crimson">
 </p>
 <table class="table table-dark" border="1">
@@ -21,61 +28,39 @@
         <th>Date End</th>
         <th>Deposits</th>
         <th>Total</th>
-<!--        <th>Accompanying Services</th>-->
+        <!--        <th>Accompanying Services</th>-->
     </tr>
     <th:block th:each="contract, stt : ${contractListPage}">
         <tr>
             <td th:text="${stt.count}+${contractListPage.number}*${contractListPage.size}"></td>
-            <td th:text="${contract.facilityName}"></td>
-            <td th:text="${contract.customerName}"></td>
-            <td th:text="${contract.startDay}"></td>
-            <td th:text="${contract.endDay}"></td>
-            <td th:text="${contract.deposit}"></td>
-            <td th:text="${contract.totalMoney}"></td>
-<!--            <td><a class="btn btn-outline-warning my-2 my-sm-0" th:href="@{/customer/edit(id=${cus.id})}">Edit</a></td>-->
-<!--            <td>-->
-<!--                <button th:onclick="|idRemove('__${cus.id}__', '__${cus.name}__')|"-->
-<!--                        class="btn btn-outline-warning my-2 my-sm-0" type="button" data-bs-toggle="modal"-->
-<!--                        data-bs-target="#exampleModal">-->
-<!--                    Xoá-->
-<!--                </button>-->
-<!--            </td>-->
+            <td th:text="${contract.getFacilityName()}"></td>
+            <td th:text="${contract.getCustomerName()}"></td>
+            <td th:text="${contract.getStartDay()}"></td>
+            <td th:text="${contract.getEndDay()}"></td>
+            <td th:text="${contract.getDeposit()}"></td>
+            <td th:text="${contract.getTotalMoney()}"></td>
         </tr>
     </th:block>
 </table>
-<!--<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"-->
-<!--     aria-hidden="true">-->
-<!--    <div class="modal-dialog">-->
-<!--        <div class="modal-content">-->
-<!--            <div class="modal-header">-->
-<!--                <h5 class="modal-title" id="exampleModalLabel">DELETE</h5>-->
-<!--                <button type="button" class="btn-close" data-bs-dismiss="modal"-->
-<!--                        aria-label="Close"></button>-->
-<!--            </div>-->
-<!--            <div class="modal-body">-->
-<!--                <span>Are you sure to delete:  <span style="color: #db365d " id="deleteModal"></span></span>-->
-<!--            </div>-->
-<!--            <div class="modal-footer">-->
-<!--                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close-->
-<!--                </button>-->
-<!--                <form th:action="@{/customer/delete}" method="post">-->
-<!--                    <input type="hidden" name="id" id="idInput">-->
-<!--                    <button class="btn btn-primary">DELETE</button>-->
-<!--                </form>-->
-<!--            </div>-->
-<!--        </div>-->
-<!--    </div>-->
-<!--</div>-->
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+
+<script
+        src="https://code.jquery.com/jquery-3.6.1.js"
+        integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI="
+        crossorigin="anonymous"></script>
+
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
         crossorigin="anonymous"></script>
-<!--<script th:inline="javascript">-->
-<!--    function idRemove(id, name) {-->
-<!--        debugger-->
-<!--        document.getElementById("idInput").value = id;-->
-<!--        document.getElementById("deleteModal").innerText = name;-->
-<!--    }-->
-<!--</script>-->
+
 <div class="d-flex justify-content-center ">
     <ul class="pagination">
         <li class="page-item disabled" th:if="${contractListPage.number == 0}">
@@ -98,7 +83,56 @@
         </li>
     </ul>
 </div>
+</body>
+
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="modal-body">
+                    <label for="name">name</label>
+                    <input type="text" id="name"><br>
+
+                    <label for="quantity">Quantity</label>
+                    <input type="quantity" id="quantity"><br>
+
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Save changes</button>
+            </div>
+        </div>
+    </div>
 </div>
-</body>
-</body>
+<script>
+
+    $("#save").click(function () {
+        //lay du lieu
+        let name = $('#name').val();
+        let quantity = $('#quantity').val();
+        let contractDetail = {
+            name: name,
+            quantity: quantity,
+        };
+        // goi ajax
+        $.ajax({
+            headers: {
+                'Accept': 'application/json',
+                'Content-Type': 'application/json'
+            },
+            type: "POST",
+            data: JSON.stringify(contractDetail),
+            //tên API
+            url: "http://localhost:8080/contract"
+        })
+    }
+    //xử lý khi thành công
+</script>
 </html>
