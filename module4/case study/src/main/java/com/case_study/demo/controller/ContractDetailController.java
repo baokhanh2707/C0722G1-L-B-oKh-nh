@@ -1,24 +1,27 @@
 package com.case_study.demo.controller;
 
+import com.case_study.demo.model.contract.AttachFacility;
 import com.case_study.demo.model.contract.ContractDetail;
+import com.case_study.demo.service.contract.IAttachFacilityService;
 import com.case_study.demo.service.contract.IContractDetailService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.CrossOrigin;
-import org.springframework.web.bind.annotation.ModelAttribute;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 @RestController
 @CrossOrigin("*")
+@RequestMapping("/contractDetail")
 public class ContractDetailRestController {
     @Autowired
     private IContractDetailService iContractDetailService;
-    @PostMapping("/save")
-    public String save(@ModelAttribute("contractDetail") ContractDetail contractDetail, RedirectAttributes redirectAttributes) {
+
+    @PostMapping("/create")
+    public ResponseEntity<ContractDetail> create(@RequestBody ContractDetail contractDetail) {
         iContractDetailService.save(contractDetail);
-        redirectAttributes.addFlashAttribute("message", "Thêm mới thành công");
-        return "redirect:/";
+        return new ResponseEntity<>(contractDetail, HttpStatus.OK);
     }
+
 
 }

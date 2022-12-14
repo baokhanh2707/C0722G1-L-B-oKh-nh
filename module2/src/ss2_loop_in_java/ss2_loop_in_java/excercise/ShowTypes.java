@@ -61,17 +61,23 @@ public class ShowTypes {
                         System.out.println("");
                     }
                 break;
+
                 case 3:
-                    int h=5;
-                    for (int i = 0; i <=h ; i++) {
-                        for (int j = 1; j <= h-i ; j++) {
-                            System.out.print(" ");
+                    System.out.println("nhập độ dài n");
+                    Scanner scanner = new Scanner(System.in);
+                    int n = scanner.nextInt();
+                    for (int i = 0; i < n; i++) {
+                        for (int j = 0; j <= i; j++) {
+                            if (i == 0 || j == 0 || i == j || i == n-1) {
+                                System.out.print("*");
+                            }
+                            else {
+                                System.out.print(" ");
+                            }
                         }
-                        for (int k = 1; k <= 2 * i - 1 ; k++) {
-                            System.out.print("*");
-                        }
-                        System.out.println("");
+                        System.out.println();
                     }
+
                 case 4:
                     System.exit(4);
                 default:
