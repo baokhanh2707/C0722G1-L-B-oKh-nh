@@ -32,7 +32,7 @@ public class CustomerService implements ICustomerService {
 
     @Override
     public void delete(Integer id) {
-       iCustomerRepository.deleteById(id);
+       iCustomerRepository.delete(id);
     }
 
     @Override

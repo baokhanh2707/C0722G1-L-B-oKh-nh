@@ -8,4 +8,5 @@ import java.util.List;
 public interface IContractDetailService {
     List<ContractDetail>finAll();
     ContractDetail save(ContractDetail contractDetail);
+
 }

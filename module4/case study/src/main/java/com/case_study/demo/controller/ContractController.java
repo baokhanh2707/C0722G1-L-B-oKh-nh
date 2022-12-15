@@ -2,7 +2,11 @@ package com.case_study.demo.controller;
 
 import com.case_study.demo.dto.ContractView;
 import com.case_study.demo.dto.CustomerDto;
+import com.case_study.demo.model.contract.AttachFacility;
 import com.case_study.demo.model.contract.Contract;
+import com.case_study.demo.model.contract.ContractDetail;
+import com.case_study.demo.service.contract.IAttachFacilityService;
+import com.case_study.demo.service.contract.IContractDetailService;
 import com.case_study.demo.service.contract.IContractService;
 import com.case_study.demo.service.customer.ICustomerService;
 import com.case_study.demo.service.employee.IEmployeeService;
@@ -27,11 +31,21 @@ public class ContractController {
     private IFacilityService iFacilityService;
     @Autowired
     private IEmployeeService employeeService;
+    @Autowired
+    private IContractDetailService iContractDetailService;
+    @Autowired
+    private IAttachFacilityService iAttachFacilityService;
 
     @GetMapping("")
     public String pageContract(@PageableDefault(page = 0, size = 5) Pageable pageable, Model model){
         Page<ContractView> contractPage=iContractService.finAll(pageable);
         model.addAttribute("contractListPage",contractPage);
+        model.addAttribute("contractDetail", new ContractDetail());
+        model.addAttribute("contractList",iContractService.findAll());
+//        model.addAttribute("contractDetail",iContractDetailService.finAll());
+        model.addAttribute("attachFacility",new AttachFacility());
+        model.addAttribute("attachFacilityList",iAttachFacilityService.finAll());
+        System.out.println(iAttachFacilityService.finAll());
         return "contract/list";
     }
 
@@ -41,6 +55,7 @@ public class ContractController {
         model.addAttribute("customerList",iCustomerService.finAll());
         model.addAttribute("facilityList",iFacilityService.finAll());
         model.addAttribute("employeeList",employeeService.finAll());
+
         return "/contract/create";
     }
 

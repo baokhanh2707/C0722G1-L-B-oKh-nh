@@ -3,6 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+            integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+            crossorigin="anonymous"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
           integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 </head>
@@ -14,9 +17,6 @@
         Add Contract
     </a>
 </p>
-<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-    Add Contract Detail
-</button>
 <p th:text="${message}" style="color: crimson">
 </p>
 <table class="table table-dark" border="1">
@@ -28,6 +28,7 @@
         <th>Date End</th>
         <th>Deposits</th>
         <th>Total</th>
+        <th>AttachFacility</th>
         <!--        <th>Accompanying Services</th>-->
     </tr>
     <th:block th:each="contract, stt : ${contractListPage}">
@@ -39,12 +40,17 @@
             <td th:text="${contract.getEndDay()}"></td>
             <td th:text="${contract.getDeposit()}"></td>
             <td th:text="${contract.getTotalMoney()}"></td>
+            <td>
+                <button class="btn btn-outline-warning my-2 my-sm-0" th:value="${contract.getId()}"
+                        id="addContractDetail" type="button" data-bs-toggle="modal"
+                        data-bs-target="#exampleModal">
+                    +
+                </button>
+            </td>
         </tr>
     </th:block>
 </table>
-<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
-        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
-        crossorigin="anonymous"></script>
+
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
         integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
         crossorigin="anonymous"></script>
@@ -60,6 +66,48 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
         crossorigin="anonymous"></script>
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1>Add new Attach Facility</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form th:action="@{/contractDetail/save}" th:object="${contractDetail}" th:method="post">
+<table>
+                    <tr>
+                        <td>
+                            <label>Id Contract</label>
+                            <input type="text" readonly name="id" id="idInput" th:field="*{contract}">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label>AttachFacility</label>
+                            <select th:field="*{attachFacility}">
+                                <option th:each="attachFacility:${attachFacilityList}"
+                                        th:value="${attachFacility.id}"
+                                        th:text="${attachFacility.name}"></option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label th:for="quantity">Quantity</label>
+                            <input type="number" th:field="*{quantity}">
+                        </td>
+                    </tr>
+</table>
+                    <div class="modal-footer">
+                        <button type="submit" class="btn btn-primary">Save changes</button>
+                    </div>
+                </form>
+
+            </div>
+        </div>
+    </div>
+</div>
 
 <div class="d-flex justify-content-center ">
     <ul class="pagination">
@@ -83,56 +131,11 @@
         </li>
     </ul>
 </div>
-</body>
-
-
-<!-- Modal -->
-<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body">
-                <div class="modal-body">
-                    <label for="name">name</label>
-                    <input type="text" id="name"><br>
-
-                    <label for="quantity">Quantity</label>
-                    <input type="quantity" id="quantity"><br>
-
-                </div>
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-primary">Save changes</button>
-            </div>
-        </div>
-    </div>
-</div>
 <script>
-
-    $("#save").click(function () {
-        //lay du lieu
-        let name = $('#name').val();
-        let quantity = $('#quantity').val();
-        let contractDetail = {
-            name: name,
-            quantity: quantity,
-        };
-        // goi ajax
-        $.ajax({
-            headers: {
-                'Accept': 'application/json',
-                'Content-Type': 'application/json'
-            },
-            type: "POST",
-            data: JSON.stringify(contractDetail),
-            //tên API
-            url: "http://localhost:8080/contract"
-        })
-    }
-    //xử lý khi thành công
+    $("#addContractDetail").click(function () {
+        $("#idInput").val(this.value);
+    })
 </script>
+</body>
 </html>
+

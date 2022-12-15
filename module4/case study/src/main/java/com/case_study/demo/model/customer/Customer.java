@@ -17,6 +17,8 @@ public class Customer {
     private String phoneNumber;
     private String email;
     private String address;
+    @Column(columnDefinition = "bit default false")
+    private boolean flagDelete;
     @ManyToOne
     @JoinColumn(name = "customer_type_id",referencedColumnName = "id")
     private CustomerType customerType;
@@ -34,7 +36,7 @@ public class Customer {
     public Customer() {
     }
 
-    public Customer(Integer id, String name, String dateOfBirth, String gender, String idCard, String phoneNumber, String email, String address, CustomerType customerType) {
+    public Customer(Integer id, String name, String dateOfBirth, String gender, String idCard, String phoneNumber, String email, String address, boolean flagDelete, CustomerType customerType, Set<Contract> contracts) {
         this.id = id;
         this.name = name;
         this.dateOfBirth = dateOfBirth;
@@ -43,7 +45,25 @@ public class Customer {
         this.phoneNumber = phoneNumber;
         this.email = email;
         this.address = address;
+        this.flagDelete = flagDelete;
         this.customerType = customerType;
+        this.contracts = contracts;
+    }
+
+    public boolean isFragDelete() {
+        return flagDelete;
+    }
+
+    public void setFragDelete(boolean flagDelete) {
+        this.flagDelete = flagDelete;
+    }
+
+    public Set<Contract> getContracts() {
+        return contracts;
+    }
+
+    public void setContracts(Set<Contract> contracts) {
+        this.contracts = contracts;
     }
 
     public Integer getId() {
