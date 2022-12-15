@@ -1,5 +1,6 @@
 package com.case_study.demo.service.contract.impl;
 
+import com.case_study.demo.dto.ContractDetailDto;
 import com.case_study.demo.model.contract.ContractDetail;
 import com.case_study.demo.repository.contract.IContractDetailRepository;
 import com.case_study.demo.repository.contract.IContractRepository;
@@ -20,5 +21,10 @@ public class ContractDetailService implements IContractDetailService {
     @Override
     public ContractDetail save(ContractDetail contractDetail) {
         return iContractDetailRepository.save(contractDetail);
+    }
+
+    @Override
+    public List<ContractDetailDto> ContractDetails(Long id) {
+        return iContractDetailRepository.ContractDetails(id);
     }
 }
