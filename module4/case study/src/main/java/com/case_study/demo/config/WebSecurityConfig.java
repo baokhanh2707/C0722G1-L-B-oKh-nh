@@ -1,6 +1,6 @@
-package com.example.security.config;
+package com.case_study.demo.config;
 
-import com.example.security.service.MyUserDetailService;
+import com.case_study.demo.service.MyUserDetailService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -18,6 +18,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
     @Autowired
     private MyUserDetailService userDetailService;
 
+
     @Bean
     public BCryptPasswordEncoder passwordEncoder() {
         return new BCryptPasswordEncoder();
@@ -33,22 +34,17 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
     protected void configure(HttpSecurity http) throws Exception {
         http.csrf().disable()
                 .formLogin()
-                .defaultSuccessUrl("/home",true)
-//                .and().authorizeRequests().antMatchers("/user").hasAnyRole( "ADMIN","USER")
-//                .and().authorizeRequests().antMatchers("/admin").hasRole("ADMIN")
+                .defaultSuccessUrl("/", true)
                 .and()
                 .authorizeRequests()
                 .anyRequest().authenticated();
-
-
-//        http.authorizeRequests().and().rememberMe()
-//                .tokenRepository(persistentTokenReepository())
-//                .tokenValiditySeconds(60 * 5);
+     http.authorizeRequests().and().rememberMe()
+              .tokenRepository(persistentTokenReepository())
+               .tokenValiditySeconds(60 * 5);
     }
-//    @Bean
-//    public PersistentTokenRepository persistentTokenReepository() {
-//        InMemoryTokenRepositoryImpl inMemoryTokenRepository = new InMemoryTokenRepositoryImpl();
-//        return inMemoryTokenRepository;
-//    }
+   @Bean
+    public PersistentTokenRepository persistentTokenReepository() {
+       InMemoryTokenRepositoryImpl inMemoryTokenRepository = new InMemoryTokenRepositoryImpl();
+       return inMemoryTokenRepository;
+   }
 }
-
