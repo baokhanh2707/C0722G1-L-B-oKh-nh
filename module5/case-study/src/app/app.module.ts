@@ -9,6 +9,10 @@ import { NavigationComponent } from './layout/navigation/navigation.component';
 import { FacilityListComponent } from './facility/list/facility-list.component';
 import { FacilityEditComponent } from './facility/edit/facility-edit.component';
 import { FacilityCreateComponent } from './facility/create/facility-create.component';
+import { ListComponent } from './customer/list/list.component';
+import { CreateComponent } from './customer/create/create.component';
+import { EditComponent } from './customer/edit/edit.component';
+import { ContractCreateComponent } from './contract-create/contract-create.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +22,11 @@ import { FacilityCreateComponent } from './facility/create/facility-create.compo
     NavigationComponent,
     FacilityListComponent,
     FacilityEditComponent,
-    FacilityCreateComponent
+    FacilityCreateComponent,
+    ListComponent,
+    CreateComponent,
+    EditComponent,
+    ContractCreateComponent
   ],
   imports: [
     BrowserModule,
