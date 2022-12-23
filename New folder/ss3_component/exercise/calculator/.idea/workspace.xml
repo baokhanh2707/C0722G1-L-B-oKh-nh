@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="9f3bea05-2cb8-4e69-bcf3-9c02fe13b53e" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/angular-calculator-app/src/app/calculator/calculator.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../case_study/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../case_study/.idea/case_study.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../case_study/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../case_study/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../case_study/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../case_study/contract/create.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../case_study/contract/list.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../case_study/customer/create.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../case_study/customer/edit.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../case_study/customer/list.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../case_study/facility/create.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../case_study/facility/edit.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../case_study/facility/list.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../case_study/home.html" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../.." />
+  </component>
+  <component name="ProjectId" id="2JIXBf4QR7SXah70RzkXkeEM4xY" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="ts.external.directory.path" value="D:\C0722G1-L-B-oKh-nh\module_5\ss3_component\exercise\calculator\angular-calculator-app\node_modules\typescript\lib" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="9f3bea05-2cb8-4e69-bcf3-9c02fe13b53e" name="Default Changelist" comment="" />
+      <created>1671766437201</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1671766437201</updated>
+      <workItem from="1671766441443" duration="22000" />
+      <workItem from="1671770801670" duration="2662000" />
+      <workItem from="1671783786560" duration="488000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="2" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="549" y="163" key="FileChooserDialogImpl" timestamp="1671766471212">
+      <screen x="0" y="0" width="1536" height="816" />
+    </state>
+    <state x="549" y="163" key="FileChooserDialogImpl/0.0.1536.816@0.0.1536.816" timestamp="1671766471211" />
+  </component>
+</project>
