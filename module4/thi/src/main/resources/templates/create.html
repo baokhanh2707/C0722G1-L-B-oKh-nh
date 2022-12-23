@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Create Blog</h1>
+<p>
+    <a th:href="@{/}">
+        Back to list
+    </a>
+</p>
+<div id="form">
+    <form th:action="@{/save}" th:object="${questionContent}"
+          method="post" novalidate="novalidate">
+        <input type="hidden" th:field="*{id}"/>
+        <div>
+            <label>Title</label>
+            <input type="text" th:field="*{title}"/>
+        </div>
+        <div>
+            <label>content</label>
+            <input type="text" th:field="*{content}"/>
+        </div>
+
+        <div>
+            <label>Loại câu hỏi</label>
+            <td>
+                <select th:field="*{idQuestionType}">
+                    <option th:each="ques: ${questionTypes}" th:value="${ques.id}" th:text="${ques.name}"></option>
+                </select>
+            </td>
+        </div>
+        <input type="submit" value="Save"/>
+    </form>
+</div>
+</body>
+</html>

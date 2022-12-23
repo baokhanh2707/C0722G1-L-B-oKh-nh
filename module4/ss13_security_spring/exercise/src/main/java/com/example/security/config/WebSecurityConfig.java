@@ -34,21 +34,21 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
         http.csrf().disable()
                 .formLogin()
                 .defaultSuccessUrl("/home",true)
-//                .and().authorizeRequests().antMatchers("/user").hasAnyRole( "ADMIN","USER")
-//                .and().authorizeRequests().antMatchers("/admin").hasRole("ADMIN")
+                .and().authorizeRequests().antMatchers("/user").hasAnyRole( "ADMIN","USER")
+                .and().authorizeRequests().antMatchers("/admin").hasRole("ADMIN")
                 .and()
                 .authorizeRequests()
                 .anyRequest().authenticated();
 
 
-//        http.authorizeRequests().and().rememberMe()
-//                .tokenRepository(persistentTokenReepository())
-//                .tokenValiditySeconds(60 * 5);
+        http.authorizeRequests().and().rememberMe()
+                .tokenRepository(persistentTokenReepository())
+                .tokenValiditySeconds(60 * 5);
     }
-//    @Bean
-//    public PersistentTokenRepository persistentTokenReepository() {
-//        InMemoryTokenRepositoryImpl inMemoryTokenRepository = new InMemoryTokenRepositoryImpl();
-//        return inMemoryTokenRepository;
-//    }
+    @Bean
+    public PersistentTokenRepository persistentTokenReepository() {
+        InMemoryTokenRepositoryImpl inMemoryTokenRepository = new InMemoryTokenRepositoryImpl();
+        return inMemoryTokenRepository;
+    }
 }
 
