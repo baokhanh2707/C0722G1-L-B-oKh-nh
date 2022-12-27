@@ -27,7 +27,7 @@
     <tr *ngFor="let item of customers">
     <td>{{item.id}}</td>
     <td>{{item.name}}</td>
-    <td>{{item.customerTypeId}}</td>
+    <td>{{item.customerTypeId?.name}}</td>
     <td>{{item.dateOfBirth}}</td>
     <td>
       <span *ngIf="item.gender== true">Nam</span>
