@@ -30,8 +30,8 @@
     <td>{{item.customerTypeId?.name}}</td>
     <td>{{item.dateOfBirth}}</td>
     <td>
-      <span *ngIf="item.gender== true">Nam</span>
-      <span *ngIf="item.gender== false">Nữ</span>
+      <span *ngIf="item.gender=== 'Nam' ">Nam</span>
+      <span *ngIf="item.gender== 'Nữ'">Nữ</span>
     </td>
     <td>{{item.idCard}}</td>
     <td>{{item.phoneNumber}}</td>

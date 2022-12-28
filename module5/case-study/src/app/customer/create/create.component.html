@@ -69,12 +69,11 @@
                     </div>
 
                     <div class="form-outline mb-4">
-                      <label class="form-label" for="customerType">Customer Type</label>
+                      <label class="form-label" for="customerTypeId">Customer Type</label>
                       <div class="input-group">
-                        <select style="height: 49px" class="form-select" id="customerType"
-                                formControlName="customerType"
-                        >
-                          <option *ngFor="let i of customerTypes">{{i.name}}</option>
+                        <select style="height: 49px" class="form-select" id="customerTypeId"
+                                formControlName="customerTypeId">
+                          <option *ngFor="let i of customerTypes" [ngValue]="i">{{i.name}}</option>
                         </select>
 
                       </div>
@@ -84,8 +83,8 @@
                       <div class="input-group">
                         <select style="height: 49px" class="form-select" formControlName="gender"
                         >
-                          <option value="Nam">Male</option>
-                          <option value="Nữ">Female</option>
+                          <option value='Nam'>Male</option>
+                          <option value='Nữ'>Female</option>
                         </select>
                         <span class="input-group-text"><i
                           class="fa-solid fa-ranking-star"></i></span>

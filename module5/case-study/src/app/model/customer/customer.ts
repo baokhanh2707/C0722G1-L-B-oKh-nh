@@ -7,7 +7,7 @@ export interface Customer {
   dateOfBirth?:string;
   idCard?:string;
   phoneNumber?:string;
-  gender?:boolean;
+  gender?:string;
   email?:string;
   address?:string;
 }

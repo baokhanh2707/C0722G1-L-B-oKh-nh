@@ -36,6 +36,7 @@ formCustomer = new FormGroup({
   id:new FormControl('',[Validators.required,Validators.pattern('KH-[0-9]{4}')]),
   name: new FormControl('',[Validators.required,Validators.pattern("([A-Z][a-z]+[ ])+([A-Z][a-z]+)")]),
   dateOfBirth: new FormControl('',[Validators.required]),
+  customerTypeId: new FormControl(),
   idCard: new FormControl('',[Validators.required,Validators.pattern("[0-9]{9}")]),
   phoneNumber:new FormControl('',[Validators.required,Validators.pattern("(((\\+|)84)|0)(3|5|7|8|9)+([0-9]{8})")]),
   gender: new FormControl('',[Validators.required]),
