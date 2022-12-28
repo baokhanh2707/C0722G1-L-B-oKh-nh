@@ -146,4 +146,7 @@ export class ListComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  save(event: Customer) {
+    this.customers.push(event)
+  }
 }

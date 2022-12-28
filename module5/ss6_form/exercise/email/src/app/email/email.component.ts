@@ -1,5 +1,5 @@
 import {Component, OnInit} from '@angular/core';
-import {FormControl, FormGroup, Validators} from "@angular/forms";
+import {AbstractControl, FormControl, FormGroup, Validators} from "@angular/forms";
 import {Country} from "../country";
 
 
@@ -19,8 +19,16 @@ export class EmailComponent implements OnInit {
     confirmPass: new FormControl('', [Validators.required, Validators.minLength(6)]),
     age: new FormControl('', [Validators.min(18)]),
     gender: new FormControl('', [Validators.required]),
-    phone: new FormControl('', [Validators.required,Validators.pattern('^[+]+[8]+[4]+[0-9]{9}$')],[]),
-  });
+    phone: new FormControl('', [Validators.required, Validators.pattern('^[+]+[8]+[4]+[0-9]{9}$')]),
+  }, [this.passValid]);
+
+
+  passValid(c: AbstractControl) {
+    if (c.get('password')?.value === c.get('confirmPass')?.value) {
+      return {invalidPass: true}
+    }
+    return null
+  }
 
   get email() {
     return this.contactForm.get('email')
@@ -59,4 +67,6 @@ export class EmailComponent implements OnInit {
   onSubmit() {
     console.log(this.contactForm.value);
   }
+
+
 }

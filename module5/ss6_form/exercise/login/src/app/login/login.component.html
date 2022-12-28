@@ -1,0 +1,30 @@
+<h1>Login</h1>
+<form [formGroup]="loginForm" (ngSubmit)="onSubmit()" novalidate>
+  <p>
+    <label for="email">Email</label>
+    <input type="text" id="email" name="email" formControlName="email">
+  </p>
+  <div *ngIf="!email.valid && (email.dirty ||email.touched)">
+    <div [hidden]="!email?.errors?.required">
+      email is required
+    </div>
+    <div [hidden]="!email?.errors?.email">
+      không đúng định dạng
+    </div>
+  </div>
+  <p>
+    <label for="password">Password</label>
+    <input type="text" id="password" name="password" formControlName="password">
+  </p>
+  <div *ngIf="!password.valid && (password.dirty ||password.touched)">
+    <div [hidden]="!password?.errors?.required">
+      password is required
+    </div>
+    <div [hidden]="!password?.errors?.minlength">
+      không đúng định dạng
+    </div>
+  </div>
+  <p>
+    <button type="submit" [disabled]="!loginForm.valid">Submit</button>
+  </p>
+</form>
