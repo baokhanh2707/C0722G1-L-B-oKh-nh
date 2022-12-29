@@ -33,7 +33,7 @@ export class ProductEditComponent implements OnInit {
   }
 
   product?: Product | null;
-  productForm: FormGroup = new FormGroup({}) ;
+  productForm: FormGroup = new FormGroup({});
 
   // tslint:disable-next-line:typedef
   ngOnInit() {

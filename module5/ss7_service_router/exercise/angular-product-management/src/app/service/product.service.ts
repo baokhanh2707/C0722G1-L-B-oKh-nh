@@ -68,14 +68,14 @@ export class ProductService {
   }
 
   // tslint:disable-next-line:typedef
-  deleteById(id: number| undefined) {
-    if ( id !== undefined){
+  deleteById(id: number | undefined) {
+    if (id !== undefined) {
       const product = this.findById(id);
-      if ( product != null){
+      if (product != null) {
         const length1 = this.products.length;
-        for (let i = 0; i < length1 ; i++) {
+        for (let i = 0; i < length1; i++) {
           console.log(this.products[i].id);
-          if (product.id === this.products[i].id){
+          if (product.id === this.products[i].id) {
             this.products.splice(i, 1);
             break;
           }

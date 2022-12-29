@@ -14,10 +14,10 @@
     <td>{{product.price}}</td>
     <td>{{product.description}}</td>
     <td>
-      <button type="button" [routerLink] ="['/product/edit',product.id]">Edit</button>
+      <button type="button" [routerLink]="['/product/edit',product.id]">Edit</button>
     </td>
     <td>
-      <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" (click)="temp = product" >
+      <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" (click)="temp = product">
         Delete
       </button>
     </td>

@@ -12,6 +12,7 @@ export class ProductDeleteComponent implements OnInit {
 
   constructor(private productService: ProductService) {
   }
+
   @Input()
   product: Product | undefined = {};
 
