@@ -1,6 +1,6 @@
 import {Component, EventEmitter, OnInit, Output} from '@angular/core';
 import {FormControl, FormGroup, Validators} from "@angular/forms";
-import {CustomerType} from "../../model/customer/customerType";
+import {CustomerType} from "../customerType";
 
 @Component({
   selector: 'app-edit',

@@ -1,0 +1,15 @@
+<h1>Danh sách Từ Điển</h1>
+<table>
+  <tr>
+    <td>STT</td>
+    <td>Tên</td>
+    <td>detail</td>
+  </tr>
+  <tr *ngFor="let i of dictionary">
+    <td>{{i.id}}</td>
+    <td>{{i.word}}</td>
+    <td>
+      <button type="button" [routerLink]="['/detail',i.id]">DeTail</button>
+    </td>
+  </tr>
+</table>

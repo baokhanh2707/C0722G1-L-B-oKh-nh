@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import {Facility} from "../../model/facility/facility";
-import {RentType} from "../../model/facility/rentType";
-import {FacilityType} from "../../model/facility/facilityType";
+import {Facility} from "../facility";
+import {RentType} from "../rentType";
+import {FacilityType} from "../facilityType";
 
 @Component({
   selector: 'app-facility-list',
