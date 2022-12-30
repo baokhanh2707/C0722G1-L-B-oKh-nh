@@ -18,9 +18,9 @@ export class ProductListComponent implements OnInit {
   ngOnInit() {
     this.getAll();
   }
-
-  // tslint:disable-next-line:typedef
   getAll() {
-    this.products = this.productService.getAll();
+    this.productService.getAll().subscribe(product => {
+      this.products = product;
+    });
   }
 }

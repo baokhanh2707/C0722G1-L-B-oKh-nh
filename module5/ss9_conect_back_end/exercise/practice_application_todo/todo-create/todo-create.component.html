@@ -1,0 +1,11 @@
+<h2 class="text-center">Todo create</h2>
+<div class="col-md-8 offset-md-2">
+  <form [formGroup]="todoForm" (ngSubmit)="saveTodo()">
+    <div>
+      <input type="text" class="form-control" formControlName="content">
+    </div>
+    <div>
+      <button type="submit">Save</button>
+    </div>
+  </form>
+</div>

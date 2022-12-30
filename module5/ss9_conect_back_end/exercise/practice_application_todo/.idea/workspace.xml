@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="7a6d10a3-932d-4573-a646-7288f1955271" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/../../../ss7_service_router/exercise/angular-product-management/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ss7_service_router/exercise/angular-product-management/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../ss7_service_router/exercise/angular-product-management/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ss7_service_router/exercise/angular-product-management/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../ss7_service_router/exercise/angular-product-management/src/app/app-routing.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ss7_service_router/exercise/angular-product-management/src/app/app-routing.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../ss7_service_router/exercise/angular-product-management/src/app/app.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ss7_service_router/exercise/angular-product-management/src/app/app.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../ss7_service_router/exercise/angular-product-management/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ss7_service_router/exercise/angular-product-management/src/app/app.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../ss7_service_router/exercise/angular-product-management/src/app/model/product.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ss7_service_router/exercise/angular-product-management/src/app/model/product.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../ss7_service_router/exercise/angular-product-management/src/app/product/product-create/product-create.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ss7_service_router/exercise/angular-product-management/src/app/product/product-create/product-create.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../ss7_service_router/exercise/angular-product-management/src/app/product/product-create/product-create.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ss7_service_router/exercise/angular-product-management/src/app/product/product-create/product-create.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../ss7_service_router/exercise/angular-product-management/src/app/product/product-delete/product-delete.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ss7_service_router/exercise/angular-product-management/src/app/product/product-delete/product-delete.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../ss7_service_router/exercise/angular-product-management/src/app/product/product-edit/product-edit.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ss7_service_router/exercise/angular-product-management/src/app/product/product-edit/product-edit.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../ss7_service_router/exercise/angular-product-management/src/app/product/product-edit/product-edit.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ss7_service_router/exercise/angular-product-management/src/app/product/product-edit/product-edit.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../ss7_service_router/exercise/angular-product-management/src/app/product/product-list/product-list.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ss7_service_router/exercise/angular-product-management/src/app/product/product-list/product-list.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../ss7_service_router/exercise/angular-product-management/src/app/product/product-list/product-list.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ss7_service_router/exercise/angular-product-management/src/app/product/product-list/product-list.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../ss7_service_router/exercise/angular-product-management/src/app/service/product.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ss7_service_router/exercise/angular-product-management/src/app/service/product.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../ss7_service_router/exercise/angular-product-management/src/environments/environment.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ss7_service_router/exercise/angular-product-management/src/environments/environment.ts" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../../.." />
+  </component>
+  <component name="ProjectId" id="2JdVFl3wVQc1LXdUAN5SDcObHXC" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="ts.external.directory.path" value="D:\WebStorm 2020.1\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="7a6d10a3-932d-4573-a646-7288f1955271" name="Default Changelist" comment="" />
+      <created>1672407845538</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1672407845538</updated>
+      <workItem from="1672407846793" duration="83000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="2" />
+  </component>
+</project>

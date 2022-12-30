@@ -22,9 +22,15 @@ export class ProductDeleteComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  // tslint:disable-next-line:typedef
   delete() {
     // @ts-ignore
-    this.productService.deleteById(this.product.id);
+    const id = this.product.id;
+    this.productService.deleteProduct(id).subscribe(data => {
+      document.getElementById('exampleModal')?.click();
+      alert('xoá thành công');
+      window.location.reload();
+    }, error => {
+    }, () => {
+    });
   }
 }

@@ -5,6 +5,7 @@
     <td>Tên</td>
     <td>Giá</td>
     <td>Mô tả</td>
+    <td>Loại sản phẩm</td>
     <td>Sửa</td>
     <td>Xóa</td>
   </tr>
@@ -13,6 +14,7 @@
     <td>{{product.name}}</td>
     <td>{{product.price}}</td>
     <td>{{product.description}}</td>
+    <td>{{product.category?.name}}</td>
     <td>
       <button type="button" [routerLink]="['/product/edit',product.id]">Edit</button>
     </td>

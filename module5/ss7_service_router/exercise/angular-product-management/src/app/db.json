@@ -1,0 +1,42 @@
+{
+  "categories": [
+    {
+      "id": 3,
+      "name": "Samsung"
+    },
+    {
+      "name": "huawei",
+      "id": 4
+    },
+    {
+      "name": "Iphone",
+      "id": 5
+    }
+  ],
+  "products": [
+    {
+      "id": 2,
+      "body": "IPhone 11",
+      "price": 3000000,
+      "description": "New 99"
+    },
+    {
+      "id": 1,
+      "body": "IPhone 12",
+      "price": 2400000,
+      "description": "New 98"
+    },
+    {
+      "id": 1,
+      "body": "IPhone 15",
+      "price": 4000000,
+      "description": "New 97"
+    },
+    {
+      "id": 5,
+      "name": "asdadasd",
+      "price": 6,
+      "description": "123123123"
+    }
+  ]
+}
