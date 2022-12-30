@@ -6,27 +6,28 @@ import {Router} from '@angular/router';
 import {Subscription} from 'rxjs';
 
 @Component({
-  selector: 'app-todo-delete',
-  templateUrl: './todo-delete.component.html',
-  styleUrls: ['./todo-delete.component.css']
+    selector: 'app-todo-delete',
+    templateUrl: './todo-delete.component.html',
+    styleUrls: ['./todo-delete.component.css']
 })
 export class TodoDeleteComponent implements OnInit {
-  @Input()
-  todo: Todo = {};
-  subscription: Subscription | undefined;
-  deleteForm: FormGroup = new FormGroup({});
-  todoes: Todo[] = [];
-  constructor(private todoService: TodoService, private route: Router) { }
+    @Input()
+    todo: Todo = {};
+    subscription: Subscription | undefined;
+    deleteForm: FormGroup = new FormGroup({});
+    todoes: Todo[] = [];
 
-  ngOnInit(): void {
-  }
+    constructor(private todoService: TodoService, private route: Router) {
+    }
 
-  deleteTodo() {
-    this.todoService.deleteById(this.todo.id).subscribe(() =>{
-      window.location.reload();
-    });
-  }
+    ngOnInit(): void {
+    }
 
+    deleteTodo() {
+        this.todoService.deleteById(this.todo.id).subscribe(() => {
+            window.location.reload();
+        });
+    }
 
 
 }

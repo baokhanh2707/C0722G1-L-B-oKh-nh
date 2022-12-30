@@ -1,19 +1,20 @@
 <h2 class="text-center">
-  Todo app
+    Todo app
 </h2>
 <div class="col-md-8 offset-md-2"><a routerLink="/todo/create" class="btn btn-primary btn-sm">Create</a></div>
 <div class="col-md-8 offset-md-2">
-  <ul>
-    <li (click)="toggleTodo(i)"
-        [class.complete]="todo.complete"
-        *ngFor="let todo of todoes; let i = index">
-      <p><label>Id: </label>{{todo.id}}</p>
-      <p>{{todo.content}}</p>
-      <div class="col-md-8 offset-md-2">
-        <a class="btn-primary btn btn-sm me-2" [routerLink]="['/todo/edit', todo.id]">Edit</a>
-        <a class="btn btn-primary btn-sm me-2" data-bs-toggle="modal" data-bs-target="#exampleModal" (click)="temp = todo">Delete</a>
-      </div>
-    </li>
-  </ul>
+    <ul>
+        <li (click)="toggleTodo(i)"
+            [class.complete]="todo.complete"
+            *ngFor="let todo of todoes; let i = index">
+            <p><label>Id: </label>{{todo.id}}</p>
+            <p>{{todo.content}}</p>
+            <div class="col-md-8 offset-md-2">
+                <a class="btn-primary btn btn-sm me-2" [routerLink]="['/todo/edit', todo.id]">Edit</a>
+                <a class="btn btn-primary btn-sm me-2" data-bs-toggle="modal" data-bs-target="#exampleModal"
+                   (click)="temp = todo">Delete</a>
+            </div>
+        </li>
+    </ul>
 </div>
 <app-todo-delete [todo]="temp"></app-todo-delete>
