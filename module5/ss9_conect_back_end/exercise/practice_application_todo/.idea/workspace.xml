@@ -2,14 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7a6d10a3-932d-4573-a646-7288f1955271" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/todo-create/todo-create.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/todo-create/todo-create.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/todo-create/todo-create.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/todo-create/todo-create.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/todo-delete/todo-delete.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/todo-delete/todo-delete.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/todo-delete/todo-delete.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/todo-delete/todo-delete.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/todo-edit/todo-edit.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/todo-edit/todo-edit.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/todo-edit/todo-edit.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/todo-edit/todo-edit.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/toto-list/toto-list.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/toto-list/toto-list.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/toto-list/toto-list.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/toto-list/toto-list.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,7 +22,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../ss7_service_router/exercise/angular-product-management" />
     <property name="ts.external.directory.path" value="D:\WebStorm 2020.1\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
   </component>
   <component name="SvnConfiguration">
@@ -44,10 +37,18 @@
       <updated>1672407845538</updated>
       <workItem from="1672407846793" duration="83000" />
       <workItem from="1672408010212" duration="82000" />
+      <workItem from="1672415807696" duration="76000" />
+      <workItem from="1672549391032" duration="23000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="2" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="549" y="163" key="FileChooserDialogImpl" timestamp="1672549408907">
+      <screen x="0" y="0" width="1536" height="816" />
+    </state>
+    <state x="549" y="163" key="FileChooserDialogImpl/0.0.1536.816@0.0.1536.816" timestamp="1672549408907" />
   </component>
 </project>
