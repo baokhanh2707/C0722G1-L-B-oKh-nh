@@ -1,0 +1,66 @@
+<!--<app-header></app-header>-->
+<!--<app-navigation></app-navigation>-->
+<h1 class="align-bottom text-center">Customer List</h1>
+<div class="row m-0">
+  <div class="col-lg-3">
+    <p>
+      <a class="btn btn-outline-warning my-2 my-sm-0" routerLink="/customer/create">
+        Add Customer
+      </a>
+    </p>
+    <input type="text" [(ngModel)]="userFilter.name" placeholder="name" name="name">
+    <br>
+    <br>
+    <input type="text" [(ngModel)]="userFilter.address" placeholder="address" name="address">
+<!--    <input type="text" [(ngModel)]="userFilter.customerType"  placeholder="search"-->
+<!--           name="customerType">-->
+    <br>
+<!--    <select [(ngModel)]="userFilter.customerType"  name="customerType">-->
+<!--      <option *ngFor="let i of customerType" [ngValue]="i">{{i.name}}</option>-->
+<!--    </select>-->
+
+  </div>
+  <table class="table table-dark" border="1">
+    <thead>
+    <tr>
+      <th>STT</th>
+      <th>Name</th>
+      <th>Customer Type</th>
+      <th>Date Of Birth</th>
+      <th>Gender</th>
+      <th>Id Card</th>
+      <th>Phone Number</th>
+      <th>Email</th>
+      <th>Address</th>
+      <th>Edit</th>
+      <th>Delete</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let item of customers | paginate: { itemsPerPage: 5, currentPage: p } | filterBy: userFilter">
+      <td>{{item.id}}</td>
+      <td>{{item.name}}</td>
+      <td>{{item.customerTypeId?.name}}</td>
+      <td>{{item.dateOfBirth}}</td>
+      <td>{{item.gender ? 'Nam' : 'Nữ' }}
+      </td>
+      <td>{{item.idCard}}</td>
+      <td>{{item.phoneNumber}}</td>
+      <td>{{item.email}}</td>
+      <td>{{item.address}}</td>
+      <td>
+        <button type="button" [routerLink]="['/customer/edit',item.id]">Edit</button>
+      </td>
+      <td>
+        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal"
+                (click)="temp = item">
+          Delete
+        </button>
+      </td>
+    </tr>
+    </tbody>
+  </table>
+  <pagination-controls (pageChange)="p = $event"></pagination-controls>
+</div>
+<app-customer-delete [customer]="temp" (eventDelete)="reload()"></app-customer-delete>
+<!--<app-footer></app-footer>-->

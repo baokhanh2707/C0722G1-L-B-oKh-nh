@@ -1,0 +1,774 @@
+{
+  "customer": [
+    {
+      "id": 5,
+      "customerCode": "KH-1111",
+      "customerTypeId": {
+        "id": 3,
+        "name": "Gold"
+      },
+      "name": "Khanh Pro Pro",
+      "dateOfBirth": "1995-12-09",
+      "idCard": "795453345",
+      "phoneNumber": "0312345678",
+      "gender": "Nam",
+      "email": "nhinhi123@gmail.com",
+      "address": "224 Lý Thái Tổ, Gia Lai",
+      "flagDelete": false
+    },
+    {
+      "id": 6,
+      "customerCode": "KH-1111",
+      "customerTypeId": {
+        "id": 4,
+        "name": "Silver"
+      },
+      "name": "Tôn Nữ Mộc Châu",
+      "dateOfBirth": "2005-12-06",
+      "idCard": "732434215",
+      "phoneNumber": "0988888844",
+      "gender": false,
+      "email": "tonnuchau@gmail.com",
+      "address": "37 Yên Thế, Đà Nẵng",
+      "flagDelete": false
+    },
+    {
+      "id": 8,
+      "customerCode": "KH-1111",
+      "customerTypeId": {
+        "id": 3,
+        "name": "Gold"
+      },
+      "name": "Nguyễn Thị Hào",
+      "dateOfBirth": "1999-04-08",
+      "idCard": "965656433",
+      "phoneNumber": "0763212345",
+      "gender": false,
+      "email": "haohao99@gmail.com",
+      "address": "55 Nguyễn Văn Linh, Kon Tum",
+      "flagDelete": false
+    },
+    {
+      "id": 9,
+      "customerCode": "KH-1234",
+      "name": "Le Ta Ha",
+      "dateOfBirth": "2022-12-09",
+      "idCard": "123123123123",
+      "phoneNumber": "+84964808185",
+      "gender": false,
+      "email": "rintakis@yahoo.com.vn",
+      "address": "28 Hội An",
+      "flagDelete": false,
+      "customerTypeId": {
+        "id": 2,
+        "name": "Platinium"
+      }
+    },
+    {
+      "id": "KH-1234",
+      "name": "An An",
+      "dateOfBirth": "1995-12-09",
+      "customerTypeId": {
+        "id": 3,
+        "name": "Gold"
+      },
+      "idCard": "795453345",
+      "phoneNumber": "0312345678",
+      "gender": "Nam",
+      "email": "nhinhi123@gmail.com",
+      "address": "224 Lý Thái Tổ, Gia Lai"
+    },
+    {
+      "id": "KH-1235",
+      "name": "Le Bao Khang",
+      "dateOfBirth": "2023-01-12",
+      "customerTypeId": {
+        "id": 4,
+        "name": "silver"
+      },
+      "idCard": "090909091",
+      "phoneNumber": "0901147093",
+      "gender": "Nữ",
+      "email": "baokhanhjax@gmail.com",
+      "address": "k93/14 trần xuân lê"
+    }
+  ],
+  "facility": [
+    {
+      "id": 1,
+      "name": "Villa Beach Front",
+      "area": 2500,
+      "cost": 1000000,
+      "maxPeople": 10,
+      "facilityType": {
+        "id": 1,
+        "name": "villa"
+      },
+      "rentType": {
+        "id": 3,
+        "name": "date"
+      },
+      "standardRoom": "vip",
+      "descriptionOtherConvenience": "Có hồ bơi",
+      "poolArea": 500,
+      "numberOfFloors": 4,
+      "facilityFree": "",
+      "flagDelete": false
+    },
+    {
+      "id": 2,
+      "name": "House Princess 01",
+      "area": 14000,
+      "cost": 5000000,
+      "maxPeople": 7,
+      "facilityType": {
+        "id": 2,
+        "name": "house"
+      },
+      "rentType": {
+        "id": 2,
+        "name": "month"
+      },
+      "standardRoom": "vip",
+      "descriptionOtherConvenience": "Có thêm bếp nướng",
+      "poolArea": 0,
+      "numberOfFloors": 3,
+      "facilityFree": "",
+      "flagDelete": false
+    },
+    {
+      "id": 3,
+      "name": "Room Twin 01",
+      "area": 5000,
+      "cost": 1000000,
+      "maxPeople": 2,
+      "facilityType": {
+        "id": 3,
+        "name": "room"
+      },
+      "rentType": {
+        "id": 4,
+        "name": "hours"
+      },
+      "standardRoom": "normal",
+      "descriptionOtherConvenience": "Có tivi",
+      "poolArea": 0,
+      "numberOfFloors": 0,
+      "facilityFree": "1 xe máy, 1 xe đạp",
+      "flagDelete": false
+    },
+    {
+      "id": 4,
+      "name": "Villa No Beach Front",
+      "area": 22000,
+      "cost": 9000000,
+      "maxPeople": 8,
+      "facilityType": {
+        "id": 1,
+        "name": "villa"
+      },
+      "rentType": {
+        "id": 1,
+        "name": "year"
+      },
+      "standardRoom": "normal",
+      "descriptionOtherConvenience": "Có hồ bơi",
+      "poolArea": 300,
+      "numberOfFloors": 3,
+      "facilityFree": "",
+      "flagDelete": false
+    },
+    {
+      "id": 5,
+      "name": "House Princess 02",
+      "area": 10000,
+      "cost": 4000000,
+      "maxPeople": 5,
+      "facilityType": {
+        "id": 2,
+        "name": "house"
+      },
+      "rentType": {
+        "id": 3,
+        "name": "date"
+      },
+      "standardRoom": "normal",
+      "descriptionOtherConvenience": "Có thêm bếp nướng",
+      "poolArea": 0,
+      "numberOfFloors": 2,
+      "facilityFree": "",
+      "flagDelete": false
+    },
+    {
+      "id": 6,
+      "name": "Room Twin 02",
+      "area": 3000,
+      "cost": 900000,
+      "maxPeople": 2,
+      "facilityType": {
+        "id": 3,
+        "name": "room"
+      },
+      "rentType": {
+        "id": 2,
+        "name": "month"
+      },
+      "standardRoom": "normal",
+      "descriptionOtherConvenience": "Có tivi",
+      "poolArea": 0,
+      "numberOfFloors": 0,
+      "facilityFree": "1 xe máy",
+      "flagDelete": false
+    }
+  ],
+  "contract": [
+    {
+      "id": 1,
+      "startDate": "2020-12-08",
+      "endDate": "2020-12-08",
+      "deposit": 0,
+      "customer": {
+        "id": 1,
+        "name": "Nguyễn Thị Hào"
+      },
+      "employee": {
+        "id": 3,
+        "name": "Hồ Thị Yến"
+      },
+      "facility": {
+        "id": 3,
+        "name": "Room Twin 01"
+      }
+    },
+    {
+      "id": 2,
+      "startDate": "2020-07-14",
+      "endDate": "2020-07-21",
+      "deposit": 200000,
+      "customer": {
+        "id": 3,
+        "name": "Trương Định Nghệ"
+      },
+      "employee": {
+        "id": 7,
+        "name": "Nguyễn Hữu Hà"
+      },
+      "facility": {
+        "id": 1,
+        "name": "Villa Beach Front"
+      }
+    },
+    {
+      "id": 3,
+      "startDate": "2021-03-15",
+      "endDate": "2021-03-17",
+      "deposit": 50000,
+      "customer": {
+        "id": 4,
+        "name": "Dương Văn Quan"
+      },
+      "employee": {
+        "id": 3,
+        "name": "Hồ Thị Yến"
+      },
+      "facility": {
+        "id": 2,
+        "name": "House Princess 01"
+      }
+    },
+    {
+      "id": 4,
+      "startDate": "2021-01-14",
+      "endDate": "2021-01-18",
+      "deposit": 100000,
+      "customer": {
+        "id": 5,
+        "name": "Hoàng Trần Nhi Nhi"
+      },
+      "employee": {
+        "id": 7,
+        "name": "Nguyễn Hữu Hà"
+      },
+      "facility": {
+        "id": 5,
+        "name": "House Princess 02"
+      }
+    },
+    {
+      "id": 5,
+      "startDate": "2021-07-14",
+      "endDate": "2021-07-15",
+      "deposit": 0,
+      "customer": {
+        "id": 2,
+        "name": "Phạm Xuân Diệu"
+      },
+      "employee": {
+        "id": 7,
+        "name": "Nguyễn Hữu Hà"
+      },
+      "facility": {
+        "id": 6,
+        "name": "Room Twin 02"
+      }
+    },
+    {
+      "id": 6,
+      "startDate": "2021-06-01",
+      "endDate": "2021-06-03",
+      "deposit": 0,
+      "customer": {
+        "id": 7,
+        "name": "Nguyễn Mỹ Kim"
+      },
+      "employee": {
+        "id": 7,
+        "name": "Nguyễn Hữu Hà"
+      },
+      "facility": {
+        "id": 6,
+        "name": "Room Twin 02"
+      }
+    },
+    {
+      "id": 7,
+      "startDate": "2021-09-02",
+      "endDate": "2021-09-05",
+      "deposit": 100000,
+      "customer": {
+        "id": 4,
+        "name": "Dương Văn Quan"
+      },
+      "employee": {
+        "id": 7,
+        "name": "Nguyễn Hữu Hà"
+      },
+      "facility": {
+        "id": 1,
+        "name": "Villa Beach Front"
+      }
+    },
+    {
+      "id": 8,
+      "startDate": "2021-06-17",
+      "endDate": "2021-06-18",
+      "deposit": 150000,
+      "customer": {
+        "id": 4,
+        "name": "Dương Văn Quan"
+      },
+      "employee": {
+        "id": 3,
+        "name": "Hồ Thị Yến"
+      },
+      "facility": {
+        "id": 1,
+        "name": "Villa Beach Front"
+      }
+    },
+    {
+      "id": 9,
+      "startDate": "2020-11-19",
+      "endDate": "2020-11-19",
+      "deposit": 0,
+      "customer": {
+        "id": 4,
+        "name": "Dương Văn Quan"
+      },
+      "employee": {
+        "id": 3,
+        "name": "Hồ Thị Yến"
+      },
+      "facility": {
+        "id": 3,
+        "name": "Room Twin 01"
+      }
+    },
+    {
+      "id": 10,
+      "startDate": "2021-04-12",
+      "endDate": "2021-04-14",
+      "deposit": 0,
+      "customer": {
+        "id": 3,
+        "name": "Trương Định Nghệ"
+      },
+      "employee": {
+        "id": 10,
+        "name": "Nguyễn Công Đạo"
+      },
+      "facility": {
+        "id": 5,
+        "name": "House Princess 02"
+      }
+    },
+    {
+      "id": 11,
+      "startDate": "2021-04-25",
+      "endDate": "2021-04-25",
+      "deposit": 0,
+      "customer": {
+        "id": 2,
+        "name": "Phạm Xuân Diệu"
+      },
+      "employee": {
+        "id": 2,
+        "name": "Lê Văn Bình"
+      },
+      "facility": {
+        "id": 1,
+        "name": "Villa Beach Front"
+      }
+    },
+    {
+      "id": 12,
+      "startDate": "2021-05-25",
+      "endDate": "2021-05-27",
+      "deposit": 0,
+      "customer": {
+        "id": 10,
+        "name": "Nguyễn Tâm Đắc"
+      },
+      "employee": {
+        "id": 7,
+        "name": "Nguyễn Hữu Hà"
+      },
+      "facility": {
+        "id": 1,
+        "name": "Villa Beach Front"
+      }
+    }
+  ],
+  "employee": [
+    {
+      "id": 1,
+      "name": "Nguyễn Văn An",
+      "dateOfBirth": "1970-11-07",
+      "idCard": "456231786",
+      "salary": 10000000,
+      "phoneNumber": "0901234121",
+      "email": "annguyen@gmail.com",
+      "address": "295 Nguyễn Tất Thành, Đà Nẵng",
+      "position": {
+        "id": 1,
+        "name": "Quản Lý"
+      },
+      "division": {
+        "id": 3,
+        "name": "Phục vụ"
+      },
+      "educationDegree": {
+        "id": 3,
+        "name": "Đại học"
+      },
+      "flagDelete": false
+    },
+    {
+      "id": 2,
+      "name": "Lê Văn Bình",
+      "dateOfBirth": "1997-04-09",
+      "idCard": "654231234",
+      "salary": 7000000,
+      "phoneNumber": "654231234",
+      "email": "binhlv@gmail.com",
+      "address": "22 Yên Bái, Đà Nẵng",
+      "position": {
+        "id": 1,
+        "name": "Quản Lý"
+      },
+      "division": {
+        "id": 2,
+        "name": "Hành Chính"
+      },
+      "educationDegree": {
+        "id": 2,
+        "name": "Cao Đẳng"
+      },
+      "flagDelete": false
+    },
+    {
+      "id": 3,
+      "name": "Hồ Thị Yến",
+      "dateOfBirth": "1995-12-12",
+      "idCard": "999231723",
+      "salary": 14000000,
+      "phoneNumber": "0412352315",
+      "email": "thiyen@gmail.com",
+      "address": "K234/11 Điện Biên Phủ, Gia Lai",
+      "position": {
+        "id": 1,
+        "name": "Quản Lý"
+      },
+      "division": {
+        "id": 2,
+        "name": "Hành Chính"
+      },
+      "educationDegree": {
+        "id": 3,
+        "name": "Đại học"
+      },
+      "flagDelete": false
+    },
+    {
+      "id": 4,
+      "name": "Võ Công Toản",
+      "dateOfBirth": "1980-04-04",
+      "idCard": "123231365",
+      "salary": 17000000,
+      "phoneNumber": "0374443232",
+      "email": "toan0404@gmail.com",
+      "address": "77 Hoàng Diệu, Quảng Trị",
+      "position": {
+        "id": 1,
+        "name": "Quản Lý"
+      },
+      "division": {
+        "id": 4,
+        "name": "Quản lý"
+      },
+      "educationDegree": {
+        "id": 4,
+        "name": "Sau Đại học"
+      },
+      "flagDelete": false
+    },
+    {
+      "id": 5,
+      "name": "Nguyễn Bỉnh Phát",
+      "dateOfBirth": "1999-12-09",
+      "idCard": "454363232",
+      "salary": 6000000,
+      "phoneNumber": "0902341231",
+      "email": "phatphat@gmail.com",
+      "address": "43 Yên Bái, Đà Nẵng",
+      "position": {
+        "id": 2,
+        "name": "Nhân viên"
+      },
+      "division": {
+        "id": 1,
+        "name": "Sale-Marketing"
+      },
+      "educationDegree": {
+        "id": 1,
+        "name": "Trung cấp"
+      },
+      "flagDelete": false
+    },
+    {
+      "id": 6,
+      "name": "Khúc Nguyễn An Nghi",
+      "dateOfBirth": "2000-11-08",
+      "idCard": "964542311",
+      "salary": 7000000,
+      "phoneNumber": "0978653213",
+      "email": "annghi20@gmail.com",
+      "address": "294 Nguyễn Tất Thành, Đà Nẵng",
+      "position": {
+        "id": 2,
+        "name": "Nhân viên"
+      },
+      "division": {
+        "id": 2,
+        "name": "Hành Chính"
+      },
+      "educationDegree": {
+        "id": 2,
+        "name": "Cao Đẳng"
+      },
+      "flagDelete": false
+    },
+    {
+      "id": 7,
+      "name": "Nguyễn Hữu Hà",
+      "dateOfBirth": "1993-01-01",
+      "idCard": "534323231",
+      "salary": 8000000,
+      "phoneNumber": "0941234553",
+      "email": "nhh0101@gmail.com",
+      "address": "4 Nguyễn Chí Thanh, Huế",
+      "position": {
+        "id": 2,
+        "name": "Nhân viên"
+      },
+      "division": {
+        "id": 2,
+        "name": "Hành Chính"
+      },
+      "educationDegree": {
+        "id": 3,
+        "name": "Đại học"
+      },
+      "flagDelete": false
+    },
+    {
+      "id": 8,
+      "name": "Nguyễn Hà Đông",
+      "dateOfBirth": "1989-09-03",
+      "idCard": "234414123",
+      "salary": 9000000,
+      "phoneNumber": "0642123111",
+      "email": "donghanguyen@gmail.com",
+      "address": "111 Hùng Vương, Hà Nội",
+      "position": {
+        "id": 2,
+        "name": "Nhân viên"
+      },
+      "division": {
+        "id": 4,
+        "name": "Quản lý"
+      },
+      "educationDegree": {
+        "id": 4,
+        "name": "Sau Đại học"
+      },
+      "flagDelete": false
+    },
+    {
+      "id": 9,
+      "name": "Tòng Hoang",
+      "dateOfBirth": "1982-09-03",
+      "idCard": "256781231",
+      "salary": 6000000,
+      "phoneNumber": "0245144444",
+      "email": "hoangtong@gmail.com",
+      "address": "213 Hàm Nghi, Đà Nẵng",
+      "position": {
+        "id": 2,
+        "name": "Nhân viên"
+      },
+      "division": {
+        "id": 4,
+        "name": "Quản lý"
+      },
+      "educationDegree": {
+        "id": 4,
+        "name": "Sau Đại học"
+      },
+      "flagDelete": false
+    },
+    {
+      "id": 10,
+      "name": "Nguyễn Công Đạo",
+      "dateOfBirth": "1994-01-08",
+      "idCard": "755434343",
+      "salary": 8000000,
+      "phoneNumber": "0988767111",
+      "email": "nguyencongdao12@gmail.com",
+      "address": "6 Hoà Khánh, Đồng Nai",
+      "position": {
+        "id": 2,
+        "name": "Nhân viên"
+      },
+      "division": {
+        "id": 2,
+        "name": "Hành Chính"
+      },
+      "educationDegree": {
+        "id": 3,
+        "name": "Đại học"
+      },
+      "flagDelete": false
+    }
+  ],
+  "position": [
+    {
+      "id": 1,
+      "name": "Quản Lý"
+    },
+    {
+      "id": 2,
+      "name": "Nhân viên"
+    }
+  ],
+  "education-degree": [
+    {
+      "id": 1,
+      "name": "Trung Cấp"
+    },
+    {
+      "id": 2,
+      "name": "Cao Đẳng"
+    },
+    {
+      "id": 3,
+      "name": "Đại học"
+    },
+    {
+      "id": 4,
+      "name": "Sau Đại học"
+    }
+  ],
+  "division": [
+    {
+      "id": 1,
+      "name": "Sale-marketing"
+    },
+    {
+      "id": 2,
+      "name": "Hành chánh"
+    },
+    {
+      "id": 3,
+      "name": "Phục vụ"
+    },
+    {
+      "id": 4,
+      "name": "Quản lý"
+    }
+  ],
+  "customer-type": [
+    {
+      "id": 1,
+      "name": "Diamond"
+    },
+    {
+      "id": 2,
+      "name": "Platinium"
+    },
+    {
+      "id": 3,
+      "name": "Gold"
+    },
+    {
+      "id": 4,
+      "name": "silver"
+    },
+    {
+      "id": 5,
+      "name": "Member"
+    }
+  ],
+  "rent-type": [
+    {
+      "id": 1,
+      "name": "year"
+    },
+    {
+      "id": 2,
+      "name": "month"
+    },
+    {
+      "id": 3,
+      "name": "day"
+    },
+    {
+      "id": 4,
+      "name": "hour"
+    }
+  ],
+  "facility-type": [
+    {
+      "id": 1,
+      "name": "Villa"
+    },
+    {
+      "id": 2,
+      "name": "House"
+    },
+    {
+      "id": 3,
+      "name": "Room"
+    }
+  ]
+}

@@ -17,22 +17,12 @@ import {BodyComponent} from './layout/body/body.component';
 import {ContractListComponent} from './contract/list/contract-list.component';
 import {ReactiveFormsModule} from "@angular/forms";
 import {HttpClientModule} from "@angular/common/http";
+import {CustomerModule} from "./customer/customer.module";
+import { HomeComponent } from './layout/home/home.component';
 
 @NgModule({
   declarations: [
-    AppComponent,
-    HeaderComponent,
-    FooterComponent,
-    NavigationComponent,
-    FacilityListComponent,
-    FacilityEditComponent,
-    FacilityCreateComponent,
-    ListComponent,
-    CreateComponent,
-    EditComponent,
-    ContractCreateComponent,
-    BodyComponent,
-    ContractListComponent
+    HomeComponent
   ],
   imports: [
     BrowserModule,

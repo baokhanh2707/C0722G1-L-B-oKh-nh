@@ -1,19 +1,81 @@
 {
-  "posts": [
+  "customer": [
     {
       "id": 1,
-      "title": "json-server",
-      "author": "typicode"
+      "customerTypeId": 5,
+      "name": "Nguyễn Thị Hào",
+      "dateOfBirth": "1970-11-07",
+      "idCard": "643431213",
+      "phoneNumber": "0945423362",
+      "gender": "Nam",
+      "email": "thihao07@gmail.com",
+      "address": "23 Nguyễn Hoàng, Đà Nẵng"
+    },
+    {
+      "id": 2,
+      "customerTypeId": 4,
+      "name": "Phạm Xuân Diệu",
+      "dateOfBirth": "1992-08-08",
+      "idCard": "865342123",
+      "phoneNumber": "0954333333",
+      "gender": "Nam",
+      "email": "xuandieu92@gmail.com",
+      "address": "K77/22 Thái Phiên, Quảng Trị"
+    },
+    {
+      "id": 3,
+      "customerTypeId": 3,
+      "name": "Trương Định Nghệ",
+      "dateOfBirth": "1990-02-27",
+      "idCard": "488645199",
+      "phoneNumber": "0373213122",
+      "gender": "Nam",
+      "email": "nghenhan2702@gmail.com",
+      "address": "K323/12 Ông Ích Khiêm, Vinh"
+    },
+    {
+      "id": 4,
+      "customerTypeId": 2,
+      "name": "Dương Văn Quan",
+      "dateOfBirth": "1981-07-08",
+      "idCard": "543432111",
+      "phoneNumber": "0490039241",
+      "gender": "Nam",
+      "email": "duongquan@gmail.com",
+      "address": "K453/12 Lê Lợi, Đà Nẵng"
+    },
+    {
+      "id": 5,
+      "customerTypeId": 1,
+      "name": "Hoàng Trần Nhi Nhi",
+      "dateOfBirth": "1995-12-09",
+      "idCard": "795453345",
+      "phoneNumber": "0312345678",
+      "gender": "Nữ",
+      "email": "nhinhi123@gmail.com",
+      "address": "224 Lý Thái Tổ, Gia Lai"
     }
   ],
-  "comments": [
+  "customerType": [
     {
       "id": 1,
-      "body": "some comment",
-      "postId": 1
+      "name": "Diamond"
+    },
+    {
+      "id": 2,
+      "name": "Platinium"
+    },
+    {
+      "id": 3,
+      "name": "Gold"
+    },
+    {
+      "id": 4,
+      "name": "Silver"
+    },
+    {
+      "id": 5,
+      "name": "Member"
     }
-  ],
-  "profile": {
-    "name": "typicode"
-  }
+  ]
 }
