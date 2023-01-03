@@ -9,6 +9,7 @@ import {NgxPaginationModule} from 'ngx-pagination';
 import { CustomerDeleteComponent } from './customer-delete/customer-delete.component';
 import { CustomerEditComponent } from './customer-edit/customer-edit.component';
 import {FilterPipeModule} from 'ngx-filter-pipe';
+import {HomeModule} from '../home/home.module';
 
 
 @NgModule({
@@ -19,7 +20,8 @@ import {FilterPipeModule} from 'ngx-filter-pipe';
     ReactiveFormsModule,
     NgxPaginationModule,
     FormsModule,
-    FilterPipeModule
+    FilterPipeModule,
+    HomeModule
   ]
 })
 export class CustomerModule { }

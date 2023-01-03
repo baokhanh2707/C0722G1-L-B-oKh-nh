@@ -12,9 +12,7 @@ import {FilterPipeModule} from 'ngx-filter-pipe';
 
 @NgModule({
   declarations: [
-    AppComponent,
-    HeaderComponent,
-    BodyComponent
+    AppComponent
   ],
   imports: [
     BrowserModule,
@@ -27,7 +25,6 @@ import {FilterPipeModule} from 'ngx-filter-pipe';
 ],
   providers: [],
   exports: [
-    HeaderComponent
   ],
   bootstrap: [AppComponent]
 })
