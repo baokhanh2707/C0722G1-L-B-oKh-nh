@@ -16,7 +16,7 @@ export class CustomerCreateComponent implements OnInit {
   constructor(private customerService: CustomerService,
               private route: Router) {
     this.formCustomer = new FormGroup({
-      id: new FormControl('', [Validators.required, Validators.pattern('KH-[0-9]{4}')]),
+      codeCustomer: new FormControl('', [Validators.required, Validators.pattern('KH-[0-9]{4}')]),
       name: new FormControl('', [Validators.required, Validators.pattern('([A-Z][a-z]+[ ])+([A-Z][a-z]+)')]),
       dateOfBirth: new FormControl('', [Validators.required]),
       customerTypeId: new FormControl(),
@@ -32,8 +32,8 @@ export class CustomerCreateComponent implements OnInit {
     });
   }
 
-  get id(): any {
-    return this.formCustomer.get('id');
+  get codeCustomer(): any {
+    return this.formCustomer.get('codeCustomer');
   }
 
   get name(): any {
@@ -66,6 +66,7 @@ export class CustomerCreateComponent implements OnInit {
   onSubmit(): void {
     this.customerService.saveCustomer(this.formCustomer.value).subscribe(data => {
       console.log(data);
+      alert('thêm mới thành công');
       this.route.navigateByUrl('/customer');
     });
   }

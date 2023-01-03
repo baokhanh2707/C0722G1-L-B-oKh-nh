@@ -9,17 +9,20 @@ import {CustomerType} from './customer-type';
 })
 export class CustomerService {
   URL_CUSTOMER = 'http://localhost:3000/customer';
-  URL_CUSTOMERTYPE = 'http://localhost:3000/customer-type';
+  URL_CUSTOMER_TYPE = 'http://localhost:3000/customer-type';
 
   constructor(private http: HttpClient) {
   }
 
-  getAll(): Observable<Customer[]> {
-    return this.http.get<Customer[]>(this.URL_CUSTOMER);
+  getAll(search: string): Observable<Customer[]> {
+    if (search == null) {
+      return this.http.get<Customer[]>(this.URL_CUSTOMER);
+    }
+    return this.http.get<Customer[]>(`${(this.URL_CUSTOMER)}?name_like=${search}`);
   }
 
   getType(): Observable<CustomerType[]> {
-    return this.http.get<CustomerType[]>(this.URL_CUSTOMERTYPE);
+    return this.http.get<CustomerType[]>(this.URL_CUSTOMER_TYPE);
   }
 
   saveCustomer(customer: Customer): Observable<Customer> {
@@ -38,4 +41,6 @@ export class CustomerService {
     console.log('a' + customer);
     return this.http.patch<Customer>(this.URL_CUSTOMER + '/' + customer.id, customer);
   }
+
 }
+

@@ -35,13 +35,13 @@
                 <div class="row" id="form">
                   <div class="col-lg-6">
                     <div class="form-outline mb-2">
-                      <label class="form-label" for="id">Code</label>
-                      <input type="text" id="id" formControlName="id"
+                      <label class="form-label" for="codeCustomer">Code</label>
+                      <input type="text" id="codeCustomer" formControlName="codeCustomer"
                              class="form-control form-control-lg"/>
-                      <div *ngIf="id?.errors?.required && (id?.dirty ||id?.touched)">
+                      <div *ngIf="codeCustomer?.errors?.required && (codeCustomer?.dirty ||codeCustomer?.touched)">
                         <span style="color: red">Id is not required</span>
                       </div>
-                      <div *ngIf="id?.errors?.pattern">
+                      <div *ngIf="codeCustomer?.errors?.pattern">
                           <span style="color: red">
                             Id is not formater
                           </span>
@@ -77,8 +77,8 @@
                       <div class="input-group">
                         <select style="height: 49px" class="form-select" formControlName="gender"
                         >
-                          <option value='Nam'>Male</option>
-                          <option value='Nữ'>Female</option>
+                          <option [value]=true>Male</option>
+                          <option [value]=false>Female</option>
                         </select>
                         <span class="input-group-text"><i
                           class="fa-solid fa-ranking-star"></i></span>

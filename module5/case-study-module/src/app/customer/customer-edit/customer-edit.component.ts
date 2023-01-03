@@ -20,8 +20,8 @@ export class CustomerEditComponent implements OnInit {
 
   constructor(private customerService: CustomerService, private activatedRoute: ActivatedRoute, private router: Router) {
     this.formEdit = new FormGroup({
-      // id: new FormControl('', [Validators.required, Validators.pattern('KH-[0-9]{4}')]),
-      id: new FormControl('',),
+      codeCustomer: new FormControl('', [Validators.required, Validators.pattern('KH-[0-9]{4}')]),
+      id: new FormControl(''),
       name: new FormControl('', [Validators.required, Validators.pattern('([A-Z][a-z]+[ ])+([A-Z][a-z]+)')]),
       dateOfBirth: new FormControl('', [Validators.required]),
       customerTypeId: new FormControl(),
@@ -42,8 +42,8 @@ export class CustomerEditComponent implements OnInit {
     });
   }
 
-  get id(): any {
-    return this.formEdit.get('id');
+  get codeCustomer(): any {
+    return this.formEdit.get('codeCustomer');
   }
 
   get name(): any {

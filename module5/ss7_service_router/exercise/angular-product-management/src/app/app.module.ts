@@ -11,21 +11,18 @@ import { ProductEditComponent } from './product/product-edit/product-edit.compon
 import { ProductDeleteComponent } from './product/product-delete/product-delete.component';
 import {HttpClientModule} from '@angular/common/http';
 import { CategoryListComponent } from './category/category-list/category-list.component';
+import {SharedModule} from './shared/shared.module';
 
 @NgModule({
   declarations: [
     AppComponent,
-    ProductListComponent,
-    ProductCreateComponent,
-    ProductEditComponent,
-    ProductDeleteComponent,
-    CategoryListComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
+    SharedModule
   ],
   providers: [],
   bootstrap: [AppComponent]
