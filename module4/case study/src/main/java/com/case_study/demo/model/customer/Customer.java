@@ -1,6 +1,7 @@
 package com.case_study.demo.model.customer;
 
 import com.case_study.demo.model.contract.Contract;
+import com.fasterxml.jackson.annotation.JsonBackReference;
 
 import javax.persistence.*;
 import java.util.Set;
@@ -21,8 +22,10 @@ public class Customer {
     private boolean flagDelete;
     @ManyToOne
     @JoinColumn(name = "customer_type_id",referencedColumnName = "id")
+//    @JsonBackReference
     private CustomerType customerType;
     @OneToMany(mappedBy = "customer")
+    @JsonBackReference
     private Set<Contract> contracts;
 
     public CustomerType getCustomerType() {

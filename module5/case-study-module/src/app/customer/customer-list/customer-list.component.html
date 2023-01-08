@@ -11,10 +11,18 @@
     </p>
   </div>
   <form [formGroup]="formCustomerSearch" (ngSubmit)="search()">
-  <div>
-    <input formControlName="name">
-    <button type="submit" class="btn btn-outline-warning my-2 my-sm-0" >Search</button>
-  </div>
+    <div>
+      <input formControlName="name">
+      <button type="submit" class="btn btn-outline-warning my-2 my-sm-0">Search</button>
+    </div>
+    <div>
+      <select style="height: 49px" class="form-select" id="customerTypeId"
+              formControlName="customerTypeId">
+        <option selected=null></option>
+        <option *ngFor="let i of customerTypeId" [ngValue]="i.name">{{i.name}}</option>
+      </select>
+      <button type="submit" class="btn btn-outline-warning my-2 my-sm-0">Search</button>
+    </div>
   </form>
   <table class="table table-dark" border="1">
     <thead>
@@ -34,23 +42,28 @@
     </tr>
     </thead>
     <tbody>
-    <tr *ngFor="let item of customers  | paginate: { itemsPerPage: 5, currentPage: p }  ">
+    <tr *ngFor="let item of customers  | paginate: { itemsPerPage: 1, currentPage: p }  ">
       <td>{{item.id}}</td>
       <td>{{item.customerCode}}</td>
       <td>{{item.name}}</td>
       <td>{{item.customerTypeId?.name}}</td>
       <td>{{item.dateOfBirth}}</td>
-      <td>{{item.gender ? 'Nam' : 'Nữ' }}
+      <td>
+        <span *ngIf="item.gender == true; else f ">Nam</span>
+        <ng-template #f>Nữ</ng-template>
       </td>
       <td>{{item.idCard}}</td>
       <td>{{item.phoneNumber}}</td>
       <td>{{item.email}}</td>
       <td>{{item.address}}</td>
       <td>
-        <button type="button" class="btn btn-outline-warning my-2 my-sm-0" [routerLink]="['/customer/edit',item.id]">Edit</button>
+        <button type="button" class="btn btn-outline-warning my-2 my-sm-0" [routerLink]="['/customer/edit',item.id]">
+          Edit
+        </button>
       </td>
       <td>
-        <button type="button" class="btn btn-outline-warning my-2 my-sm-0" data-bs-toggle="modal" data-bs-target="#exampleModal"
+        <button type="button" class="btn btn-outline-warning my-2 my-sm-0" data-bs-toggle="modal"
+                data-bs-target="#exampleModal"
                 (click)="temp = item">
           Delete
         </button>

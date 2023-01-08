@@ -9,7 +9,7 @@ export interface Customer {
   dateOfBirth?: string;
   idCard?: string;
   phoneNumber?: string;
-  gender?: string;
+  gender?: boolean;
   email?: string;
   address?: string;
 }

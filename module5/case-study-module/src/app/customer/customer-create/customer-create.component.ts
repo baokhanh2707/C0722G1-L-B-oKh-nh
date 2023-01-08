@@ -16,24 +16,28 @@ export class CustomerCreateComponent implements OnInit {
   constructor(private customerService: CustomerService,
               private route: Router) {
     this.formCustomer = new FormGroup({
-      codeCustomer: new FormControl('', [Validators.required, Validators.pattern('KH-[0-9]{4}')]),
-      name: new FormControl('', [Validators.required, Validators.pattern('([A-Z][a-z]+[ ])+([A-Z][a-z]+)')]),
-      dateOfBirth: new FormControl('', [Validators.required]),
-      customerTypeId: new FormControl(),
-      idCard: new FormControl('', [Validators.required, Validators.pattern('[0-9]{9}')]),
-      phoneNumber: new FormControl('', [Validators.required, Validators.pattern('(((\\+|)84)|0)(3|5|7|8|9)+([0-9]{8})')]),
-      gender: new FormControl('', [Validators.required]),
-      email: new FormControl('', [Validators.required, Validators.pattern('^[a-z0-9._%+-]+@[a-z0-9.-]+\\.[a-z]{2,4}$')]),
-      address: new FormControl(),
-    });
+        customerCode: new FormControl('', [Validators.required, Validators.pattern('KH-[0-9]{4}')]),
+        name: new FormControl('', [Validators.required, Validators.pattern('([A-Z][a-z]+[ ])+([A-Z][a-z]+)')]),
+        dateOfBirth: new FormControl('', [Validators.required]),
+        customerTypeId: new FormControl(),
+        idCard: new FormControl('', [Validators.required, Validators.pattern('[0-9]{9}')]),
+        phoneNumber: new FormControl('', [Validators.required, Validators.pattern('(((\\+|)84)|0)(3|5|7|8|9)+([0-9]{8})')]),
+        gender: new FormControl('', [Validators.required]),
+        email: new FormControl('', [Validators.required, Validators.pattern('^[a-z0-9._%+-]+@[a-z0-9.-]+\\.[a-z]{2,4}$')]),
+        address: new FormControl(),
+      }
+      // , this.validateDate);
+    );
     this.customerService.getType().subscribe(data => {
       console.log(data);
       this.customerType = data;
     });
   }
 
-  get codeCustomer(): any {
-    return this.formCustomer.get('codeCustomer');
+  // validateDate(dateOfBirth: any): void {
+  // }
+  get customerCode(): any {
+    return this.formCustomer.get('customerCode');
   }
 
   get name(): any {

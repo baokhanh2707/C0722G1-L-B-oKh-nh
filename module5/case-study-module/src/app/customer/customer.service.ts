@@ -14,11 +14,18 @@ export class CustomerService {
   constructor(private http: HttpClient) {
   }
 
-  getAll(search: string): Observable<Customer[]> {
-    if (search == null) {
+  getAll(searchName: string , searchType: string): Observable<Customer[]> {
+    if (searchName == null && searchType != null) {
+      return this.http.get<Customer[]>(`${(this.URL_CUSTOMER)}?customerTypeId.name_like=${searchType}`);
+    }
+    if (searchType == null && searchName != null) {
+      return this.http.get<Customer[]>(`${(this.URL_CUSTOMER)}?name_like=${searchName}`);
+    }
+    if (searchName != null && searchType != null) {
+      return this.http.get<Customer[]>(`${(this.URL_CUSTOMER)}?name_like=${searchName}&customerTypeId.name_like=${searchType}`);
+    } else {
       return this.http.get<Customer[]>(this.URL_CUSTOMER);
     }
-    return this.http.get<Customer[]>(`${(this.URL_CUSTOMER)}?name_like=${search}`);
   }
 
   getType(): Observable<CustomerType[]> {

@@ -11,7 +11,7 @@
       "dateOfBirth": "1995-12-09",
       "idCard": "795453345",
       "phoneNumber": "0312345678",
-      "gender": "Nam",
+      "gender": true,
       "email": "nhinhi123@gmail.com",
       "address": "224 Lý Thái Tổ, Gia Lai",
       "flagDelete": false
@@ -23,7 +23,7 @@
         "id": 4,
         "name": "Silver"
       },
-      "name": "Tôn Nữ Mộc Châu",
+      "name": "Ton Nu Moc Chau",
       "dateOfBirth": "2005-12-06",
       "idCard": "732434215",
       "phoneNumber": "0988888844",
@@ -39,11 +39,11 @@
         "id": 3,
         "name": "Gold"
       },
-      "name": "Nguyễn Thị Hào",
+      "name": "Nguyen Thi Hao",
       "dateOfBirth": "1999-04-08",
       "idCard": "965656433",
       "phoneNumber": "0763212345",
-      "gender": false,
+      "gender": true,
       "email": "haohao99@gmail.com",
       "address": "55 Nguyễn Văn Linh, Kon Tum",
       "flagDelete": false
@@ -53,16 +53,17 @@
       "customerCode": "KH-1234",
       "name": "Le Ta Ha",
       "dateOfBirth": "2022-12-09",
-      "idCard": "123123123123",
+      "idCard": "123123121",
       "phoneNumber": "+84964808185",
-      "gender": false,
+      "gender": true,
       "email": "rintakis@yahoo.com.vn",
       "address": "28 Hội An",
       "flagDelete": false,
       "customerTypeId": {
         "id": 2,
         "name": "Platinium"
-      }
+      },
+      "codeCustomer": "KH-1240"
     },
     {
       "id": 6,
@@ -75,54 +76,84 @@
       },
       "idCard": "090909091",
       "phoneNumber": "0901147093",
-      "gender": "Nữ",
+      "gender": true,
       "email": "baokhanhjax@gmail.com",
       "address": "k93/14 trần xuân lê"
     },
     {
-      "codeCustomer": "KH-1236",
+      "customerCode": "KH-1234",
       "name": "Le Bao Khanh",
-      "dateOfBirth": "2022-12-31",
+      "dateOfBirth": "2023-01-11",
       "customerTypeId": {
         "id": 2,
         "name": "Platinium"
       },
-      "idCard": "090909091",
-      "phoneNumber": "0905147093",
-      "gender": "Nữ",
-      "email": "huynvmgcd17132@fpt.edu.vn",
-      "address": "k93/15 trần xuân lê",
-      "id": 7
+      "idCard": "131313131",
+      "phoneNumber": "0901147093",
+      "gender": true,
+      "email": "baokhanhjax@gmail.com",
+      "address": "hải châu",
+      "id": 12
     },
     {
-      "codeCustomer": "KH-1238",
-      "name": "Le Bao Kha",
-      "dateOfBirth": "2023-01-12",
+      "customerCode": "KH-1250",
+      "name": "Le Bao Kho",
+      "dateOfBirth": "2023-01-06",
       "customerTypeId": {
-        "id": 2,
-        "name": "Platinium"
+        "id": 4,
+        "name": "silver"
+      },
+      "idCard": "876786812",
+      "phoneNumber": "0901147092",
+      "gender": true,
+      "email": "baokhanhjax@gmail.com",
+      "address": "k93/15 trần xuân lê",
+      "id": 13
+    },
+    {
+      "customerCode": "KH-1248",
+      "name": "Cam Van",
+      "dateOfBirth": "2023-01-13",
+      "customerTypeId": {
+        "id": 1,
+        "name": "Diamond"
+      },
+      "idCard": "090909123",
+      "phoneNumber": "0901147093",
+      "gender": false,
+      "email": "van@gmail.com",
+      "address": "k93/15 trần xuân lê",
+      "id": 14
+    },
+    {
+      "customerCode": "KH-1299",
+      "name": "Le Bao Bao",
+      "dateOfBirth": "2023-01-14",
+      "customerTypeId": {
+        "id": 5,
+        "name": "Member"
+      },
+      "idCard": "090909123",
+      "phoneNumber": "0912445812",
+      "gender": "true",
+      "email": "baokhanhjax@gmail.com",
+      "address": "k93/15 trần xuân lê",
+      "id": 15
+    },
+    {
+      "customerCode": "KH-1299",
+      "name": "Le Bao Khi",
+      "dateOfBirth": "2022-12-29",
+      "customerTypeId": {
+        "id": 5,
+        "name": "Member"
       },
       "idCard": "090909091",
       "phoneNumber": "0901147093",
-      "gender": "Nam",
+      "gender": true,
       "email": "baokhanhjax@gmail.com",
-      "address": "k93/15 trần xuân lê",
-      "id": 8
-    },
-    {
-      "codeCustomer": "KH-1240",
-      "name": "Le Bao Khanh",
-      "dateOfBirth": "2023-01-07",
-      "customerTypeId": {
-        "id": 3,
-        "name": "Gold"
-      },
-      "idCard": "091241231",
-      "phoneNumber": "0901147092",
-      "gender": "false",
-      "email": "huynvmgcd17132@fpt.edu.vn",
-      "address": "k93/15 trần xuân lê",
-      "id": 9
+      "address": "hải châu",
+      "id": 16
     }
   ],
   "facility": [

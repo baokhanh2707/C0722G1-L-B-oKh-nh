@@ -1,0 +1,78 @@
+
+              <h2 class="text-uppercase text-center mb-5">Nhập Hàng</h2>
+              <form [formGroup]="formLohang" (ngSubmit)="onSubmit()" novalidate>
+                <div class="row" id="form">
+                  <div class="col-lg-6">
+                    <div class="form-outline mb-2">
+                      <label class="form-label" for="maLoHang">Code</label>
+                      <input type="text" id="maLoHang" formControlName="maLoHang"
+                             class="form-control form-control-lg"/>
+                      <div *ngIf="maLoHang?.errors?.required && (maLoHang?.dirty ||maLoHang?.touched)">
+                        <span style="color: red">Không được bỏ trống</span>
+                      </div>
+                      <div *ngIf="maLoHang?.errors?.pattern">
+                          <span style="color: red">
+                            Không đúng định dạng
+                          </span>
+                      </div>
+                    </div>
+                    <div class="form-outline mb-2">
+                      <label class="form-label" for="tenSanpham">Tên Sản Phẩm</label>
+                      <div class="input-group">
+                        <select style="height: 49px" class="form-select" id="tenSanpham"
+                                formControlName="tenSanpham">
+                          <option *ngFor="let i of sanPhams" [ngValue]="i">{{i.tenSanPham}}</option>
+                        </select>
+                      </div>
+                    <div class="form-outline mb-2">
+                      <label class="form-label" for="soLuong">Số Lượng</label>
+                      <input type="number" id="soLuong" formControlName="soLuong"
+                             class="form-control form-control-lg"/>
+                      <div *ngIf="soLuong?.errors?.required && (soLuong?.dirty ||soLuong?.touched)">
+                        <span style="color: red">Không được để Trống</span>
+                      </div>
+                      <div *ngIf="soLuong?.errors?.min">
+                          <span style="color: red">
+                            Phải Là số Nguyên Dương
+                          </span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-lg-6">
+                    <label class="form-label" for="ngayNhapHang">Ngày nhập hàng</label>
+                    <div class="form-outline mb-2">
+                      <input type="date" id="ngayNhapHang" formControlName="ngayNhapHang"
+                             class="form-control form-control-lg"/>
+                      <div *ngIf="ngayNhapHang?.errors?.required && (ngayNhapHang?.dirty ||ngayNhapHang?.touched)">
+                        <span style="color: red">Không được để Trống</span>
+                      </div>
+                    </div>
+
+                    <label class="form-label" for="ngaySanXuat">Ngày Sản Xuất</label>
+                    <div class="form-outline mb-2">
+                      <input type="date" id="ngaySanXuat" formControlName="ngaySanXuat"
+                             class="form-control form-control-lg"/>
+                      <div *ngIf="ngaySanXuat?.errors?.required && (ngaySanXuat?.dirty ||ngaySanXuat?.touched)">
+                        <span style="color: red">Không được để Trống</span>
+                      </div>
+                    </div>
+                    <div class="form-outline mb-2">
+                      <label class="form-label" for="ngayHetHan">Ngày Hết Hạn</label>
+                      <input type="date" id="ngayHetHan" formControlName="ngayHetHan"
+                             class="form-control form-control-lg"/>
+                      <div *ngIf="ngayHetHan?.errors?.required && (ngayHetHan?.dirty ||ngayHetHan?.touched)">
+                        <span style="color: red">Không được để Trống</span>
+                      </div>
+                </div>
+                <div class="d-flex justify-content-center">
+                  <button type="submit" [disabled]="!formLohang.valid"
+                          class="btn btn-success btn-block btn-lg gradient-custom-4 text-body">
+                    Create
+                  </button>
+                </div>
+                </div>
+                  </div>
+                  </div>
+              </form>
+
+

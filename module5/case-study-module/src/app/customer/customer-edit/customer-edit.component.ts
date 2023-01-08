@@ -20,7 +20,7 @@ export class CustomerEditComponent implements OnInit {
 
   constructor(private customerService: CustomerService, private activatedRoute: ActivatedRoute, private router: Router) {
     this.formEdit = new FormGroup({
-      codeCustomer: new FormControl('', [Validators.required, Validators.pattern('KH-[0-9]{4}')]),
+      customerCode: new FormControl('', [Validators.required, Validators.pattern('KH-[0-9]{4}')]),
       id: new FormControl(''),
       name: new FormControl('', [Validators.required, Validators.pattern('([A-Z][a-z]+[ ])+([A-Z][a-z]+)')]),
       dateOfBirth: new FormControl('', [Validators.required]),
@@ -34,6 +34,7 @@ export class CustomerEditComponent implements OnInit {
     this.customerService.getType().subscribe(data => {
       this.customerType = data;
     });
+    // lấy tham số của url là id đem vào service
     this.activatedRoute.paramMap.subscribe(data => {
       const id = data.get('id');
       if (id != null) {
@@ -42,8 +43,8 @@ export class CustomerEditComponent implements OnInit {
     });
   }
 
-  get codeCustomer(): any {
-    return this.formEdit.get('codeCustomer');
+  get customerCode(): any {
+    return this.formEdit.get('customerCode');
   }
 
   get name(): any {

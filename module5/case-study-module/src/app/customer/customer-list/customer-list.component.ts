@@ -11,17 +11,18 @@ import {FormControl, FormGroup, Validators} from '@angular/forms';
 })
 export class CustomerListComponent implements OnInit {
   customers: Customer[] = [];
-  customerType: CustomerType[] = [];
+  customerTypeId: CustomerType[] = [];
   p = 1;
   temp: Customer | undefined;
   // userFilter: any = {name: '', address: ''};
   formCustomerSearch: FormGroup = new FormGroup({
     name: new FormControl(),
+    customerTypeId: new FormControl()
   });
 
   constructor(private customerService: CustomerService) {
     this.customerService.getType().subscribe(data => {
-      this.customerType = data;
+      this.customerTypeId = data;
     });
   }
 
@@ -30,7 +31,7 @@ export class CustomerListComponent implements OnInit {
   }
 
   getAll(): void {
-    this.customerService.getAll(this.formCustomerSearch.value.name).subscribe(customer => {
+    this.customerService.getAll(this.formCustomerSearch.value.name, this.formCustomerSearch.value.customerTypeId).subscribe(customer => {
       this.customers = customer;
       console.log(customer);
     });
@@ -41,8 +42,9 @@ export class CustomerListComponent implements OnInit {
   }
 
   search(): void {
-    this.customerService.getAll(this.formCustomerSearch.value.name).subscribe(data => {
+    this.customerService.getAll(this.formCustomerSearch.value.name, this.formCustomerSearch.value.customerTypeId).subscribe(data => {
       this.customers = data;
+      this.p = 1;
     });
   }
 }

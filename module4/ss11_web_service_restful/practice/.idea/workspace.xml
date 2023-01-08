@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="95904878-4f74-4bce-839e-4f3996e62bea" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/../../case study/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/../../case study/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../case study/src/main/java/com/case_study/demo/config/WebSecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../case study/src/main/java/com/case_study/demo/config/WebSecurityConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../case study/src/main/java/com/case_study/demo/model/customer/Customer.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../case study/src/main/java/com/case_study/demo/model/customer/Customer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../case study/src/main/java/com/case_study/demo/model/customer/CustomerType.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../case study/src/main/java/com/case_study/demo/model/customer/CustomerType.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../case study/src/main/java/com/case_study/demo/model/login/MyUserDetail.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../case study/src/main/java/com/case_study/demo/model/login/MyUserDetail.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../case study/src/main/java/com/case_study/demo/service/MyUserDetailService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../case study/src/main/java/com/case_study/demo/service/MyUserDetailService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../module5/case-study-module/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/../../../module5/case-study-module/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../module5/case-study-module/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/../../../module5/case-study-module/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../module5/case-study-module/src/app/customer/customer-create/customer-create.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../../module5/case-study-module/src/app/customer/customer-create/customer-create.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../module5/case-study-module/src/app/customer/customer-create/customer-create.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../../../module5/case-study-module/src/app/customer/customer-create/customer-create.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../module5/case-study-module/src/app/customer/customer-delete/customer-delete.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../../module5/case-study-module/src/app/customer/customer-delete/customer-delete.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../module5/case-study-module/src/app/customer/customer-edit/customer-edit.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../../module5/case-study-module/src/app/customer/customer-edit/customer-edit.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../module5/case-study-module/src/app/customer/customer-edit/customer-edit.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../../../module5/case-study-module/src/app/customer/customer-edit/customer-edit.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../module5/case-study-module/src/app/customer/customer-list/customer-list.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../../module5/case-study-module/src/app/customer/customer-list/customer-list.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../module5/case-study-module/src/app/customer/customer-list/customer-list.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../../../module5/case-study-module/src/app/customer/customer-list/customer-list.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../module5/case-study-module/src/app/customer/customer.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../../../module5/case-study-module/src/app/customer/customer.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../module5/case-study-module/src/app/customer/customer.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../../../module5/case-study-module/src/app/customer/customer.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../module5/case-study-module/src/app/data/data.json" beforeDir="false" afterPath="$PROJECT_DIR$/../../../module5/case-study-module/src/app/data/data.json" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../.." />
+  </component>
+  <component name="ProjectId" id="2Jlj0hC13p5PmqJoSOQgvY1i1P8" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+    <option name="showMembers" value="true" />
+    <option name="sortByType" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../bai_tap" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="95904878-4f74-4bce-839e-4f3996e62bea" name="Default Changelist" comment="" />
+      <created>1672659343029</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1672659343029</updated>
+      <workItem from="1672659345295" duration="79000" />
+      <workItem from="1672716500417" duration="6000" />
+      <workItem from="1672888249863" duration="4000" />
+      <workItem from="1672992961483" duration="56000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="2" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="549" y="163" key="FileChooserDialogImpl" timestamp="1672993017483">
+      <screen x="0" y="0" width="1536" height="816" />
+    </state>
+    <state x="549" y="163" key="FileChooserDialogImpl/0.0.1536.816@0.0.1536.816" timestamp="1672993017483" />
+  </component>
+</project>
