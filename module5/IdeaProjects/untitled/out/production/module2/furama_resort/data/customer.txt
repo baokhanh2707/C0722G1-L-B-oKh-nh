@@ -1,0 +1,2 @@
+KH1,Lê Bảo,27/07/1997,Nam,032165498712,1234567890,khanh@gmail.com,Member,Tổ 68/Phường Hòa Khê
+KH1,Lê Bảo,28/02/2003,Nam,090909090909,0123456789,khanh@gmail.com,Platinium,tổ 56/phường Hòa Khê
