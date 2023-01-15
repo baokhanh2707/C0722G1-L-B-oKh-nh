@@ -1,3 +1,5 @@
+
+<script src="ckeditor/ckeditor.js"></script>
 <h1>Tạo sản phẩm mới</h1>
 <form [formGroup]="productForm" (ngSubmit)="submit()">
   <table>
@@ -7,7 +9,7 @@
     </tr>
     <tr>
       <td>Tên sản phẩm:</td>
-      <td><input type="text" formControlName="name"></td>
+      <td><textarea  formControlName="name" id="editor1"></textarea></td>
     </tr>
     <tr>
       <td>Giá sản phẩm</td>
@@ -34,3 +36,8 @@
     </tr>
   </table>
 </form>
+<script>
+  // Replace the <textarea id="editor1"> with a CKEditor 4
+  // instance, using default configuration.
+  CKEDITOR.replace( 'editor1' );
+</script>
