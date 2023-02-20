@@ -9,6 +9,8 @@ import { LoginComponent } from './login/login.component';
 import {RouterModule} from "@angular/router";
 import {AppRoutingModule} from "./app-routing.module";
 import {ReactiveFormsModule} from "@angular/forms";
+import { DetailComponent } from './detail/detail.component';
+import { CartComponent } from './cart/cart.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +18,9 @@ import {ReactiveFormsModule} from "@angular/forms";
     HomeComponent,
     HeaderComponent,
     FooterComponent,
-    LoginComponent
+    LoginComponent,
+    DetailComponent,
+    CartComponent
   ],
   imports: [
     BrowserModule,
