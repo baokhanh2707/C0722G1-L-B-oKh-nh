@@ -16,15 +16,28 @@ public class JwtResponse {
     public JwtResponse() {
     }
 
-    public JwtResponse(Long idAccount, String token, String type, String name, String usernameAccount, String email, Collection<? extends GrantedAuthority> roles) {
-        this.idAccount = idAccount;
+    public JwtResponse(String token, String type, String name, Collection<? extends GrantedAuthority> roles) {
         this.token = token;
         this.type = type;
         this.name = name;
-        this.usernameAccount = usernameAccount;
-        this.email = email;
         this.roles = roles;
     }
+
+    public JwtResponse(String token, String name, Collection<? extends GrantedAuthority> authorities) {
+        this.token = token;
+        this.name = name;
+        this.roles = authorities;
+    }
+
+    public JwtResponse(String token, String name, Collection<? extends GrantedAuthority> authorities, String usernameAccount, Long idAccount, String email) {
+        this.token = token;
+        this.name = name;
+        this.roles = authorities;
+        this.usernameAccount = usernameAccount;
+        this.idAccount = idAccount;
+        this.email = email;
+    }
+
 
     public Long getIdAccount() {
         return idAccount;
@@ -32,6 +45,22 @@ public class JwtResponse {
 
     public void setIdAccount(Long idAccount) {
         this.idAccount = idAccount;
+    }
+
+    public String getUsernameAccount() {
+        return usernameAccount;
+    }
+
+    public void setUsernameAccount(String usernameAccount) {
+        this.usernameAccount = usernameAccount;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
     }
 
     public String getToken() {
@@ -56,22 +85,6 @@ public class JwtResponse {
 
     public void setName(String name) {
         this.name = name;
-    }
-
-    public String getUsernameAccount() {
-        return usernameAccount;
-    }
-
-    public void setUsernameAccount(String usernameAccount) {
-        this.usernameAccount = usernameAccount;
-    }
-
-    public String getEmail() {
-        return email;
-    }
-
-    public void setEmail(String email) {
-        this.email = email;
     }
 
     public Collection<? extends GrantedAuthority> getRoles() {

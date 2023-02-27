@@ -1,24 +1,31 @@
-package com.be.security;
+package com.be.jwt.jwt;
 
+import com.be.jwt.userprincal.AccountPrinciple;
 import io.jsonwebtoken.*;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.context.annotation.Bean;
+import org.springframework.security.core.Authentication;
 import org.springframework.stereotype.Component;
 
 import java.util.Date;
+
 @Component
 public class JwtProvider {
+
     private static final Logger logger = LoggerFactory.getLogger(JwtProvider.class);
-    private String jwtSecret = "baokhanhjax@gmail.com";
-public String generateJwtToken(String userName){
-    return Jwts.builder()
-            .setSubject(userName)
-            .setIssuedAt(new Date())
-            .setExpiration(new Date((new Date()).getTime() + (100 * 60 * 60 * 24)))
-            .signWith(SignatureAlgorithm.HS512,jwtSecret)
-            .compact();
-}
+    private String jwtSecret = "letahaphuong@gmail.com";
+    private int jwtExpiration = 86400;// 60 * 60 * 24
+
+    public String createToken(Authentication authentication) {
+        AccountPrinciple accountPrinciple = (AccountPrinciple) authentication.getPrincipal();
+
+        return Jwts.builder()
+                .setSubject(accountPrinciple.getUsername())
+                .setIssuedAt(new Date())
+                .setExpiration(new Date(new Date().getTime() + jwtExpiration))
+                .signWith(SignatureAlgorithm.HS512, jwtSecret)
+                .compact();
+    }
 
     public boolean validateToken(String token) {
         try {
@@ -40,4 +47,8 @@ public String generateJwtToken(String userName){
         return false;
     }
 
+    public String getUserNameFromToken(String token) {
+        String username = Jwts.parser().setSigningKey(jwtSecret).parseClaimsJws(token).getBody().getSubject();
+        return username;
+    }
 }

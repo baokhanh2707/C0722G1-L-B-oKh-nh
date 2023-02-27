@@ -1,34 +1,38 @@
 package com.be.model;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
+
 import javax.persistence.*;
 import java.util.Set;
 
 @Entity
 public class TypeProduct {
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    private Long id;
-    private String name;
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long idTypeProduct;
+    private String nameTypeProduct;
+
     @OneToMany(mappedBy = "typeProductId")
+    @JsonBackReference
     public Set<Laptop> laptopSet;
 
     public TypeProduct() {
     }
 
-    public Long getId() {
-        return id;
+    public Long getIdTypeProduct() {
+        return idTypeProduct;
     }
 
-    public void setId(Long id) {
-        this.id = id;
+    public void setIdTypeProduct(Long idTypeProduct) {
+        this.idTypeProduct = idTypeProduct;
     }
 
-    public String getName() {
-        return name;
+    public String getNameTypeProduct() {
+        return nameTypeProduct;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setNameTypeProduct(String nameTypeProduct) {
+        this.nameTypeProduct = nameTypeProduct;
     }
 
     public Set<Laptop> getLaptopSet() {

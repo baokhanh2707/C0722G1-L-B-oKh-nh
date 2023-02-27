@@ -1,4 +1,4 @@
-package com.be.model;
+package com.be.model.account;
 
 public enum RoleName {
     ADMIN,

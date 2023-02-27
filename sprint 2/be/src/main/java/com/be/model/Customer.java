@@ -1,5 +1,7 @@
 package com.be.model;
 
+import com.be.model.account.Account;
+
 import javax.persistence.*;
 import java.util.Set;
 
@@ -15,7 +17,6 @@ public class Customer {
     private String address;
     private String email;
     @OneToOne()
-    @JoinColumn(name = "account_id", referencedColumnName = "id")
     private Account account;
     @OneToMany(mappedBy = "customer")
     public Set<Oder> oderSet;

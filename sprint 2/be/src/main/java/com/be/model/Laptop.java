@@ -10,14 +10,15 @@ public class Laptop {
     private Long id;
     private String name;
     private double price;
-    private String cpuType;
-    private String cpuSpeed;
-    private String ramLaptop;
-    private String resolution;
-    private String dimensionsAndWeight;
+    private String processor;
+    private String ram;
+    private String memory;
+    private String graphicsCard;
+    private String screen;
+    private String size;
     private String image;
-    @ManyToOne
-    private OriginalProduct originalProductId;
+    private String operatingSystem;
+    private boolean flagDelete = false;
     @ManyToOne
     private TypeProduct typeProductId;
     @OneToMany(mappedBy = "laptop")
@@ -50,44 +51,52 @@ public class Laptop {
         this.price = price;
     }
 
-    public String getCpuType() {
-        return cpuType;
+    public String getProcessor() {
+        return processor;
     }
 
-    public void setCpuType(String cpuType) {
-        this.cpuType = cpuType;
+    public void setProcessor(String processor) {
+        this.processor = processor;
     }
 
-    public String getCpuSpeed() {
-        return cpuSpeed;
+    public String getRam() {
+        return ram;
     }
 
-    public void setCpuSpeed(String cpuSpeed) {
-        this.cpuSpeed = cpuSpeed;
+    public void setRam(String ram) {
+        this.ram = ram;
     }
 
-    public String getRamLaptop() {
-        return ramLaptop;
+    public String getMemory() {
+        return memory;
     }
 
-    public void setRamLaptop(String ramLaptop) {
-        this.ramLaptop = ramLaptop;
+    public void setMemory(String memory) {
+        this.memory = memory;
     }
 
-    public String getResolution() {
-        return resolution;
+    public String getGraphicsCard() {
+        return graphicsCard;
     }
 
-    public void setResolution(String resolution) {
-        this.resolution = resolution;
+    public void setGraphicsCard(String graphicsCard) {
+        this.graphicsCard = graphicsCard;
     }
 
-    public String getDimensionsAndWeight() {
-        return dimensionsAndWeight;
+    public String getScreen() {
+        return screen;
     }
 
-    public void setDimensionsAndWeight(String dimensionsAndWeight) {
-        this.dimensionsAndWeight = dimensionsAndWeight;
+    public void setScreen(String screen) {
+        this.screen = screen;
+    }
+
+    public String getSize() {
+        return size;
+    }
+
+    public void setSize(String size) {
+        this.size = size;
     }
 
     public String getImage() {
@@ -98,12 +107,20 @@ public class Laptop {
         this.image = image;
     }
 
-    public OriginalProduct getOriginalProductId() {
-        return originalProductId;
+    public String getOperatingSystem() {
+        return operatingSystem;
     }
 
-    public void setOriginalProductId(OriginalProduct originalProductId) {
-        this.originalProductId = originalProductId;
+    public void setOperatingSystem(String operatingSystem) {
+        this.operatingSystem = operatingSystem;
+    }
+
+    public boolean isFlagDelete() {
+        return flagDelete;
+    }
+
+    public void setFlagDelete(boolean flagDelete) {
+        this.flagDelete = flagDelete;
     }
 
     public TypeProduct getTypeProductId() {

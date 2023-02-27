@@ -1,6 +1,6 @@
 package com.be.service.impl;
 
-import com.be.model.Account;
+import com.be.model.account.Account;
 import com.be.repository.account.IAccountRepository;
 import com.be.service.IAccountService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -11,9 +11,11 @@ import java.util.Optional;
 public class AccountService implements IAccountService {
     @Autowired
     private IAccountRepository iAccountRepository;
+
+
     @Override
-    public Optional<Account> findByUserName(String nameAccount) {
-        return iAccountRepository.findByUserName(nameAccount);
+    public Optional<Account> findByUserName(String userName) {
+        return iAccountRepository.findByUsername(userName);
     }
 
     @Override
@@ -22,12 +24,7 @@ public class AccountService implements IAccountService {
     }
 
     @Override
-    public Boolean existsByUsername(String usernameAccount) {
-        return iAccountRepository.existsByUsername(usernameAccount);
-    }
-
-    @Override
-    public Account save(Account account) {
-      return iAccountRepository.save(account);
+    public Boolean existsByUsername(String userName) {
+        return iAccountRepository.existsByUsername(userName);
     }
 }
