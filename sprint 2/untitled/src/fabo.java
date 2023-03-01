@@ -148,27 +148,69 @@ public class fabo<n> {
 //    }
 
 
-
+    //        public static void main(String[] args) {
+//            String string = "anh có có anh em anh";
+//            Map<String, Integer> wordCount = new HashMap<>();
+//            String[] words = string.split(" ");
+//
+//            for (String word : words) {
+//                if (!wordCount.containsKey(word)) {
+//                    wordCount.put(word, 1);
+//                } else {
+//                    wordCount.put(word, wordCount.get(word) + 1);
+//                }
+//            }
+//
+//            for (String word : wordCount.keySet()) {
+//                System.out.println(word + " xuất hiện" + wordCount.get(word) + " lần");
+//            }
+//        }
     public static void main(String[] args) {
-String[][] chs=new String[2][];
-chs[0]=new String[2];
-chs[1]=new String[5];
-int i =97;
-        for (int a = 0; a <chs.length ; a++) {
-            for (int b = 0; b < chs.length; b++) {
-                chs[a][b] = "" + i;
-                i++;
-            }
-        }
-        for (String[] ca : chs){
-            for (String c : ca){
-                System.out.print(c+" ");
-            }
-            System.out.println();
-        }
+//        Scanner scanner = new Scanner(System.in);
+//        int n = scanner.nextInt();
+//        int result=0;
+//        while (n!=0){
+//          int temp=n%10;
+//          result=result*10+temp;
+//          n=n/10;
+//        }
+//        System.out.println(result);
+
+
+//        int[] number = {2, 5, 7, 23, 63};
+//        int sum = 0;
+//        int max=number[0];
+//        int min=number[0];
+//        for (int i = 0; i < number.length; i++) {
+//            sum+=number[i];
+//            if(number[i]>max){
+//                max=number[i];
+//            }
+//            if(number[i]<min){
+//                min=number[i];
+//            }
+//        }
+//        System.out.println("tong 4 so nhỏ nhất la: "+(sum -max) );
+//        System.out.println("tong 4 so lớn nhất la: "+(sum -min) );
+//    }
+
+//        int[] number = {2, 5, 7, 23, 63,63,93};
+//int max=number[0];
+//int max2=number[0];
+//
+//        for (int i = 0; i < number.length; i++) {
+//            if(number[i]>max){
+//                max=number[i];
+//            }
+//        }
+//        for (int i = 0; i < number.length; i++) {
+//            if(number[i]>max2 & number[i] < max){
+//                max2=number[i];
+//            }
+//        }
+//        System.out.println(max2);
+//    }
+
+
     }
 }
-
-
-
-

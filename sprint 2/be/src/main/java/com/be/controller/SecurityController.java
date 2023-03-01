@@ -18,7 +18,7 @@ import javax.validation.Valid;
 
 @RestController
 @CrossOrigin(value = "*", allowedHeaders = "*")
-@RequestMapping("api")
+@RequestMapping("api/public")
 public class SecurityController {
     @Autowired
     private JwtProvider jwtProvider;

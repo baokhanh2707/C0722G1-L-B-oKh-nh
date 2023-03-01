@@ -15,6 +15,7 @@ import org.springframework.security.config.annotation.web.configuration.WebSecur
 import org.springframework.security.config.http.SessionCreationPolicy;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
+import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
 
 @Configuration
 @EnableWebSecurity
@@ -52,9 +53,10 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
         httpSecurity.cors().and().csrf()
                 .disable()
                 .authorizeRequests()
-//                .antMatchers("/**")
-//                .permitAll()
-                .antMatchers("/api-laptop").hasAnyRole("ADMIN")
+                .antMatchers("/**")
+                .permitAll()
+//                .antMatchers("/api/customer/**","/api/post/**").hasAnyRole("CUSTOMER","EMPLOYEE","ADMIN")
+//                .antMatchers("/api/employees/**").hasAnyRole("EMPLOYEE","ADMIN")
                 .anyRequest()
                 .authenticated()
 //                .and()

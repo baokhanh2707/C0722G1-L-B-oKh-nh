@@ -11,6 +11,9 @@ import {AppRoutingModule} from "./app-routing.module";
 import {ReactiveFormsModule} from "@angular/forms";
 import { DetailComponent } from './detail/detail.component';
 import { CartComponent } from './cart/cart.component';
+import {ToastrModule} from "ngx-toastr";
+import {HttpClientModule} from "@angular/common/http";
+import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
 
 @NgModule({
   declarations: [
@@ -27,6 +30,9 @@ import { CartComponent } from './cart/cart.component';
     RouterModule,
     AppRoutingModule,
     ReactiveFormsModule,
+    BrowserAnimationsModule,
+    ToastrModule.forRoot(),
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
