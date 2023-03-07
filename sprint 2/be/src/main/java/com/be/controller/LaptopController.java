@@ -8,10 +8,7 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.data.web.PageableDefault;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.CrossOrigin;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("api/public")
@@ -20,11 +17,17 @@ public class LaptopController {
     @Autowired
     private ILapTopService lapTopService;
 
+//    @GetMapping("/list")
+//    public ResponseEntity<Page<Laptop>> getAllLaptop(@PageableDefault(size = 6) Pageable pageable) {
+//        Page<Laptop> laptopPage;
+//        laptopPage = lapTopService.getAllLaptop(pageable);
+//        return new ResponseEntity<>(laptopPage, HttpStatus.OK);
+//    }
+
     @GetMapping("/list")
-    public ResponseEntity<Page<Laptop>> getAllLaptop(@PageableDefault(size = 6) Pageable pageable) {
+    public ResponseEntity<Page<Laptop>> getAllLaptop(@PageableDefault(size = 6) Pageable pageable, @RequestParam(defaultValue = "") String search) {
         Page<Laptop> laptopPage;
-        laptopPage = lapTopService.getAllLaptop(pageable);
+        laptopPage = lapTopService.getAllLaptopAndSearch(search, pageable);
         return new ResponseEntity<>(laptopPage, HttpStatus.OK);
     }
-
 }

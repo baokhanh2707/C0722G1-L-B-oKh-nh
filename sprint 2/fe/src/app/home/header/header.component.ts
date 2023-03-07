@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {TokenService} from "../../service/token/token.service";
 import {Router} from "@angular/router";
 import {ToastrService} from "ngx-toastr";
+import {BehaviorServiceService} from "../../service/BehaviorService/behavior-service.service";
 
 @Component({
   selector: 'app-header',
@@ -16,7 +17,9 @@ export class HeaderComponent implements OnInit {
 
   constructor(private tokenService:TokenService,
               private route: Router,
-              private toast:ToastrService) { }
+              private router: Router,
+              private toast:ToastrService,
+              private behaviorService: BehaviorServiceService) { }
 
   ngOnInit(): void {
     if (this.tokenService.getToken()) {
@@ -35,5 +38,10 @@ export class HeaderComponent implements OnInit {
       timeOut: 3000,
       extendedTimeOut: 1500
     });
+  }
+
+  searchNameClock(search: any) {
+    this.behaviorService.setSearch(search);
+    this.router.navigateByUrl('');
   }
 }

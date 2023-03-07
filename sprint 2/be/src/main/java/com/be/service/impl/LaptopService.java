@@ -16,4 +16,9 @@ public class LaptopService implements ILapTopService {
     public Page<Laptop> getAllLaptop(Pageable pageable) {
         return lapTopRepository.getAllLaptop(pageable);
     }
+
+    @Override
+    public Page<Laptop> getAllLaptopAndSearch( String nameSearch,Pageable pageable) {
+        return lapTopRepository.getAllLaptopAndSearch(nameSearch,pageable);
+    }
 }

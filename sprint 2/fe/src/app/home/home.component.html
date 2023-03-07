@@ -40,7 +40,7 @@
     <div class="col-2"></div>
     <div class="col-9" >
       <div class="row ">
-        <div class="col-4" *ngFor="let data of homeJson.content" style="margin-bottom: 30px">
+        <div class="col-4" *ngFor="let data of homeJson?.content" style="margin-bottom: 30px">
           <div class="card" style="width: 80%;box-shadow: 2px 2px 3px #1976d2 ">
             <div class="cart-img" style="height: 176px">
               <img
@@ -49,10 +49,11 @@
             </div>
 
             <div class="card-body" style="height: 250px">
-              <h6 class="card-text" > Tên Sản Phẩm : {{data.name}}</h6>
-              <h5 class="card-title"> Giá : {{data.price}}</h5>
-              <a href="#" class="btn btn-primary">Chi tiết sản phẩm</a>
+              <div><h6 class="card-text" > Tên Sản Phẩm : {{data.name}}</h6></div>
+              <div style="margin-top: 20px"><h5 class="card-title"> Giá : {{data.price}}</h5></div>
+              <div><a href="#" class="btn btn-primary">Chi tiết sản phẩm</a></div>
             </div>
+
           </div>
         </div>
       </div>
@@ -61,7 +62,7 @@
     <div class="col-1"></div>
   </div>
 </div>
-<div *ngIf="homeJson.content.length != 0">
+<div *ngIf="homeJson?.content?.length != 0">
   <div *ngIf="homeJson" class="d-flex justify-content-center" id="last-row">
     <div>
       <nav aria-label="Page navigation example">

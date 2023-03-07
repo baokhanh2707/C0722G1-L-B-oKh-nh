@@ -1,4 +1,4 @@
-import { Injectable } from '@angular/core';
+import {Injectable} from '@angular/core';
 import {HttpClient} from "@angular/common/http";
 import {Observable} from "rxjs";
 import {Product} from "../../entity/product/product";
@@ -8,8 +8,10 @@ import {Product} from "../../entity/product/product";
 })
 export class HomeService {
 
-  constructor(private httpClient : HttpClient) { }
-  getHomeList(page: number): Observable<any> {
-    return this.httpClient.get('http://localhost:8080/api/public/list?page=' + page);
+  constructor(private httpClient: HttpClient) {
+  }
+
+  getHomeList(page: number, search: string): Observable<any> {
+    return this.httpClient.get('http://localhost:8080/api/public/list?page=' + page + '&search=' + search);
   }
 }
