@@ -47,8 +47,7 @@ export class LoginComponent implements OnInit {
             this.statusRole = data.roles;
             this.tokenService.setEmail(data.email);
             this.tokenService.setIdAccount(data.idAccount);
-            location.href = 'http://localhost:4200/home';
-            // window.open('http://localhost:4200/home');
+            location.href = 'http://localhost:4200/';
             this.toast.info('Đăng nhập thành công.', 'Thông báo');
           }
         }

@@ -14,14 +14,14 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping("api-laptop")
+@RequestMapping("api/public")
 @CrossOrigin("*")
 public class LaptopController {
     @Autowired
     private ILapTopService lapTopService;
 
-    @GetMapping("")
-    public ResponseEntity<Page<Laptop>> getAllLaptop(@PageableDefault(size = 3) Pageable pageable) {
+    @GetMapping("/list")
+    public ResponseEntity<Page<Laptop>> getAllLaptop(@PageableDefault(size = 6) Pageable pageable) {
         Page<Laptop> laptopPage;
         laptopPage = lapTopService.getAllLaptop(pageable);
         return new ResponseEntity<>(laptopPage, HttpStatus.OK);

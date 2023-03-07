@@ -50,13 +50,13 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 
     @Override
     protected void configure(HttpSecurity httpSecurity) throws Exception {
+//        httpSecurity.authorizeRequests().antMatchers("").access("hasRole('ADMIN')");
+//        httpSecurity.authorizeRequests().antMatchers("").access("hasAnyRole('ADMIN','USER')");
         httpSecurity.cors().and().csrf()
                 .disable()
                 .authorizeRequests()
-                .antMatchers("/**")
+                .antMatchers("/api/public/**")
                 .permitAll()
-//                .antMatchers("/api/customer/**","/api/post/**").hasAnyRole("CUSTOMER","EMPLOYEE","ADMIN")
-//                .antMatchers("/api/employees/**").hasAnyRole("EMPLOYEE","ADMIN")
                 .anyRequest()
                 .authenticated()
 //                .and()

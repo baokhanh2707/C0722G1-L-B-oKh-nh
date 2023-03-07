@@ -165,7 +165,7 @@ public class fabo<n> {
 //                System.out.println(word + " xuất hiện" + wordCount.get(word) + " lần");
 //            }
 //        }
-    public static void main(String[] args) {
+//    public static void main(String[] args) {
 //        Scanner scanner = new Scanner(System.in);
 //        int n = scanner.nextInt();
 //        int result=0;
@@ -176,7 +176,10 @@ public class fabo<n> {
 //        }
 //        System.out.println(result);
 
-
+//
+//    public static void main(String[] args) {
+//
+//
 //        int[] number = {2, 5, 7, 23, 63};
 //        int sum = 0;
 //        int max=number[0];
@@ -192,25 +195,68 @@ public class fabo<n> {
 //        }
 //        System.out.println("tong 4 so nhỏ nhất la: "+(sum -max) );
 //        System.out.println("tong 4 so lớn nhất la: "+(sum -min) );
-//    }
-
-//        int[] number = {2, 5, 7, 23, 63,63,93};
-//int max=number[0];
-//int max2=number[0];
+//}
+//
+//
+//    public static void main(String[] args) {
+//        int[] number = {2, 5, 7, 23, 63, 63, 93};
+//        int max = number[0];
+//        int max2 = number[0];
 //
 //        for (int i = 0; i < number.length; i++) {
-//            if(number[i]>max){
-//                max=number[i];
+//            if (number[i] > max) {
+//                max = number[i];
 //            }
 //        }
 //        for (int i = 0; i < number.length; i++) {
-//            if(number[i]>max2 & number[i] < max){
-//                max2=number[i];
+//            if (number[i] > max2 & number[i] < max) {
+//                max2 = number[i];
 //            }
 //        }
 //        System.out.println(max2);
 //    }
+//public static void main(String[] args) {
+//    String str = "baccasc";
+//    char[] string = str.toCharArray();
+//    System.out.println(string[3]);
+//    for (int i = 0; i < string.length - 1; i++) {
+//        for (int j = i + 1; j < string.length; j++) {
+//            if (string[i] > string[j]) {
+//                char temp = string[i];
+//                string[i] = string[j];
+//                string[j] = temp;
+//            }
+//        }
+//    }
+//    String result = new String(string);
+//    System.out.println(result);
+//}
 
+//    public static void main(String[] args) {
+//        String str = "abcdefgh";
+//        char[] chars = str.toCharArray();
+//        String result = "";
+//        for (int i = chars.length-1 ; i >= 0; i--) {
+//            result += chars[i];
+//        }
+//        System.out.println("Chuỗi đảo ngược là : " + result);
+//    }
+public static void main(String[] args) {
+            Scanner scanner = new Scanner(System.in);
+            System.out.println("Mời nhập độ dài: ");
+            int height = scanner.nextInt();
 
-    }
+            for (int i = 1; i <= height; i++) {
+                for (int j = 1; j <= height - i; j++) {
+                    System.out.print(" ");
+                }
+                for (int k = 1; k <= 2 * i - 1; k++) {
+                    System.out.print("*");
+                }
+                System.out.println();
+            }
+        }
 }
+
+
+

@@ -6,12 +6,13 @@ java:S2326"n is not used in the class.(ðûý·
 Q	java:S125"<This block of commented-out lines of code should be removed.(€ó¸·
 V	java:S125"<This block of commented-out lines of code should be removed.(ŠÂïÿÿÿÿÿ
 W	java:S125—"<This block of commented-out lines of code should be removed.(»ž•ûÿÿÿÿ
-R	java:S125©"<This block of commented-out lines of code should be removed.(‹Éÿ¼
-W	java:S125´"<This block of commented-out lines of code should be removed.(Ü¨Ë®üÿÿÿÿ
-W	java:S125Å"<This block of commented-out lines of code should be removed.(øç€œýÿÿÿÿ
+W	java:S125´"<This block of commented-out lines of code should be removed.(»ž•ûÿÿÿÿ
+W	java:S125ë"<This block of commented-out lines of code should be removed.(»ž•ûÿÿÿÿ
+T	java:S106ö"9Replace this use of System.out or System.err by a logger.(ûöÕ øÿÿÿÿ
+O	java:S106û"9Replace this use of System.out or System.err by a logger.(×•œ²
+T	java:S106þ"9Replace this use of System.out or System.err by a logger.(‹µ‹¶ýÿÿÿÿ
+T	java:S106€"9Replace this use of System.out or System.err by a logger.(ªÓ¼áþÿÿÿÿ
 I
 java:S1128".Remove this unused import 'java.util.HashMap'.(™˜”€ùÿÿÿÿ
 E
 java:S1128"*Remove this unused import 'java.util.Map'.(¼è½Òþÿÿÿÿ
-I
-java:S1128".Remove this unused import 'java.util.Scanner'.(ÒÜÅ¸úÿÿÿÿ
