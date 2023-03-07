@@ -40,7 +40,7 @@ export class HeaderComponent implements OnInit {
     });
   }
 
-  searchNameClock(search: any) {
+  searchName(search: any) {
     this.behaviorService.setSearch(search);
     this.router.navigateByUrl('');
   }
