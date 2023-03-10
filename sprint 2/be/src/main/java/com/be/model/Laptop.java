@@ -1,6 +1,9 @@
 package com.be.model;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
+
 import javax.persistence.*;
+import java.util.List;
 import java.util.Set;
 
 @Entity
@@ -23,6 +26,17 @@ public class Laptop {
     private TypeProduct typeProductId;
     @OneToMany(mappedBy = "laptop")
     public Set<OderDetail> oderDetailSet;
+    @OneToMany(mappedBy = "laptop")
+    @JsonBackReference
+    private List<CartDetail> cartDetailList;
+
+    public List<CartDetail> getCartDetailList() {
+        return cartDetailList;
+    }
+
+    public void setCartDetailList(List<CartDetail> cartDetailList) {
+        this.cartDetailList = cartDetailList;
+    }
 
     public Laptop() {
     }

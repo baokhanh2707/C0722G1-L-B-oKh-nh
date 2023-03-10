@@ -14,4 +14,11 @@ export class HomeService {
   getHomeList(page: number, search: string): Observable<any> {
     return this.httpClient.get('http://localhost:8080/api/public/list?page=' + page + '&search=' + search);
   }
+  detailLapTop(id:number):Observable<any>{
+    return this.httpClient.get('http://localhost:8080/api/public/detail?id=' + id)
+  }
+
+  getListTypeProduct(id:number):Observable<any>{
+    return this.httpClient.get('http://localhost:8080/api/public/related?id='+id)
+  }
 }

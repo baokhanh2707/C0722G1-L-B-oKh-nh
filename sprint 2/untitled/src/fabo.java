@@ -241,21 +241,38 @@ public class fabo<n> {
 //        }
 //        System.out.println("Chuỗi đảo ngược là : " + result);
 //    }
-public static void main(String[] args) {
-            Scanner scanner = new Scanner(System.in);
-            System.out.println("Mời nhập độ dài: ");
-            int height = scanner.nextInt();
+//public static void main(String[] args) {
+//            Scanner scanner = new Scanner(System.in);
+//            System.out.println("Mời nhập độ dài: ");
+//            int height = scanner.nextInt();
+//
+//            for (int i = 1; i <= height; i++) {
+//                for (int j = 1; j <= height - i; j++) {
+//                    System.out.print(" ");
+//                }
+//                for (int k = 1; k <= 2 * i - 1; k++) {
+//                    System.out.print("*");
+//                }
+//                System.out.println();
+//            }
+//        }
 
-            for (int i = 1; i <= height; i++) {
-                for (int j = 1; j <= height - i; j++) {
-                    System.out.print(" ");
-                }
-                for (int k = 1; k <= 2 * i - 1; k++) {
-                    System.out.print("*");
-                }
-                System.out.println();
+    public static void main(String[] args) {
+        int[] arr = {1, 2, 3, 2, 1};
+        boolean isSymmetric = true;
+        for (int i = 0; i < arr.length / 2; i++) {
+            if (arr[i] != arr[arr.length - i - 1]) {
+                isSymmetric = false;
+                break;
             }
         }
+        if (isSymmetric) {
+            System.out.println("Mang la mang doi xung.");
+        } else {
+            System.out.println("Mang khong doi xung.");
+        }
+    }
+
 }
 
 

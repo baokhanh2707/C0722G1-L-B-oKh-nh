@@ -50,8 +50,8 @@
 
             <div class="card-body" style="height: 250px">
               <div><h6 class="card-text" > Tên Sản Phẩm : {{data.name}}</h6></div>
-              <div style="margin-top: 20px"><h5 class="card-title"> Giá : {{data.price}}</h5></div>
-              <div><a href="#" class="btn btn-primary">Chi tiết sản phẩm</a></div>
+              <div style="margin-top: 20px"><h5 class="card-title"> Giá : {{data.price|number}}đ</h5></div>
+              <div><a [routerLink]="['/detail',data.id]" class="btn btn-primary">Chi tiết sản phẩm</a></div>
             </div>
 
           </div>

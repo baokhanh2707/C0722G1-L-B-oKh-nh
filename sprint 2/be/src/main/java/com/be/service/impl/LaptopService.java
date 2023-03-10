@@ -8,6 +8,8 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Service
 public class LaptopService implements ILapTopService {
     @Autowired
@@ -20,5 +22,15 @@ public class LaptopService implements ILapTopService {
     @Override
     public Page<Laptop> getAllLaptopAndSearch( String nameSearch,Pageable pageable) {
         return lapTopRepository.getAllLaptopAndSearch(nameSearch,pageable);
+    }
+
+    @Override
+    public Laptop findByIdLaptop(Long idLapTop) {
+        return lapTopRepository.findByIdLaptop(idLapTop);
+    }
+
+    @Override
+    public List<Laptop> getLapByIdProduct(Long idProduct) {
+        return lapTopRepository.getLapByIdProduct(idProduct);
     }
 }

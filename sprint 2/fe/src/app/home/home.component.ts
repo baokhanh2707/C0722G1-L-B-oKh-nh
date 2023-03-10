@@ -21,28 +21,20 @@ export class HomeComponent implements OnInit {
 
   ngOnInit(): void {
     this.homeList(this.page,this.search);
-    this.getValueHeader();
+   this.getValueHeader()
   }
 
-  // homeList(): void {
-  //   this.homeService.getHomeList(this.page,this.search).subscribe(data => {
-  //     if (data !== null) {
-  //       this.homeJson = data;
-  //     }
-  //   })
-  // }
   gotoPage(pageNumber: number): void {
     this.page = pageNumber;
     this.ngOnInit();
   }
-
   private getValueHeader() {
     this.behaviorService.getSearch().subscribe(data => {
       this.search = data;
-      console.log(this.search)
       this.homeList(this.page,this.search);
     });
   }
+
 
   private homeList(page: number, search: string) {
     this.homeService.getHomeList(this.page,this.search).subscribe(data => {
