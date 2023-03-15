@@ -1,1 +1,0 @@
-EdrawMind.exe /UPGRADE="upgrade"
