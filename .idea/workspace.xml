@@ -16,7 +16,7 @@
     </option>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="2N3QH7xSD6tZHJXYDwrsjvKrLbS" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -29,7 +29,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../C0722G1-L-B-oKh-nh/sprint 2/fe-sprint2" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../C0722G1-L-B-oKh-nh/module6/2/C0722G1-Repo-FE/C0722G1-Repo-FE" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
@@ -53,7 +53,9 @@
       <option name="presentableId" value="Default" />
       <updated>1678890195641</updated>
       <workItem from="1678890196906" duration="113000" />
-      <workItem from="1678897486928" duration="4957000" />
+      <workItem from="1678897486928" duration="5258000" />
+      <workItem from="1678935689240" duration="6447000" />
+      <workItem from="1678948043518" duration="2304000" />
     </task>
     <servers />
   </component>
@@ -61,9 +63,9 @@
     <option name="version" value="2" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="549" y="163" key="FileChooserDialogImpl" timestamp="1678903842171">
+    <state x="549" y="163" key="FileChooserDialogImpl" timestamp="1678938974699">
       <screen x="0" y="0" width="1536" height="816" />
     </state>
-    <state x="549" y="163" key="FileChooserDialogImpl/0.0.1536.816@0.0.1536.816" timestamp="1678903842171" />
+    <state x="549" y="163" key="FileChooserDialogImpl/0.0.1536.816@0.0.1536.816" timestamp="1678938974699" />
   </component>
 </project>
